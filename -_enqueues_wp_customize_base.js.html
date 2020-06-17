@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Documentation Source: _enqueues/wp/customize/base.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.united.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Documentation</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="addComment.html">addComment</a></li><li><a href="commentsBox.html">commentsBox</a></li><li><a href="findPosts.html">findPosts</a></li><li><a href="imageEdit.html">imageEdit</a></li><li><a href="inlineEditPost.html">inlineEditPost</a></li><li><a href="inlineEditTax.html">inlineEditTax</a></li><li><a href="postboxes.html">postboxes</a></li><li><a href="switchEditors.html">switchEditors</a></li><li><a href="wp.html">wp</a></li><li><a href="wp.a11y.html">wp.a11y</a></li><li><a href="wp.api.html">wp.api</a></li><li><a href="wp.api.collections.html">wp.api.collections</a></li><li><a href="wp.api.models.html">wp.api.models</a></li><li><a href="wp.api.utils.html">wp.api.utils</a></li><li><a href="wp.api.views.html">wp.api.views</a></li><li><a href="wp.Backbone.html">wp.Backbone</a></li><li><a href="wp.codeEditor.html">wp.codeEditor</a></li><li><a href="wp.communityEvents.html">wp.communityEvents</a></li><li><a href="wp.customHtmlWidget.html">wp.customHtmlWidget</a></li><li><a href="wp.customize.html">wp.customize</a></li><li><a href="wp.customize.HeaderTool.html">wp.customize.HeaderTool</a></li><li><a href="wp.customize.Menus.html">wp.customize.Menus</a></li><li><a href="wp.customize.navMenusPreview.html">wp.customize.navMenusPreview</a></li><li><a href="wp.customize.selectiveRefresh.html">wp.customize.selectiveRefresh</a></li><li><a href="wp.customize.utils.html">wp.customize.utils</a></li><li><a href="wp.customize.Widgets.html">wp.customize.Widgets</a></li><li><a href="wp.customize.widgetsPreview.html">wp.customize.widgetsPreview</a></li><li><a href="wp.emoji.html">wp.emoji</a></li><li><a href="wp.heartbeat.html">wp.heartbeat</a></li><li><a href="wp.media.html">wp.media</a></li><li><a href="wp.media.audio.html">wp.media.audio</a></li><li><a href="wp.media.controller.html">wp.media.controller</a></li><li><a href="wp.media.editor.html">wp.media.editor</a></li><li><a href="wp.media.editor.send.html">wp.media.editor.send</a></li><li><a href="wp.media.featuredImage.html">wp.media.featuredImage</a></li><li><a href="wp.media.frames.html">wp.media.frames</a></li><li><a href="wp.media.model.html">wp.media.model</a></li><li><a href="wp.media.model.Attachments.filters.html">wp.media.model.Attachments.filters</a></li><li><a href="wp.media.string.html">wp.media.string</a></li><li><a href="wp.media.video.html">wp.media.video</a></li><li><a href="wp.media.view.html">wp.media.view</a></li><li><a href="wp.mediaWidgets.html">wp.mediaWidgets</a></li><li><a href="wp.passwordStrength.html">wp.passwordStrength</a></li><li><a href="wp.textWidgets.html">wp.textWidgets</a></li><li><a href="wp.updates.html">wp.updates</a></li><li><a href="wp.utils.html">wp.utils</a></li><li><a href="wpNavMenu.html">wpNavMenu</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="-_.html"></a></li><li><a href="$.widget.wp.pointer.html">$.widget.wp.pointer</a></li><li><a href="$.widget.wp.wpColorPicker.html">$.widget.wp.wpColorPicker</a></li><li><a href="Heading.html">Heading</a></li><li><a href="wp.Backbone.Subviews.html">wp.Backbone.Subviews</a></li><li><a href="wp.BaseHandler.html">wp.BaseHandler</a></li><li><a href="wp.CustomHeader.html">wp.CustomHeader</a></li><li><a href="wp.customHtmlWidgets.CustomHtmlWidgetControl.html">wp.customHtmlWidgets.CustomHtmlWidgetControl</a></li><li><a href="wp.customize.BackgroundControl.html">wp.customize.BackgroundControl</a></li><li><a href="wp.customize.BackgroundPositionControl.html">wp.customize.BackgroundPositionControl</a></li><li><a href="wp.customize.CodeEditorControl.html">wp.customize.CodeEditorControl</a></li><li><a href="wp.customize.ColorControl.html">wp.customize.ColorControl</a></li><li><a href="wp.customize.Control.html">wp.customize.Control</a></li><li><a href="wp.customize.CroppedImageControl.html">wp.customize.CroppedImageControl</a></li><li><a href="wp.customize.DateTimeControl.html">wp.customize.DateTimeControl</a></li><li><a href="wp.customize.Element.html">wp.customize.Element</a></li><li><a href="wp.customize.HeaderControl.html">wp.customize.HeaderControl</a></li><li><a href="wp.customize.HeaderTool.ChoiceList.html">wp.customize.HeaderTool.ChoiceList</a></li><li><a href="wp.customize.HeaderTool.ChoiceListView.html">wp.customize.HeaderTool.ChoiceListView</a></li><li><a href="wp.customize.HeaderTool.ChoiceView.html">wp.customize.HeaderTool.ChoiceView</a></li><li><a href="wp.customize.HeaderTool.CombinedList.html">wp.customize.HeaderTool.CombinedList</a></li><li><a href="wp.customize.HeaderTool.CurrentView.html">wp.customize.HeaderTool.CurrentView</a></li><li><a href="wp.customize.HeaderTool.DefaultsList.html">wp.customize.HeaderTool.DefaultsList</a></li><li><a href="wp.customize.HeaderTool.ImageModel.html">wp.customize.HeaderTool.ImageModel</a></li><li><a href="wp.customize.ImageControl.html">wp.customize.ImageControl</a></li><li><a href="wp.customize.Loader.html">wp.customize.Loader</a></li><li><a href="wp.customize.MediaControl.html">wp.customize.MediaControl</a></li><li><a href="wp.customize.Menus.AvailableItemCollection.html">wp.customize.Menus.AvailableItemCollection</a></li><li><a href="wp.customize.Menus.AvailableItemModel.html">wp.customize.Menus.AvailableItemModel</a></li><li><a href="wp.customize.Menus.AvailableMenuItemsPanelView.html">wp.customize.Menus.AvailableMenuItemsPanelView</a></li><li><a href="wp.customize.Menus.MenuAutoAddControl.html">wp.customize.Menus.MenuAutoAddControl</a></li><li><a href="wp.customize.Menus.MenuControl.html">wp.customize.Menus.MenuControl</a></li><li><a href="wp.customize.Menus.MenuItemControl.html">wp.customize.Menus.MenuItemControl</a></li><li><a href="wp.customize.Menus.MenuLocationControl.html">wp.customize.Menus.MenuLocationControl</a></li><li><a href="wp.customize.Menus.MenuLocationsControl.html">wp.customize.Menus.MenuLocationsControl</a></li><li><a href="wp.customize.Menus.MenuNameControl.html">wp.customize.Menus.MenuNameControl</a></li><li><a href="wp.customize.Menus.MenuSection.html">wp.customize.Menus.MenuSection</a></li><li><a href="wp.customize.Menus.MenusPanel.html">wp.customize.Menus.MenusPanel</a></li><li><a href="wp.customize.Menus.NewMenuSection.html">wp.customize.Menus.NewMenuSection</a></li><li><a href="wp.customize.Messenger.html">wp.customize.Messenger</a></li><li><a href="wp.customize.navMenusPreview.NavMenuInstancePartial.html">wp.customize.navMenusPreview.NavMenuInstancePartial</a></li><li><a href="wp.customize.Notification.html">wp.customize.Notification</a></li><li><a href="wp.customize.Notifications.html">wp.customize.Notifications</a></li><li><a href="wp.customize.OuterSection.html">wp.customize.OuterSection</a></li><li><a href="wp.customize.OverlayNotification.html">wp.customize.OverlayNotification</a></li><li><a href="wp.customize.Panel.html">wp.customize.Panel</a></li><li><a href="wp.customize.Preview.html">wp.customize.Preview</a></li><li><a href="wp.customize.Previewer.html">wp.customize.Previewer</a></li><li><a href="wp.customize.PreviewFrame.html">wp.customize.PreviewFrame</a></li><li><a href="wp.customize.PreviewLinkControl.html">wp.customize.PreviewLinkControl</a></li><li><a href="wp.customize.Section.html">wp.customize.Section</a></li><li><a href="wp.customize.selectiveRefresh.Partial.html">wp.customize.selectiveRefresh.Partial</a></li><li><a href="wp.customize.selectiveRefresh.Placement.html">wp.customize.selectiveRefresh.Placement</a></li><li><a href="wp.customize.Setting.html">wp.customize.Setting</a></li><li><a href="wp.customize.SiteIconControl.html">wp.customize.SiteIconControl</a></li><li><a href="wp.customize.ThemeControl.html">wp.customize.ThemeControl</a></li><li><a href="wp.customize.ThemesPanel.html">wp.customize.ThemesPanel</a></li><li><a href="wp.customize.ThemesSection.html">wp.customize.ThemesSection</a></li><li><a href="wp.customize.UploadControl.html">wp.customize.UploadControl</a></li><li><a href="wp.customize.Value.html">wp.customize.Value</a></li><li><a href="wp.customize.Values.html">wp.customize.Values</a></li><li><a href="wp.customize.Widgets.AvailableWidgetsPanelView.html">wp.customize.Widgets.AvailableWidgetsPanelView</a></li><li><a href="wp.customize.Widgets.SidebarCollection.html">wp.customize.Widgets.SidebarCollection</a></li><li><a href="wp.customize.Widgets.SidebarControl.html">wp.customize.Widgets.SidebarControl</a></li><li><a href="wp.customize.Widgets.SidebarModel.html">wp.customize.Widgets.SidebarModel</a></li><li><a href="wp.customize.Widgets.SidebarSection.html">wp.customize.Widgets.SidebarSection</a></li><li><a href="wp.customize.Widgets.WidgetCollection.html">wp.customize.Widgets.WidgetCollection</a></li><li><a href="wp.customize.Widgets.WidgetControl.html">wp.customize.Widgets.WidgetControl</a></li><li><a href="wp.customize.Widgets.WidgetModel.html">wp.customize.Widgets.WidgetModel</a></li><li><a href="wp.customize.Widgets.WidgetsPanel.html">wp.customize.Widgets.WidgetsPanel</a></li><li><a href="wp.customize.widgetsPreview.SidebarPartial.html">wp.customize.widgetsPreview.SidebarPartial</a></li><li><a href="wp.customize.widgetsPreview.WidgetPartial.html">wp.customize.widgetsPreview.WidgetPartial</a></li><li><a href="wp.customize-Container.html">wp.customize~Container</a></li><li><a href="wp.customize-LockedNotification.html">wp.customize~LockedNotification</a></li><li><a href="wp.media.collection.html">wp.media.collection</a></li><li><a href="wp.media.controller.AudioDetails.html">wp.media.controller.AudioDetails</a></li><li><a href="wp.media.controller.CollectionAdd.html">wp.media.controller.CollectionAdd</a></li><li><a href="wp.media.controller.CollectionEdit.html">wp.media.controller.CollectionEdit</a></li><li><a href="wp.media.controller.Cropper.html">wp.media.controller.Cropper</a></li><li><a href="wp.media.controller.CustomizeImageCropper.html">wp.media.controller.CustomizeImageCropper</a></li><li><a href="wp.media.controller.EditAttachmentMetadata.html">wp.media.controller.EditAttachmentMetadata</a></li><li><a href="wp.media.controller.EditImage.html">wp.media.controller.EditImage</a></li><li><a href="wp.media.controller.Embed.html">wp.media.controller.Embed</a></li><li><a href="wp.media.controller.FeaturedImage.html">wp.media.controller.FeaturedImage</a></li><li><a href="wp.media.controller.GalleryAdd.html">wp.media.controller.GalleryAdd</a></li><li><a href="wp.media.controller.GalleryEdit.html">wp.media.controller.GalleryEdit</a></li><li><a href="wp.media.controller.ImageDetails.html">wp.media.controller.ImageDetails</a></li><li><a href="wp.media.controller.Library.html">wp.media.controller.Library</a></li><li><a href="wp.media.controller.Region.html">wp.media.controller.Region</a></li><li><a href="wp.media.controller.ReplaceImage.html">wp.media.controller.ReplaceImage</a></li><li><a href="wp.media.controller.SiteIconCropper.html">wp.media.controller.SiteIconCropper</a></li><li><a href="wp.media.controller.State.html">wp.media.controller.State</a></li><li><a href="wp.media.model.Attachment.html">wp.media.model.Attachment</a></li><li><a href="wp.media.model.Attachments.html">wp.media.model.Attachments</a></li><li><a href="wp.media.model.PostImage.html">wp.media.model.PostImage</a></li><li><a href="wp.media.model.PostMedia.html">wp.media.model.PostMedia</a></li><li><a href="wp.media.model.Query.html">wp.media.model.Query</a></li><li><a href="wp.media.model.Selection.html">wp.media.model.Selection</a></li><li><a href="wp.media.View_.html">wp.media.View</a></li><li><a href="wp.media.view.Attachment.html">wp.media.view.Attachment</a></li><li><a href="wp.media.view.Attachment.Details.html">wp.media.view.Attachment.Details</a></li><li><a href="wp.media.view.Attachment.Details.TwoColumn.html">wp.media.view.Attachment.Details.TwoColumn</a></li><li><a href="wp.media.view.Attachment.EditLibrary.html">wp.media.view.Attachment.EditLibrary</a></li><li><a href="wp.media.view.Attachment.EditSelection.html">wp.media.view.Attachment.EditSelection</a></li><li><a href="wp.media.view.Attachment.Library.html">wp.media.view.Attachment.Library</a></li><li><a href="wp.media.view.Attachment.Selection.html">wp.media.view.Attachment.Selection</a></li><li><a href="wp.media.view.AttachmentCompat.html">wp.media.view.AttachmentCompat</a></li><li><a href="wp.media.view.AttachmentFilters.html">wp.media.view.AttachmentFilters</a></li><li><a href="wp.media.view.AttachmentFilters.All.html">wp.media.view.AttachmentFilters.All</a></li><li><a href="wp.media.view.AttachmentFilters.DateFilter.html">wp.media.view.AttachmentFilters.DateFilter</a></li><li><a href="wp.media.view.AttachmentFilters.Uploaded.html">wp.media.view.AttachmentFilters.Uploaded</a></li><li><a href="wp.media.view.Attachments.html">wp.media.view.Attachments</a></li><li><a href="wp.media.view.Attachments.Selection.html">wp.media.view.Attachments.Selection</a></li><li><a href="wp.media.view.AttachmentsBrowser.html">wp.media.view.AttachmentsBrowser</a></li><li><a href="wp.media.view.AudioDetails.html">wp.media.view.AudioDetails</a></li><li><a href="wp.media.view.Button.html">wp.media.view.Button</a></li><li><a href="wp.media.view.ButtonGroup.html">wp.media.view.ButtonGroup</a></li><li><a href="wp.media.view.Cropper.html">wp.media.view.Cropper</a></li><li><a href="wp.media.view.DeleteSelected.html">wp.media.view.DeleteSelected</a></li><li><a href="wp.media.view.DeleteSelectedPermanently.html">wp.media.view.DeleteSelectedPermanently</a></li><li><a href="wp.media.view.EditImage.html">wp.media.view.EditImage</a></li><li><a href="wp.media.view.EditImage.Details.html">wp.media.view.EditImage.Details</a></li><li><a href="wp.media.view.EditorUploader.html">wp.media.view.EditorUploader</a></li><li><a href="wp.media.view.Embed.html">wp.media.view.Embed</a></li><li><a href="wp.media.view.EmbedImage.html">wp.media.view.EmbedImage</a></li><li><a href="wp.media.view.EmbedLink.html">wp.media.view.EmbedLink</a></li><li><a href="wp.media.view.EmbedUrl.html">wp.media.view.EmbedUrl</a></li><li><a href="wp.media.view.FocusManager.html">wp.media.view.FocusManager</a></li><li><a href="wp.media.view.Frame.html">wp.media.view.Frame</a></li><li><a href="wp.media.view.Iframe.html">wp.media.view.Iframe</a></li><li><a href="wp.media.view.ImageDetails.html">wp.media.view.ImageDetails</a></li><li><a href="wp.media.view.Label.html">wp.media.view.Label</a></li><li><a href="wp.media.view.MediaDetails.html">wp.media.view.MediaDetails</a></li><li><a href="wp.media.view.MediaFrame.html">wp.media.view.MediaFrame</a></li><li><a href="wp.media.view.MediaFrame.AudioDetails.html">wp.media.view.MediaFrame.AudioDetails</a></li><li><a href="wp.media.view.MediaFrame.EditAttachments.html">wp.media.view.MediaFrame.EditAttachments</a></li><li><a href="wp.media.view.MediaFrame.ImageDetails.html">wp.media.view.MediaFrame.ImageDetails</a></li><li><a href="wp.media.view.MediaFrame.Manage.html">wp.media.view.MediaFrame.Manage</a></li><li><a href="wp.media.view.MediaFrame.Manage.Router.html">wp.media.view.MediaFrame.Manage.Router</a></li><li><a href="wp.media.view.MediaFrame.MediaDetails.html">wp.media.view.MediaFrame.MediaDetails</a></li><li><a href="wp.media.view.MediaFrame.Post.html">wp.media.view.MediaFrame.Post</a></li><li><a href="wp.media.view.MediaFrame.Select.html">wp.media.view.MediaFrame.Select</a></li><li><a href="wp.media.view.MediaFrame.VideoDetails.html">wp.media.view.MediaFrame.VideoDetails</a></li><li><a href="wp.media.view.Menu.html">wp.media.view.Menu</a></li><li><a href="wp.media.view.MenuItem.html">wp.media.view.MenuItem</a></li><li><a href="wp.media.view.Modal.html">wp.media.view.Modal</a></li><li><a href="wp.media.view.PriorityList.html">wp.media.view.PriorityList</a></li><li><a href="wp.media.view.Router.html">wp.media.view.Router</a></li><li><a href="wp.media.view.RouterItem.html">wp.media.view.RouterItem</a></li><li><a href="wp.media.view.Search.html">wp.media.view.Search</a></li><li><a href="wp.media.view.Selection.html">wp.media.view.Selection</a></li><li><a href="wp.media.view.SelectModeToggle.html">wp.media.view.SelectModeToggle</a></li><li><a href="wp.media.view.Settings.html">wp.media.view.Settings</a></li><li><a href="wp.media.view.Settings.AttachmentDisplay.html">wp.media.view.Settings.AttachmentDisplay</a></li><li><a href="wp.media.view.Settings.Gallery.html">wp.media.view.Settings.Gallery</a></li><li><a href="wp.media.view.Settings.Playlist.html">wp.media.view.Settings.Playlist</a></li><li><a href="wp.media.view.Sidebar.html">wp.media.view.Sidebar</a></li><li><a href="wp.media.view.SiteIconCropper.html">wp.media.view.SiteIconCropper</a></li><li><a href="wp.media.view.SiteIconPreview.html">wp.media.view.SiteIconPreview</a></li><li><a href="wp.media.view.Spinner.html">wp.media.view.Spinner</a></li><li><a href="wp.media.view.Toolbar.html">wp.media.view.Toolbar</a></li><li><a href="wp.media.view.Toolbar.Embed.html">wp.media.view.Toolbar.Embed</a></li><li><a href="wp.media.view.Toolbar.Select.html">wp.media.view.Toolbar.Select</a></li><li><a href="wp.media.view.UploaderInline.html">wp.media.view.UploaderInline</a></li><li><a href="wp.media.view.UploaderStatus.html">wp.media.view.UploaderStatus</a></li><li><a href="wp.media.view.UploaderStatusError.html">wp.media.view.UploaderStatusError</a></li><li><a href="wp.media.view.UploaderWindow.html">wp.media.view.UploaderWindow</a></li><li><a href="wp.media.view.VideoDetails.html">wp.media.view.VideoDetails</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_audio.html">wp.mediaWidgets.controlConstructors.media_audio</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_gallery.html">wp.mediaWidgets.controlConstructors.media_gallery</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_video.html">wp.mediaWidgets.controlConstructors.media_video</a></li><li><a href="wp.mediaWidgets.controlConstructors-AudioDetailsMediaFrame.html">wp.mediaWidgets.controlConstructors~AudioDetailsMediaFrame</a></li><li><a href="wp.mediaWidgets.controlConstructors-VideoDetailsMediaFrame.html">wp.mediaWidgets.controlConstructors~VideoDetailsMediaFrame</a></li><li><a href="wp.mediaWidgets.MediaEmbedView.html">wp.mediaWidgets.MediaEmbedView</a></li><li><a href="wp.mediaWidgets.MediaFrameSelect.html">wp.mediaWidgets.MediaFrameSelect</a></li><li><a href="wp.mediaWidgets.MediaWidgetControl.html">wp.mediaWidgets.MediaWidgetControl</a></li><li><a href="wp.mediaWidgets.MediaWidgetModel.html">wp.mediaWidgets.MediaWidgetModel</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_audio.html">wp.mediaWidgets.modelConstructors.media_audio</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_gallery.html">wp.mediaWidgets.modelConstructors.media_gallery</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_image.html">wp.mediaWidgets.modelConstructors.media_image</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_video.html">wp.mediaWidgets.modelConstructors.media_video</a></li><li><a href="wp.mediaWidgets.PersistentDisplaySettingsLibrary.html">wp.mediaWidgets.PersistentDisplaySettingsLibrary</a></li><li><a href="wp.mediaWidgets-Constructor.html">wp.mediaWidgets~Constructor</a></li><li><a href="wp.mediaWidgets-GalleryDetailsMediaFrame.html">wp.mediaWidgets~GalleryDetailsMediaFrame</a></li><li><a href="wp.NativeHandler.html">wp.NativeHandler</a></li><li><a href="wp.textWidgets.TextWidgetControl.html">wp.textWidgets.TextWidgetControl</a></li><li><a href="wp.utils.wordcounter.html">wp.utils.wordcounter</a></li><li><a href="wp.YouTubeHandler.html">wp.YouTubeHandler</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">Mixins<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="wp.media.controller.StateMachine.html">wp.media.controller.StateMachine</a></li><li><a href="wp.media.mixin.html">wp.media.mixin</a></li><li><a href="wp.media.selectionSync.html">wp.media.selectionSync</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="wp.media.controller.Region.html#event:activate">wp.media.controller.Region#event:activate</a></li><li><a href="wp.media.controller.Region.html#event:create">wp.media.controller.Region#event:create</a></li><li><a href="wp.media.controller.Region.html#event:deactivate">wp.media.controller.Region#event:deactivate</a></li><li><a href="wp.media.controller.Region.html#event:render">wp.media.controller.Region#event:render</a></li><li><a href="wp.media.view.Frame.html#event:%257Bmode%257D:deactivate">wp.media.view.Frame#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.AudioDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.AudioDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.EditAttachments.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.EditAttachments#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.ImageDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.ImageDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Manage.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Manage#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.MediaDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.MediaDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Post.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Post#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Select.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Select#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.VideoDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.VideoDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.controlConstructors-AudioDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.controlConstructors~AudioDetailsMediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.controlConstructors-VideoDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.controlConstructors~VideoDetailsMediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.MediaFrameSelect.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.MediaFrameSelect#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets-GalleryDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets~GalleryDetailsMediaFrame#event:{mode}:deactivate</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#$">$</a></li><li><a href="global.html#_attach">_attach</a></li><li><a href="global.html#_isReady">_isReady</a></li><li><a href="global.html#add">add</a></li><li><a href="global.html#ajaxPopulateWidgets">ajaxPopulateWidgets</a></li><li><a href="global.html#ajaxWidgets">ajaxWidgets</a></li><li><a href="global.html#all">all</a></li><li><a href="global.html#array_unique_noempty">array_unique_noempty</a></li><li><a href="global.html#clearFilters">clearFilters</a></li><li><a href="global.html#commentReply">commentReply</a></li><li><a href="global.html#detach">detach</a></li><li><a href="global.html#editPermalink">editPermalink</a></li><li><a href="global.html#filtersChecked">filtersChecked</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#get">get</a></li><li><a href="global.html#insert">insert</a></li><li><a href="global.html#media">media</a></li><li><a href="global.html#out">out</a></li><li><a href="global.html#over">over</a></li><li><a href="global.html#passwordStrength">passwordStrength</a></li><li><a href="global.html#prepare">prepare</a></li><li><a href="global.html#quickPressLoad">quickPressLoad</a></li><li><a href="global.html#ready">ready</a></li><li><a href="global.html#remove">remove</a></li><li><a href="global.html#render">render</a></li><li><a href="global.html#replace">replace</a></li><li><a href="global.html#search">search</a></li><li><a href="global.html#send_to_editor">send_to_editor</a></li><li><a href="global.html#set">set</a></li><li><a href="global.html#setCommentsList">setCommentsList</a></li><li><a href="global.html#tagBox">tagBox</a></li><li><a href="global.html#tb_position">tb_position</a></li><li><a href="global.html#theExtraList">theExtraList</a></li><li><a href="global.html#theList">theList</a></li><li><a href="global.html#unset">unset</a></li><li><a href="global.html#uploader">uploader</a></li><li><a href="global.html#WPRemoveThumbnail">WPRemoveThumbnail</a></li><li><a href="global.html#WPSetThumbnailHTML">WPSetThumbnailHTML</a></li><li><a href="global.html#WPSetThumbnailID">WPSetThumbnailID</a></li><li><a href="global.html#wptitlehint">wptitlehint</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-12">
+	
+		<div id="main">
+			
+
+		<h1 class="page-title">Source: _enqueues/wp/customize/base.js</h1>
+    
+<section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">/**
+ * @output wp-includes/js/customize-base.js
+ */
+
+/** @namespace wp */
+window.wp = window.wp || {};
+
+(function( exports, $ ){
+	var api = {}, ctor, inherits,
+		slice = Array.prototype.slice;
+
+	// Shared empty constructor function to aid in prototype-chain creation.
+	ctor = function() {};
+
+	/**
+	 * Helper function to correctly set up the prototype chain, for subclasses.
+	 * Similar to `goog.inherits`, but uses a hash of prototype properties and
+	 * class properties to be extended.
+	 *
+	 * @param  object parent      Parent class constructor to inherit from.
+	 * @param  object protoProps  Properties to apply to the prototype for use as class instance properties.
+	 * @param  object staticProps Properties to apply directly to the class constructor.
+	 * @return child              The subclassed constructor.
+	 */
+	inherits = function( parent, protoProps, staticProps ) {
+		var child;
+
+		/*
+		 * The constructor function for the new subclass is either defined by you
+		 * (the "constructor" property in your `extend` definition), or defaulted
+		 * by us to simply call `super()`.
+		 */
+		if ( protoProps &amp;&amp; protoProps.hasOwnProperty( 'constructor' ) ) {
+			child = protoProps.constructor;
+		} else {
+			child = function() {
+				/*
+				 * Storing the result `super()` before returning the value
+				 * prevents a bug in Opera where, if the constructor returns
+				 * a function, Opera will reject the return value in favor of
+				 * the original object. This causes all sorts of trouble.
+				 */
+				var result = parent.apply( this, arguments );
+				return result;
+			};
+		}
+
+		// Inherit class (static) properties from parent.
+		$.extend( child, parent );
+
+		// Set the prototype chain to inherit from `parent`,
+		// without calling `parent`'s constructor function.
+		ctor.prototype  = parent.prototype;
+		child.prototype = new ctor();
+
+		// Add prototype properties (instance properties) to the subclass,
+		// if supplied.
+		if ( protoProps ) {
+			$.extend( child.prototype, protoProps );
+		}
+
+		// Add static properties to the constructor function, if supplied.
+		if ( staticProps ) {
+			$.extend( child, staticProps );
+		}
+
+		// Correctly set child's `prototype.constructor`.
+		child.prototype.constructor = child;
+
+		// Set a convenience property in case the parent's prototype is needed later.
+		child.__super__ = parent.prototype;
+
+		return child;
+	};
+
+	/**
+	 * Base class for object inheritance.
+	 */
+	api.Class = function( applicator, argsArray, options ) {
+		var magic, args = arguments;
+
+		if ( applicator &amp;&amp; argsArray &amp;&amp; api.Class.applicator === applicator ) {
+			args = argsArray;
+			$.extend( this, options || {} );
+		}
+
+		magic = this;
+
+		/*
+		 * If the class has a method called "instance",
+		 * the return value from the class' constructor will be a function that
+		 * calls the "instance" method.
+		 *
+		 * It is also an object that has properties and methods inside it.
+		 */
+		if ( this.instance ) {
+			magic = function() {
+				return magic.instance.apply( magic, arguments );
+			};
+
+			$.extend( magic, this );
+		}
+
+		magic.initialize.apply( magic, args );
+		return magic;
+	};
+
+	/**
+	 * Creates a subclass of the class.
+	 *
+	 * @param  object protoProps  Properties to apply to the prototype.
+	 * @param  object staticProps Properties to apply directly to the class.
+	 * @return child              The subclass.
+	 */
+	api.Class.extend = function( protoProps, classProps ) {
+		var child = inherits( this, protoProps, classProps );
+		child.extend = this.extend;
+		return child;
+	};
+
+	api.Class.applicator = {};
+
+	/**
+	 * Initialize a class instance.
+	 *
+	 * Override this function in a subclass as needed.
+	 */
+	api.Class.prototype.initialize = function() {};
+
+	/*
+	 * Checks whether a given instance extended a constructor.
+	 *
+	 * The magic surrounding the instance parameter causes the instanceof
+	 * keyword to return inaccurate results; it defaults to the function's
+	 * prototype instead of the constructor chain. Hence this function.
+	 */
+	api.Class.prototype.extended = function( constructor ) {
+		var proto = this;
+
+		while ( typeof proto.constructor !== 'undefined' ) {
+			if ( proto.constructor === constructor ) {
+				return true;
+			}
+			if ( typeof proto.constructor.__super__ === 'undefined' ) {
+				return false;
+			}
+			proto = proto.constructor.__super__;
+		}
+		return false;
+	};
+
+	/**
+	 * An events manager object, offering the ability to bind to and trigger events.
+	 *
+	 * Used as a mixin.
+	 */
+	api.Events = {
+		trigger: function( id ) {
+			if ( this.topics &amp;&amp; this.topics[ id ] ) {
+				this.topics[ id ].fireWith( this, slice.call( arguments, 1 ) );
+			}
+			return this;
+		},
+
+		bind: function( id ) {
+			this.topics = this.topics || {};
+			this.topics[ id ] = this.topics[ id ] || $.Callbacks();
+			this.topics[ id ].add.apply( this.topics[ id ], slice.call( arguments, 1 ) );
+			return this;
+		},
+
+		unbind: function( id ) {
+			if ( this.topics &amp;&amp; this.topics[ id ] ) {
+				this.topics[ id ].remove.apply( this.topics[ id ], slice.call( arguments, 1 ) );
+			}
+			return this;
+		}
+	};
+
+	/**
+	 * Observable values that support two-way binding.
+	 *
+	 * @memberOf wp.customize
+	 * @alias wp.customize.Value
+	 *
+	 * @constructor
+	 */
+	api.Value = api.Class.extend(/** @lends wp.customize.Value.prototype */{
+		/**
+		 * @param {mixed}  initial The initial value.
+		 * @param {object} options
+		 */
+		initialize: function( initial, options ) {
+			this._value = initial; // @todo Potentially change this to a this.set() call.
+			this.callbacks = $.Callbacks();
+			this._dirty = false;
+
+			$.extend( this, options || {} );
+
+			this.set = $.proxy( this.set, this );
+		},
+
+		/*
+		 * Magic. Returns a function that will become the instance.
+		 * Set to null to prevent the instance from extending a function.
+		 */
+		instance: function() {
+			return arguments.length ? this.set.apply( this, arguments ) : this.get();
+		},
+
+		/**
+		 * Get the value.
+		 *
+		 * @return {mixed}
+		 */
+		get: function() {
+			return this._value;
+		},
+
+		/**
+		 * Set the value and trigger all bound callbacks.
+		 *
+		 * @param {object} to New value.
+		 */
+		set: function( to ) {
+			var from = this._value;
+
+			to = this._setter.apply( this, arguments );
+			to = this.validate( to );
+
+			// Bail if the sanitized value is null or unchanged.
+			if ( null === to || _.isEqual( from, to ) ) {
+				return this;
+			}
+
+			this._value = to;
+			this._dirty = true;
+
+			this.callbacks.fireWith( this, [ to, from ] );
+
+			return this;
+		},
+
+		_setter: function( to ) {
+			return to;
+		},
+
+		setter: function( callback ) {
+			var from = this.get();
+			this._setter = callback;
+			// Temporarily clear value so setter can decide if it's valid.
+			this._value = null;
+			this.set( from );
+			return this;
+		},
+
+		resetSetter: function() {
+			this._setter = this.constructor.prototype._setter;
+			this.set( this.get() );
+			return this;
+		},
+
+		validate: function( value ) {
+			return value;
+		},
+
+		/**
+		 * Bind a function to be invoked whenever the value changes.
+		 *
+		 * @param {...Function} A function, or multiple functions, to add to the callback stack.
+		 */
+		bind: function() {
+			this.callbacks.add.apply( this.callbacks, arguments );
+			return this;
+		},
+
+		/**
+		 * Unbind a previously bound function.
+		 *
+		 * @param {...Function} A function, or multiple functions, to remove from the callback stack.
+		 */
+		unbind: function() {
+			this.callbacks.remove.apply( this.callbacks, arguments );
+			return this;
+		},
+
+		link: function() { // values*
+			var set = this.set;
+			$.each( arguments, function() {
+				this.bind( set );
+			});
+			return this;
+		},
+
+		unlink: function() { // values*
+			var set = this.set;
+			$.each( arguments, function() {
+				this.unbind( set );
+			});
+			return this;
+		},
+
+		sync: function() { // values*
+			var that = this;
+			$.each( arguments, function() {
+				that.link( this );
+				this.link( that );
+			});
+			return this;
+		},
+
+		unsync: function() { // values*
+			var that = this;
+			$.each( arguments, function() {
+				that.unlink( this );
+				this.unlink( that );
+			});
+			return this;
+		}
+	});
+
+	/**
+	 * A collection of observable values.
+	 *
+	 * @memberOf wp.customize
+	 * @alias wp.customize.Values
+	 *
+	 * @constructor
+	 * @augments wp.customize.Class
+	 * @mixes wp.customize.Events
+	 */
+	api.Values = api.Class.extend(/** @lends wp.customize.Values.prototype */{
+
+		/**
+		 * The default constructor for items of the collection.
+		 *
+		 * @type {object}
+		 */
+		defaultConstructor: api.Value,
+
+		initialize: function( options ) {
+			$.extend( this, options || {} );
+
+			this._value = {};
+			this._deferreds = {};
+		},
+
+		/**
+		 * Get the instance of an item from the collection if only ID is specified.
+		 *
+		 * If more than one argument is supplied, all are expected to be IDs and
+		 * the last to be a function callback that will be invoked when the requested
+		 * items are available.
+		 *
+		 * @see {api.Values.when}
+		 *
+		 * @param  {string}   id ID of the item.
+		 * @param  {...}         Zero or more IDs of items to wait for and a callback
+		 *                       function to invoke when they're available. Optional.
+		 * @return {mixed}    The item instance if only one ID was supplied.
+		 *                    A Deferred Promise object if a callback function is supplied.
+		 */
+		instance: function( id ) {
+			if ( arguments.length === 1 ) {
+				return this.value( id );
+			}
+
+			return this.when.apply( this, arguments );
+		},
+
+		/**
+		 * Get the instance of an item.
+		 *
+		 * @param  {string} id The ID of the item.
+		 * @return {[type]}    [description]
+		 */
+		value: function( id ) {
+			return this._value[ id ];
+		},
+
+		/**
+		 * Whether the collection has an item with the given ID.
+		 *
+		 * @param  {string}  id The ID of the item to look for.
+		 * @return {Boolean}
+		 */
+		has: function( id ) {
+			return typeof this._value[ id ] !== 'undefined';
+		},
+
+		/**
+		 * Add an item to the collection.
+		 *
+		 * @param {string|wp.customize.Class} item - The item instance to add, or the ID for the instance to add. When an ID string is supplied, then itemObject must be provided.
+		 * @param {wp.customize.Class}        [itemObject] - The item instance when the first argument is a ID string.
+		 * @return {wp.customize.Class} The new item's instance, or an existing instance if already added.
+		 */
+		add: function( item, itemObject ) {
+			var collection = this, id, instance;
+			if ( 'string' === typeof item ) {
+				id = item;
+				instance = itemObject;
+			} else {
+				if ( 'string' !== typeof item.id ) {
+					throw new Error( 'Unknown key' );
+				}
+				id = item.id;
+				instance = item;
+			}
+
+			if ( collection.has( id ) ) {
+				return collection.value( id );
+			}
+
+			collection._value[ id ] = instance;
+			instance.parent = collection;
+
+			// Propagate a 'change' event on an item up to the collection.
+			if ( instance.extended( api.Value ) ) {
+				instance.bind( collection._change );
+			}
+
+			collection.trigger( 'add', instance );
+
+			// If a deferred object exists for this item,
+			// resolve it.
+			if ( collection._deferreds[ id ] ) {
+				collection._deferreds[ id ].resolve();
+			}
+
+			return collection._value[ id ];
+		},
+
+		/**
+		 * Create a new item of the collection using the collection's default constructor
+		 * and store it in the collection.
+		 *
+		 * @param  {string} id    The ID of the item.
+		 * @param  {mixed}  value Any extra arguments are passed into the item's initialize method.
+		 * @return {mixed}  The new item's instance.
+		 */
+		create: function( id ) {
+			return this.add( id, new this.defaultConstructor( api.Class.applicator, slice.call( arguments, 1 ) ) );
+		},
+
+		/**
+		 * Iterate over all items in the collection invoking the provided callback.
+		 *
+		 * @param  {Function} callback Function to invoke.
+		 * @param  {object}   context  Object context to invoke the function with. Optional.
+		 */
+		each: function( callback, context ) {
+			context = typeof context === 'undefined' ? this : context;
+
+			$.each( this._value, function( key, obj ) {
+				callback.call( context, obj, key );
+			});
+		},
+
+		/**
+		 * Remove an item from the collection.
+		 *
+		 * @param  {string} id The ID of the item to remove.
+		 */
+		remove: function( id ) {
+			var value = this.value( id );
+
+			if ( value ) {
+
+				// Trigger event right before the element is removed from the collection.
+				this.trigger( 'remove', value );
+
+				if ( value.extended( api.Value ) ) {
+					value.unbind( this._change );
+				}
+				delete value.parent;
+			}
+
+			delete this._value[ id ];
+			delete this._deferreds[ id ];
+
+			// Trigger removed event after the item has been eliminated from the collection.
+			if ( value ) {
+				this.trigger( 'removed', value );
+			}
+		},
+
+		/**
+		 * Runs a callback once all requested values exist.
+		 *
+		 * when( ids*, [callback] );
+		 *
+		 * For example:
+		 *     when( id1, id2, id3, function( value1, value2, value3 ) {} );
+		 *
+		 * @return $.Deferred.promise();
+		 */
+		when: function() {
+			var self = this,
+				ids  = slice.call( arguments ),
+				dfd  = $.Deferred();
+
+			// If the last argument is a callback, bind it to .done().
+			if ( $.isFunction( ids[ ids.length - 1 ] ) ) {
+				dfd.done( ids.pop() );
+			}
+
+			/*
+			 * Create a stack of deferred objects for each item that is not
+			 * yet available, and invoke the supplied callback when they are.
+			 */
+			$.when.apply( $, $.map( ids, function( id ) {
+				if ( self.has( id ) ) {
+					return;
+				}
+
+				/*
+				 * The requested item is not available yet, create a deferred
+				 * object to resolve when it becomes available.
+				 */
+				return self._deferreds[ id ] = self._deferreds[ id ] || $.Deferred();
+			})).done( function() {
+				var values = $.map( ids, function( id ) {
+						return self( id );
+					});
+
+				// If a value is missing, we've used at least one expired deferred.
+				// Call Values.when again to generate a new deferred.
+				if ( values.length !== ids.length ) {
+					// ids.push( callback );
+					self.when.apply( self, ids ).done( function() {
+						dfd.resolveWith( self, values );
+					});
+					return;
+				}
+
+				dfd.resolveWith( self, values );
+			});
+
+			return dfd.promise();
+		},
+
+		/**
+		 * A helper function to propagate a 'change' event from an item
+		 * to the collection itself.
+		 */
+		_change: function() {
+			this.parent.trigger( 'change', this );
+		}
+	});
+
+	// Create a global events bus on the Customizer.
+	$.extend( api.Values.prototype, api.Events );
+
+
+	/**
+	 * Cast a string to a jQuery collection if it isn't already.
+	 *
+	 * @param {string|jQuery collection} element
+	 */
+	api.ensure = function( element ) {
+		return typeof element === 'string' ? $( element ) : element;
+	};
+
+	/**
+	 * An observable value that syncs with an element.
+	 *
+	 * Handles inputs, selects, and textareas by default.
+	 *
+	 * @memberOf wp.customize
+	 * @alias wp.customize.Element
+	 *
+	 * @constructor
+	 * @augments wp.customize.Value
+	 * @augments wp.customize.Class
+	 */
+	api.Element = api.Value.extend(/** @lends wp.customize.Element */{
+		initialize: function( element, options ) {
+			var self = this,
+				synchronizer = api.Element.synchronizer.html,
+				type, update, refresh;
+
+			this.element = api.ensure( element );
+			this.events = '';
+
+			if ( this.element.is( 'input, select, textarea' ) ) {
+				type = this.element.prop( 'type' );
+				this.events += ' change input';
+				synchronizer = api.Element.synchronizer.val;
+
+				if ( this.element.is( 'input' ) &amp;&amp; api.Element.synchronizer[ type ] ) {
+					synchronizer = api.Element.synchronizer[ type ];
+				}
+			}
+
+			api.Value.prototype.initialize.call( this, null, $.extend( options || {}, synchronizer ) );
+			this._value = this.get();
+
+			update = this.update;
+			refresh = this.refresh;
+
+			this.update = function( to ) {
+				if ( to !== refresh.call( self ) ) {
+					update.apply( this, arguments );
+				}
+			};
+			this.refresh = function() {
+				self.set( refresh.call( self ) );
+			};
+
+			this.bind( this.update );
+			this.element.bind( this.events, this.refresh );
+		},
+
+		find: function( selector ) {
+			return $( selector, this.element );
+		},
+
+		refresh: function() {},
+
+		update: function() {}
+	});
+
+	api.Element.synchronizer = {};
+
+	$.each( [ 'html', 'val' ], function( index, method ) {
+		api.Element.synchronizer[ method ] = {
+			update: function( to ) {
+				this.element[ method ]( to );
+			},
+			refresh: function() {
+				return this.element[ method ]();
+			}
+		};
+	});
+
+	api.Element.synchronizer.checkbox = {
+		update: function( to ) {
+			this.element.prop( 'checked', to );
+		},
+		refresh: function() {
+			return this.element.prop( 'checked' );
+		}
+	};
+
+	api.Element.synchronizer.radio = {
+		update: function( to ) {
+			this.element.filter( function() {
+				return this.value === to;
+			}).prop( 'checked', true );
+		},
+		refresh: function() {
+			return this.element.filter( ':checked' ).val();
+		}
+	};
+
+	$.support.postMessage = !! window.postMessage;
+
+	/**
+	 * A communicator for sending data from one window to another over postMessage.
+	 *
+	 * @memberOf wp.customize
+	 * @alias wp.customize.Messenger
+	 *
+	 * @constructor
+	 * @augments wp.customize.Class
+	 * @mixes wp.customize.Events
+	 */
+	api.Messenger = api.Class.extend(/** @lends wp.customize.Messenger.prototype */{
+		/**
+		 * Create a new Value.
+		 *
+		 * @param  {string} key     Unique identifier.
+		 * @param  {mixed}  initial Initial value.
+		 * @param  {mixed}  options Options hash. Optional.
+		 * @return {Value}          Class instance of the Value.
+		 */
+		add: function( key, initial, options ) {
+			return this[ key ] = new api.Value( initial, options );
+		},
+
+		/**
+		 * Initialize Messenger.
+		 *
+		 * @param  {object} params - Parameters to configure the messenger.
+		 *         {string} params.url - The URL to communicate with.
+		 *         {window} params.targetWindow - The window instance to communicate with. Default window.parent.
+		 *         {string} params.channel - If provided, will send the channel with each message and only accept messages a matching channel.
+		 * @param  {object} options - Extend any instance parameter or method with this object.
+		 */
+		initialize: function( params, options ) {
+			// Target the parent frame by default, but only if a parent frame exists.
+			var defaultTarget = window.parent === window ? null : window.parent;
+
+			$.extend( this, options || {} );
+
+			this.add( 'channel', params.channel );
+			this.add( 'url', params.url || '' );
+			this.add( 'origin', this.url() ).link( this.url ).setter( function( to ) {
+				var urlParser = document.createElement( 'a' );
+				urlParser.href = to;
+				// Port stripping needed by IE since it adds to host but not to event.origin.
+				return urlParser.protocol + '//' + urlParser.host.replace( /:(80|443)$/, '' );
+			});
+
+			// First add with no value.
+			this.add( 'targetWindow', null );
+			// This avoids SecurityErrors when setting a window object in x-origin iframe'd scenarios.
+			this.targetWindow.set = function( to ) {
+				var from = this._value;
+
+				to = this._setter.apply( this, arguments );
+				to = this.validate( to );
+
+				if ( null === to || from === to ) {
+					return this;
+				}
+
+				this._value = to;
+				this._dirty = true;
+
+				this.callbacks.fireWith( this, [ to, from ] );
+
+				return this;
+			};
+			// Now set it.
+			this.targetWindow( params.targetWindow || defaultTarget );
+
+
+			/*
+			 * Since we want jQuery to treat the receive function as unique
+			 * to this instance, we give the function a new guid.
+			 *
+			 * This will prevent every Messenger's receive function from being
+			 * unbound when calling $.off( 'message', this.receive );
+			 */
+			this.receive = $.proxy( this.receive, this );
+			this.receive.guid = $.guid++;
+
+			$( window ).on( 'message', this.receive );
+		},
+
+		destroy: function() {
+			$( window ).off( 'message', this.receive );
+		},
+
+		/**
+		 * Receive data from the other window.
+		 *
+		 * @param  {jQuery.Event} event Event with embedded data.
+		 */
+		receive: function( event ) {
+			var message;
+
+			event = event.originalEvent;
+
+			if ( ! this.targetWindow || ! this.targetWindow() ) {
+				return;
+			}
+
+			// Check to make sure the origin is valid.
+			if ( this.origin() &amp;&amp; event.origin !== this.origin() ) {
+				return;
+			}
+
+			// Ensure we have a string that's JSON.parse-able.
+			if ( typeof event.data !== 'string' || event.data[0] !== '{' ) {
+				return;
+			}
+
+			message = JSON.parse( event.data );
+
+			// Check required message properties.
+			if ( ! message || ! message.id || typeof message.data === 'undefined' ) {
+				return;
+			}
+
+			// Check if channel names match.
+			if ( ( message.channel || this.channel() ) &amp;&amp; this.channel() !== message.channel ) {
+				return;
+			}
+
+			this.trigger( message.id, message.data );
+		},
+
+		/**
+		 * Send data to the other window.
+		 *
+		 * @param  {string} id   The event name.
+		 * @param  {object} data Data.
+		 */
+		send: function( id, data ) {
+			var message;
+
+			data = typeof data === 'undefined' ? null : data;
+
+			if ( ! this.url() || ! this.targetWindow() ) {
+				return;
+			}
+
+			message = { id: id, data: data };
+			if ( this.channel() ) {
+				message.channel = this.channel();
+			}
+
+			this.targetWindow().postMessage( JSON.stringify( message ), this.origin() );
+		}
+	});
+
+	// Add the Events mixin to api.Messenger.
+	$.extend( api.Messenger.prototype, api.Events );
+
+	/**
+	 * Notification.
+	 *
+	 * @class
+	 * @augments wp.customize.Class
+	 * @since 4.6.0
+	 *
+	 * @memberOf wp.customize
+	 * @alias wp.customize.Notification
+	 *
+	 * @param {string}  code - The error code.
+	 * @param {object}  params - Params.
+	 * @param {string}  params.message=null - The error message.
+	 * @param {string}  [params.type=error] - The notification type.
+	 * @param {boolean} [params.fromServer=false] - Whether the notification was server-sent.
+	 * @param {string}  [params.setting=null] - The setting ID that the notification is related to.
+	 * @param {*}       [params.data=null] - Any additional data.
+	 */
+	api.Notification = api.Class.extend(/** @lends wp.customize.Notification.prototype */{
+
+		/**
+		 * Template function for rendering the notification.
+		 *
+		 * This will be populated with template option or else it will be populated with template from the ID.
+		 *
+		 * @since 4.9.0
+		 * @var {Function}
+		 */
+		template: null,
+
+		/**
+		 * ID for the template to render the notification.
+		 *
+		 * @since 4.9.0
+		 * @var {string}
+		 */
+		templateId: 'customize-notification',
+
+		/**
+		 * Additional class names to add to the notification container.
+		 *
+		 * @since 4.9.0
+		 * @var {string}
+		 */
+		containerClasses: '',
+
+		/**
+		 * Initialize notification.
+		 *
+		 * @since 4.9.0
+		 *
+		 * @param {string}   code - Notification code.
+		 * @param {object}   params - Notification parameters.
+		 * @param {string}   params.message - Message.
+		 * @param {string}   [params.type=error] - Type.
+		 * @param {string}   [params.setting] - Related setting ID.
+		 * @param {Function} [params.template] - Function for rendering template. If not provided, this will come from templateId.
+		 * @param {string}   [params.templateId] - ID for template to render the notification.
+		 * @param {string}   [params.containerClasses] - Additional class names to add to the notification container.
+		 * @param {boolean}  [params.dismissible] - Whether the notification can be dismissed.
+		 */
+		initialize: function( code, params ) {
+			var _params;
+			this.code = code;
+			_params = _.extend(
+				{
+					message: null,
+					type: 'error',
+					fromServer: false,
+					data: null,
+					setting: null,
+					template: null,
+					dismissible: false,
+					containerClasses: ''
+				},
+				params
+			);
+			delete _params.code;
+			_.extend( this, _params );
+		},
+
+		/**
+		 * Render the notification.
+		 *
+		 * @since 4.9.0
+		 *
+		 * @return {jQuery} Notification container element.
+		 */
+		render: function() {
+			var notification = this, container, data;
+			if ( ! notification.template ) {
+				notification.template = wp.template( notification.templateId );
+			}
+			data = _.extend( {}, notification, {
+				alt: notification.parent &amp;&amp; notification.parent.alt
+			} );
+			container = $( notification.template( data ) );
+
+			if ( notification.dismissible ) {
+				container.find( '.notice-dismiss' ).on( 'click keydown', function( event ) {
+					if ( 'keydown' === event.type &amp;&amp; 13 !== event.which ) {
+						return;
+					}
+
+					if ( notification.parent ) {
+						notification.parent.remove( notification.code );
+					} else {
+						container.remove();
+					}
+				});
+			}
+
+			return container;
+		}
+	});
+
+	// The main API object is also a collection of all customizer settings.
+	api = $.extend( new api.Values(), api );
+
+	/**
+	 * Get all customize settings.
+	 *
+	 * @alias wp.customize.get
+	 *
+	 * @return {object}
+	 */
+	api.get = function() {
+		var result = {};
+
+		this.each( function( obj, key ) {
+			result[ key ] = obj.get();
+		});
+
+		return result;
+	};
+
+	/**
+	 * Utility function namespace
+	 *
+	 * @namespace wp.customize.utils
+	 */
+	api.utils = {};
+
+	/**
+	 * Parse query string.
+	 *
+	 * @since 4.7.0
+	 * @access public
+	 *
+	 * @alias wp.customize.utils.parseQueryString
+	 *
+	 * @param {string} queryString Query string.
+	 * @return {object} Parsed query string.
+	 */
+	api.utils.parseQueryString = function parseQueryString( queryString ) {
+		var queryParams = {};
+		_.each( queryString.split( '&amp;' ), function( pair ) {
+			var parts, key, value;
+			parts = pair.split( '=', 2 );
+			if ( ! parts[0] ) {
+				return;
+			}
+			key = decodeURIComponent( parts[0].replace( /\+/g, ' ' ) );
+			key = key.replace( / /g, '_' ); // What PHP does.
+			if ( _.isUndefined( parts[1] ) ) {
+				value = null;
+			} else {
+				value = decodeURIComponent( parts[1].replace( /\+/g, ' ' ) );
+			}
+			queryParams[ key ] = value;
+		} );
+		return queryParams;
+	};
+
+	/**
+	 * Expose the API publicly on window.wp.customize
+	 *
+	 * @namespace wp.customize
+	 */
+	exports.customize = api;
+})( wp, jQuery );
+</pre>
+    </article>
+</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a>
+	
+		on 2020-06-17T11:56:24+00:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

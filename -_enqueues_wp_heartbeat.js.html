@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Documentation Source: _enqueues/wp/heartbeat.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.united.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Documentation</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="addComment.html">addComment</a></li><li><a href="commentsBox.html">commentsBox</a></li><li><a href="findPosts.html">findPosts</a></li><li><a href="imageEdit.html">imageEdit</a></li><li><a href="inlineEditPost.html">inlineEditPost</a></li><li><a href="inlineEditTax.html">inlineEditTax</a></li><li><a href="postboxes.html">postboxes</a></li><li><a href="switchEditors.html">switchEditors</a></li><li><a href="wp.html">wp</a></li><li><a href="wp.a11y.html">wp.a11y</a></li><li><a href="wp.api.html">wp.api</a></li><li><a href="wp.api.collections.html">wp.api.collections</a></li><li><a href="wp.api.models.html">wp.api.models</a></li><li><a href="wp.api.utils.html">wp.api.utils</a></li><li><a href="wp.api.views.html">wp.api.views</a></li><li><a href="wp.Backbone.html">wp.Backbone</a></li><li><a href="wp.codeEditor.html">wp.codeEditor</a></li><li><a href="wp.communityEvents.html">wp.communityEvents</a></li><li><a href="wp.customHtmlWidget.html">wp.customHtmlWidget</a></li><li><a href="wp.customize.html">wp.customize</a></li><li><a href="wp.customize.HeaderTool.html">wp.customize.HeaderTool</a></li><li><a href="wp.customize.Menus.html">wp.customize.Menus</a></li><li><a href="wp.customize.navMenusPreview.html">wp.customize.navMenusPreview</a></li><li><a href="wp.customize.selectiveRefresh.html">wp.customize.selectiveRefresh</a></li><li><a href="wp.customize.utils.html">wp.customize.utils</a></li><li><a href="wp.customize.Widgets.html">wp.customize.Widgets</a></li><li><a href="wp.customize.widgetsPreview.html">wp.customize.widgetsPreview</a></li><li><a href="wp.emoji.html">wp.emoji</a></li><li><a href="wp.heartbeat.html">wp.heartbeat</a></li><li><a href="wp.media.html">wp.media</a></li><li><a href="wp.media.audio.html">wp.media.audio</a></li><li><a href="wp.media.controller.html">wp.media.controller</a></li><li><a href="wp.media.editor.html">wp.media.editor</a></li><li><a href="wp.media.editor.send.html">wp.media.editor.send</a></li><li><a href="wp.media.featuredImage.html">wp.media.featuredImage</a></li><li><a href="wp.media.frames.html">wp.media.frames</a></li><li><a href="wp.media.model.html">wp.media.model</a></li><li><a href="wp.media.model.Attachments.filters.html">wp.media.model.Attachments.filters</a></li><li><a href="wp.media.string.html">wp.media.string</a></li><li><a href="wp.media.video.html">wp.media.video</a></li><li><a href="wp.media.view.html">wp.media.view</a></li><li><a href="wp.mediaWidgets.html">wp.mediaWidgets</a></li><li><a href="wp.passwordStrength.html">wp.passwordStrength</a></li><li><a href="wp.textWidgets.html">wp.textWidgets</a></li><li><a href="wp.updates.html">wp.updates</a></li><li><a href="wp.utils.html">wp.utils</a></li><li><a href="wpNavMenu.html">wpNavMenu</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="-_.html"></a></li><li><a href="$.widget.wp.pointer.html">$.widget.wp.pointer</a></li><li><a href="$.widget.wp.wpColorPicker.html">$.widget.wp.wpColorPicker</a></li><li><a href="Heading.html">Heading</a></li><li><a href="wp.Backbone.Subviews.html">wp.Backbone.Subviews</a></li><li><a href="wp.BaseHandler.html">wp.BaseHandler</a></li><li><a href="wp.CustomHeader.html">wp.CustomHeader</a></li><li><a href="wp.customHtmlWidgets.CustomHtmlWidgetControl.html">wp.customHtmlWidgets.CustomHtmlWidgetControl</a></li><li><a href="wp.customize.BackgroundControl.html">wp.customize.BackgroundControl</a></li><li><a href="wp.customize.BackgroundPositionControl.html">wp.customize.BackgroundPositionControl</a></li><li><a href="wp.customize.CodeEditorControl.html">wp.customize.CodeEditorControl</a></li><li><a href="wp.customize.ColorControl.html">wp.customize.ColorControl</a></li><li><a href="wp.customize.Control.html">wp.customize.Control</a></li><li><a href="wp.customize.CroppedImageControl.html">wp.customize.CroppedImageControl</a></li><li><a href="wp.customize.DateTimeControl.html">wp.customize.DateTimeControl</a></li><li><a href="wp.customize.Element.html">wp.customize.Element</a></li><li><a href="wp.customize.HeaderControl.html">wp.customize.HeaderControl</a></li><li><a href="wp.customize.HeaderTool.ChoiceList.html">wp.customize.HeaderTool.ChoiceList</a></li><li><a href="wp.customize.HeaderTool.ChoiceListView.html">wp.customize.HeaderTool.ChoiceListView</a></li><li><a href="wp.customize.HeaderTool.ChoiceView.html">wp.customize.HeaderTool.ChoiceView</a></li><li><a href="wp.customize.HeaderTool.CombinedList.html">wp.customize.HeaderTool.CombinedList</a></li><li><a href="wp.customize.HeaderTool.CurrentView.html">wp.customize.HeaderTool.CurrentView</a></li><li><a href="wp.customize.HeaderTool.DefaultsList.html">wp.customize.HeaderTool.DefaultsList</a></li><li><a href="wp.customize.HeaderTool.ImageModel.html">wp.customize.HeaderTool.ImageModel</a></li><li><a href="wp.customize.ImageControl.html">wp.customize.ImageControl</a></li><li><a href="wp.customize.Loader.html">wp.customize.Loader</a></li><li><a href="wp.customize.MediaControl.html">wp.customize.MediaControl</a></li><li><a href="wp.customize.Menus.AvailableItemCollection.html">wp.customize.Menus.AvailableItemCollection</a></li><li><a href="wp.customize.Menus.AvailableItemModel.html">wp.customize.Menus.AvailableItemModel</a></li><li><a href="wp.customize.Menus.AvailableMenuItemsPanelView.html">wp.customize.Menus.AvailableMenuItemsPanelView</a></li><li><a href="wp.customize.Menus.MenuAutoAddControl.html">wp.customize.Menus.MenuAutoAddControl</a></li><li><a href="wp.customize.Menus.MenuControl.html">wp.customize.Menus.MenuControl</a></li><li><a href="wp.customize.Menus.MenuItemControl.html">wp.customize.Menus.MenuItemControl</a></li><li><a href="wp.customize.Menus.MenuLocationControl.html">wp.customize.Menus.MenuLocationControl</a></li><li><a href="wp.customize.Menus.MenuLocationsControl.html">wp.customize.Menus.MenuLocationsControl</a></li><li><a href="wp.customize.Menus.MenuNameControl.html">wp.customize.Menus.MenuNameControl</a></li><li><a href="wp.customize.Menus.MenuSection.html">wp.customize.Menus.MenuSection</a></li><li><a href="wp.customize.Menus.MenusPanel.html">wp.customize.Menus.MenusPanel</a></li><li><a href="wp.customize.Menus.NewMenuSection.html">wp.customize.Menus.NewMenuSection</a></li><li><a href="wp.customize.Messenger.html">wp.customize.Messenger</a></li><li><a href="wp.customize.navMenusPreview.NavMenuInstancePartial.html">wp.customize.navMenusPreview.NavMenuInstancePartial</a></li><li><a href="wp.customize.Notification.html">wp.customize.Notification</a></li><li><a href="wp.customize.Notifications.html">wp.customize.Notifications</a></li><li><a href="wp.customize.OuterSection.html">wp.customize.OuterSection</a></li><li><a href="wp.customize.OverlayNotification.html">wp.customize.OverlayNotification</a></li><li><a href="wp.customize.Panel.html">wp.customize.Panel</a></li><li><a href="wp.customize.Preview.html">wp.customize.Preview</a></li><li><a href="wp.customize.Previewer.html">wp.customize.Previewer</a></li><li><a href="wp.customize.PreviewFrame.html">wp.customize.PreviewFrame</a></li><li><a href="wp.customize.PreviewLinkControl.html">wp.customize.PreviewLinkControl</a></li><li><a href="wp.customize.Section.html">wp.customize.Section</a></li><li><a href="wp.customize.selectiveRefresh.Partial.html">wp.customize.selectiveRefresh.Partial</a></li><li><a href="wp.customize.selectiveRefresh.Placement.html">wp.customize.selectiveRefresh.Placement</a></li><li><a href="wp.customize.Setting.html">wp.customize.Setting</a></li><li><a href="wp.customize.SiteIconControl.html">wp.customize.SiteIconControl</a></li><li><a href="wp.customize.ThemeControl.html">wp.customize.ThemeControl</a></li><li><a href="wp.customize.ThemesPanel.html">wp.customize.ThemesPanel</a></li><li><a href="wp.customize.ThemesSection.html">wp.customize.ThemesSection</a></li><li><a href="wp.customize.UploadControl.html">wp.customize.UploadControl</a></li><li><a href="wp.customize.Value.html">wp.customize.Value</a></li><li><a href="wp.customize.Values.html">wp.customize.Values</a></li><li><a href="wp.customize.Widgets.AvailableWidgetsPanelView.html">wp.customize.Widgets.AvailableWidgetsPanelView</a></li><li><a href="wp.customize.Widgets.SidebarCollection.html">wp.customize.Widgets.SidebarCollection</a></li><li><a href="wp.customize.Widgets.SidebarControl.html">wp.customize.Widgets.SidebarControl</a></li><li><a href="wp.customize.Widgets.SidebarModel.html">wp.customize.Widgets.SidebarModel</a></li><li><a href="wp.customize.Widgets.SidebarSection.html">wp.customize.Widgets.SidebarSection</a></li><li><a href="wp.customize.Widgets.WidgetCollection.html">wp.customize.Widgets.WidgetCollection</a></li><li><a href="wp.customize.Widgets.WidgetControl.html">wp.customize.Widgets.WidgetControl</a></li><li><a href="wp.customize.Widgets.WidgetModel.html">wp.customize.Widgets.WidgetModel</a></li><li><a href="wp.customize.Widgets.WidgetsPanel.html">wp.customize.Widgets.WidgetsPanel</a></li><li><a href="wp.customize.widgetsPreview.SidebarPartial.html">wp.customize.widgetsPreview.SidebarPartial</a></li><li><a href="wp.customize.widgetsPreview.WidgetPartial.html">wp.customize.widgetsPreview.WidgetPartial</a></li><li><a href="wp.customize-Container.html">wp.customize~Container</a></li><li><a href="wp.customize-LockedNotification.html">wp.customize~LockedNotification</a></li><li><a href="wp.media.collection.html">wp.media.collection</a></li><li><a href="wp.media.controller.AudioDetails.html">wp.media.controller.AudioDetails</a></li><li><a href="wp.media.controller.CollectionAdd.html">wp.media.controller.CollectionAdd</a></li><li><a href="wp.media.controller.CollectionEdit.html">wp.media.controller.CollectionEdit</a></li><li><a href="wp.media.controller.Cropper.html">wp.media.controller.Cropper</a></li><li><a href="wp.media.controller.CustomizeImageCropper.html">wp.media.controller.CustomizeImageCropper</a></li><li><a href="wp.media.controller.EditAttachmentMetadata.html">wp.media.controller.EditAttachmentMetadata</a></li><li><a href="wp.media.controller.EditImage.html">wp.media.controller.EditImage</a></li><li><a href="wp.media.controller.Embed.html">wp.media.controller.Embed</a></li><li><a href="wp.media.controller.FeaturedImage.html">wp.media.controller.FeaturedImage</a></li><li><a href="wp.media.controller.GalleryAdd.html">wp.media.controller.GalleryAdd</a></li><li><a href="wp.media.controller.GalleryEdit.html">wp.media.controller.GalleryEdit</a></li><li><a href="wp.media.controller.ImageDetails.html">wp.media.controller.ImageDetails</a></li><li><a href="wp.media.controller.Library.html">wp.media.controller.Library</a></li><li><a href="wp.media.controller.Region.html">wp.media.controller.Region</a></li><li><a href="wp.media.controller.ReplaceImage.html">wp.media.controller.ReplaceImage</a></li><li><a href="wp.media.controller.SiteIconCropper.html">wp.media.controller.SiteIconCropper</a></li><li><a href="wp.media.controller.State.html">wp.media.controller.State</a></li><li><a href="wp.media.model.Attachment.html">wp.media.model.Attachment</a></li><li><a href="wp.media.model.Attachments.html">wp.media.model.Attachments</a></li><li><a href="wp.media.model.PostImage.html">wp.media.model.PostImage</a></li><li><a href="wp.media.model.PostMedia.html">wp.media.model.PostMedia</a></li><li><a href="wp.media.model.Query.html">wp.media.model.Query</a></li><li><a href="wp.media.model.Selection.html">wp.media.model.Selection</a></li><li><a href="wp.media.View_.html">wp.media.View</a></li><li><a href="wp.media.view.Attachment.html">wp.media.view.Attachment</a></li><li><a href="wp.media.view.Attachment.Details.html">wp.media.view.Attachment.Details</a></li><li><a href="wp.media.view.Attachment.Details.TwoColumn.html">wp.media.view.Attachment.Details.TwoColumn</a></li><li><a href="wp.media.view.Attachment.EditLibrary.html">wp.media.view.Attachment.EditLibrary</a></li><li><a href="wp.media.view.Attachment.EditSelection.html">wp.media.view.Attachment.EditSelection</a></li><li><a href="wp.media.view.Attachment.Library.html">wp.media.view.Attachment.Library</a></li><li><a href="wp.media.view.Attachment.Selection.html">wp.media.view.Attachment.Selection</a></li><li><a href="wp.media.view.AttachmentCompat.html">wp.media.view.AttachmentCompat</a></li><li><a href="wp.media.view.AttachmentFilters.html">wp.media.view.AttachmentFilters</a></li><li><a href="wp.media.view.AttachmentFilters.All.html">wp.media.view.AttachmentFilters.All</a></li><li><a href="wp.media.view.AttachmentFilters.DateFilter.html">wp.media.view.AttachmentFilters.DateFilter</a></li><li><a href="wp.media.view.AttachmentFilters.Uploaded.html">wp.media.view.AttachmentFilters.Uploaded</a></li><li><a href="wp.media.view.Attachments.html">wp.media.view.Attachments</a></li><li><a href="wp.media.view.Attachments.Selection.html">wp.media.view.Attachments.Selection</a></li><li><a href="wp.media.view.AttachmentsBrowser.html">wp.media.view.AttachmentsBrowser</a></li><li><a href="wp.media.view.AudioDetails.html">wp.media.view.AudioDetails</a></li><li><a href="wp.media.view.Button.html">wp.media.view.Button</a></li><li><a href="wp.media.view.ButtonGroup.html">wp.media.view.ButtonGroup</a></li><li><a href="wp.media.view.Cropper.html">wp.media.view.Cropper</a></li><li><a href="wp.media.view.DeleteSelected.html">wp.media.view.DeleteSelected</a></li><li><a href="wp.media.view.DeleteSelectedPermanently.html">wp.media.view.DeleteSelectedPermanently</a></li><li><a href="wp.media.view.EditImage.html">wp.media.view.EditImage</a></li><li><a href="wp.media.view.EditImage.Details.html">wp.media.view.EditImage.Details</a></li><li><a href="wp.media.view.EditorUploader.html">wp.media.view.EditorUploader</a></li><li><a href="wp.media.view.Embed.html">wp.media.view.Embed</a></li><li><a href="wp.media.view.EmbedImage.html">wp.media.view.EmbedImage</a></li><li><a href="wp.media.view.EmbedLink.html">wp.media.view.EmbedLink</a></li><li><a href="wp.media.view.EmbedUrl.html">wp.media.view.EmbedUrl</a></li><li><a href="wp.media.view.FocusManager.html">wp.media.view.FocusManager</a></li><li><a href="wp.media.view.Frame.html">wp.media.view.Frame</a></li><li><a href="wp.media.view.Iframe.html">wp.media.view.Iframe</a></li><li><a href="wp.media.view.ImageDetails.html">wp.media.view.ImageDetails</a></li><li><a href="wp.media.view.Label.html">wp.media.view.Label</a></li><li><a href="wp.media.view.MediaDetails.html">wp.media.view.MediaDetails</a></li><li><a href="wp.media.view.MediaFrame.html">wp.media.view.MediaFrame</a></li><li><a href="wp.media.view.MediaFrame.AudioDetails.html">wp.media.view.MediaFrame.AudioDetails</a></li><li><a href="wp.media.view.MediaFrame.EditAttachments.html">wp.media.view.MediaFrame.EditAttachments</a></li><li><a href="wp.media.view.MediaFrame.ImageDetails.html">wp.media.view.MediaFrame.ImageDetails</a></li><li><a href="wp.media.view.MediaFrame.Manage.html">wp.media.view.MediaFrame.Manage</a></li><li><a href="wp.media.view.MediaFrame.Manage.Router.html">wp.media.view.MediaFrame.Manage.Router</a></li><li><a href="wp.media.view.MediaFrame.MediaDetails.html">wp.media.view.MediaFrame.MediaDetails</a></li><li><a href="wp.media.view.MediaFrame.Post.html">wp.media.view.MediaFrame.Post</a></li><li><a href="wp.media.view.MediaFrame.Select.html">wp.media.view.MediaFrame.Select</a></li><li><a href="wp.media.view.MediaFrame.VideoDetails.html">wp.media.view.MediaFrame.VideoDetails</a></li><li><a href="wp.media.view.Menu.html">wp.media.view.Menu</a></li><li><a href="wp.media.view.MenuItem.html">wp.media.view.MenuItem</a></li><li><a href="wp.media.view.Modal.html">wp.media.view.Modal</a></li><li><a href="wp.media.view.PriorityList.html">wp.media.view.PriorityList</a></li><li><a href="wp.media.view.Router.html">wp.media.view.Router</a></li><li><a href="wp.media.view.RouterItem.html">wp.media.view.RouterItem</a></li><li><a href="wp.media.view.Search.html">wp.media.view.Search</a></li><li><a href="wp.media.view.Selection.html">wp.media.view.Selection</a></li><li><a href="wp.media.view.SelectModeToggle.html">wp.media.view.SelectModeToggle</a></li><li><a href="wp.media.view.Settings.html">wp.media.view.Settings</a></li><li><a href="wp.media.view.Settings.AttachmentDisplay.html">wp.media.view.Settings.AttachmentDisplay</a></li><li><a href="wp.media.view.Settings.Gallery.html">wp.media.view.Settings.Gallery</a></li><li><a href="wp.media.view.Settings.Playlist.html">wp.media.view.Settings.Playlist</a></li><li><a href="wp.media.view.Sidebar.html">wp.media.view.Sidebar</a></li><li><a href="wp.media.view.SiteIconCropper.html">wp.media.view.SiteIconCropper</a></li><li><a href="wp.media.view.SiteIconPreview.html">wp.media.view.SiteIconPreview</a></li><li><a href="wp.media.view.Spinner.html">wp.media.view.Spinner</a></li><li><a href="wp.media.view.Toolbar.html">wp.media.view.Toolbar</a></li><li><a href="wp.media.view.Toolbar.Embed.html">wp.media.view.Toolbar.Embed</a></li><li><a href="wp.media.view.Toolbar.Select.html">wp.media.view.Toolbar.Select</a></li><li><a href="wp.media.view.UploaderInline.html">wp.media.view.UploaderInline</a></li><li><a href="wp.media.view.UploaderStatus.html">wp.media.view.UploaderStatus</a></li><li><a href="wp.media.view.UploaderStatusError.html">wp.media.view.UploaderStatusError</a></li><li><a href="wp.media.view.UploaderWindow.html">wp.media.view.UploaderWindow</a></li><li><a href="wp.media.view.VideoDetails.html">wp.media.view.VideoDetails</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_audio.html">wp.mediaWidgets.controlConstructors.media_audio</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_gallery.html">wp.mediaWidgets.controlConstructors.media_gallery</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_video.html">wp.mediaWidgets.controlConstructors.media_video</a></li><li><a href="wp.mediaWidgets.controlConstructors-AudioDetailsMediaFrame.html">wp.mediaWidgets.controlConstructors~AudioDetailsMediaFrame</a></li><li><a href="wp.mediaWidgets.controlConstructors-VideoDetailsMediaFrame.html">wp.mediaWidgets.controlConstructors~VideoDetailsMediaFrame</a></li><li><a href="wp.mediaWidgets.MediaEmbedView.html">wp.mediaWidgets.MediaEmbedView</a></li><li><a href="wp.mediaWidgets.MediaFrameSelect.html">wp.mediaWidgets.MediaFrameSelect</a></li><li><a href="wp.mediaWidgets.MediaWidgetControl.html">wp.mediaWidgets.MediaWidgetControl</a></li><li><a href="wp.mediaWidgets.MediaWidgetModel.html">wp.mediaWidgets.MediaWidgetModel</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_audio.html">wp.mediaWidgets.modelConstructors.media_audio</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_gallery.html">wp.mediaWidgets.modelConstructors.media_gallery</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_image.html">wp.mediaWidgets.modelConstructors.media_image</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_video.html">wp.mediaWidgets.modelConstructors.media_video</a></li><li><a href="wp.mediaWidgets.PersistentDisplaySettingsLibrary.html">wp.mediaWidgets.PersistentDisplaySettingsLibrary</a></li><li><a href="wp.mediaWidgets-Constructor.html">wp.mediaWidgets~Constructor</a></li><li><a href="wp.mediaWidgets-GalleryDetailsMediaFrame.html">wp.mediaWidgets~GalleryDetailsMediaFrame</a></li><li><a href="wp.NativeHandler.html">wp.NativeHandler</a></li><li><a href="wp.textWidgets.TextWidgetControl.html">wp.textWidgets.TextWidgetControl</a></li><li><a href="wp.utils.wordcounter.html">wp.utils.wordcounter</a></li><li><a href="wp.YouTubeHandler.html">wp.YouTubeHandler</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">Mixins<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="wp.media.controller.StateMachine.html">wp.media.controller.StateMachine</a></li><li><a href="wp.media.mixin.html">wp.media.mixin</a></li><li><a href="wp.media.selectionSync.html">wp.media.selectionSync</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="wp.media.controller.Region.html#event:activate">wp.media.controller.Region#event:activate</a></li><li><a href="wp.media.controller.Region.html#event:create">wp.media.controller.Region#event:create</a></li><li><a href="wp.media.controller.Region.html#event:deactivate">wp.media.controller.Region#event:deactivate</a></li><li><a href="wp.media.controller.Region.html#event:render">wp.media.controller.Region#event:render</a></li><li><a href="wp.media.view.Frame.html#event:%257Bmode%257D:deactivate">wp.media.view.Frame#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.AudioDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.AudioDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.EditAttachments.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.EditAttachments#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.ImageDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.ImageDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Manage.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Manage#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.MediaDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.MediaDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Post.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Post#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Select.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Select#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.VideoDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.VideoDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.controlConstructors-AudioDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.controlConstructors~AudioDetailsMediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.controlConstructors-VideoDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.controlConstructors~VideoDetailsMediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.MediaFrameSelect.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.MediaFrameSelect#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets-GalleryDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets~GalleryDetailsMediaFrame#event:{mode}:deactivate</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#$">$</a></li><li><a href="global.html#_attach">_attach</a></li><li><a href="global.html#_isReady">_isReady</a></li><li><a href="global.html#add">add</a></li><li><a href="global.html#ajaxPopulateWidgets">ajaxPopulateWidgets</a></li><li><a href="global.html#ajaxWidgets">ajaxWidgets</a></li><li><a href="global.html#all">all</a></li><li><a href="global.html#array_unique_noempty">array_unique_noempty</a></li><li><a href="global.html#clearFilters">clearFilters</a></li><li><a href="global.html#commentReply">commentReply</a></li><li><a href="global.html#detach">detach</a></li><li><a href="global.html#editPermalink">editPermalink</a></li><li><a href="global.html#filtersChecked">filtersChecked</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#get">get</a></li><li><a href="global.html#insert">insert</a></li><li><a href="global.html#media">media</a></li><li><a href="global.html#out">out</a></li><li><a href="global.html#over">over</a></li><li><a href="global.html#passwordStrength">passwordStrength</a></li><li><a href="global.html#prepare">prepare</a></li><li><a href="global.html#quickPressLoad">quickPressLoad</a></li><li><a href="global.html#ready">ready</a></li><li><a href="global.html#remove">remove</a></li><li><a href="global.html#render">render</a></li><li><a href="global.html#replace">replace</a></li><li><a href="global.html#search">search</a></li><li><a href="global.html#send_to_editor">send_to_editor</a></li><li><a href="global.html#set">set</a></li><li><a href="global.html#setCommentsList">setCommentsList</a></li><li><a href="global.html#tagBox">tagBox</a></li><li><a href="global.html#tb_position">tb_position</a></li><li><a href="global.html#theExtraList">theExtraList</a></li><li><a href="global.html#theList">theList</a></li><li><a href="global.html#unset">unset</a></li><li><a href="global.html#uploader">uploader</a></li><li><a href="global.html#WPRemoveThumbnail">WPRemoveThumbnail</a></li><li><a href="global.html#WPSetThumbnailHTML">WPSetThumbnailHTML</a></li><li><a href="global.html#WPSetThumbnailID">WPSetThumbnailID</a></li><li><a href="global.html#wptitlehint">wptitlehint</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-12">
+	
+		<div id="main">
+			
+
+		<h1 class="page-title">Source: _enqueues/wp/heartbeat.js</h1>
+    
+<section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">/**
+ * Heartbeat API
+ *
+ * Heartbeat is a simple server polling API that sends XHR requests to
+ * the server every 15 - 60 seconds and triggers events (or callbacks) upon
+ * receiving data. Currently these 'ticks' handle transports for post locking,
+ * login-expiration warnings, autosave, and related tasks while a user is logged in.
+ *
+ * Available PHP filters (in ajax-actions.php):
+ * - heartbeat_received
+ * - heartbeat_send
+ * - heartbeat_tick
+ * - heartbeat_nopriv_received
+ * - heartbeat_nopriv_send
+ * - heartbeat_nopriv_tick
+ * @see wp_ajax_nopriv_heartbeat(), wp_ajax_heartbeat()
+ *
+ * Custom jQuery events:
+ * - heartbeat-send
+ * - heartbeat-tick
+ * - heartbeat-error
+ * - heartbeat-connection-lost
+ * - heartbeat-connection-restored
+ * - heartbeat-nonces-expired
+ *
+ * @since 3.6.0
+ * @output wp-includes/js/heartbeat.js
+ */
+
+( function( $, window, undefined ) {
+
+	/**
+	 * Constructs the Heartbeat API.
+	 *
+	 * @since 3.6.0
+	 *
+	 * @return {Object} An instance of the Heartbeat class.
+	 * @constructor
+	 */
+	var Heartbeat = function() {
+		var $document = $(document),
+			settings = {
+				// Suspend/resume.
+				suspend: false,
+
+				// Whether suspending is enabled.
+				suspendEnabled: true,
+
+				// Current screen id, defaults to the JS global 'pagenow' when present
+				// (in the admin) or 'front'.
+				screenId: '',
+
+				// XHR request URL, defaults to the JS global 'ajaxurl' when present.
+				url: '',
+
+				// Timestamp, start of the last connection request.
+				lastTick: 0,
+
+				// Container for the enqueued items.
+				queue: {},
+
+				// Connect interval (in seconds).
+				mainInterval: 60,
+
+				// Used when the interval is set to 5 seconds temporarily.
+				tempInterval: 0,
+
+				// Used when the interval is reset.
+				originalInterval: 0,
+
+				// Used to limit the number of AJAX requests.
+				minimalInterval: 0,
+
+				// Used together with tempInterval.
+				countdown: 0,
+
+				// Whether a connection is currently in progress.
+				connecting: false,
+
+				// Whether a connection error occurred.
+				connectionError: false,
+
+				// Used to track non-critical errors.
+				errorcount: 0,
+
+				// Whether at least one connection has been completed successfully.
+				hasConnected: false,
+
+				// Whether the current browser window is in focus and the user is active.
+				hasFocus: true,
+
+				// Timestamp, last time the user was active. Checked every 30 seconds.
+				userActivity: 0,
+
+				// Flag whether events tracking user activity were set.
+				userActivityEvents: false,
+
+				// Timer that keeps track of how long a user has focus.
+				checkFocusTimer: 0,
+
+				// Timer that keeps track of how long needs to be waited before connecting to
+				// the server again.
+				beatTimer: 0
+			};
+
+		/**
+		 * Sets local variables and events, then starts the heartbeat.
+		 *
+		 * @since 3.8.0
+		 * @access private
+		 *
+		 * @return {void}
+		 */
+		function initialize() {
+			var options, hidden, visibilityState, visibilitychange;
+
+			if ( typeof window.pagenow === 'string' ) {
+				settings.screenId = window.pagenow;
+			}
+
+			if ( typeof window.ajaxurl === 'string' ) {
+				settings.url = window.ajaxurl;
+			}
+
+			// Pull in options passed from PHP.
+			if ( typeof window.heartbeatSettings === 'object' ) {
+				options = window.heartbeatSettings;
+
+				// The XHR URL can be passed as option when window.ajaxurl is not set.
+				if ( ! settings.url &amp;&amp; options.ajaxurl ) {
+					settings.url = options.ajaxurl;
+				}
+
+				/*
+				 * The interval can be from 15 to 120 seconds and can be set temporarily to 5 seconds.
+				 * It can be set in the initial options or changed later through JS and/or through PHP.
+				 */
+				if ( options.interval ) {
+					settings.mainInterval = options.interval;
+
+					if ( settings.mainInterval &lt; 15 ) {
+						settings.mainInterval = 15;
+					} else if ( settings.mainInterval > 120 ) {
+						settings.mainInterval = 120;
+					}
+				}
+
+				/*
+				 * Used to limit the number of AJAX requests. Overrides all other intervals
+				 * if they are shorter. Needed for some hosts that cannot handle frequent requests
+				 * and the user may exceed the allocated server CPU time, etc. The minimal interval
+				 * can be up to 600 seconds, however setting it to longer than 120 seconds
+				 * will limit or disable some of the functionality (like post locks).
+				 * Once set at initialization, minimalInterval cannot be changed/overridden.
+				 */
+				if ( options.minimalInterval ) {
+					options.minimalInterval = parseInt( options.minimalInterval, 10 );
+					settings.minimalInterval = options.minimalInterval > 0 &amp;&amp; options.minimalInterval &lt;= 600 ? options.minimalInterval * 1000 : 0;
+				}
+
+				if ( settings.minimalInterval &amp;&amp; settings.mainInterval &lt; settings.minimalInterval ) {
+					settings.mainInterval = settings.minimalInterval;
+				}
+
+				// 'screenId' can be added from settings on the front end where the JS global
+				// 'pagenow' is not set.
+				if ( ! settings.screenId ) {
+					settings.screenId = options.screenId || 'front';
+				}
+
+				if ( options.suspension === 'disable' ) {
+					settings.suspendEnabled = false;
+				}
+			}
+
+			// Convert to milliseconds.
+			settings.mainInterval = settings.mainInterval * 1000;
+			settings.originalInterval = settings.mainInterval;
+
+			/*
+			 * Switch the interval to 120 seconds by using the Page Visibility API.
+			 * If the browser doesn't support it (Safari &lt; 7, Android &lt; 4.4, IE &lt; 10), the
+			 * interval will be increased to 120 seconds after 5 minutes of mouse and keyboard
+			 * inactivity.
+			 */
+			if ( typeof document.hidden !== 'undefined' ) {
+				hidden = 'hidden';
+				visibilitychange = 'visibilitychange';
+				visibilityState = 'visibilityState';
+			} else if ( typeof document.msHidden !== 'undefined' ) { // IE10.
+				hidden = 'msHidden';
+				visibilitychange = 'msvisibilitychange';
+				visibilityState = 'msVisibilityState';
+			} else if ( typeof document.webkitHidden !== 'undefined' ) { // Android.
+				hidden = 'webkitHidden';
+				visibilitychange = 'webkitvisibilitychange';
+				visibilityState = 'webkitVisibilityState';
+			}
+
+			if ( hidden ) {
+				if ( document[hidden] ) {
+					settings.hasFocus = false;
+				}
+
+				$document.on( visibilitychange + '.wp-heartbeat', function() {
+					if ( document[visibilityState] === 'hidden' ) {
+						blurred();
+						window.clearInterval( settings.checkFocusTimer );
+					} else {
+						focused();
+						if ( document.hasFocus ) {
+							settings.checkFocusTimer = window.setInterval( checkFocus, 10000 );
+						}
+					}
+				});
+			}
+
+			// Use document.hasFocus() if available.
+			if ( document.hasFocus ) {
+				settings.checkFocusTimer = window.setInterval( checkFocus, 10000 );
+			}
+
+			$(window).on( 'unload.wp-heartbeat', function() {
+				// Don't connect anymore.
+				settings.suspend = true;
+
+				// Abort the last request if not completed.
+				if ( settings.xhr &amp;&amp; settings.xhr.readyState !== 4 ) {
+					settings.xhr.abort();
+				}
+			});
+
+			// Check for user activity every 30 seconds.
+			window.setInterval( checkUserActivity, 30000 );
+
+			// Start one tick after DOM ready.
+			$document.ready( function() {
+				settings.lastTick = time();
+				scheduleNextTick();
+			});
+		}
+
+		/**
+		 * Returns the current time according to the browser.
+		 *
+		 * @since 3.6.0
+		 * @access private
+		 *
+		 * @return {number} Returns the current time.
+		 */
+		function time() {
+			return (new Date()).getTime();
+		}
+
+		/**
+		 * Checks if the iframe is from the same origin.
+		 *
+		 * @since 3.6.0
+		 * @access private
+		 *
+		 * @return {boolean} Returns whether or not the iframe is from the same origin.
+		 */
+		function isLocalFrame( frame ) {
+			var origin, src = frame.src;
+
+			/*
+			 * Need to compare strings as WebKit doesn't throw JS errors when iframes have
+			 * different origin. It throws uncatchable exceptions.
+			 */
+			if ( src &amp;&amp; /^https?:\/\//.test( src ) ) {
+				origin = window.location.origin ? window.location.origin : window.location.protocol + '//' + window.location.host;
+
+				if ( src.indexOf( origin ) !== 0 ) {
+					return false;
+				}
+			}
+
+			try {
+				if ( frame.contentWindow.document ) {
+					return true;
+				}
+			} catch(e) {}
+
+			return false;
+		}
+
+		/**
+		 * Checks if the document's focus has changed.
+		 *
+		 * @since 4.1.0
+		 * @access private
+		 *
+		 * @return {void}
+		 */
+		function checkFocus() {
+			if ( settings.hasFocus &amp;&amp; ! document.hasFocus() ) {
+				blurred();
+			} else if ( ! settings.hasFocus &amp;&amp; document.hasFocus() ) {
+				focused();
+			}
+		}
+
+		/**
+		 * Sets error state and fires an event on XHR errors or timeout.
+		 *
+		 * @since 3.8.0
+		 * @access private
+		 *
+		 * @param {string} error  The error type passed from the XHR.
+		 * @param {number} status The HTTP status code passed from jqXHR
+		 *                        (200, 404, 500, etc.).
+		 *
+		 * @return {void}
+		 */
+		function setErrorState( error, status ) {
+			var trigger;
+
+			if ( error ) {
+				switch ( error ) {
+					case 'abort':
+						// Do nothing.
+						break;
+					case 'timeout':
+						// No response for 30 seconds.
+						trigger = true;
+						break;
+					case 'error':
+						if ( 503 === status &amp;&amp; settings.hasConnected ) {
+							trigger = true;
+							break;
+						}
+						/* falls through */
+					case 'parsererror':
+					case 'empty':
+					case 'unknown':
+						settings.errorcount++;
+
+						if ( settings.errorcount > 2 &amp;&amp; settings.hasConnected ) {
+							trigger = true;
+						}
+
+						break;
+				}
+
+				if ( trigger &amp;&amp; ! hasConnectionError() ) {
+					settings.connectionError = true;
+					$document.trigger( 'heartbeat-connection-lost', [error, status] );
+					wp.hooks.doAction( 'heartbeat.connection-lost', error, status );
+				}
+			}
+		}
+
+		/**
+		 * Clears the error state and fires an event if there is a connection error.
+		 *
+		 * @since 3.8.0
+		 * @access private
+		 *
+		 * @return {void}
+		 */
+		function clearErrorState() {
+			// Has connected successfully.
+			settings.hasConnected = true;
+
+			if ( hasConnectionError() ) {
+				settings.errorcount = 0;
+				settings.connectionError = false;
+				$document.trigger( 'heartbeat-connection-restored' );
+				wp.hooks.doAction( 'heartbeat.connection-restored' );
+			}
+		}
+
+		/**
+		 * Gathers the data and connects to the server.
+		 *
+		 * @since 3.6.0
+		 * @access private
+		 *
+		 * @return {void}
+		 */
+		function connect() {
+			var ajaxData, heartbeatData;
+
+			// If the connection to the server is slower than the interval,
+			// heartbeat connects as soon as the previous connection's response is received.
+			if ( settings.connecting || settings.suspend ) {
+				return;
+			}
+
+			settings.lastTick = time();
+
+			heartbeatData = $.extend( {}, settings.queue );
+			// Clear the data queue. Anything added after this point will be sent on the next tick.
+			settings.queue = {};
+
+			$document.trigger( 'heartbeat-send', [ heartbeatData ] );
+			wp.hooks.doAction( 'heartbeat.send', heartbeatData );
+
+			ajaxData = {
+				data: heartbeatData,
+				interval: settings.tempInterval ? settings.tempInterval / 1000 : settings.mainInterval / 1000,
+				_nonce: typeof window.heartbeatSettings === 'object' ? window.heartbeatSettings.nonce : '',
+				action: 'heartbeat',
+				screen_id: settings.screenId,
+				has_focus: settings.hasFocus
+			};
+
+			if ( 'customize' === settings.screenId  ) {
+				ajaxData.wp_customize = 'on';
+			}
+
+			settings.connecting = true;
+			settings.xhr = $.ajax({
+				url: settings.url,
+				type: 'post',
+				timeout: 30000, // Throw an error if not completed after 30 seconds.
+				data: ajaxData,
+				dataType: 'json'
+			}).always( function() {
+				settings.connecting = false;
+				scheduleNextTick();
+			}).done( function( response, textStatus, jqXHR ) {
+				var newInterval;
+
+				if ( ! response ) {
+					setErrorState( 'empty' );
+					return;
+				}
+
+				clearErrorState();
+
+				if ( response.nonces_expired ) {
+					$document.trigger( 'heartbeat-nonces-expired' );
+					wp.hooks.doAction( 'heartbeat.nonces-expired' );
+				}
+
+				// Change the interval from PHP.
+				if ( response.heartbeat_interval ) {
+					newInterval = response.heartbeat_interval;
+					delete response.heartbeat_interval;
+				}
+
+				// Update the heartbeat nonce if set.
+				if ( response.heartbeat_nonce &amp;&amp; typeof window.heartbeatSettings === 'object' ) {
+					window.heartbeatSettings.nonce = response.heartbeat_nonce;
+					delete response.heartbeat_nonce;
+				}
+
+				// Update the Rest API nonce if set and wp-api loaded.
+				if ( response.rest_nonce &amp;&amp; typeof window.wpApiSettings === 'object' ) {
+					window.wpApiSettings.nonce = response.rest_nonce;
+					// This nonce is required for api-fetch through heartbeat.tick.
+					// delete response.rest_nonce;
+				}
+
+				$document.trigger( 'heartbeat-tick', [response, textStatus, jqXHR] );
+				wp.hooks.doAction( 'heartbeat.tick', response, textStatus, jqXHR );
+
+				// Do this last. Can trigger the next XHR if connection time > 5 seconds and newInterval == 'fast'.
+				if ( newInterval ) {
+					interval( newInterval );
+				}
+			}).fail( function( jqXHR, textStatus, error ) {
+				setErrorState( textStatus || 'unknown', jqXHR.status );
+				$document.trigger( 'heartbeat-error', [jqXHR, textStatus, error] );
+				wp.hooks.doAction( 'heartbeat.error', jqXHR, textStatus, error );
+			});
+		}
+
+		/**
+		 * Schedules the next connection.
+		 *
+		 * Fires immediately if the connection time is longer than the interval.
+		 *
+		 * @since 3.8.0
+		 * @access private
+		 *
+		 * @return {void}
+		 */
+		function scheduleNextTick() {
+			var delta = time() - settings.lastTick,
+				interval = settings.mainInterval;
+
+			if ( settings.suspend ) {
+				return;
+			}
+
+			if ( ! settings.hasFocus ) {
+				interval = 120000; // 120 seconds. Post locks expire after 150 seconds.
+			} else if ( settings.countdown > 0 &amp;&amp; settings.tempInterval ) {
+				interval = settings.tempInterval;
+				settings.countdown--;
+
+				if ( settings.countdown &lt; 1 ) {
+					settings.tempInterval = 0;
+				}
+			}
+
+			if ( settings.minimalInterval &amp;&amp; interval &lt; settings.minimalInterval ) {
+				interval = settings.minimalInterval;
+			}
+
+			window.clearTimeout( settings.beatTimer );
+
+			if ( delta &lt; interval ) {
+				settings.beatTimer = window.setTimeout(
+					function() {
+						connect();
+					},
+					interval - delta
+				);
+			} else {
+				connect();
+			}
+		}
+
+		/**
+		 * Sets the internal state when the browser window becomes hidden or loses focus.
+		 *
+		 * @since 3.6.0
+		 * @access private
+		 *
+		 * @return {void}
+		 */
+		function blurred() {
+			settings.hasFocus = false;
+		}
+
+		/**
+		 * Sets the internal state when the browser window becomes visible or is in focus.
+		 *
+		 * @since 3.6.0
+		 * @access private
+		 *
+		 * @return {void}
+		 */
+		function focused() {
+			settings.userActivity = time();
+
+			// Resume if suspended.
+			settings.suspend = false;
+
+			if ( ! settings.hasFocus ) {
+				settings.hasFocus = true;
+				scheduleNextTick();
+			}
+		}
+
+		/**
+		 * Runs when the user becomes active after a period of inactivity.
+		 *
+		 * @since 3.6.0
+		 * @access private
+		 *
+		 * @return {void}
+		 */
+		function userIsActive() {
+			settings.userActivityEvents = false;
+			$document.off( '.wp-heartbeat-active' );
+
+			$('iframe').each( function( i, frame ) {
+				if ( isLocalFrame( frame ) ) {
+					$( frame.contentWindow ).off( '.wp-heartbeat-active' );
+				}
+			});
+
+			focused();
+		}
+
+		/**
+		 * Checks for user activity.
+		 *
+		 * Runs every 30 seconds. Sets 'hasFocus = true' if user is active and the window
+		 * is in the background. Sets 'hasFocus = false' if the user has been inactive
+		 * (no mouse or keyboard activity) for 5 minutes even when the window has focus.
+		 *
+		 * @since 3.8.0
+		 * @access private
+		 *
+		 * @return {void}
+		 */
+		function checkUserActivity() {
+			var lastActive = settings.userActivity ? time() - settings.userActivity : 0;
+
+			// Throttle down when no mouse or keyboard activity for 5 minutes.
+			if ( lastActive > 300000 &amp;&amp; settings.hasFocus ) {
+				blurred();
+			}
+
+			// Suspend after 10 minutes of inactivity when suspending is enabled.
+			// Always suspend after 60 minutes of inactivity. This will release the post lock, etc.
+			if ( ( settings.suspendEnabled &amp;&amp; lastActive > 600000 ) || lastActive > 3600000 ) {
+				settings.suspend = true;
+			}
+
+			if ( ! settings.userActivityEvents ) {
+				$document.on( 'mouseover.wp-heartbeat-active keyup.wp-heartbeat-active touchend.wp-heartbeat-active', function() {
+					userIsActive();
+				});
+
+				$('iframe').each( function( i, frame ) {
+					if ( isLocalFrame( frame ) ) {
+						$( frame.contentWindow ).on( 'mouseover.wp-heartbeat-active keyup.wp-heartbeat-active touchend.wp-heartbeat-active', function() {
+							userIsActive();
+						});
+					}
+				});
+
+				settings.userActivityEvents = true;
+			}
+		}
+
+		// Public methods.
+
+		/**
+		 * Checks whether the window (or any local iframe in it) has focus, or the user
+		 * is active.
+		 *
+		 * @since 3.6.0
+		 * @memberOf wp.heartbeat.prototype
+		 *
+		 * @return {boolean} True if the window or the user is active.
+		 */
+		function hasFocus() {
+			return settings.hasFocus;
+		}
+
+		/**
+		 * Checks whether there is a connection error.
+		 *
+		 * @since 3.6.0
+		 *
+		 * @memberOf wp.heartbeat.prototype
+		 *
+		 * @return {boolean} True if a connection error was found.
+		 */
+		function hasConnectionError() {
+			return settings.connectionError;
+		}
+
+		/**
+		 * Connects as soon as possible regardless of 'hasFocus' state.
+		 *
+		 * Will not open two concurrent connections. If a connection is in progress,
+		 * will connect again immediately after the current connection completes.
+		 *
+		 * @since 3.8.0
+		 *
+		 * @memberOf wp.heartbeat.prototype
+		 *
+		 * @return {void}
+		 */
+		function connectNow() {
+			settings.lastTick = 0;
+			scheduleNextTick();
+		}
+
+		/**
+		 * Disables suspending.
+		 *
+		 * Should be used only when Heartbeat is performing critical tasks like
+		 * autosave, post-locking, etc. Using this on many screens may overload
+		 * the user's hosting account if several browser windows/tabs are left open
+		 * for a long time.
+		 *
+		 * @since 3.8.0
+		 *
+		 * @memberOf wp.heartbeat.prototype
+		 *
+		 * @return {void}
+		 */
+		function disableSuspend() {
+			settings.suspendEnabled = false;
+		}
+
+		/**
+		 * Gets/Sets the interval.
+		 *
+		 * When setting to 'fast' or 5, the interval is 5 seconds for the next 30 ticks
+		 * (for 2 minutes and 30 seconds) by default. In this case the number of 'ticks'
+		 * can be passed as second argument. If the window doesn't have focus,
+		 * the interval slows down to 2 minutes.
+		 *
+		 * @since 3.6.0
+		 *
+		 * @memberOf wp.heartbeat.prototype
+		 *
+		 * @param {string|number} speed Interval: 'fast' or 5, 15, 30, 60, 120.
+		 *                              Fast equals 5.
+		 * @param {string}        ticks Tells how many ticks before the interval reverts
+		 *                              back. Used with speed = 'fast' or 5.
+		 *
+		 * @return {number} Current interval in seconds.
+		 */
+		function interval( speed, ticks ) {
+			var newInterval,
+				oldInterval = settings.tempInterval ? settings.tempInterval : settings.mainInterval;
+
+			if ( speed ) {
+				switch ( speed ) {
+					case 'fast':
+					case 5:
+						newInterval = 5000;
+						break;
+					case 15:
+						newInterval = 15000;
+						break;
+					case 30:
+						newInterval = 30000;
+						break;
+					case 60:
+						newInterval = 60000;
+						break;
+					case 120:
+						newInterval = 120000;
+						break;
+					case 'long-polling':
+						// Allow long polling (experimental).
+						settings.mainInterval = 0;
+						return 0;
+					default:
+						newInterval = settings.originalInterval;
+				}
+
+				if ( settings.minimalInterval &amp;&amp; newInterval &lt; settings.minimalInterval ) {
+					newInterval = settings.minimalInterval;
+				}
+
+				if ( 5000 === newInterval ) {
+					ticks = parseInt( ticks, 10 ) || 30;
+					ticks = ticks &lt; 1 || ticks > 30 ? 30 : ticks;
+
+					settings.countdown = ticks;
+					settings.tempInterval = newInterval;
+				} else {
+					settings.countdown = 0;
+					settings.tempInterval = 0;
+					settings.mainInterval = newInterval;
+				}
+
+				/*
+				 * Change the next connection time if new interval has been set.
+				 * Will connect immediately if the time since the last connection
+				 * is greater than the new interval.
+				 */
+				if ( newInterval !== oldInterval ) {
+					scheduleNextTick();
+				}
+			}
+
+			return settings.tempInterval ? settings.tempInterval / 1000 : settings.mainInterval / 1000;
+		}
+
+		/**
+		 * Enqueues data to send with the next XHR.
+		 *
+		 * As the data is send asynchronously, this function doesn't return the XHR
+		 * response. To see the response, use the custom jQuery event 'heartbeat-tick'
+		 * on the document, example:
+		 *		$(document).on( 'heartbeat-tick.myname', function( event, data, textStatus, jqXHR ) {
+		 *			// code
+		 *		});
+		 * If the same 'handle' is used more than once, the data is not overwritten when
+		 * the third argument is 'true'. Use `wp.heartbeat.isQueued('handle')` to see if
+		 * any data is already queued for that handle.
+		 *
+		 * @since 3.6.0
+		 *
+		 * @memberOf wp.heartbeat.prototype
+		 *
+		 * @param {string}  handle      Unique handle for the data, used in PHP to
+		 *                              receive the data.
+		 * @param {*}       data        The data to send.
+		 * @param {boolean} noOverwrite Whether to overwrite existing data in the queue.
+		 *
+		 * @return {boolean} True if the data was queued.
+		 */
+		function enqueue( handle, data, noOverwrite ) {
+			if ( handle ) {
+				if ( noOverwrite &amp;&amp; this.isQueued( handle ) ) {
+					return false;
+				}
+
+				settings.queue[handle] = data;
+				return true;
+			}
+			return false;
+		}
+
+		/**
+		 * Checks if data with a particular handle is queued.
+		 *
+		 * @since 3.6.0
+		 *
+		 * @param {string} handle The handle for the data.
+		 *
+		 * @return {boolean} True if the data is queued with this handle.
+		 */
+		function isQueued( handle ) {
+			if ( handle ) {
+				return settings.queue.hasOwnProperty( handle );
+			}
+		}
+
+		/**
+		 * Removes data with a particular handle from the queue.
+		 *
+		 * @since 3.7.0
+		 *
+		 * @memberOf wp.heartbeat.prototype
+		 *
+		 * @param {string} handle The handle for the data.
+		 *
+		 * @return {void}
+		 */
+		function dequeue( handle ) {
+			if ( handle ) {
+				delete settings.queue[handle];
+			}
+		}
+
+		/**
+		 * Gets data that was enqueued with a particular handle.
+		 *
+		 * @since 3.7.0
+		 *
+		 * @memberOf wp.heartbeat.prototype
+		 *
+		 * @param {string} handle The handle for the data.
+		 *
+		 * @return {*} The data or undefined.
+		 */
+		function getQueuedItem( handle ) {
+			if ( handle ) {
+				return this.isQueued( handle ) ? settings.queue[handle] : undefined;
+			}
+		}
+
+		initialize();
+
+		// Expose public methods.
+		return {
+			hasFocus: hasFocus,
+			connectNow: connectNow,
+			disableSuspend: disableSuspend,
+			interval: interval,
+			hasConnectionError: hasConnectionError,
+			enqueue: enqueue,
+			dequeue: dequeue,
+			isQueued: isQueued,
+			getQueuedItem: getQueuedItem
+		};
+	};
+
+	/**
+	 * Ensure the global `wp` object exists.
+	 *
+	 * @namespace wp
+	 */
+	window.wp = window.wp || {};
+
+	/**
+	 * Contains the Heartbeat API.
+	 *
+	 * @namespace wp.heartbeat
+	 * @type {Heartbeat}
+	 */
+	window.wp.heartbeat = new Heartbeat();
+
+}( jQuery, window ));
+</pre>
+    </article>
+</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a>
+	
+		on 2020-06-17T11:56:24+00:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

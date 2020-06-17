@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Documentation Source: _enqueues/admin/post.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.united.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Documentation</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="addComment.html">addComment</a></li><li><a href="commentsBox.html">commentsBox</a></li><li><a href="findPosts.html">findPosts</a></li><li><a href="imageEdit.html">imageEdit</a></li><li><a href="inlineEditPost.html">inlineEditPost</a></li><li><a href="inlineEditTax.html">inlineEditTax</a></li><li><a href="postboxes.html">postboxes</a></li><li><a href="switchEditors.html">switchEditors</a></li><li><a href="wp.html">wp</a></li><li><a href="wp.a11y.html">wp.a11y</a></li><li><a href="wp.api.html">wp.api</a></li><li><a href="wp.api.collections.html">wp.api.collections</a></li><li><a href="wp.api.models.html">wp.api.models</a></li><li><a href="wp.api.utils.html">wp.api.utils</a></li><li><a href="wp.api.views.html">wp.api.views</a></li><li><a href="wp.Backbone.html">wp.Backbone</a></li><li><a href="wp.codeEditor.html">wp.codeEditor</a></li><li><a href="wp.communityEvents.html">wp.communityEvents</a></li><li><a href="wp.customHtmlWidget.html">wp.customHtmlWidget</a></li><li><a href="wp.customize.html">wp.customize</a></li><li><a href="wp.customize.HeaderTool.html">wp.customize.HeaderTool</a></li><li><a href="wp.customize.Menus.html">wp.customize.Menus</a></li><li><a href="wp.customize.navMenusPreview.html">wp.customize.navMenusPreview</a></li><li><a href="wp.customize.selectiveRefresh.html">wp.customize.selectiveRefresh</a></li><li><a href="wp.customize.utils.html">wp.customize.utils</a></li><li><a href="wp.customize.Widgets.html">wp.customize.Widgets</a></li><li><a href="wp.customize.widgetsPreview.html">wp.customize.widgetsPreview</a></li><li><a href="wp.emoji.html">wp.emoji</a></li><li><a href="wp.heartbeat.html">wp.heartbeat</a></li><li><a href="wp.media.html">wp.media</a></li><li><a href="wp.media.audio.html">wp.media.audio</a></li><li><a href="wp.media.controller.html">wp.media.controller</a></li><li><a href="wp.media.editor.html">wp.media.editor</a></li><li><a href="wp.media.editor.send.html">wp.media.editor.send</a></li><li><a href="wp.media.featuredImage.html">wp.media.featuredImage</a></li><li><a href="wp.media.frames.html">wp.media.frames</a></li><li><a href="wp.media.model.html">wp.media.model</a></li><li><a href="wp.media.model.Attachments.filters.html">wp.media.model.Attachments.filters</a></li><li><a href="wp.media.string.html">wp.media.string</a></li><li><a href="wp.media.video.html">wp.media.video</a></li><li><a href="wp.media.view.html">wp.media.view</a></li><li><a href="wp.mediaWidgets.html">wp.mediaWidgets</a></li><li><a href="wp.passwordStrength.html">wp.passwordStrength</a></li><li><a href="wp.textWidgets.html">wp.textWidgets</a></li><li><a href="wp.updates.html">wp.updates</a></li><li><a href="wp.utils.html">wp.utils</a></li><li><a href="wpNavMenu.html">wpNavMenu</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="-_.html"></a></li><li><a href="$.widget.wp.pointer.html">$.widget.wp.pointer</a></li><li><a href="$.widget.wp.wpColorPicker.html">$.widget.wp.wpColorPicker</a></li><li><a href="Heading.html">Heading</a></li><li><a href="wp.Backbone.Subviews.html">wp.Backbone.Subviews</a></li><li><a href="wp.BaseHandler.html">wp.BaseHandler</a></li><li><a href="wp.CustomHeader.html">wp.CustomHeader</a></li><li><a href="wp.customHtmlWidgets.CustomHtmlWidgetControl.html">wp.customHtmlWidgets.CustomHtmlWidgetControl</a></li><li><a href="wp.customize.BackgroundControl.html">wp.customize.BackgroundControl</a></li><li><a href="wp.customize.BackgroundPositionControl.html">wp.customize.BackgroundPositionControl</a></li><li><a href="wp.customize.CodeEditorControl.html">wp.customize.CodeEditorControl</a></li><li><a href="wp.customize.ColorControl.html">wp.customize.ColorControl</a></li><li><a href="wp.customize.Control.html">wp.customize.Control</a></li><li><a href="wp.customize.CroppedImageControl.html">wp.customize.CroppedImageControl</a></li><li><a href="wp.customize.DateTimeControl.html">wp.customize.DateTimeControl</a></li><li><a href="wp.customize.Element.html">wp.customize.Element</a></li><li><a href="wp.customize.HeaderControl.html">wp.customize.HeaderControl</a></li><li><a href="wp.customize.HeaderTool.ChoiceList.html">wp.customize.HeaderTool.ChoiceList</a></li><li><a href="wp.customize.HeaderTool.ChoiceListView.html">wp.customize.HeaderTool.ChoiceListView</a></li><li><a href="wp.customize.HeaderTool.ChoiceView.html">wp.customize.HeaderTool.ChoiceView</a></li><li><a href="wp.customize.HeaderTool.CombinedList.html">wp.customize.HeaderTool.CombinedList</a></li><li><a href="wp.customize.HeaderTool.CurrentView.html">wp.customize.HeaderTool.CurrentView</a></li><li><a href="wp.customize.HeaderTool.DefaultsList.html">wp.customize.HeaderTool.DefaultsList</a></li><li><a href="wp.customize.HeaderTool.ImageModel.html">wp.customize.HeaderTool.ImageModel</a></li><li><a href="wp.customize.ImageControl.html">wp.customize.ImageControl</a></li><li><a href="wp.customize.Loader.html">wp.customize.Loader</a></li><li><a href="wp.customize.MediaControl.html">wp.customize.MediaControl</a></li><li><a href="wp.customize.Menus.AvailableItemCollection.html">wp.customize.Menus.AvailableItemCollection</a></li><li><a href="wp.customize.Menus.AvailableItemModel.html">wp.customize.Menus.AvailableItemModel</a></li><li><a href="wp.customize.Menus.AvailableMenuItemsPanelView.html">wp.customize.Menus.AvailableMenuItemsPanelView</a></li><li><a href="wp.customize.Menus.MenuAutoAddControl.html">wp.customize.Menus.MenuAutoAddControl</a></li><li><a href="wp.customize.Menus.MenuControl.html">wp.customize.Menus.MenuControl</a></li><li><a href="wp.customize.Menus.MenuItemControl.html">wp.customize.Menus.MenuItemControl</a></li><li><a href="wp.customize.Menus.MenuLocationControl.html">wp.customize.Menus.MenuLocationControl</a></li><li><a href="wp.customize.Menus.MenuLocationsControl.html">wp.customize.Menus.MenuLocationsControl</a></li><li><a href="wp.customize.Menus.MenuNameControl.html">wp.customize.Menus.MenuNameControl</a></li><li><a href="wp.customize.Menus.MenuSection.html">wp.customize.Menus.MenuSection</a></li><li><a href="wp.customize.Menus.MenusPanel.html">wp.customize.Menus.MenusPanel</a></li><li><a href="wp.customize.Menus.NewMenuSection.html">wp.customize.Menus.NewMenuSection</a></li><li><a href="wp.customize.Messenger.html">wp.customize.Messenger</a></li><li><a href="wp.customize.navMenusPreview.NavMenuInstancePartial.html">wp.customize.navMenusPreview.NavMenuInstancePartial</a></li><li><a href="wp.customize.Notification.html">wp.customize.Notification</a></li><li><a href="wp.customize.Notifications.html">wp.customize.Notifications</a></li><li><a href="wp.customize.OuterSection.html">wp.customize.OuterSection</a></li><li><a href="wp.customize.OverlayNotification.html">wp.customize.OverlayNotification</a></li><li><a href="wp.customize.Panel.html">wp.customize.Panel</a></li><li><a href="wp.customize.Preview.html">wp.customize.Preview</a></li><li><a href="wp.customize.Previewer.html">wp.customize.Previewer</a></li><li><a href="wp.customize.PreviewFrame.html">wp.customize.PreviewFrame</a></li><li><a href="wp.customize.PreviewLinkControl.html">wp.customize.PreviewLinkControl</a></li><li><a href="wp.customize.Section.html">wp.customize.Section</a></li><li><a href="wp.customize.selectiveRefresh.Partial.html">wp.customize.selectiveRefresh.Partial</a></li><li><a href="wp.customize.selectiveRefresh.Placement.html">wp.customize.selectiveRefresh.Placement</a></li><li><a href="wp.customize.Setting.html">wp.customize.Setting</a></li><li><a href="wp.customize.SiteIconControl.html">wp.customize.SiteIconControl</a></li><li><a href="wp.customize.ThemeControl.html">wp.customize.ThemeControl</a></li><li><a href="wp.customize.ThemesPanel.html">wp.customize.ThemesPanel</a></li><li><a href="wp.customize.ThemesSection.html">wp.customize.ThemesSection</a></li><li><a href="wp.customize.UploadControl.html">wp.customize.UploadControl</a></li><li><a href="wp.customize.Value.html">wp.customize.Value</a></li><li><a href="wp.customize.Values.html">wp.customize.Values</a></li><li><a href="wp.customize.Widgets.AvailableWidgetsPanelView.html">wp.customize.Widgets.AvailableWidgetsPanelView</a></li><li><a href="wp.customize.Widgets.SidebarCollection.html">wp.customize.Widgets.SidebarCollection</a></li><li><a href="wp.customize.Widgets.SidebarControl.html">wp.customize.Widgets.SidebarControl</a></li><li><a href="wp.customize.Widgets.SidebarModel.html">wp.customize.Widgets.SidebarModel</a></li><li><a href="wp.customize.Widgets.SidebarSection.html">wp.customize.Widgets.SidebarSection</a></li><li><a href="wp.customize.Widgets.WidgetCollection.html">wp.customize.Widgets.WidgetCollection</a></li><li><a href="wp.customize.Widgets.WidgetControl.html">wp.customize.Widgets.WidgetControl</a></li><li><a href="wp.customize.Widgets.WidgetModel.html">wp.customize.Widgets.WidgetModel</a></li><li><a href="wp.customize.Widgets.WidgetsPanel.html">wp.customize.Widgets.WidgetsPanel</a></li><li><a href="wp.customize.widgetsPreview.SidebarPartial.html">wp.customize.widgetsPreview.SidebarPartial</a></li><li><a href="wp.customize.widgetsPreview.WidgetPartial.html">wp.customize.widgetsPreview.WidgetPartial</a></li><li><a href="wp.customize-Container.html">wp.customize~Container</a></li><li><a href="wp.customize-LockedNotification.html">wp.customize~LockedNotification</a></li><li><a href="wp.media.collection.html">wp.media.collection</a></li><li><a href="wp.media.controller.AudioDetails.html">wp.media.controller.AudioDetails</a></li><li><a href="wp.media.controller.CollectionAdd.html">wp.media.controller.CollectionAdd</a></li><li><a href="wp.media.controller.CollectionEdit.html">wp.media.controller.CollectionEdit</a></li><li><a href="wp.media.controller.Cropper.html">wp.media.controller.Cropper</a></li><li><a href="wp.media.controller.CustomizeImageCropper.html">wp.media.controller.CustomizeImageCropper</a></li><li><a href="wp.media.controller.EditAttachmentMetadata.html">wp.media.controller.EditAttachmentMetadata</a></li><li><a href="wp.media.controller.EditImage.html">wp.media.controller.EditImage</a></li><li><a href="wp.media.controller.Embed.html">wp.media.controller.Embed</a></li><li><a href="wp.media.controller.FeaturedImage.html">wp.media.controller.FeaturedImage</a></li><li><a href="wp.media.controller.GalleryAdd.html">wp.media.controller.GalleryAdd</a></li><li><a href="wp.media.controller.GalleryEdit.html">wp.media.controller.GalleryEdit</a></li><li><a href="wp.media.controller.ImageDetails.html">wp.media.controller.ImageDetails</a></li><li><a href="wp.media.controller.Library.html">wp.media.controller.Library</a></li><li><a href="wp.media.controller.Region.html">wp.media.controller.Region</a></li><li><a href="wp.media.controller.ReplaceImage.html">wp.media.controller.ReplaceImage</a></li><li><a href="wp.media.controller.SiteIconCropper.html">wp.media.controller.SiteIconCropper</a></li><li><a href="wp.media.controller.State.html">wp.media.controller.State</a></li><li><a href="wp.media.model.Attachment.html">wp.media.model.Attachment</a></li><li><a href="wp.media.model.Attachments.html">wp.media.model.Attachments</a></li><li><a href="wp.media.model.PostImage.html">wp.media.model.PostImage</a></li><li><a href="wp.media.model.PostMedia.html">wp.media.model.PostMedia</a></li><li><a href="wp.media.model.Query.html">wp.media.model.Query</a></li><li><a href="wp.media.model.Selection.html">wp.media.model.Selection</a></li><li><a href="wp.media.View_.html">wp.media.View</a></li><li><a href="wp.media.view.Attachment.html">wp.media.view.Attachment</a></li><li><a href="wp.media.view.Attachment.Details.html">wp.media.view.Attachment.Details</a></li><li><a href="wp.media.view.Attachment.Details.TwoColumn.html">wp.media.view.Attachment.Details.TwoColumn</a></li><li><a href="wp.media.view.Attachment.EditLibrary.html">wp.media.view.Attachment.EditLibrary</a></li><li><a href="wp.media.view.Attachment.EditSelection.html">wp.media.view.Attachment.EditSelection</a></li><li><a href="wp.media.view.Attachment.Library.html">wp.media.view.Attachment.Library</a></li><li><a href="wp.media.view.Attachment.Selection.html">wp.media.view.Attachment.Selection</a></li><li><a href="wp.media.view.AttachmentCompat.html">wp.media.view.AttachmentCompat</a></li><li><a href="wp.media.view.AttachmentFilters.html">wp.media.view.AttachmentFilters</a></li><li><a href="wp.media.view.AttachmentFilters.All.html">wp.media.view.AttachmentFilters.All</a></li><li><a href="wp.media.view.AttachmentFilters.DateFilter.html">wp.media.view.AttachmentFilters.DateFilter</a></li><li><a href="wp.media.view.AttachmentFilters.Uploaded.html">wp.media.view.AttachmentFilters.Uploaded</a></li><li><a href="wp.media.view.Attachments.html">wp.media.view.Attachments</a></li><li><a href="wp.media.view.Attachments.Selection.html">wp.media.view.Attachments.Selection</a></li><li><a href="wp.media.view.AttachmentsBrowser.html">wp.media.view.AttachmentsBrowser</a></li><li><a href="wp.media.view.AudioDetails.html">wp.media.view.AudioDetails</a></li><li><a href="wp.media.view.Button.html">wp.media.view.Button</a></li><li><a href="wp.media.view.ButtonGroup.html">wp.media.view.ButtonGroup</a></li><li><a href="wp.media.view.Cropper.html">wp.media.view.Cropper</a></li><li><a href="wp.media.view.DeleteSelected.html">wp.media.view.DeleteSelected</a></li><li><a href="wp.media.view.DeleteSelectedPermanently.html">wp.media.view.DeleteSelectedPermanently</a></li><li><a href="wp.media.view.EditImage.html">wp.media.view.EditImage</a></li><li><a href="wp.media.view.EditImage.Details.html">wp.media.view.EditImage.Details</a></li><li><a href="wp.media.view.EditorUploader.html">wp.media.view.EditorUploader</a></li><li><a href="wp.media.view.Embed.html">wp.media.view.Embed</a></li><li><a href="wp.media.view.EmbedImage.html">wp.media.view.EmbedImage</a></li><li><a href="wp.media.view.EmbedLink.html">wp.media.view.EmbedLink</a></li><li><a href="wp.media.view.EmbedUrl.html">wp.media.view.EmbedUrl</a></li><li><a href="wp.media.view.FocusManager.html">wp.media.view.FocusManager</a></li><li><a href="wp.media.view.Frame.html">wp.media.view.Frame</a></li><li><a href="wp.media.view.Iframe.html">wp.media.view.Iframe</a></li><li><a href="wp.media.view.ImageDetails.html">wp.media.view.ImageDetails</a></li><li><a href="wp.media.view.Label.html">wp.media.view.Label</a></li><li><a href="wp.media.view.MediaDetails.html">wp.media.view.MediaDetails</a></li><li><a href="wp.media.view.MediaFrame.html">wp.media.view.MediaFrame</a></li><li><a href="wp.media.view.MediaFrame.AudioDetails.html">wp.media.view.MediaFrame.AudioDetails</a></li><li><a href="wp.media.view.MediaFrame.EditAttachments.html">wp.media.view.MediaFrame.EditAttachments</a></li><li><a href="wp.media.view.MediaFrame.ImageDetails.html">wp.media.view.MediaFrame.ImageDetails</a></li><li><a href="wp.media.view.MediaFrame.Manage.html">wp.media.view.MediaFrame.Manage</a></li><li><a href="wp.media.view.MediaFrame.Manage.Router.html">wp.media.view.MediaFrame.Manage.Router</a></li><li><a href="wp.media.view.MediaFrame.MediaDetails.html">wp.media.view.MediaFrame.MediaDetails</a></li><li><a href="wp.media.view.MediaFrame.Post.html">wp.media.view.MediaFrame.Post</a></li><li><a href="wp.media.view.MediaFrame.Select.html">wp.media.view.MediaFrame.Select</a></li><li><a href="wp.media.view.MediaFrame.VideoDetails.html">wp.media.view.MediaFrame.VideoDetails</a></li><li><a href="wp.media.view.Menu.html">wp.media.view.Menu</a></li><li><a href="wp.media.view.MenuItem.html">wp.media.view.MenuItem</a></li><li><a href="wp.media.view.Modal.html">wp.media.view.Modal</a></li><li><a href="wp.media.view.PriorityList.html">wp.media.view.PriorityList</a></li><li><a href="wp.media.view.Router.html">wp.media.view.Router</a></li><li><a href="wp.media.view.RouterItem.html">wp.media.view.RouterItem</a></li><li><a href="wp.media.view.Search.html">wp.media.view.Search</a></li><li><a href="wp.media.view.Selection.html">wp.media.view.Selection</a></li><li><a href="wp.media.view.SelectModeToggle.html">wp.media.view.SelectModeToggle</a></li><li><a href="wp.media.view.Settings.html">wp.media.view.Settings</a></li><li><a href="wp.media.view.Settings.AttachmentDisplay.html">wp.media.view.Settings.AttachmentDisplay</a></li><li><a href="wp.media.view.Settings.Gallery.html">wp.media.view.Settings.Gallery</a></li><li><a href="wp.media.view.Settings.Playlist.html">wp.media.view.Settings.Playlist</a></li><li><a href="wp.media.view.Sidebar.html">wp.media.view.Sidebar</a></li><li><a href="wp.media.view.SiteIconCropper.html">wp.media.view.SiteIconCropper</a></li><li><a href="wp.media.view.SiteIconPreview.html">wp.media.view.SiteIconPreview</a></li><li><a href="wp.media.view.Spinner.html">wp.media.view.Spinner</a></li><li><a href="wp.media.view.Toolbar.html">wp.media.view.Toolbar</a></li><li><a href="wp.media.view.Toolbar.Embed.html">wp.media.view.Toolbar.Embed</a></li><li><a href="wp.media.view.Toolbar.Select.html">wp.media.view.Toolbar.Select</a></li><li><a href="wp.media.view.UploaderInline.html">wp.media.view.UploaderInline</a></li><li><a href="wp.media.view.UploaderStatus.html">wp.media.view.UploaderStatus</a></li><li><a href="wp.media.view.UploaderStatusError.html">wp.media.view.UploaderStatusError</a></li><li><a href="wp.media.view.UploaderWindow.html">wp.media.view.UploaderWindow</a></li><li><a href="wp.media.view.VideoDetails.html">wp.media.view.VideoDetails</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_audio.html">wp.mediaWidgets.controlConstructors.media_audio</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_gallery.html">wp.mediaWidgets.controlConstructors.media_gallery</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_video.html">wp.mediaWidgets.controlConstructors.media_video</a></li><li><a href="wp.mediaWidgets.controlConstructors-AudioDetailsMediaFrame.html">wp.mediaWidgets.controlConstructors~AudioDetailsMediaFrame</a></li><li><a href="wp.mediaWidgets.controlConstructors-VideoDetailsMediaFrame.html">wp.mediaWidgets.controlConstructors~VideoDetailsMediaFrame</a></li><li><a href="wp.mediaWidgets.MediaEmbedView.html">wp.mediaWidgets.MediaEmbedView</a></li><li><a href="wp.mediaWidgets.MediaFrameSelect.html">wp.mediaWidgets.MediaFrameSelect</a></li><li><a href="wp.mediaWidgets.MediaWidgetControl.html">wp.mediaWidgets.MediaWidgetControl</a></li><li><a href="wp.mediaWidgets.MediaWidgetModel.html">wp.mediaWidgets.MediaWidgetModel</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_audio.html">wp.mediaWidgets.modelConstructors.media_audio</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_gallery.html">wp.mediaWidgets.modelConstructors.media_gallery</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_image.html">wp.mediaWidgets.modelConstructors.media_image</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_video.html">wp.mediaWidgets.modelConstructors.media_video</a></li><li><a href="wp.mediaWidgets.PersistentDisplaySettingsLibrary.html">wp.mediaWidgets.PersistentDisplaySettingsLibrary</a></li><li><a href="wp.mediaWidgets-Constructor.html">wp.mediaWidgets~Constructor</a></li><li><a href="wp.mediaWidgets-GalleryDetailsMediaFrame.html">wp.mediaWidgets~GalleryDetailsMediaFrame</a></li><li><a href="wp.NativeHandler.html">wp.NativeHandler</a></li><li><a href="wp.textWidgets.TextWidgetControl.html">wp.textWidgets.TextWidgetControl</a></li><li><a href="wp.utils.wordcounter.html">wp.utils.wordcounter</a></li><li><a href="wp.YouTubeHandler.html">wp.YouTubeHandler</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">Mixins<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="wp.media.controller.StateMachine.html">wp.media.controller.StateMachine</a></li><li><a href="wp.media.mixin.html">wp.media.mixin</a></li><li><a href="wp.media.selectionSync.html">wp.media.selectionSync</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="wp.media.controller.Region.html#event:activate">wp.media.controller.Region#event:activate</a></li><li><a href="wp.media.controller.Region.html#event:create">wp.media.controller.Region#event:create</a></li><li><a href="wp.media.controller.Region.html#event:deactivate">wp.media.controller.Region#event:deactivate</a></li><li><a href="wp.media.controller.Region.html#event:render">wp.media.controller.Region#event:render</a></li><li><a href="wp.media.view.Frame.html#event:%257Bmode%257D:deactivate">wp.media.view.Frame#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.AudioDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.AudioDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.EditAttachments.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.EditAttachments#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.ImageDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.ImageDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Manage.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Manage#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.MediaDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.MediaDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Post.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Post#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Select.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Select#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.VideoDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.VideoDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.controlConstructors-AudioDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.controlConstructors~AudioDetailsMediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.controlConstructors-VideoDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.controlConstructors~VideoDetailsMediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.MediaFrameSelect.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.MediaFrameSelect#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets-GalleryDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets~GalleryDetailsMediaFrame#event:{mode}:deactivate</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#$">$</a></li><li><a href="global.html#_attach">_attach</a></li><li><a href="global.html#_isReady">_isReady</a></li><li><a href="global.html#add">add</a></li><li><a href="global.html#ajaxPopulateWidgets">ajaxPopulateWidgets</a></li><li><a href="global.html#ajaxWidgets">ajaxWidgets</a></li><li><a href="global.html#all">all</a></li><li><a href="global.html#array_unique_noempty">array_unique_noempty</a></li><li><a href="global.html#clearFilters">clearFilters</a></li><li><a href="global.html#commentReply">commentReply</a></li><li><a href="global.html#detach">detach</a></li><li><a href="global.html#editPermalink">editPermalink</a></li><li><a href="global.html#filtersChecked">filtersChecked</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#get">get</a></li><li><a href="global.html#insert">insert</a></li><li><a href="global.html#media">media</a></li><li><a href="global.html#out">out</a></li><li><a href="global.html#over">over</a></li><li><a href="global.html#passwordStrength">passwordStrength</a></li><li><a href="global.html#prepare">prepare</a></li><li><a href="global.html#quickPressLoad">quickPressLoad</a></li><li><a href="global.html#ready">ready</a></li><li><a href="global.html#remove">remove</a></li><li><a href="global.html#render">render</a></li><li><a href="global.html#replace">replace</a></li><li><a href="global.html#search">search</a></li><li><a href="global.html#send_to_editor">send_to_editor</a></li><li><a href="global.html#set">set</a></li><li><a href="global.html#setCommentsList">setCommentsList</a></li><li><a href="global.html#tagBox">tagBox</a></li><li><a href="global.html#tb_position">tb_position</a></li><li><a href="global.html#theExtraList">theExtraList</a></li><li><a href="global.html#theList">theList</a></li><li><a href="global.html#unset">unset</a></li><li><a href="global.html#uploader">uploader</a></li><li><a href="global.html#WPRemoveThumbnail">WPRemoveThumbnail</a></li><li><a href="global.html#WPSetThumbnailHTML">WPSetThumbnailHTML</a></li><li><a href="global.html#WPSetThumbnailID">WPSetThumbnailID</a></li><li><a href="global.html#wptitlehint">wptitlehint</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-12">
+	
+		<div id="main">
+			
+
+		<h1 class="page-title">Source: _enqueues/admin/post.js</h1>
+    
+<section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">/**
+ * @file Contains all dynamic functionality needed on post and term pages.
+ *
+ * @output wp-admin/js/post.js
+ */
+
+ /* global postL10n, ajaxurl, wpAjax, setPostThumbnailL10n, postboxes, pagenow, tinymce, alert, deleteUserSetting */
+ /* global theList:true, theExtraList:true, getUserSetting, setUserSetting, commentReply, commentsBox */
+ /* global WPSetThumbnailHTML, wptitlehint */
+
+// Backwards compatibility: prevent fatal errors.
+window.makeSlugeditClickable = window.editPermalink = function(){};
+
+// Make sure the wp object exists.
+window.wp = window.wp || {};
+
+( function( $ ) {
+	var titleHasFocus = false;
+
+	/**
+	 * Control loading of comments on the post and term edit pages.
+	 *
+	 * @type {{st: number, get: commentsBox.get, load: commentsBox.load}}
+	 *
+	 * @namespace commentsBox
+	 */
+	window.commentsBox = {
+		// Comment offset to use when fetching new comments.
+		st : 0,
+
+		/**
+		 * Fetch comments using AJAX and display them in the box.
+		 *
+		 * @memberof commentsBox
+		 *
+		 * @param {int} total Total number of comments for this post.
+		 * @param {int} num   Optional. Number of comments to fetch, defaults to 20.
+		 * @return {boolean} Always returns false.
+		 */
+		get : function(total, num) {
+			var st = this.st, data;
+			if ( ! num )
+				num = 20;
+
+			this.st += num;
+			this.total = total;
+			$( '#commentsdiv .spinner' ).addClass( 'is-active' );
+
+			data = {
+				'action' : 'get-comments',
+				'mode' : 'single',
+				'_ajax_nonce' : $('#add_comment_nonce').val(),
+				'p' : $('#post_ID').val(),
+				'start' : st,
+				'number' : num
+			};
+
+			$.post(
+				ajaxurl,
+				data,
+				function(r) {
+					r = wpAjax.parseAjaxResponse(r);
+					$('#commentsdiv .widefat').show();
+					$( '#commentsdiv .spinner' ).removeClass( 'is-active' );
+
+					if ( 'object' == typeof r &amp;&amp; r.responses[0] ) {
+						$('#the-comment-list').append( r.responses[0].data );
+
+						theList = theExtraList = null;
+						$( 'a[className*=\':\']' ).unbind();
+
+						// If the offset is over the total number of comments we cannot fetch any more, so hide the button.
+						if ( commentsBox.st > commentsBox.total )
+							$('#show-comments').hide();
+						else
+							$('#show-comments').show().children('a').html(postL10n.showcomm);
+
+						return;
+					} else if ( 1 == r ) {
+						$('#show-comments').html(postL10n.endcomm);
+						return;
+					}
+
+					$('#the-comment-list').append('&lt;tr>&lt;td colspan="2">'+wpAjax.broken+'&lt;/td>&lt;/tr>');
+				}
+			);
+
+			return false;
+		},
+
+		/**
+		 * Load the next batch of comments.
+		 *
+		 * @memberof commentsBox
+		 *
+		 * @param {int} total Total number of comments to load.
+		 */
+		load: function(total){
+			this.st = jQuery('#the-comment-list tr.comment:visible').length;
+			this.get(total);
+		}
+	};
+
+	/**
+	 * Overwrite the content of the Featured Image postbox
+	 *
+	 * @param {string} html New HTML to be displayed in the content area of the postbox.
+	 *
+	 * @global
+	 */
+	window.WPSetThumbnailHTML = function(html){
+		$('.inside', '#postimagediv').html(html);
+	};
+
+	/**
+	 * Set the Image ID of the Featured Image
+	 *
+	 * @param {int} id The post_id of the image to use as Featured Image.
+	 *
+	 * @global
+	 */
+	window.WPSetThumbnailID = function(id){
+		var field = $('input[value="_thumbnail_id"]', '#list-table');
+		if ( field.length > 0 ) {
+			$('#meta\\[' + field.attr('id').match(/[0-9]+/) + '\\]\\[value\\]').text(id);
+		}
+	};
+
+	/**
+	 * Remove the Featured Image
+	 *
+	 * @param {string} nonce Nonce to use in the request.
+	 *
+	 * @global
+	 */
+	window.WPRemoveThumbnail = function(nonce){
+		$.post(ajaxurl, {
+			action: 'set-post-thumbnail', post_id: $( '#post_ID' ).val(), thumbnail_id: -1, _ajax_nonce: nonce, cookie: encodeURIComponent( document.cookie )
+		},
+			/**
+			 * Handle server response
+			 *
+			 * @param {string} str Response, will be '0' when an error occurred otherwise contains link to add Featured Image.
+			 */
+			function(str){
+			if ( str == '0' ) {
+				alert( setPostThumbnailL10n.error );
+			} else {
+				WPSetThumbnailHTML(str);
+			}
+		}
+		);
+	};
+
+	/**
+	 * Heartbeat locks.
+	 *
+	 * Used to lock editing of an object by only one user at a time.
+	 *
+	 * When the user does not send a heartbeat in a heartbeat-time
+	 * the user is no longer editing and another user can start editing.
+	 */
+	$(document).on( 'heartbeat-send.refresh-lock', function( e, data ) {
+		var lock = $('#active_post_lock').val(),
+			post_id = $('#post_ID').val(),
+			send = {};
+
+		if ( ! post_id || ! $('#post-lock-dialog').length )
+			return;
+
+		send.post_id = post_id;
+
+		if ( lock )
+			send.lock = lock;
+
+		data['wp-refresh-post-lock'] = send;
+
+	}).on( 'heartbeat-tick.refresh-lock', function( e, data ) {
+		// Post locks: update the lock string or show the dialog if somebody has taken over editing.
+		var received, wrap, avatar;
+
+		if ( data['wp-refresh-post-lock'] ) {
+			received = data['wp-refresh-post-lock'];
+
+			if ( received.lock_error ) {
+				// Show "editing taken over" message.
+				wrap = $('#post-lock-dialog');
+
+				if ( wrap.length &amp;&amp; ! wrap.is(':visible') ) {
+					if ( wp.autosave ) {
+						// Save the latest changes and disable.
+						$(document).one( 'heartbeat-tick', function() {
+							wp.autosave.server.suspend();
+							wrap.removeClass('saving').addClass('saved');
+							$(window).off( 'beforeunload.edit-post' );
+						});
+
+						wrap.addClass('saving');
+						wp.autosave.server.triggerSave();
+					}
+
+					if ( received.lock_error.avatar_src ) {
+						avatar = $( '&lt;img class="avatar avatar-64 photo" width="64" height="64" alt="" />' ).attr( 'src', received.lock_error.avatar_src.replace( /&amp;amp;/g, '&amp;' ) );
+						wrap.find('div.post-locked-avatar').empty().append( avatar );
+					}
+
+					wrap.show().find('.currently-editing').text( received.lock_error.text );
+					wrap.find('.wp-tab-first').focus();
+				}
+			} else if ( received.new_lock ) {
+				$('#active_post_lock').val( received.new_lock );
+			}
+		}
+	}).on( 'before-autosave.update-post-slug', function() {
+		titleHasFocus = document.activeElement &amp;&amp; document.activeElement.id === 'title';
+	}).on( 'after-autosave.update-post-slug', function() {
+
+		/*
+		 * Create slug area only if not already there
+		 * and the title field was not focused (user was not typing a title) when autosave ran.
+		 */
+		if ( ! $('#edit-slug-box > *').length &amp;&amp; ! titleHasFocus ) {
+			$.post( ajaxurl, {
+					action: 'sample-permalink',
+					post_id: $('#post_ID').val(),
+					new_title: $('#title').val(),
+					samplepermalinknonce: $('#samplepermalinknonce').val()
+				},
+				function( data ) {
+					if ( data != '-1' ) {
+						$('#edit-slug-box').html(data);
+					}
+				}
+			);
+		}
+	});
+
+}(jQuery));
+
+/**
+ * Heartbeat refresh nonces.
+ */
+(function($) {
+	var check, timeout;
+
+	/**
+	 * Only allow to check for nonce refresh every 30 seconds.
+	 */
+	function schedule() {
+		check = false;
+		window.clearTimeout( timeout );
+		timeout = window.setTimeout( function(){ check = true; }, 300000 );
+	}
+
+	$(document).on( 'heartbeat-send.wp-refresh-nonces', function( e, data ) {
+		var post_id,
+			$authCheck = $('#wp-auth-check-wrap');
+
+		if ( check || ( $authCheck.length &amp;&amp; ! $authCheck.hasClass( 'hidden' ) ) ) {
+			if ( ( post_id = $('#post_ID').val() ) &amp;&amp; $('#_wpnonce').val() ) {
+				data['wp-refresh-post-nonces'] = {
+					post_id: post_id
+				};
+			}
+		}
+	}).on( 'heartbeat-tick.wp-refresh-nonces', function( e, data ) {
+		var nonces = data['wp-refresh-post-nonces'];
+
+		if ( nonces ) {
+			schedule();
+
+			if ( nonces.replace ) {
+				$.each( nonces.replace, function( selector, value ) {
+					$( '#' + selector ).val( value );
+				});
+			}
+
+			if ( nonces.heartbeatNonce )
+				window.heartbeatSettings.nonce = nonces.heartbeatNonce;
+		}
+	}).ready( function() {
+		schedule();
+	});
+}(jQuery));
+
+/**
+ * All post and postbox controls and functionality.
+ */
+jQuery(document).ready( function($) {
+	var stamp, visibility, $submitButtons, updateVisibility, updateText,
+		sticky = '',
+		$textarea = $('#content'),
+		$document = $(document),
+		postId = $('#post_ID').val() || 0,
+		$submitpost = $('#submitpost'),
+		releaseLock = true,
+		$postVisibilitySelect = $('#post-visibility-select'),
+		$timestampdiv = $('#timestampdiv'),
+		$postStatusSelect = $('#post-status-select'),
+		isMac = window.navigator.platform ? window.navigator.platform.indexOf( 'Mac' ) !== -1 : false;
+
+	postboxes.add_postbox_toggles(pagenow);
+
+	/*
+	 * Clear the window name. Otherwise if this is a former preview window where the user navigated to edit another post,
+	 * and the first post is still being edited, clicking Preview there will use this window to show the preview.
+	 */
+	window.name = '';
+
+	// Post locks: contain focus inside the dialog. If the dialog is shown, focus the first item.
+	$('#post-lock-dialog .notification-dialog').on( 'keydown', function(e) {
+		// Don't do anything when [Tab] is pressed.
+		if ( e.which != 9 )
+			return;
+
+		var target = $(e.target);
+
+		// [Shift] + [Tab] on first tab cycles back to last tab.
+		if ( target.hasClass('wp-tab-first') &amp;&amp; e.shiftKey ) {
+			$(this).find('.wp-tab-last').focus();
+			e.preventDefault();
+		// [Tab] on last tab cycles back to first tab.
+		} else if ( target.hasClass('wp-tab-last') &amp;&amp; ! e.shiftKey ) {
+			$(this).find('.wp-tab-first').focus();
+			e.preventDefault();
+		}
+	}).filter(':visible').find('.wp-tab-first').focus();
+
+	// Set the heartbeat interval to 15 seconds if post lock dialogs are enabled.
+	if ( wp.heartbeat &amp;&amp; $('#post-lock-dialog').length ) {
+		wp.heartbeat.interval( 15 );
+	}
+
+	// The form is being submitted by the user.
+	$submitButtons = $submitpost.find( ':submit, a.submitdelete, #post-preview' ).on( 'click.edit-post', function( event ) {
+		var $button = $(this);
+
+		if ( $button.hasClass('disabled') ) {
+			event.preventDefault();
+			return;
+		}
+
+		if ( $button.hasClass('submitdelete') || $button.is( '#post-preview' ) ) {
+			return;
+		}
+
+		// The form submission can be blocked from JS or by using HTML 5.0 validation on some fields.
+		// Run this only on an actual 'submit'.
+		$('form#post').off( 'submit.edit-post' ).on( 'submit.edit-post', function( event ) {
+			if ( event.isDefaultPrevented() ) {
+				return;
+			}
+
+			// Stop auto save.
+			if ( wp.autosave ) {
+				wp.autosave.server.suspend();
+			}
+
+			if ( typeof commentReply !== 'undefined' ) {
+				/*
+				 * Warn the user they have an unsaved comment before submitting
+				 * the post data for update.
+				 */
+				if ( ! commentReply.discardCommentChanges() ) {
+					return false;
+				}
+
+				/*
+				 * Close the comment edit/reply form if open to stop the form
+				 * action from interfering with the post's form action.
+				 */
+				commentReply.close();
+			}
+
+			releaseLock = false;
+			$(window).off( 'beforeunload.edit-post' );
+
+			$submitButtons.addClass( 'disabled' );
+
+			if ( $button.attr('id') === 'publish' ) {
+				$submitpost.find( '#major-publishing-actions .spinner' ).addClass( 'is-active' );
+			} else {
+				$submitpost.find( '#minor-publishing .spinner' ).addClass( 'is-active' );
+			}
+		});
+	});
+
+	// Submit the form saving a draft or an autosave, and show a preview in a new tab.
+	$('#post-preview').on( 'click.post-preview', function( event ) {
+		var $this = $(this),
+			$form = $('form#post'),
+			$previewField = $('input#wp-preview'),
+			target = $this.attr('target') || 'wp-preview',
+			ua = navigator.userAgent.toLowerCase();
+
+		event.preventDefault();
+
+		if ( $this.hasClass('disabled') ) {
+			return;
+		}
+
+		if ( wp.autosave ) {
+			wp.autosave.server.tempBlockSave();
+		}
+
+		$previewField.val('dopreview');
+		$form.attr( 'target', target ).submit().attr( 'target', '' );
+
+		// Workaround for WebKit bug preventing a form submitting twice to the same action.
+		// https://bugs.webkit.org/show_bug.cgi?id=28633
+		if ( ua.indexOf('safari') !== -1 &amp;&amp; ua.indexOf('chrome') === -1 ) {
+			$form.attr( 'action', function( index, value ) {
+				return value + '?t=' + ( new Date() ).getTime();
+			});
+		}
+
+		$previewField.val('');
+	});
+
+	// This code is meant to allow tabbing from Title to Post content.
+	$('#title').on( 'keydown.editor-focus', function( event ) {
+		var editor;
+
+		if ( event.keyCode === 9 &amp;&amp; ! event.ctrlKey &amp;&amp; ! event.altKey &amp;&amp; ! event.shiftKey ) {
+			editor = typeof tinymce != 'undefined' &amp;&amp; tinymce.get('content');
+
+			if ( editor &amp;&amp; ! editor.isHidden() ) {
+				editor.focus();
+			} else if ( $textarea.length ) {
+				$textarea.focus();
+			} else {
+				return;
+			}
+
+			event.preventDefault();
+		}
+	});
+
+	// Auto save new posts after a title is typed.
+	if ( $( '#auto_draft' ).val() ) {
+		$( '#title' ).blur( function() {
+			var cancel;
+
+			if ( ! this.value || $('#edit-slug-box > *').length ) {
+				return;
+			}
+
+			// Cancel the auto save when the blur was triggered by the user submitting the form.
+			$('form#post').one( 'submit', function() {
+				cancel = true;
+			});
+
+			window.setTimeout( function() {
+				if ( ! cancel &amp;&amp; wp.autosave ) {
+					wp.autosave.server.triggerSave();
+				}
+			}, 200 );
+		});
+	}
+
+	$document.on( 'autosave-disable-buttons.edit-post', function() {
+		$submitButtons.addClass( 'disabled' );
+	}).on( 'autosave-enable-buttons.edit-post', function() {
+		if ( ! wp.heartbeat || ! wp.heartbeat.hasConnectionError() ) {
+			$submitButtons.removeClass( 'disabled' );
+		}
+	}).on( 'before-autosave.edit-post', function() {
+		$( '.autosave-message' ).text( postL10n.savingText );
+	}).on( 'after-autosave.edit-post', function( event, data ) {
+		$( '.autosave-message' ).text( data.message );
+
+		if ( $( document.body ).hasClass( 'post-new-php' ) ) {
+			$( '.submitbox .submitdelete' ).show();
+		}
+	});
+
+	/*
+	 * When the user is trying to load another page, or reloads current page
+	 * show a confirmation dialog when there are unsaved changes.
+	 */
+	$(window).on( 'beforeunload.edit-post', function() {
+		var editor = typeof tinymce !== 'undefined' &amp;&amp; tinymce.get('content');
+
+		if ( ( editor &amp;&amp; ! editor.isHidden() &amp;&amp; editor.isDirty() ) ||
+			( wp.autosave &amp;&amp; wp.autosave.server.postChanged() ) ) {
+
+			return postL10n.saveAlert;
+		}
+	}).on( 'unload.edit-post', function( event ) {
+		if ( ! releaseLock ) {
+			return;
+		}
+
+		/*
+		 * Unload is triggered (by hand) on removing the Thickbox iframe.
+		 * Make sure we process only the main document unload.
+		 */
+		if ( event.target &amp;&amp; event.target.nodeName != '#document' ) {
+			return;
+		}
+
+		var postID = $('#post_ID').val();
+		var postLock = $('#active_post_lock').val();
+
+		if ( ! postID || ! postLock ) {
+			return;
+		}
+
+		var data = {
+			action: 'wp-remove-post-lock',
+			_wpnonce: $('#_wpnonce').val(),
+			post_ID: postID,
+			active_post_lock: postLock
+		};
+
+		if ( window.FormData &amp;&amp; window.navigator.sendBeacon ) {
+			var formData = new window.FormData();
+
+			$.each( data, function( key, value ) {
+				formData.append( key, value );
+			});
+
+			if ( window.navigator.sendBeacon( ajaxurl, formData ) ) {
+				return;
+			}
+		}
+
+		// Fall back to a synchronous POST request.
+		// See https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon
+		$.post({
+			async: false,
+			data: data,
+			url: ajaxurl
+		});
+	});
+
+	// Multiple taxonomies.
+	if ( $('#tagsdiv-post_tag').length ) {
+		window.tagBox &amp;&amp; window.tagBox.init();
+	} else {
+		$('.meta-box-sortables').children('div.postbox').each(function(){
+			if ( this.id.indexOf('tagsdiv-') === 0 ) {
+				window.tagBox &amp;&amp; window.tagBox.init();
+				return false;
+			}
+		});
+	}
+
+	// Handle categories.
+	$('.categorydiv').each( function(){
+		var this_id = $(this).attr('id'), catAddBefore, catAddAfter, taxonomyParts, taxonomy, settingName;
+
+		taxonomyParts = this_id.split('-');
+		taxonomyParts.shift();
+		taxonomy = taxonomyParts.join('-');
+		settingName = taxonomy + '_tab';
+
+		if ( taxonomy == 'category' ) {
+			settingName = 'cats';
+		}
+
+		// @todo Move to jQuery 1.3+, support for multiple hierarchical taxonomies, see wp-lists.js.
+		$('a', '#' + taxonomy + '-tabs').click( function( e ) {
+			e.preventDefault();
+			var t = $(this).attr('href');
+			$(this).parent().addClass('tabs').siblings('li').removeClass('tabs');
+			$('#' + taxonomy + '-tabs').siblings('.tabs-panel').hide();
+			$(t).show();
+			if ( '#' + taxonomy + '-all' == t ) {
+				deleteUserSetting( settingName );
+			} else {
+				setUserSetting( settingName, 'pop' );
+			}
+		});
+
+		if ( getUserSetting( settingName ) )
+			$('a[href="#' + taxonomy + '-pop"]', '#' + taxonomy + '-tabs').click();
+
+		// Add category button controls.
+		$('#new' + taxonomy).one( 'focus', function() {
+			$( this ).val( '' ).removeClass( 'form-input-tip' );
+		});
+
+		// On [Enter] submit the taxonomy.
+		$('#new' + taxonomy).keypress( function(event){
+			if( 13 === event.keyCode ) {
+				event.preventDefault();
+				$('#' + taxonomy + '-add-submit').click();
+			}
+		});
+
+		// After submitting a new taxonomy, re-focus the input field.
+		$('#' + taxonomy + '-add-submit').click( function() {
+			$('#new' + taxonomy).focus();
+		});
+
+		/**
+		 * Before adding a new taxonomy, disable submit button.
+		 *
+		 * @param {Object} s Taxonomy object which will be added.
+		 *
+		 * @return {Object}
+		 */
+		catAddBefore = function( s ) {
+			if ( !$('#new'+taxonomy).val() ) {
+				return false;
+			}
+
+			s.data += '&amp;' + $( ':checked', '#'+taxonomy+'checklist' ).serialize();
+			$( '#' + taxonomy + '-add-submit' ).prop( 'disabled', true );
+			return s;
+		};
+
+		/**
+		 * Re-enable submit button after a taxonomy has been added.
+		 *
+		 * Re-enable submit button.
+		 * If the taxonomy has a parent place the taxonomy underneath the parent.
+		 *
+		 * @param {Object} r Response.
+		 * @param {Object} s Taxonomy data.
+		 *
+		 * @return {void}
+		 */
+		catAddAfter = function( r, s ) {
+			var sup, drop = $('#new'+taxonomy+'_parent');
+
+			$( '#' + taxonomy + '-add-submit' ).prop( 'disabled', false );
+			if ( 'undefined' != s.parsed.responses[0] &amp;&amp; (sup = s.parsed.responses[0].supplemental.newcat_parent) ) {
+				drop.before(sup);
+				drop.remove();
+			}
+		};
+
+		$('#' + taxonomy + 'checklist').wpList({
+			alt: '',
+			response: taxonomy + '-ajax-response',
+			addBefore: catAddBefore,
+			addAfter: catAddAfter
+		});
+
+		// Add new taxonomy button toggles input form visibility.
+		$('#' + taxonomy + '-add-toggle').click( function( e ) {
+			e.preventDefault();
+			$('#' + taxonomy + '-adder').toggleClass( 'wp-hidden-children' );
+			$('a[href="#' + taxonomy + '-all"]', '#' + taxonomy + '-tabs').click();
+			$('#new'+taxonomy).focus();
+		});
+
+		// Sync checked items between "All {taxonomy}" and "Most used" lists.
+		$('#' + taxonomy + 'checklist, #' + taxonomy + 'checklist-pop').on( 'click', 'li.popular-category > label input[type="checkbox"]', function() {
+			var t = $(this), c = t.is(':checked'), id = t.val();
+			if ( id &amp;&amp; t.parents('#taxonomy-'+taxonomy).length )
+				$('#in-' + taxonomy + '-' + id + ', #in-popular-' + taxonomy + '-' + id).prop( 'checked', c );
+		});
+
+	}); // End cats.
+
+	// Custom Fields postbox.
+	if ( $('#postcustom').length ) {
+		$( '#the-list' ).wpList( {
+			/**
+			 * Add current post_ID to request to fetch custom fields
+			 *
+			 * @ignore
+			 *
+			 * @param {Object} s Request object.
+			 *
+			 * @return {Object} Data modified with post_ID attached.
+			 */
+			addBefore: function( s ) {
+				s.data += '&amp;post_id=' + $('#post_ID').val();
+				return s;
+			},
+			/**
+			 * Show the listing of custom fields after fetching.
+			 *
+			 * @ignore
+			 */
+			addAfter: function() {
+				$('table#list-table').show();
+			}
+		});
+	}
+
+	/*
+	 * Publish Post box (#submitdiv)
+	 */
+	if ( $('#submitdiv').length ) {
+		stamp = $('#timestamp').html();
+		visibility = $('#post-visibility-display').html();
+
+		/**
+		 * When the visibility of a post changes sub-options should be shown or hidden.
+		 *
+		 * @ignore
+		 *
+		 * @return {void}
+		 */
+		updateVisibility = function() {
+			// Show sticky for public posts.
+			if ( $postVisibilitySelect.find('input:radio:checked').val() != 'public' ) {
+				$('#sticky').prop('checked', false);
+				$('#sticky-span').hide();
+			} else {
+				$('#sticky-span').show();
+			}
+
+			// Show password input field for password protected post.
+			if ( $postVisibilitySelect.find('input:radio:checked').val() != 'password' ) {
+				$('#password-span').hide();
+			} else {
+				$('#password-span').show();
+			}
+		};
+
+		/**
+		 * Make sure all labels represent the current settings.
+		 *
+		 * @ignore
+		 *
+		 * @return {boolean} False when an invalid timestamp has been selected, otherwise True.
+		 */
+		updateText = function() {
+
+			if ( ! $timestampdiv.length )
+				return true;
+
+			var attemptedDate, originalDate, currentDate, publishOn, postStatus = $('#post_status'),
+				optPublish = $('option[value="publish"]', postStatus), aa = $('#aa').val(),
+				mm = $('#mm').val(), jj = $('#jj').val(), hh = $('#hh').val(), mn = $('#mn').val();
+
+			attemptedDate = new Date( aa, mm - 1, jj, hh, mn );
+			originalDate = new Date( $('#hidden_aa').val(), $('#hidden_mm').val() -1, $('#hidden_jj').val(), $('#hidden_hh').val(), $('#hidden_mn').val() );
+			currentDate = new Date( $('#cur_aa').val(), $('#cur_mm').val() -1, $('#cur_jj').val(), $('#cur_hh').val(), $('#cur_mn').val() );
+
+			// Catch unexpected date problems.
+			if ( attemptedDate.getFullYear() != aa || (1 + attemptedDate.getMonth()) != mm || attemptedDate.getDate() != jj || attemptedDate.getMinutes() != mn ) {
+				$timestampdiv.find('.timestamp-wrap').addClass('form-invalid');
+				return false;
+			} else {
+				$timestampdiv.find('.timestamp-wrap').removeClass('form-invalid');
+			}
+
+			// Determine what the publish should be depending on the date and post status.
+			if ( attemptedDate > currentDate &amp;&amp; $('#original_post_status').val() != 'future' ) {
+				publishOn = postL10n.publishOnFuture;
+				$('#publish').val( postL10n.schedule );
+			} else if ( attemptedDate &lt;= currentDate &amp;&amp; $('#original_post_status').val() != 'publish' ) {
+				publishOn = postL10n.publishOn;
+				$('#publish').val( postL10n.publish );
+			} else {
+				publishOn = postL10n.publishOnPast;
+				$('#publish').val( postL10n.update );
+			}
+
+			// If the date is the same, set it to trigger update events.
+			if ( originalDate.toUTCString() == attemptedDate.toUTCString() ) {
+				// Re-set to the current value.
+				$('#timestamp').html(stamp);
+			} else {
+				$('#timestamp').html(
+					'\n' + publishOn + ' &lt;b>' +
+					postL10n.dateFormat
+						.replace( '%1$s', $( 'option[value="' + mm + '"]', '#mm' ).attr( 'data-text' ) )
+						.replace( '%2$s', parseInt( jj, 10 ) )
+						.replace( '%3$s', aa )
+						.replace( '%4$s', ( '00' + hh ).slice( -2 ) )
+						.replace( '%5$s', ( '00' + mn ).slice( -2 ) ) +
+						'&lt;/b> '
+				);
+			}
+
+			// Add "privately published" to post status when applies.
+			if ( $postVisibilitySelect.find('input:radio:checked').val() == 'private' ) {
+				$('#publish').val( postL10n.update );
+				if ( 0 === optPublish.length ) {
+					postStatus.append('&lt;option value="publish">' + postL10n.privatelyPublished + '&lt;/option>');
+				} else {
+					optPublish.html( postL10n.privatelyPublished );
+				}
+				$('option[value="publish"]', postStatus).prop('selected', true);
+				$('#misc-publishing-actions .edit-post-status').hide();
+			} else {
+				if ( $('#original_post_status').val() == 'future' || $('#original_post_status').val() == 'draft' ) {
+					if ( optPublish.length ) {
+						optPublish.remove();
+						postStatus.val($('#hidden_post_status').val());
+					}
+				} else {
+					optPublish.html( postL10n.published );
+				}
+				if ( postStatus.is(':hidden') )
+					$('#misc-publishing-actions .edit-post-status').show();
+			}
+
+			// Update "Status:" to currently selected status.
+			$('#post-status-display').text(
+				// Remove any potential tags from post status text.
+				wp.sanitize.stripTagsAndEncodeText( $('option:selected', postStatus).text() )
+			);
+
+			// Show or hide the "Save Draft" button.
+			if ( $('option:selected', postStatus).val() == 'private' || $('option:selected', postStatus).val() == 'publish' ) {
+				$('#save-post').hide();
+			} else {
+				$('#save-post').show();
+				if ( $('option:selected', postStatus).val() == 'pending' ) {
+					$('#save-post').show().val( postL10n.savePending );
+				} else {
+					$('#save-post').show().val( postL10n.saveDraft );
+				}
+			}
+			return true;
+		};
+
+		// Show the visibility options and hide the toggle button when opened.
+		$( '#visibility .edit-visibility').click( function( e ) {
+			e.preventDefault();
+			if ( $postVisibilitySelect.is(':hidden') ) {
+				updateVisibility();
+				$postVisibilitySelect.slideDown( 'fast', function() {
+					$postVisibilitySelect.find( 'input[type="radio"]' ).first().focus();
+				} );
+				$(this).hide();
+			}
+		});
+
+		// Cancel visibility selection area and hide it from view.
+		$postVisibilitySelect.find('.cancel-post-visibility').click( function( event ) {
+			$postVisibilitySelect.slideUp('fast');
+			$('#visibility-radio-' + $('#hidden-post-visibility').val()).prop('checked', true);
+			$('#post_password').val($('#hidden-post-password').val());
+			$('#sticky').prop('checked', $('#hidden-post-sticky').prop('checked'));
+			$('#post-visibility-display').html(visibility);
+			$('#visibility .edit-visibility').show().focus();
+			updateText();
+			event.preventDefault();
+		});
+
+		// Set the selected visibility as current.
+		$postVisibilitySelect.find('.save-post-visibility').click( function( event ) { // Crazyhorse - multiple OK cancels.
+			$postVisibilitySelect.slideUp('fast');
+			$('#visibility .edit-visibility').show().focus();
+			updateText();
+
+			if ( $postVisibilitySelect.find('input:radio:checked').val() != 'public' ) {
+				$('#sticky').prop('checked', false);
+			}
+
+			if ( $('#sticky').prop('checked') ) {
+				sticky = 'Sticky';
+			} else {
+				sticky = '';
+			}
+
+			$('#post-visibility-display').html(	postL10n[ $postVisibilitySelect.find('input:radio:checked').val() + sticky ]	);
+			event.preventDefault();
+		});
+
+		// When the selection changes, update labels.
+		$postVisibilitySelect.find('input:radio').change( function() {
+			updateVisibility();
+		});
+
+		// Edit publish time click.
+		$timestampdiv.siblings('a.edit-timestamp').click( function( event ) {
+			if ( $timestampdiv.is( ':hidden' ) ) {
+				$timestampdiv.slideDown( 'fast', function() {
+					$( 'input, select', $timestampdiv.find( '.timestamp-wrap' ) ).first().focus();
+				} );
+				$(this).hide();
+			}
+			event.preventDefault();
+		});
+
+		// Cancel editing the publish time and hide the settings.
+		$timestampdiv.find('.cancel-timestamp').click( function( event ) {
+			$timestampdiv.slideUp('fast').siblings('a.edit-timestamp').show().focus();
+			$('#mm').val($('#hidden_mm').val());
+			$('#jj').val($('#hidden_jj').val());
+			$('#aa').val($('#hidden_aa').val());
+			$('#hh').val($('#hidden_hh').val());
+			$('#mn').val($('#hidden_mn').val());
+			updateText();
+			event.preventDefault();
+		});
+
+		// Save the changed timestamp.
+		$timestampdiv.find('.save-timestamp').click( function( event ) { // Crazyhorse - multiple OK cancels.
+			if ( updateText() ) {
+				$timestampdiv.slideUp('fast');
+				$timestampdiv.siblings('a.edit-timestamp').show().focus();
+			}
+			event.preventDefault();
+		});
+
+		// Cancel submit when an invalid timestamp has been selected.
+		$('#post').on( 'submit', function( event ) {
+			if ( ! updateText() ) {
+				event.preventDefault();
+				$timestampdiv.show();
+
+				if ( wp.autosave ) {
+					wp.autosave.enableButtons();
+				}
+
+				$( '#publishing-action .spinner' ).removeClass( 'is-active' );
+			}
+		});
+
+		// Post Status edit click.
+		$postStatusSelect.siblings('a.edit-post-status').click( function( event ) {
+			if ( $postStatusSelect.is( ':hidden' ) ) {
+				$postStatusSelect.slideDown( 'fast', function() {
+					$postStatusSelect.find('select').focus();
+				} );
+				$(this).hide();
+			}
+			event.preventDefault();
+		});
+
+		// Save the Post Status changes and hide the options.
+		$postStatusSelect.find('.save-post-status').click( function( event ) {
+			$postStatusSelect.slideUp( 'fast' ).siblings( 'a.edit-post-status' ).show().focus();
+			updateText();
+			event.preventDefault();
+		});
+
+		// Cancel Post Status editing and hide the options.
+		$postStatusSelect.find('.cancel-post-status').click( function( event ) {
+			$postStatusSelect.slideUp( 'fast' ).siblings( 'a.edit-post-status' ).show().focus();
+			$('#post_status').val( $('#hidden_post_status').val() );
+			updateText();
+			event.preventDefault();
+		});
+	}
+
+	/**
+	 * Handle the editing of the post_name. Create the required HTML elements and
+	 * update the changes via AJAX.
+	 *
+	 * @global
+	 *
+	 * @return {void}
+	 */
+	function editPermalink() {
+		var i, slug_value,
+			$el, revert_e,
+			c = 0,
+			real_slug = $('#post_name'),
+			revert_slug = real_slug.val(),
+			permalink = $( '#sample-permalink' ),
+			permalinkOrig = permalink.html(),
+			permalinkInner = $( '#sample-permalink a' ).html(),
+			buttons = $('#edit-slug-buttons'),
+			buttonsOrig = buttons.html(),
+			full = $('#editable-post-name-full');
+
+		// Deal with Twemoji in the post-name.
+		full.find( 'img' ).replaceWith( function() { return this.alt; } );
+		full = full.html();
+
+		permalink.html( permalinkInner );
+
+		// Save current content to revert to when cancelling.
+		$el = $( '#editable-post-name' );
+		revert_e = $el.html();
+
+		buttons.html( '&lt;button type="button" class="save button button-small">' + postL10n.ok + '&lt;/button> &lt;button type="button" class="cancel button-link">' + postL10n.cancel + '&lt;/button>' );
+
+		// Save permalink changes.
+		buttons.children( '.save' ).click( function() {
+			var new_slug = $el.children( 'input' ).val();
+
+			if ( new_slug == $('#editable-post-name-full').text() ) {
+				buttons.children('.cancel').click();
+				return;
+			}
+
+			$.post(
+				ajaxurl,
+				{
+					action: 'sample-permalink',
+					post_id: postId,
+					new_slug: new_slug,
+					new_title: $('#title').val(),
+					samplepermalinknonce: $('#samplepermalinknonce').val()
+				},
+				function(data) {
+					var box = $('#edit-slug-box');
+					box.html(data);
+					if (box.hasClass('hidden')) {
+						box.fadeIn('fast', function () {
+							box.removeClass('hidden');
+						});
+					}
+
+					buttons.html(buttonsOrig);
+					permalink.html(permalinkOrig);
+					real_slug.val(new_slug);
+					$( '.edit-slug' ).focus();
+					wp.a11y.speak( postL10n.permalinkSaved );
+				}
+			);
+		});
+
+		// Cancel editing of permalink.
+		buttons.children( '.cancel' ).click( function() {
+			$('#view-post-btn').show();
+			$el.html(revert_e);
+			buttons.html(buttonsOrig);
+			permalink.html(permalinkOrig);
+			real_slug.val(revert_slug);
+			$( '.edit-slug' ).focus();
+		});
+
+		// If more than 1/4th of 'full' is '%', make it empty.
+		for ( i = 0; i &lt; full.length; ++i ) {
+			if ( '%' == full.charAt(i) )
+				c++;
+		}
+		slug_value = ( c > full.length / 4 ) ? '' : full;
+
+		$el.html( '&lt;input type="text" id="new-post-slug" value="' + slug_value + '" autocomplete="off" />' ).children( 'input' ).keydown( function( e ) {
+			var key = e.which;
+			// On [Enter], just save the new slug, don't save the post.
+			if ( 13 === key ) {
+				e.preventDefault();
+				buttons.children( '.save' ).click();
+			}
+			// On [Esc] cancel the editing.
+			if ( 27 === key ) {
+				buttons.children( '.cancel' ).click();
+			}
+		} ).keyup( function() {
+			real_slug.val( this.value );
+		}).focus();
+	}
+
+	$( '#titlediv' ).on( 'click', '.edit-slug', function() {
+		editPermalink();
+	});
+
+	/**
+	 * Adds screen reader text to the title label when needed.
+	 *
+	 * Use the 'screen-reader-text' class to emulate a placeholder attribute
+	 * and hide the label when entering a value.
+	 *
+	 * @param {string} id Optional. HTML ID to add the screen reader helper text to.
+	 *
+	 * @global
+	 *
+	 * @return {void}
+	 */
+	window.wptitlehint = function( id ) {
+		id = id || 'title';
+
+		var title = $( '#' + id ), titleprompt = $( '#' + id + '-prompt-text' );
+
+		if ( '' === title.val() ) {
+			titleprompt.removeClass( 'screen-reader-text' );
+		}
+
+		title.on( 'input', function() {
+			if ( '' === this.value ) {
+				titleprompt.removeClass( 'screen-reader-text' );
+				return;
+			}
+
+			titleprompt.addClass( 'screen-reader-text' );
+		} );
+	};
+
+	wptitlehint();
+
+	// Resize the WYSIWYG and plain text editors.
+	( function() {
+		var editor, offset, mce,
+			$handle = $('#post-status-info'),
+			$postdivrich = $('#postdivrich');
+
+		// If there are no textareas or we are on a touch device, we can't do anything.
+		if ( ! $textarea.length || 'ontouchstart' in window ) {
+			// Hide the resize handle.
+			$('#content-resize-handle').hide();
+			return;
+		}
+
+		/**
+		 * Handle drag event.
+		 *
+		 * @param {Object} event Event containing details about the drag.
+		 */
+		function dragging( event ) {
+			if ( $postdivrich.hasClass( 'wp-editor-expand' ) ) {
+				return;
+			}
+
+			if ( mce ) {
+				editor.theme.resizeTo( null, offset + event.pageY );
+			} else {
+				$textarea.height( Math.max( 50, offset + event.pageY ) );
+			}
+
+			event.preventDefault();
+		}
+
+		/**
+		 * When the dragging stopped make sure we return focus and do a sanity check on the height.
+		 */
+		function endDrag() {
+			var height, toolbarHeight;
+
+			if ( $postdivrich.hasClass( 'wp-editor-expand' ) ) {
+				return;
+			}
+
+			if ( mce ) {
+				editor.focus();
+				toolbarHeight = parseInt( $( '#wp-content-editor-container .mce-toolbar-grp' ).height(), 10 );
+
+				if ( toolbarHeight &lt; 10 || toolbarHeight > 200 ) {
+					toolbarHeight = 30;
+				}
+
+				height = parseInt( $('#content_ifr').css('height'), 10 ) + toolbarHeight - 28;
+			} else {
+				$textarea.focus();
+				height = parseInt( $textarea.css('height'), 10 );
+			}
+
+			$document.off( '.wp-editor-resize' );
+
+			// Sanity check: normalize height to stay within acceptable ranges.
+			if ( height &amp;&amp; height > 50 &amp;&amp; height &lt; 5000 ) {
+				setUserSetting( 'ed_size', height );
+			}
+		}
+
+		$handle.on( 'mousedown.wp-editor-resize', function( event ) {
+			if ( typeof tinymce !== 'undefined' ) {
+				editor = tinymce.get('content');
+			}
+
+			if ( editor &amp;&amp; ! editor.isHidden() ) {
+				mce = true;
+				offset = $('#content_ifr').height() - event.pageY;
+			} else {
+				mce = false;
+				offset = $textarea.height() - event.pageY;
+				$textarea.blur();
+			}
+
+			$document.on( 'mousemove.wp-editor-resize', dragging )
+				.on( 'mouseup.wp-editor-resize mouseleave.wp-editor-resize', endDrag );
+
+			event.preventDefault();
+		}).on( 'mouseup.wp-editor-resize', endDrag );
+	})();
+
+	// TinyMCE specific handling of Post Format changes to reflect in the editor.
+	if ( typeof tinymce !== 'undefined' ) {
+		// When changing post formats, change the editor body class.
+		$( '#post-formats-select input.post-format' ).on( 'change.set-editor-class', function() {
+			var editor, body, format = this.id;
+
+			if ( format &amp;&amp; $( this ).prop( 'checked' ) &amp;&amp; ( editor = tinymce.get( 'content' ) ) ) {
+				body = editor.getBody();
+				body.className = body.className.replace( /\bpost-format-[^ ]+/, '' );
+				editor.dom.addClass( body, format == 'post-format-0' ? 'post-format-standard' : format );
+				$( document ).trigger( 'editor-classchange' );
+			}
+		});
+
+		// When changing page template, change the editor body class.
+		$( '#page_template' ).on( 'change.set-editor-class', function() {
+			var editor, body, pageTemplate = $( this ).val() || '';
+
+			pageTemplate = pageTemplate.substr( pageTemplate.lastIndexOf( '/' ) + 1, pageTemplate.length )
+				.replace( /\.php$/, '' )
+				.replace( /\./g, '-' );
+
+			if ( pageTemplate &amp;&amp; ( editor = tinymce.get( 'content' ) ) ) {
+				body = editor.getBody();
+				body.className = body.className.replace( /\bpage-template-[^ ]+/, '' );
+				editor.dom.addClass( body, 'page-template-' + pageTemplate );
+				$( document ).trigger( 'editor-classchange' );
+			}
+		});
+
+	}
+
+	// Save on pressing [Ctrl]/[Command] + [S] in the Text editor.
+	$textarea.on( 'keydown.wp-autosave', function( event ) {
+		// Key [S] has code 83.
+		if ( event.which === 83 ) {
+			if ( event.shiftKey || event.altKey || ( isMac &amp;&amp; ( ! event.metaKey || event.ctrlKey ) ) || ( ! isMac &amp;&amp; ! event.ctrlKey ) ) {
+				return;
+			}
+
+			wp.autosave &amp;&amp; wp.autosave.server.triggerSave();
+			event.preventDefault();
+		}
+	});
+
+	// If the last status was auto-draft and the save is triggered, edit the current URL.
+	if ( $( '#original_post_status' ).val() === 'auto-draft' &amp;&amp; window.history.replaceState ) {
+		var location;
+
+		$( '#publish' ).on( 'click', function() {
+			location = window.location.href;
+			location += ( location.indexOf( '?' ) !== -1 ) ? '&amp;' : '?';
+			location += 'wp-post-new-reload=true';
+
+			window.history.replaceState( null, null, location );
+		});
+	}
+});
+
+/**
+ * TinyMCE word count display
+ */
+( function( $, counter ) {
+	$( function() {
+		var $content = $( '#content' ),
+			$count = $( '#wp-word-count' ).find( '.word-count' ),
+			prevCount = 0,
+			contentEditor;
+
+		/**
+		 * Get the word count from TinyMCE and display it
+		 */
+		function update() {
+			var text, count;
+
+			if ( ! contentEditor || contentEditor.isHidden() ) {
+				text = $content.val();
+			} else {
+				text = contentEditor.getContent( { format: 'raw' } );
+			}
+
+			count = counter.count( text );
+
+			if ( count !== prevCount ) {
+				$count.text( count );
+			}
+
+			prevCount = count;
+		}
+
+		/**
+		 * Bind the word count update triggers.
+		 *
+		 * When a node change in the main TinyMCE editor has been triggered.
+		 * When a key has been released in the plain text content editor.
+		 */
+		$( document ).on( 'tinymce-editor-init', function( event, editor ) {
+			if ( editor.id !== 'content' ) {
+				return;
+			}
+
+			contentEditor = editor;
+
+			editor.on( 'nodechange keyup', _.debounce( update, 1000 ) );
+		} );
+
+		$content.on( 'input keyup', _.debounce( update, 1000 ) );
+
+		update();
+	} );
+
+} )( jQuery, new wp.utils.WordCounter() );
+</pre>
+    </article>
+</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a>
+	
+		on 2020-06-17T11:56:24+00:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

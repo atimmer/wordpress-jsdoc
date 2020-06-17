@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Documentation Source: _enqueues/wp/editor/base.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.united.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Documentation</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="addComment.html">addComment</a></li><li><a href="commentsBox.html">commentsBox</a></li><li><a href="findPosts.html">findPosts</a></li><li><a href="imageEdit.html">imageEdit</a></li><li><a href="inlineEditPost.html">inlineEditPost</a></li><li><a href="inlineEditTax.html">inlineEditTax</a></li><li><a href="postboxes.html">postboxes</a></li><li><a href="switchEditors.html">switchEditors</a></li><li><a href="wp.html">wp</a></li><li><a href="wp.a11y.html">wp.a11y</a></li><li><a href="wp.api.html">wp.api</a></li><li><a href="wp.api.collections.html">wp.api.collections</a></li><li><a href="wp.api.models.html">wp.api.models</a></li><li><a href="wp.api.utils.html">wp.api.utils</a></li><li><a href="wp.api.views.html">wp.api.views</a></li><li><a href="wp.Backbone.html">wp.Backbone</a></li><li><a href="wp.codeEditor.html">wp.codeEditor</a></li><li><a href="wp.communityEvents.html">wp.communityEvents</a></li><li><a href="wp.customHtmlWidget.html">wp.customHtmlWidget</a></li><li><a href="wp.customize.html">wp.customize</a></li><li><a href="wp.customize.HeaderTool.html">wp.customize.HeaderTool</a></li><li><a href="wp.customize.Menus.html">wp.customize.Menus</a></li><li><a href="wp.customize.navMenusPreview.html">wp.customize.navMenusPreview</a></li><li><a href="wp.customize.selectiveRefresh.html">wp.customize.selectiveRefresh</a></li><li><a href="wp.customize.utils.html">wp.customize.utils</a></li><li><a href="wp.customize.Widgets.html">wp.customize.Widgets</a></li><li><a href="wp.customize.widgetsPreview.html">wp.customize.widgetsPreview</a></li><li><a href="wp.emoji.html">wp.emoji</a></li><li><a href="wp.heartbeat.html">wp.heartbeat</a></li><li><a href="wp.media.html">wp.media</a></li><li><a href="wp.media.audio.html">wp.media.audio</a></li><li><a href="wp.media.controller.html">wp.media.controller</a></li><li><a href="wp.media.editor.html">wp.media.editor</a></li><li><a href="wp.media.editor.send.html">wp.media.editor.send</a></li><li><a href="wp.media.featuredImage.html">wp.media.featuredImage</a></li><li><a href="wp.media.frames.html">wp.media.frames</a></li><li><a href="wp.media.model.html">wp.media.model</a></li><li><a href="wp.media.model.Attachments.filters.html">wp.media.model.Attachments.filters</a></li><li><a href="wp.media.string.html">wp.media.string</a></li><li><a href="wp.media.video.html">wp.media.video</a></li><li><a href="wp.media.view.html">wp.media.view</a></li><li><a href="wp.mediaWidgets.html">wp.mediaWidgets</a></li><li><a href="wp.passwordStrength.html">wp.passwordStrength</a></li><li><a href="wp.textWidgets.html">wp.textWidgets</a></li><li><a href="wp.updates.html">wp.updates</a></li><li><a href="wp.utils.html">wp.utils</a></li><li><a href="wpNavMenu.html">wpNavMenu</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="-_.html"></a></li><li><a href="$.widget.wp.pointer.html">$.widget.wp.pointer</a></li><li><a href="$.widget.wp.wpColorPicker.html">$.widget.wp.wpColorPicker</a></li><li><a href="Heading.html">Heading</a></li><li><a href="wp.Backbone.Subviews.html">wp.Backbone.Subviews</a></li><li><a href="wp.BaseHandler.html">wp.BaseHandler</a></li><li><a href="wp.CustomHeader.html">wp.CustomHeader</a></li><li><a href="wp.customHtmlWidgets.CustomHtmlWidgetControl.html">wp.customHtmlWidgets.CustomHtmlWidgetControl</a></li><li><a href="wp.customize.BackgroundControl.html">wp.customize.BackgroundControl</a></li><li><a href="wp.customize.BackgroundPositionControl.html">wp.customize.BackgroundPositionControl</a></li><li><a href="wp.customize.CodeEditorControl.html">wp.customize.CodeEditorControl</a></li><li><a href="wp.customize.ColorControl.html">wp.customize.ColorControl</a></li><li><a href="wp.customize.Control.html">wp.customize.Control</a></li><li><a href="wp.customize.CroppedImageControl.html">wp.customize.CroppedImageControl</a></li><li><a href="wp.customize.DateTimeControl.html">wp.customize.DateTimeControl</a></li><li><a href="wp.customize.Element.html">wp.customize.Element</a></li><li><a href="wp.customize.HeaderControl.html">wp.customize.HeaderControl</a></li><li><a href="wp.customize.HeaderTool.ChoiceList.html">wp.customize.HeaderTool.ChoiceList</a></li><li><a href="wp.customize.HeaderTool.ChoiceListView.html">wp.customize.HeaderTool.ChoiceListView</a></li><li><a href="wp.customize.HeaderTool.ChoiceView.html">wp.customize.HeaderTool.ChoiceView</a></li><li><a href="wp.customize.HeaderTool.CombinedList.html">wp.customize.HeaderTool.CombinedList</a></li><li><a href="wp.customize.HeaderTool.CurrentView.html">wp.customize.HeaderTool.CurrentView</a></li><li><a href="wp.customize.HeaderTool.DefaultsList.html">wp.customize.HeaderTool.DefaultsList</a></li><li><a href="wp.customize.HeaderTool.ImageModel.html">wp.customize.HeaderTool.ImageModel</a></li><li><a href="wp.customize.ImageControl.html">wp.customize.ImageControl</a></li><li><a href="wp.customize.Loader.html">wp.customize.Loader</a></li><li><a href="wp.customize.MediaControl.html">wp.customize.MediaControl</a></li><li><a href="wp.customize.Menus.AvailableItemCollection.html">wp.customize.Menus.AvailableItemCollection</a></li><li><a href="wp.customize.Menus.AvailableItemModel.html">wp.customize.Menus.AvailableItemModel</a></li><li><a href="wp.customize.Menus.AvailableMenuItemsPanelView.html">wp.customize.Menus.AvailableMenuItemsPanelView</a></li><li><a href="wp.customize.Menus.MenuAutoAddControl.html">wp.customize.Menus.MenuAutoAddControl</a></li><li><a href="wp.customize.Menus.MenuControl.html">wp.customize.Menus.MenuControl</a></li><li><a href="wp.customize.Menus.MenuItemControl.html">wp.customize.Menus.MenuItemControl</a></li><li><a href="wp.customize.Menus.MenuLocationControl.html">wp.customize.Menus.MenuLocationControl</a></li><li><a href="wp.customize.Menus.MenuLocationsControl.html">wp.customize.Menus.MenuLocationsControl</a></li><li><a href="wp.customize.Menus.MenuNameControl.html">wp.customize.Menus.MenuNameControl</a></li><li><a href="wp.customize.Menus.MenuSection.html">wp.customize.Menus.MenuSection</a></li><li><a href="wp.customize.Menus.MenusPanel.html">wp.customize.Menus.MenusPanel</a></li><li><a href="wp.customize.Menus.NewMenuSection.html">wp.customize.Menus.NewMenuSection</a></li><li><a href="wp.customize.Messenger.html">wp.customize.Messenger</a></li><li><a href="wp.customize.navMenusPreview.NavMenuInstancePartial.html">wp.customize.navMenusPreview.NavMenuInstancePartial</a></li><li><a href="wp.customize.Notification.html">wp.customize.Notification</a></li><li><a href="wp.customize.Notifications.html">wp.customize.Notifications</a></li><li><a href="wp.customize.OuterSection.html">wp.customize.OuterSection</a></li><li><a href="wp.customize.OverlayNotification.html">wp.customize.OverlayNotification</a></li><li><a href="wp.customize.Panel.html">wp.customize.Panel</a></li><li><a href="wp.customize.Preview.html">wp.customize.Preview</a></li><li><a href="wp.customize.Previewer.html">wp.customize.Previewer</a></li><li><a href="wp.customize.PreviewFrame.html">wp.customize.PreviewFrame</a></li><li><a href="wp.customize.PreviewLinkControl.html">wp.customize.PreviewLinkControl</a></li><li><a href="wp.customize.Section.html">wp.customize.Section</a></li><li><a href="wp.customize.selectiveRefresh.Partial.html">wp.customize.selectiveRefresh.Partial</a></li><li><a href="wp.customize.selectiveRefresh.Placement.html">wp.customize.selectiveRefresh.Placement</a></li><li><a href="wp.customize.Setting.html">wp.customize.Setting</a></li><li><a href="wp.customize.SiteIconControl.html">wp.customize.SiteIconControl</a></li><li><a href="wp.customize.ThemeControl.html">wp.customize.ThemeControl</a></li><li><a href="wp.customize.ThemesPanel.html">wp.customize.ThemesPanel</a></li><li><a href="wp.customize.ThemesSection.html">wp.customize.ThemesSection</a></li><li><a href="wp.customize.UploadControl.html">wp.customize.UploadControl</a></li><li><a href="wp.customize.Value.html">wp.customize.Value</a></li><li><a href="wp.customize.Values.html">wp.customize.Values</a></li><li><a href="wp.customize.Widgets.AvailableWidgetsPanelView.html">wp.customize.Widgets.AvailableWidgetsPanelView</a></li><li><a href="wp.customize.Widgets.SidebarCollection.html">wp.customize.Widgets.SidebarCollection</a></li><li><a href="wp.customize.Widgets.SidebarControl.html">wp.customize.Widgets.SidebarControl</a></li><li><a href="wp.customize.Widgets.SidebarModel.html">wp.customize.Widgets.SidebarModel</a></li><li><a href="wp.customize.Widgets.SidebarSection.html">wp.customize.Widgets.SidebarSection</a></li><li><a href="wp.customize.Widgets.WidgetCollection.html">wp.customize.Widgets.WidgetCollection</a></li><li><a href="wp.customize.Widgets.WidgetControl.html">wp.customize.Widgets.WidgetControl</a></li><li><a href="wp.customize.Widgets.WidgetModel.html">wp.customize.Widgets.WidgetModel</a></li><li><a href="wp.customize.Widgets.WidgetsPanel.html">wp.customize.Widgets.WidgetsPanel</a></li><li><a href="wp.customize.widgetsPreview.SidebarPartial.html">wp.customize.widgetsPreview.SidebarPartial</a></li><li><a href="wp.customize.widgetsPreview.WidgetPartial.html">wp.customize.widgetsPreview.WidgetPartial</a></li><li><a href="wp.customize-Container.html">wp.customize~Container</a></li><li><a href="wp.customize-LockedNotification.html">wp.customize~LockedNotification</a></li><li><a href="wp.media.collection.html">wp.media.collection</a></li><li><a href="wp.media.controller.AudioDetails.html">wp.media.controller.AudioDetails</a></li><li><a href="wp.media.controller.CollectionAdd.html">wp.media.controller.CollectionAdd</a></li><li><a href="wp.media.controller.CollectionEdit.html">wp.media.controller.CollectionEdit</a></li><li><a href="wp.media.controller.Cropper.html">wp.media.controller.Cropper</a></li><li><a href="wp.media.controller.CustomizeImageCropper.html">wp.media.controller.CustomizeImageCropper</a></li><li><a href="wp.media.controller.EditAttachmentMetadata.html">wp.media.controller.EditAttachmentMetadata</a></li><li><a href="wp.media.controller.EditImage.html">wp.media.controller.EditImage</a></li><li><a href="wp.media.controller.Embed.html">wp.media.controller.Embed</a></li><li><a href="wp.media.controller.FeaturedImage.html">wp.media.controller.FeaturedImage</a></li><li><a href="wp.media.controller.GalleryAdd.html">wp.media.controller.GalleryAdd</a></li><li><a href="wp.media.controller.GalleryEdit.html">wp.media.controller.GalleryEdit</a></li><li><a href="wp.media.controller.ImageDetails.html">wp.media.controller.ImageDetails</a></li><li><a href="wp.media.controller.Library.html">wp.media.controller.Library</a></li><li><a href="wp.media.controller.Region.html">wp.media.controller.Region</a></li><li><a href="wp.media.controller.ReplaceImage.html">wp.media.controller.ReplaceImage</a></li><li><a href="wp.media.controller.SiteIconCropper.html">wp.media.controller.SiteIconCropper</a></li><li><a href="wp.media.controller.State.html">wp.media.controller.State</a></li><li><a href="wp.media.model.Attachment.html">wp.media.model.Attachment</a></li><li><a href="wp.media.model.Attachments.html">wp.media.model.Attachments</a></li><li><a href="wp.media.model.PostImage.html">wp.media.model.PostImage</a></li><li><a href="wp.media.model.PostMedia.html">wp.media.model.PostMedia</a></li><li><a href="wp.media.model.Query.html">wp.media.model.Query</a></li><li><a href="wp.media.model.Selection.html">wp.media.model.Selection</a></li><li><a href="wp.media.View_.html">wp.media.View</a></li><li><a href="wp.media.view.Attachment.html">wp.media.view.Attachment</a></li><li><a href="wp.media.view.Attachment.Details.html">wp.media.view.Attachment.Details</a></li><li><a href="wp.media.view.Attachment.Details.TwoColumn.html">wp.media.view.Attachment.Details.TwoColumn</a></li><li><a href="wp.media.view.Attachment.EditLibrary.html">wp.media.view.Attachment.EditLibrary</a></li><li><a href="wp.media.view.Attachment.EditSelection.html">wp.media.view.Attachment.EditSelection</a></li><li><a href="wp.media.view.Attachment.Library.html">wp.media.view.Attachment.Library</a></li><li><a href="wp.media.view.Attachment.Selection.html">wp.media.view.Attachment.Selection</a></li><li><a href="wp.media.view.AttachmentCompat.html">wp.media.view.AttachmentCompat</a></li><li><a href="wp.media.view.AttachmentFilters.html">wp.media.view.AttachmentFilters</a></li><li><a href="wp.media.view.AttachmentFilters.All.html">wp.media.view.AttachmentFilters.All</a></li><li><a href="wp.media.view.AttachmentFilters.DateFilter.html">wp.media.view.AttachmentFilters.DateFilter</a></li><li><a href="wp.media.view.AttachmentFilters.Uploaded.html">wp.media.view.AttachmentFilters.Uploaded</a></li><li><a href="wp.media.view.Attachments.html">wp.media.view.Attachments</a></li><li><a href="wp.media.view.Attachments.Selection.html">wp.media.view.Attachments.Selection</a></li><li><a href="wp.media.view.AttachmentsBrowser.html">wp.media.view.AttachmentsBrowser</a></li><li><a href="wp.media.view.AudioDetails.html">wp.media.view.AudioDetails</a></li><li><a href="wp.media.view.Button.html">wp.media.view.Button</a></li><li><a href="wp.media.view.ButtonGroup.html">wp.media.view.ButtonGroup</a></li><li><a href="wp.media.view.Cropper.html">wp.media.view.Cropper</a></li><li><a href="wp.media.view.DeleteSelected.html">wp.media.view.DeleteSelected</a></li><li><a href="wp.media.view.DeleteSelectedPermanently.html">wp.media.view.DeleteSelectedPermanently</a></li><li><a href="wp.media.view.EditImage.html">wp.media.view.EditImage</a></li><li><a href="wp.media.view.EditImage.Details.html">wp.media.view.EditImage.Details</a></li><li><a href="wp.media.view.EditorUploader.html">wp.media.view.EditorUploader</a></li><li><a href="wp.media.view.Embed.html">wp.media.view.Embed</a></li><li><a href="wp.media.view.EmbedImage.html">wp.media.view.EmbedImage</a></li><li><a href="wp.media.view.EmbedLink.html">wp.media.view.EmbedLink</a></li><li><a href="wp.media.view.EmbedUrl.html">wp.media.view.EmbedUrl</a></li><li><a href="wp.media.view.FocusManager.html">wp.media.view.FocusManager</a></li><li><a href="wp.media.view.Frame.html">wp.media.view.Frame</a></li><li><a href="wp.media.view.Iframe.html">wp.media.view.Iframe</a></li><li><a href="wp.media.view.ImageDetails.html">wp.media.view.ImageDetails</a></li><li><a href="wp.media.view.Label.html">wp.media.view.Label</a></li><li><a href="wp.media.view.MediaDetails.html">wp.media.view.MediaDetails</a></li><li><a href="wp.media.view.MediaFrame.html">wp.media.view.MediaFrame</a></li><li><a href="wp.media.view.MediaFrame.AudioDetails.html">wp.media.view.MediaFrame.AudioDetails</a></li><li><a href="wp.media.view.MediaFrame.EditAttachments.html">wp.media.view.MediaFrame.EditAttachments</a></li><li><a href="wp.media.view.MediaFrame.ImageDetails.html">wp.media.view.MediaFrame.ImageDetails</a></li><li><a href="wp.media.view.MediaFrame.Manage.html">wp.media.view.MediaFrame.Manage</a></li><li><a href="wp.media.view.MediaFrame.Manage.Router.html">wp.media.view.MediaFrame.Manage.Router</a></li><li><a href="wp.media.view.MediaFrame.MediaDetails.html">wp.media.view.MediaFrame.MediaDetails</a></li><li><a href="wp.media.view.MediaFrame.Post.html">wp.media.view.MediaFrame.Post</a></li><li><a href="wp.media.view.MediaFrame.Select.html">wp.media.view.MediaFrame.Select</a></li><li><a href="wp.media.view.MediaFrame.VideoDetails.html">wp.media.view.MediaFrame.VideoDetails</a></li><li><a href="wp.media.view.Menu.html">wp.media.view.Menu</a></li><li><a href="wp.media.view.MenuItem.html">wp.media.view.MenuItem</a></li><li><a href="wp.media.view.Modal.html">wp.media.view.Modal</a></li><li><a href="wp.media.view.PriorityList.html">wp.media.view.PriorityList</a></li><li><a href="wp.media.view.Router.html">wp.media.view.Router</a></li><li><a href="wp.media.view.RouterItem.html">wp.media.view.RouterItem</a></li><li><a href="wp.media.view.Search.html">wp.media.view.Search</a></li><li><a href="wp.media.view.Selection.html">wp.media.view.Selection</a></li><li><a href="wp.media.view.SelectModeToggle.html">wp.media.view.SelectModeToggle</a></li><li><a href="wp.media.view.Settings.html">wp.media.view.Settings</a></li><li><a href="wp.media.view.Settings.AttachmentDisplay.html">wp.media.view.Settings.AttachmentDisplay</a></li><li><a href="wp.media.view.Settings.Gallery.html">wp.media.view.Settings.Gallery</a></li><li><a href="wp.media.view.Settings.Playlist.html">wp.media.view.Settings.Playlist</a></li><li><a href="wp.media.view.Sidebar.html">wp.media.view.Sidebar</a></li><li><a href="wp.media.view.SiteIconCropper.html">wp.media.view.SiteIconCropper</a></li><li><a href="wp.media.view.SiteIconPreview.html">wp.media.view.SiteIconPreview</a></li><li><a href="wp.media.view.Spinner.html">wp.media.view.Spinner</a></li><li><a href="wp.media.view.Toolbar.html">wp.media.view.Toolbar</a></li><li><a href="wp.media.view.Toolbar.Embed.html">wp.media.view.Toolbar.Embed</a></li><li><a href="wp.media.view.Toolbar.Select.html">wp.media.view.Toolbar.Select</a></li><li><a href="wp.media.view.UploaderInline.html">wp.media.view.UploaderInline</a></li><li><a href="wp.media.view.UploaderStatus.html">wp.media.view.UploaderStatus</a></li><li><a href="wp.media.view.UploaderStatusError.html">wp.media.view.UploaderStatusError</a></li><li><a href="wp.media.view.UploaderWindow.html">wp.media.view.UploaderWindow</a></li><li><a href="wp.media.view.VideoDetails.html">wp.media.view.VideoDetails</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_audio.html">wp.mediaWidgets.controlConstructors.media_audio</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_gallery.html">wp.mediaWidgets.controlConstructors.media_gallery</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_video.html">wp.mediaWidgets.controlConstructors.media_video</a></li><li><a href="wp.mediaWidgets.controlConstructors-AudioDetailsMediaFrame.html">wp.mediaWidgets.controlConstructors~AudioDetailsMediaFrame</a></li><li><a href="wp.mediaWidgets.controlConstructors-VideoDetailsMediaFrame.html">wp.mediaWidgets.controlConstructors~VideoDetailsMediaFrame</a></li><li><a href="wp.mediaWidgets.MediaEmbedView.html">wp.mediaWidgets.MediaEmbedView</a></li><li><a href="wp.mediaWidgets.MediaFrameSelect.html">wp.mediaWidgets.MediaFrameSelect</a></li><li><a href="wp.mediaWidgets.MediaWidgetControl.html">wp.mediaWidgets.MediaWidgetControl</a></li><li><a href="wp.mediaWidgets.MediaWidgetModel.html">wp.mediaWidgets.MediaWidgetModel</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_audio.html">wp.mediaWidgets.modelConstructors.media_audio</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_gallery.html">wp.mediaWidgets.modelConstructors.media_gallery</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_image.html">wp.mediaWidgets.modelConstructors.media_image</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_video.html">wp.mediaWidgets.modelConstructors.media_video</a></li><li><a href="wp.mediaWidgets.PersistentDisplaySettingsLibrary.html">wp.mediaWidgets.PersistentDisplaySettingsLibrary</a></li><li><a href="wp.mediaWidgets-Constructor.html">wp.mediaWidgets~Constructor</a></li><li><a href="wp.mediaWidgets-GalleryDetailsMediaFrame.html">wp.mediaWidgets~GalleryDetailsMediaFrame</a></li><li><a href="wp.NativeHandler.html">wp.NativeHandler</a></li><li><a href="wp.textWidgets.TextWidgetControl.html">wp.textWidgets.TextWidgetControl</a></li><li><a href="wp.utils.wordcounter.html">wp.utils.wordcounter</a></li><li><a href="wp.YouTubeHandler.html">wp.YouTubeHandler</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">Mixins<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="wp.media.controller.StateMachine.html">wp.media.controller.StateMachine</a></li><li><a href="wp.media.mixin.html">wp.media.mixin</a></li><li><a href="wp.media.selectionSync.html">wp.media.selectionSync</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="wp.media.controller.Region.html#event:activate">wp.media.controller.Region#event:activate</a></li><li><a href="wp.media.controller.Region.html#event:create">wp.media.controller.Region#event:create</a></li><li><a href="wp.media.controller.Region.html#event:deactivate">wp.media.controller.Region#event:deactivate</a></li><li><a href="wp.media.controller.Region.html#event:render">wp.media.controller.Region#event:render</a></li><li><a href="wp.media.view.Frame.html#event:%257Bmode%257D:deactivate">wp.media.view.Frame#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.AudioDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.AudioDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.EditAttachments.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.EditAttachments#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.ImageDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.ImageDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Manage.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Manage#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.MediaDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.MediaDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Post.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Post#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Select.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Select#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.VideoDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.VideoDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.controlConstructors-AudioDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.controlConstructors~AudioDetailsMediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.controlConstructors-VideoDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.controlConstructors~VideoDetailsMediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.MediaFrameSelect.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.MediaFrameSelect#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets-GalleryDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets~GalleryDetailsMediaFrame#event:{mode}:deactivate</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#$">$</a></li><li><a href="global.html#_attach">_attach</a></li><li><a href="global.html#_isReady">_isReady</a></li><li><a href="global.html#add">add</a></li><li><a href="global.html#ajaxPopulateWidgets">ajaxPopulateWidgets</a></li><li><a href="global.html#ajaxWidgets">ajaxWidgets</a></li><li><a href="global.html#all">all</a></li><li><a href="global.html#array_unique_noempty">array_unique_noempty</a></li><li><a href="global.html#clearFilters">clearFilters</a></li><li><a href="global.html#commentReply">commentReply</a></li><li><a href="global.html#detach">detach</a></li><li><a href="global.html#editPermalink">editPermalink</a></li><li><a href="global.html#filtersChecked">filtersChecked</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#get">get</a></li><li><a href="global.html#insert">insert</a></li><li><a href="global.html#media">media</a></li><li><a href="global.html#out">out</a></li><li><a href="global.html#over">over</a></li><li><a href="global.html#passwordStrength">passwordStrength</a></li><li><a href="global.html#prepare">prepare</a></li><li><a href="global.html#quickPressLoad">quickPressLoad</a></li><li><a href="global.html#ready">ready</a></li><li><a href="global.html#remove">remove</a></li><li><a href="global.html#render">render</a></li><li><a href="global.html#replace">replace</a></li><li><a href="global.html#search">search</a></li><li><a href="global.html#send_to_editor">send_to_editor</a></li><li><a href="global.html#set">set</a></li><li><a href="global.html#setCommentsList">setCommentsList</a></li><li><a href="global.html#tagBox">tagBox</a></li><li><a href="global.html#tb_position">tb_position</a></li><li><a href="global.html#theExtraList">theExtraList</a></li><li><a href="global.html#theList">theList</a></li><li><a href="global.html#unset">unset</a></li><li><a href="global.html#uploader">uploader</a></li><li><a href="global.html#WPRemoveThumbnail">WPRemoveThumbnail</a></li><li><a href="global.html#WPSetThumbnailHTML">WPSetThumbnailHTML</a></li><li><a href="global.html#WPSetThumbnailID">WPSetThumbnailID</a></li><li><a href="global.html#wptitlehint">wptitlehint</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-12">
+	
+		<div id="main">
+			
+
+		<h1 class="page-title">Source: _enqueues/wp/editor/base.js</h1>
+    
+<section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">/**
+ * @output wp-admin/js/editor.js
+ */
+
+window.wp = window.wp || {};
+
+( function( $, wp ) {
+	wp.editor = wp.editor || {};
+
+	/**
+	 * Utility functions for the editor.
+	 *
+	 * @since 2.5.0
+	 */
+	function SwitchEditors() {
+		var tinymce, $$,
+			exports = {};
+
+		function init() {
+			if ( ! tinymce &amp;&amp; window.tinymce ) {
+				tinymce = window.tinymce;
+				$$ = tinymce.$;
+
+				/**
+				 * Handles onclick events for the Visual/Text tabs.
+				 *
+				 * @since 4.3.0
+				 *
+				 * @return {void}
+				 */
+				$$( document ).on( 'click', function( event ) {
+					var id, mode,
+						target = $$( event.target );
+
+					if ( target.hasClass( 'wp-switch-editor' ) ) {
+						id = target.attr( 'data-wp-editor-id' );
+						mode = target.hasClass( 'switch-tmce' ) ? 'tmce' : 'html';
+						switchEditor( id, mode );
+					}
+				});
+			}
+		}
+
+		/**
+		 * Returns the height of the editor toolbar(s) in px.
+		 *
+		 * @since 3.9.0
+		 *
+		 * @param {Object} editor The TinyMCE editor.
+		 * @return {number} If the height is between 10 and 200 return the height,
+		 * else return 30.
+		 */
+		function getToolbarHeight( editor ) {
+			var node = $$( '.mce-toolbar-grp', editor.getContainer() )[0],
+				height = node &amp;&amp; node.clientHeight;
+
+			if ( height &amp;&amp; height > 10 &amp;&amp; height &lt; 200 ) {
+				return parseInt( height, 10 );
+			}
+
+			return 30;
+		}
+
+		/**
+		 * Switches the editor between Visual and Text mode.
+		 *
+		 * @since 2.5.0
+		 *
+		 * @memberof switchEditors
+		 *
+		 * @param {string} id The id of the editor you want to change the editor mode for. Default: `content`.
+		 * @param {string} mode The mode you want to switch to. Default: `toggle`.
+		 * @return {void}
+		 */
+		function switchEditor( id, mode ) {
+			id = id || 'content';
+			mode = mode || 'toggle';
+
+			var editorHeight, toolbarHeight, iframe,
+				editor = tinymce.get( id ),
+				wrap = $$( '#wp-' + id + '-wrap' ),
+				$textarea = $$( '#' + id ),
+				textarea = $textarea[0];
+
+			if ( 'toggle' === mode ) {
+				if ( editor &amp;&amp; ! editor.isHidden() ) {
+					mode = 'html';
+				} else {
+					mode = 'tmce';
+				}
+			}
+
+			if ( 'tmce' === mode || 'tinymce' === mode ) {
+				// If the editor is visible we are already in `tinymce` mode.
+				if ( editor &amp;&amp; ! editor.isHidden() ) {
+					return false;
+				}
+
+				// Insert closing tags for any open tags in QuickTags.
+				if ( typeof( window.QTags ) !== 'undefined' ) {
+					window.QTags.closeAllTags( id );
+				}
+
+				editorHeight = parseInt( textarea.style.height, 10 ) || 0;
+
+				var keepSelection = false;
+				if ( editor ) {
+					keepSelection = editor.getParam( 'wp_keep_scroll_position' );
+				} else {
+					keepSelection = window.tinyMCEPreInit.mceInit[ id ] &amp;&amp;
+									window.tinyMCEPreInit.mceInit[ id ].wp_keep_scroll_position;
+				}
+
+				if ( keepSelection ) {
+					// Save the selection.
+					addHTMLBookmarkInTextAreaContent( $textarea );
+				}
+
+				if ( editor ) {
+					editor.show();
+
+					// No point to resize the iframe in iOS.
+					if ( ! tinymce.Env.iOS &amp;&amp; editorHeight ) {
+						toolbarHeight = getToolbarHeight( editor );
+						editorHeight = editorHeight - toolbarHeight + 14;
+
+						// Sane limit for the editor height.
+						if ( editorHeight > 50 &amp;&amp; editorHeight &lt; 5000 ) {
+							editor.theme.resizeTo( null, editorHeight );
+						}
+					}
+
+					if ( editor.getParam( 'wp_keep_scroll_position' ) ) {
+						// Restore the selection.
+						focusHTMLBookmarkInVisualEditor( editor );
+					}
+				} else {
+					tinymce.init( window.tinyMCEPreInit.mceInit[ id ] );
+				}
+
+				wrap.removeClass( 'html-active' ).addClass( 'tmce-active' );
+				$textarea.attr( 'aria-hidden', true );
+				window.setUserSetting( 'editor', 'tinymce' );
+
+			} else if ( 'html' === mode ) {
+				// If the editor is hidden (Quicktags is shown) we don't need to switch.
+				if ( editor &amp;&amp; editor.isHidden() ) {
+					return false;
+				}
+
+				if ( editor ) {
+					// Don't resize the textarea in iOS.
+					// The iframe is forced to 100% height there, we shouldn't match it.
+					if ( ! tinymce.Env.iOS ) {
+						iframe = editor.iframeElement;
+						editorHeight = iframe ? parseInt( iframe.style.height, 10 ) : 0;
+
+						if ( editorHeight ) {
+							toolbarHeight = getToolbarHeight( editor );
+							editorHeight = editorHeight + toolbarHeight - 14;
+
+							// Sane limit for the textarea height.
+							if ( editorHeight > 50 &amp;&amp; editorHeight &lt; 5000 ) {
+								textarea.style.height = editorHeight + 'px';
+							}
+						}
+					}
+
+					var selectionRange = null;
+
+					if ( editor.getParam( 'wp_keep_scroll_position' ) ) {
+						selectionRange = findBookmarkedPosition( editor );
+					}
+
+					editor.hide();
+
+					if ( selectionRange ) {
+						selectTextInTextArea( editor, selectionRange );
+					}
+				} else {
+					// There is probably a JS error on the page.
+					// The TinyMCE editor instance doesn't exist. Show the textarea.
+					$textarea.css({ 'display': '', 'visibility': '' });
+				}
+
+				wrap.removeClass( 'tmce-active' ).addClass( 'html-active' );
+				$textarea.attr( 'aria-hidden', false );
+				window.setUserSetting( 'editor', 'html' );
+			}
+		}
+
+		/**
+		 * Checks if a cursor is inside an HTML tag or comment.
+		 *
+		 * In order to prevent breaking HTML tags when selecting text, the cursor
+		 * must be moved to either the start or end of the tag.
+		 *
+		 * This will prevent the selection marker to be inserted in the middle of an HTML tag.
+		 *
+		 * This function gives information whether the cursor is inside a tag or not, as well as
+		 * the tag type, if it is a closing tag and check if the HTML tag is inside a shortcode tag,
+		 * e.g. `[caption]&lt;img.../>..`.
+		 *
+		 * @param {string} content The test content where the cursor is.
+		 * @param {number} cursorPosition The cursor position inside the content.
+		 *
+		 * @return {(null|Object)} Null if cursor is not in a tag, Object if the cursor is inside a tag.
+		 */
+		function getContainingTagInfo( content, cursorPosition ) {
+			var lastLtPos = content.lastIndexOf( '&lt;', cursorPosition - 1 ),
+				lastGtPos = content.lastIndexOf( '>', cursorPosition );
+
+			if ( lastLtPos > lastGtPos || content.substr( cursorPosition, 1 ) === '>' ) {
+				// Find what the tag is.
+				var tagContent = content.substr( lastLtPos ),
+					tagMatch = tagContent.match( /&lt;\s*(\/)?(\w+|\!-{2}.*-{2})/ );
+
+				if ( ! tagMatch ) {
+					return null;
+				}
+
+				var tagType = tagMatch[2],
+					closingGt = tagContent.indexOf( '>' );
+
+				return {
+					ltPos: lastLtPos,
+					gtPos: lastLtPos + closingGt + 1, // Offset by one to get the position _after_ the character.
+					tagType: tagType,
+					isClosingTag: !! tagMatch[1]
+				};
+			}
+			return null;
+		}
+
+		/**
+		 * Checks if the cursor is inside a shortcode
+		 *
+		 * If the cursor is inside a shortcode wrapping tag, e.g. `[caption]` it's better to
+		 * move the selection marker to before or after the shortcode.
+		 *
+		 * For example `[caption]` rewrites/removes anything that's between the `[caption]` tag and the
+		 * `&lt;img/>` tag inside.
+		 *
+		 * `[caption]&lt;span>ThisIsGone&lt;/span>&lt;img .../>[caption]`
+		 *
+		 * Moving the selection to before or after the short code is better, since it allows to select
+		 * something, instead of just losing focus and going to the start of the content.
+		 *
+		 * @param {string} content The text content to check against.
+		 * @param {number} cursorPosition    The cursor position to check.
+		 *
+		 * @return {(undefined|Object)} Undefined if the cursor is not wrapped in a shortcode tag.
+		 *                              Information about the wrapping shortcode tag if it's wrapped in one.
+		 */
+		function getShortcodeWrapperInfo( content, cursorPosition ) {
+			var contentShortcodes = getShortCodePositionsInText( content );
+
+			for ( var i = 0; i &lt; contentShortcodes.length; i++ ) {
+				var element = contentShortcodes[ i ];
+
+				if ( cursorPosition >= element.startIndex &amp;&amp; cursorPosition &lt;= element.endIndex ) {
+					return element;
+				}
+			}
+		}
+
+		/**
+		 * Gets a list of unique shortcodes or shortcode-look-alikes in the content.
+		 *
+		 * @param {string} content The content we want to scan for shortcodes.
+		 */
+		function getShortcodesInText( content ) {
+			var shortcodes = content.match( /\[+([\w_-])+/g ),
+				result = [];
+
+			if ( shortcodes ) {
+				for ( var i = 0; i &lt; shortcodes.length; i++ ) {
+					var shortcode = shortcodes[ i ].replace( /^\[+/g, '' );
+
+					if ( result.indexOf( shortcode ) === -1 ) {
+						result.push( shortcode );
+					}
+				}
+			}
+
+			return result;
+		}
+
+		/**
+		 * Gets all shortcodes and their positions in the content
+		 *
+		 * This function returns all the shortcodes that could be found in the textarea content
+		 * along with their character positions and boundaries.
+		 *
+		 * This is used to check if the selection cursor is inside the boundaries of a shortcode
+		 * and move it accordingly, to avoid breakage.
+		 *
+		 * @link adjustTextAreaSelectionCursors
+		 *
+		 * The information can also be used in other cases when we need to lookup shortcode data,
+		 * as it's already structured!
+		 *
+		 * @param {string} content The content we want to scan for shortcodes
+		 */
+		function getShortCodePositionsInText( content ) {
+			var allShortcodes = getShortcodesInText( content ), shortcodeInfo;
+
+			if ( allShortcodes.length === 0 ) {
+				return [];
+			}
+
+			var shortcodeDetailsRegexp = wp.shortcode.regexp( allShortcodes.join( '|' ) ),
+				shortcodeMatch, // Define local scope for the variable to be used in the loop below.
+				shortcodesDetails = [];
+
+			while ( shortcodeMatch = shortcodeDetailsRegexp.exec( content ) ) {
+				/**
+				 * Check if the shortcode should be shown as plain text.
+				 *
+				 * This corresponds to the [[shortcode]] syntax, which doesn't parse the shortcode
+				 * and just shows it as text.
+				 */
+				var showAsPlainText = shortcodeMatch[1] === '[';
+
+				shortcodeInfo = {
+					shortcodeName: shortcodeMatch[2],
+					showAsPlainText: showAsPlainText,
+					startIndex: shortcodeMatch.index,
+					endIndex: shortcodeMatch.index + shortcodeMatch[0].length,
+					length: shortcodeMatch[0].length
+				};
+
+				shortcodesDetails.push( shortcodeInfo );
+			}
+
+			/**
+			 * Get all URL matches, and treat them as embeds.
+			 *
+			 * Since there isn't a good way to detect if a URL by itself on a line is a previewable
+			 * object, it's best to treat all of them as such.
+			 *
+			 * This means that the selection will capture the whole URL, in a similar way shrotcodes
+			 * are treated.
+			 */
+			var urlRegexp = new RegExp(
+				'(^|[\\n\\r][\\n\\r]|&lt;p>)(https?:\\/\\/[^\s"]+?)(&lt;\\/p>\s*|[\\n\\r][\\n\\r]|$)', 'gi'
+			);
+
+			while ( shortcodeMatch = urlRegexp.exec( content ) ) {
+				shortcodeInfo = {
+					shortcodeName: 'url',
+					showAsPlainText: false,
+					startIndex: shortcodeMatch.index,
+					endIndex: shortcodeMatch.index + shortcodeMatch[ 0 ].length,
+					length: shortcodeMatch[ 0 ].length,
+					urlAtStartOfContent: shortcodeMatch[ 1 ] === '',
+					urlAtEndOfContent: shortcodeMatch[ 3 ] === ''
+				};
+
+				shortcodesDetails.push( shortcodeInfo );
+			}
+
+			return shortcodesDetails;
+		}
+
+		/**
+		 * Generate a cursor marker element to be inserted in the content.
+		 *
+		 * `span` seems to be the least destructive element that can be used.
+		 *
+		 * Using DomQuery syntax to create it, since it's used as both text and as a DOM element.
+		 *
+		 * @param {Object} domLib DOM library instance.
+		 * @param {string} content The content to insert into the cusror marker element.
+		 */
+		function getCursorMarkerSpan( domLib, content ) {
+			return domLib( '&lt;span>' ).css( {
+						display: 'inline-block',
+						width: 0,
+						overflow: 'hidden',
+						'line-height': 0
+					} )
+					.html( content ? content : '' );
+		}
+
+		/**
+		 * Gets adjusted selection cursor positions according to HTML tags, comments, and shortcodes.
+		 *
+		 * Shortcodes and HTML codes are a bit of a special case when selecting, since they may render
+		 * content in Visual mode. If we insert selection markers somewhere inside them, it's really possible
+		 * to break the syntax and render the HTML tag or shortcode broken.
+		 *
+		 * @link getShortcodeWrapperInfo
+		 *
+		 * @param {string} content Textarea content that the cursors are in
+		 * @param {{cursorStart: number, cursorEnd: number}} cursorPositions Cursor start and end positions
+		 *
+		 * @return {{cursorStart: number, cursorEnd: number}}
+		 */
+		function adjustTextAreaSelectionCursors( content, cursorPositions ) {
+			var voidElements = [
+				'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input',
+				'keygen', 'link', 'meta', 'param', 'source', 'track', 'wbr'
+			];
+
+			var cursorStart = cursorPositions.cursorStart,
+				cursorEnd = cursorPositions.cursorEnd,
+				// Check if the cursor is in a tag and if so, adjust it.
+				isCursorStartInTag = getContainingTagInfo( content, cursorStart );
+
+			if ( isCursorStartInTag ) {
+				/**
+				 * Only move to the start of the HTML tag (to select the whole element) if the tag
+				 * is part of the voidElements list above.
+				 *
+				 * This list includes tags that are self-contained and don't need a closing tag, according to the
+				 * HTML5 specification.
+				 *
+				 * This is done in order to make selection of text a bit more consistent when selecting text in
+				 * `&lt;p>` tags or such.
+				 *
+				 * In cases where the tag is not a void element, the cursor is put to the end of the tag,
+				 * so it's either between the opening and closing tag elements or after the closing tag.
+				 */
+				if ( voidElements.indexOf( isCursorStartInTag.tagType ) !== -1 ) {
+					cursorStart = isCursorStartInTag.ltPos;
+				} else {
+					cursorStart = isCursorStartInTag.gtPos;
+				}
+			}
+
+			var isCursorEndInTag = getContainingTagInfo( content, cursorEnd );
+			if ( isCursorEndInTag ) {
+				cursorEnd = isCursorEndInTag.gtPos;
+			}
+
+			var isCursorStartInShortcode = getShortcodeWrapperInfo( content, cursorStart );
+			if ( isCursorStartInShortcode &amp;&amp; ! isCursorStartInShortcode.showAsPlainText ) {
+				/**
+				 * If a URL is at the start or the end of the content,
+				 * the selection doesn't work, because it inserts a marker in the text,
+				 * which breaks the embedURL detection.
+				 *
+				 * The best way to avoid that and not modify the user content is to
+				 * adjust the cursor to either after or before URL.
+				 */
+				if ( isCursorStartInShortcode.urlAtStartOfContent ) {
+					cursorStart = isCursorStartInShortcode.endIndex;
+				} else {
+					cursorStart = isCursorStartInShortcode.startIndex;
+				}
+			}
+
+			var isCursorEndInShortcode = getShortcodeWrapperInfo( content, cursorEnd );
+			if ( isCursorEndInShortcode &amp;&amp; ! isCursorEndInShortcode.showAsPlainText ) {
+				if ( isCursorEndInShortcode.urlAtEndOfContent ) {
+					cursorEnd = isCursorEndInShortcode.startIndex;
+				} else {
+					cursorEnd = isCursorEndInShortcode.endIndex;
+				}
+			}
+
+			return {
+				cursorStart: cursorStart,
+				cursorEnd: cursorEnd
+			};
+		}
+
+		/**
+		 * Adds text selection markers in the editor textarea.
+		 *
+		 * Adds selection markers in the content of the editor `textarea`.
+		 * The method directly manipulates the `textarea` content, to allow TinyMCE plugins
+		 * to run after the markers are added.
+		 *
+		 * @param {object} $textarea TinyMCE's textarea wrapped as a DomQuery object
+		 */
+		function addHTMLBookmarkInTextAreaContent( $textarea ) {
+			if ( ! $textarea || ! $textarea.length ) {
+				// If no valid $textarea object is provided, there's nothing we can do.
+				return;
+			}
+
+			var textArea = $textarea[0],
+				textAreaContent = textArea.value,
+
+				adjustedCursorPositions = adjustTextAreaSelectionCursors( textAreaContent, {
+					cursorStart: textArea.selectionStart,
+					cursorEnd: textArea.selectionEnd
+				} ),
+
+				htmlModeCursorStartPosition = adjustedCursorPositions.cursorStart,
+				htmlModeCursorEndPosition = adjustedCursorPositions.cursorEnd,
+
+				mode = htmlModeCursorStartPosition !== htmlModeCursorEndPosition ? 'range' : 'single',
+
+				selectedText = null,
+				cursorMarkerSkeleton = getCursorMarkerSpan( $$, '&amp;#65279;' ).attr( 'data-mce-type','bookmark' );
+
+			if ( mode === 'range' ) {
+				var markedText = textArea.value.slice( htmlModeCursorStartPosition, htmlModeCursorEndPosition ),
+					bookMarkEnd = cursorMarkerSkeleton.clone().addClass( 'mce_SELRES_end' );
+
+				selectedText = [
+					markedText,
+					bookMarkEnd[0].outerHTML
+				].join( '' );
+			}
+
+			textArea.value = [
+				textArea.value.slice( 0, htmlModeCursorStartPosition ), // Text until the cursor/selection position.
+				cursorMarkerSkeleton.clone()							// Cursor/selection start marker.
+					.addClass( 'mce_SELRES_start' )[0].outerHTML,
+				selectedText, 											// Selected text with end cursor/position marker.
+				textArea.value.slice( htmlModeCursorEndPosition )		// Text from last cursor/selection position to end.
+			].join( '' );
+		}
+
+		/**
+		 * Focuses the selection markers in Visual mode.
+		 *
+		 * The method checks for existing selection markers inside the editor DOM (Visual mode)
+		 * and create a selection between the two nodes using the DOM `createRange` selection API
+		 *
+		 * If there is only a single node, select only the single node through TinyMCE's selection API
+		 *
+		 * @param {Object} editor TinyMCE editor instance.
+		 */
+		function focusHTMLBookmarkInVisualEditor( editor ) {
+			var startNode = editor.$( '.mce_SELRES_start' ).attr( 'data-mce-bogus', 1 ),
+				endNode = editor.$( '.mce_SELRES_end' ).attr( 'data-mce-bogus', 1 );
+
+			if ( startNode.length ) {
+				editor.focus();
+
+				if ( ! endNode.length ) {
+					editor.selection.select( startNode[0] );
+				} else {
+					var selection = editor.getDoc().createRange();
+
+					selection.setStartAfter( startNode[0] );
+					selection.setEndBefore( endNode[0] );
+
+					editor.selection.setRng( selection );
+				}
+			}
+
+			if ( editor.getParam( 'wp_keep_scroll_position' ) ) {
+				scrollVisualModeToStartElement( editor, startNode );
+			}
+
+			removeSelectionMarker( startNode );
+			removeSelectionMarker( endNode );
+
+			editor.save();
+		}
+
+		/**
+		 * Removes selection marker and the parent node if it is an empty paragraph.
+		 *
+		 * By default TinyMCE wraps loose inline tags in a `&lt;p>`.
+		 * When removing selection markers an empty `&lt;p>` may be left behind, remove it.
+		 *
+		 * @param {object} $marker The marker to be removed from the editor DOM, wrapped in an instnce of `editor.$`
+		 */
+		function removeSelectionMarker( $marker ) {
+			var $markerParent = $marker.parent();
+
+			$marker.remove();
+
+			//Remove empty paragraph left over after removing the marker.
+			if ( $markerParent.is( 'p' ) &amp;&amp; ! $markerParent.children().length &amp;&amp; ! $markerParent.text() ) {
+				$markerParent.remove();
+			}
+		}
+
+		/**
+		 * Scrolls the content to place the selected element in the center of the screen.
+		 *
+		 * Takes an element, that is usually the selection start element, selected in
+		 * `focusHTMLBookmarkInVisualEditor()` and scrolls the screen so the element appears roughly
+		 * in the middle of the screen.
+		 *
+		 * I order to achieve the proper positioning, the editor media bar and toolbar are subtracted
+		 * from the window height, to get the proper viewport window, that the user sees.
+		 *
+		 * @param {Object} editor TinyMCE editor instance.
+		 * @param {Object} element HTMLElement that should be scrolled into view.
+		 */
+		function scrollVisualModeToStartElement( editor, element ) {
+			var elementTop = editor.$( element ).offset().top,
+				TinyMCEContentAreaTop = editor.$( editor.getContentAreaContainer() ).offset().top,
+
+				toolbarHeight = getToolbarHeight( editor ),
+
+				edTools = $( '#wp-content-editor-tools' ),
+				edToolsHeight = 0,
+				edToolsOffsetTop = 0,
+
+				$scrollArea;
+
+			if ( edTools.length ) {
+				edToolsHeight = edTools.height();
+				edToolsOffsetTop = edTools.offset().top;
+			}
+
+			var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
+
+				selectionPosition = TinyMCEContentAreaTop + elementTop,
+				visibleAreaHeight = windowHeight - ( edToolsHeight + toolbarHeight );
+
+			// There's no need to scroll if the selection is inside the visible area.
+			if ( selectionPosition &lt; visibleAreaHeight ) {
+				return;
+			}
+
+			/**
+			 * The minimum scroll height should be to the top of the editor, to offer a consistent
+			 * experience.
+			 *
+			 * In order to find the top of the editor, we calculate the offset of `#wp-content-editor-tools` and
+			 * subtracting the height. This gives the scroll position where the top of the editor tools aligns with
+			 * the top of the viewport (under the Master Bar)
+			 */
+			var adjustedScroll;
+			if ( editor.settings.wp_autoresize_on ) {
+				$scrollArea = $( 'html,body' );
+				adjustedScroll = Math.max( selectionPosition - visibleAreaHeight / 2, edToolsOffsetTop - edToolsHeight );
+			} else {
+				$scrollArea = $( editor.contentDocument ).find( 'html,body' );
+				adjustedScroll = elementTop;
+			}
+
+			$scrollArea.animate( {
+				scrollTop: parseInt( adjustedScroll, 10 )
+			}, 100 );
+		}
+
+		/**
+		 * This method was extracted from the `SaveContent` hook in
+		 * `wp-includes/js/tinymce/plugins/wordpress/plugin.js`.
+		 *
+		 * It's needed here, since the method changes the content a bit, which confuses the cursor position.
+		 *
+		 * @param {Object} event TinyMCE event object.
+		 */
+		function fixTextAreaContent( event ) {
+			// Keep empty paragraphs :(
+			event.content = event.content.replace( /&lt;p>(?:&lt;br ?\/?>|\u00a0|\uFEFF| )*&lt;\/p>/g, '&lt;p>&amp;nbsp;&lt;/p>' );
+		}
+
+		/**
+		 * Finds the current selection position in the Visual editor.
+		 *
+		 * Find the current selection in the Visual editor by inserting marker elements at the start
+		 * and end of the selection.
+		 *
+		 * Uses the standard DOM selection API to achieve that goal.
+		 *
+		 * Check the notes in the comments in the code below for more information on some gotchas
+		 * and why this solution was chosen.
+		 *
+		 * @param {Object} editor The editor where we must find the selection.
+		 * @return {(null|Object)} The selection range position in the editor.
+		 */
+		function findBookmarkedPosition( editor ) {
+			// Get the TinyMCE `window` reference, since we need to access the raw selection.
+			var TinyMCEWindow = editor.getWin(),
+				selection = TinyMCEWindow.getSelection();
+
+			if ( ! selection || selection.rangeCount &lt; 1 ) {
+				// no selection, no need to continue.
+				return;
+			}
+
+			/**
+			 * The ID is used to avoid replacing user generated content, that may coincide with the
+			 * format specified below.
+			 * @type {string}
+			 */
+			var selectionID = 'SELRES_' + Math.random();
+
+			/**
+			 * Create two marker elements that will be used to mark the start and the end of the range.
+			 *
+			 * The elements have hardcoded style that makes them invisible. This is done to avoid seeing
+			 * random content flickering in the editor when switching between modes.
+			 */
+			var spanSkeleton = getCursorMarkerSpan( editor.$, selectionID ),
+				startElement = spanSkeleton.clone().addClass( 'mce_SELRES_start' ),
+				endElement = spanSkeleton.clone().addClass( 'mce_SELRES_end' );
+
+			/**
+			 * Inspired by:
+			 * @link https://stackoverflow.com/a/17497803/153310
+			 *
+			 * Why do it this way and not with TinyMCE's bookmarks?
+			 *
+			 * TinyMCE's bookmarks are very nice when working with selections and positions, BUT
+			 * there is no way to determine the precise position of the bookmark when switching modes, since
+			 * TinyMCE does some serialization of the content, to fix things like shortcodes, run plugins, prettify
+			 * HTML code and so on. In this process, the bookmark markup gets lost.
+			 *
+			 * If we decide to hook right after the bookmark is added, we can see where the bookmark is in the raw HTML
+			 * in TinyMCE. Unfortunately this state is before the serialization, so any visual markup in the content will
+			 * throw off the positioning.
+			 *
+			 * To avoid this, we insert two custom `span`s that will serve as the markers at the beginning and end of the
+			 * selection.
+			 *
+			 * Why not use TinyMCE's selection API or the DOM API to wrap the contents? Because if we do that, this creates
+			 * a new node, which is inserted in the dom. Now this will be fine, if we worked with fixed selections to
+			 * full nodes. Unfortunately in our case, the user can select whatever they like, which means that the
+			 * selection may start in the middle of one node and end in the middle of a completely different one. If we
+			 * wrap the selection in another node, this will create artifacts in the content.
+			 *
+			 * Using the method below, we insert the custom `span` nodes at the start and at the end of the selection.
+			 * This helps us not break the content and also gives us the option to work with multi-node selections without
+			 * breaking the markup.
+			 */
+			var range = selection.getRangeAt( 0 ),
+				startNode = range.startContainer,
+				startOffset = range.startOffset,
+				boundaryRange = range.cloneRange();
+
+			/**
+			 * If the selection is on a shortcode with Live View, TinyMCE creates a bogus markup,
+			 * which we have to account for.
+			 */
+			if ( editor.$( startNode ).parents( '.mce-offscreen-selection' ).length > 0 ) {
+				startNode = editor.$( '[data-mce-selected]' )[0];
+
+				/**
+				 * Marking the start and end element with `data-mce-object-selection` helps
+				 * discern when the selected object is a Live Preview selection.
+				 *
+				 * This way we can adjust the selection to properly select only the content, ignoring
+				 * whitespace inserted around the selected object by the Editor.
+				 */
+				startElement.attr( 'data-mce-object-selection', 'true' );
+				endElement.attr( 'data-mce-object-selection', 'true' );
+
+				editor.$( startNode ).before( startElement[0] );
+				editor.$( startNode ).after( endElement[0] );
+			} else {
+				boundaryRange.collapse( false );
+				boundaryRange.insertNode( endElement[0] );
+
+				boundaryRange.setStart( startNode, startOffset );
+				boundaryRange.collapse( true );
+				boundaryRange.insertNode( startElement[0] );
+
+				range.setStartAfter( startElement[0] );
+				range.setEndBefore( endElement[0] );
+				selection.removeAllRanges();
+				selection.addRange( range );
+			}
+
+			/**
+			 * Now the editor's content has the start/end nodes.
+			 *
+			 * Unfortunately the content goes through some more changes after this step, before it gets inserted
+			 * in the `textarea`. This means that we have to do some minor cleanup on our own here.
+			 */
+			editor.on( 'GetContent', fixTextAreaContent );
+
+			var content = removep( editor.getContent() );
+
+			editor.off( 'GetContent', fixTextAreaContent );
+
+			startElement.remove();
+			endElement.remove();
+
+			var startRegex = new RegExp(
+				'&lt;span[^>]*\\s*class="mce_SELRES_start"[^>]+>\\s*' + selectionID + '[^&lt;]*&lt;\\/span>(\\s*)'
+			);
+
+			var endRegex = new RegExp(
+				'(\\s*)&lt;span[^>]*\\s*class="mce_SELRES_end"[^>]+>\\s*' + selectionID + '[^&lt;]*&lt;\\/span>'
+			);
+
+			var startMatch = content.match( startRegex ),
+				endMatch = content.match( endRegex );
+
+			if ( ! startMatch ) {
+				return null;
+			}
+
+			var startIndex = startMatch.index,
+				startMatchLength = startMatch[0].length,
+				endIndex = null;
+
+			if (endMatch) {
+				/**
+				 * Adjust the selection index, if the selection contains a Live Preview object or not.
+				 *
+				 * Check where the `data-mce-object-selection` attribute is set above for more context.
+				 */
+				if ( startMatch[0].indexOf( 'data-mce-object-selection' ) !== -1 ) {
+					startMatchLength -= startMatch[1].length;
+				}
+
+				var endMatchIndex = endMatch.index;
+
+				if ( endMatch[0].indexOf( 'data-mce-object-selection' ) !== -1 ) {
+					endMatchIndex -= endMatch[1].length;
+				}
+
+				// We need to adjust the end position to discard the length of the range start marker.
+				endIndex = endMatchIndex - startMatchLength;
+			}
+
+			return {
+				start: startIndex,
+				end: endIndex
+			};
+		}
+
+		/**
+		 * Selects text in the TinyMCE `textarea`.
+		 *
+		 * Selects the text in TinyMCE's textarea that's between `selection.start` and `selection.end`.
+		 *
+		 * For `selection` parameter:
+		 * @link findBookmarkedPosition
+		 *
+		 * @param {Object} editor TinyMCE's editor instance.
+		 * @param {Object} selection Selection data.
+		 */
+		function selectTextInTextArea( editor, selection ) {
+			// Only valid in the text area mode and if we have selection.
+			if ( ! selection ) {
+				return;
+			}
+
+			var textArea = editor.getElement(),
+				start = selection.start,
+				end = selection.end || selection.start;
+
+			if ( textArea.focus ) {
+				// Wait for the Visual editor to be hidden, then focus and scroll to the position.
+				setTimeout( function() {
+					textArea.setSelectionRange( start, end );
+					if ( textArea.blur ) {
+						// Defocus before focusing.
+						textArea.blur();
+					}
+					textArea.focus();
+				}, 100 );
+			}
+		}
+
+		// Restore the selection when the editor is initialized. Needed when the Text editor is the default.
+		$( document ).on( 'tinymce-editor-init.keep-scroll-position', function( event, editor ) {
+			if ( editor.$( '.mce_SELRES_start' ).length ) {
+				focusHTMLBookmarkInVisualEditor( editor );
+			}
+		} );
+
+		/**
+		 * Replaces &lt;p> tags with two line breaks. "Opposite" of wpautop().
+		 *
+		 * Replaces &lt;p> tags with two line breaks except where the &lt;p> has attributes.
+		 * Unifies whitespace.
+		 * Indents &lt;li>, &lt;dt> and &lt;dd> for better readability.
+		 *
+		 * @since 2.5.0
+		 *
+		 * @memberof switchEditors
+		 *
+		 * @param {string} html The content from the editor.
+		 * @return {string} The content with stripped paragraph tags.
+		 */
+		function removep( html ) {
+			var blocklist = 'blockquote|ul|ol|li|dl|dt|dd|table|thead|tbody|tfoot|tr|th|td|h[1-6]|fieldset|figure',
+				blocklist1 = blocklist + '|div|p',
+				blocklist2 = blocklist + '|pre',
+				preserve_linebreaks = false,
+				preserve_br = false,
+				preserve = [];
+
+			if ( ! html ) {
+				return '';
+			}
+
+			// Protect script and style tags.
+			if ( html.indexOf( '&lt;script' ) !== -1 || html.indexOf( '&lt;style' ) !== -1 ) {
+				html = html.replace( /&lt;(script|style)[^>]*>[\s\S]*?&lt;\/\1>/g, function( match ) {
+					preserve.push( match );
+					return '&lt;wp-preserve>';
+				} );
+			}
+
+			// Protect pre tags.
+			if ( html.indexOf( '&lt;pre' ) !== -1 ) {
+				preserve_linebreaks = true;
+				html = html.replace( /&lt;pre[^>]*>[\s\S]+?&lt;\/pre>/g, function( a ) {
+					a = a.replace( /&lt;br ?\/?>(\r\n|\n)?/g, '&lt;wp-line-break>' );
+					a = a.replace( /&lt;\/?p( [^>]*)?>(\r\n|\n)?/g, '&lt;wp-line-break>' );
+					return a.replace( /\r?\n/g, '&lt;wp-line-break>' );
+				});
+			}
+
+			// Remove line breaks but keep &lt;br> tags inside image captions.
+			if ( html.indexOf( '[caption' ) !== -1 ) {
+				preserve_br = true;
+				html = html.replace( /\[caption[\s\S]+?\[\/caption\]/g, function( a ) {
+					return a.replace( /&lt;br([^>]*)>/g, '&lt;wp-temp-br$1>' ).replace( /[\r\n\t]+/, '' );
+				});
+			}
+
+			// Normalize white space characters before and after block tags.
+			html = html.replace( new RegExp( '\\s*&lt;/(' + blocklist1 + ')>\\s*', 'g' ), '&lt;/$1>\n' );
+			html = html.replace( new RegExp( '\\s*&lt;((?:' + blocklist1 + ')(?: [^>]*)?)>', 'g' ), '\n&lt;$1>' );
+
+			// Mark &lt;/p> if it has any attributes.
+			html = html.replace( /(&lt;p [^>]+>.*?)&lt;\/p>/g, '$1&lt;/p#>' );
+
+			// Preserve the first &lt;p> inside a &lt;div>.
+			html = html.replace( /&lt;div( [^>]*)?>\s*&lt;p>/gi, '&lt;div$1>\n\n' );
+
+			// Remove paragraph tags.
+			html = html.replace( /\s*&lt;p>/gi, '' );
+			html = html.replace( /\s*&lt;\/p>\s*/gi, '\n\n' );
+
+			// Normalize white space chars and remove multiple line breaks.
+			html = html.replace( /\n[\s\u00a0]+\n/g, '\n\n' );
+
+			// Replace &lt;br> tags with line breaks.
+			html = html.replace( /(\s*)&lt;br ?\/?>\s*/gi, function( match, space ) {
+				if ( space &amp;&amp; space.indexOf( '\n' ) !== -1 ) {
+					return '\n\n';
+				}
+
+				return '\n';
+			});
+
+			// Fix line breaks around &lt;div>.
+			html = html.replace( /\s*&lt;div/g, '\n&lt;div' );
+			html = html.replace( /&lt;\/div>\s*/g, '&lt;/div>\n' );
+
+			// Fix line breaks around caption shortcodes.
+			html = html.replace( /\s*\[caption([^\[]+)\[\/caption\]\s*/gi, '\n\n[caption$1[/caption]\n\n' );
+			html = html.replace( /caption\]\n\n+\[caption/g, 'caption]\n\n[caption' );
+
+			// Pad block elements tags with a line break.
+			html = html.replace( new RegExp('\\s*&lt;((?:' + blocklist2 + ')(?: [^>]*)?)\\s*>', 'g' ), '\n&lt;$1>' );
+			html = html.replace( new RegExp('\\s*&lt;/(' + blocklist2 + ')>\\s*', 'g' ), '&lt;/$1>\n' );
+
+			// Indent &lt;li>, &lt;dt> and &lt;dd> tags.
+			html = html.replace( /&lt;((li|dt|dd)[^>]*)>/g, ' \t&lt;$1>' );
+
+			// Fix line breaks around &lt;select> and &lt;option>.
+			if ( html.indexOf( '&lt;option' ) !== -1 ) {
+				html = html.replace( /\s*&lt;option/g, '\n&lt;option' );
+				html = html.replace( /\s*&lt;\/select>/g, '\n&lt;/select>' );
+			}
+
+			// Pad &lt;hr> with two line breaks.
+			if ( html.indexOf( '&lt;hr' ) !== -1 ) {
+				html = html.replace( /\s*&lt;hr( [^>]*)?>\s*/g, '\n\n&lt;hr$1>\n\n' );
+			}
+
+			// Remove line breaks in &lt;object> tags.
+			if ( html.indexOf( '&lt;object' ) !== -1 ) {
+				html = html.replace( /&lt;object[\s\S]+?&lt;\/object>/g, function( a ) {
+					return a.replace( /[\r\n]+/g, '' );
+				});
+			}
+
+			// Unmark special paragraph closing tags.
+			html = html.replace( /&lt;\/p#>/g, '&lt;/p>\n' );
+
+			// Pad remaining &lt;p> tags whit a line break.
+			html = html.replace( /\s*(&lt;p [^>]+>[\s\S]*?&lt;\/p>)/g, '\n$1' );
+
+			// Trim.
+			html = html.replace( /^\s+/, '' );
+			html = html.replace( /[\s\u00a0]+$/, '' );
+
+			if ( preserve_linebreaks ) {
+				html = html.replace( /&lt;wp-line-break>/g, '\n' );
+			}
+
+			if ( preserve_br ) {
+				html = html.replace( /&lt;wp-temp-br([^>]*)>/g, '&lt;br$1>' );
+			}
+
+			// Restore preserved tags.
+			if ( preserve.length ) {
+				html = html.replace( /&lt;wp-preserve>/g, function() {
+					return preserve.shift();
+				} );
+			}
+
+			return html;
+		}
+
+		/**
+		 * Replaces two line breaks with a paragraph tag and one line break with a &lt;br>.
+		 *
+		 * Similar to `wpautop()` in formatting.php.
+		 *
+		 * @since 2.5.0
+		 *
+		 * @memberof switchEditors
+		 *
+		 * @param {string} text The text input.
+		 * @return {string} The formatted text.
+		 */
+		function autop( text ) {
+			var preserve_linebreaks = false,
+				preserve_br = false,
+				blocklist = 'table|thead|tfoot|caption|col|colgroup|tbody|tr|td|th|div|dl|dd|dt|ul|ol|li|pre' +
+					'|form|map|area|blockquote|address|math|style|p|h[1-6]|hr|fieldset|legend|section' +
+					'|article|aside|hgroup|header|footer|nav|figure|figcaption|details|menu|summary';
+
+			// Normalize line breaks.
+			text = text.replace( /\r\n|\r/g, '\n' );
+
+			// Remove line breaks from &lt;object>.
+			if ( text.indexOf( '&lt;object' ) !== -1 ) {
+				text = text.replace( /&lt;object[\s\S]+?&lt;\/object>/g, function( a ) {
+					return a.replace( /\n+/g, '' );
+				});
+			}
+
+			// Remove line breaks from tags.
+			text = text.replace( /&lt;[^&lt;>]+>/g, function( a ) {
+				return a.replace( /[\n\t ]+/g, ' ' );
+			});
+
+			// Preserve line breaks in &lt;pre> and &lt;script> tags.
+			if ( text.indexOf( '&lt;pre' ) !== -1 || text.indexOf( '&lt;script' ) !== -1 ) {
+				preserve_linebreaks = true;
+				text = text.replace( /&lt;(pre|script)[^>]*>[\s\S]*?&lt;\/\1>/g, function( a ) {
+					return a.replace( /\n/g, '&lt;wp-line-break>' );
+				});
+			}
+
+			if ( text.indexOf( '&lt;figcaption' ) !== -1 ) {
+				text = text.replace( /\s*(&lt;figcaption[^>]*>)/g, '$1' );
+				text = text.replace( /&lt;\/figcaption>\s*/g, '&lt;/figcaption>' );
+			}
+
+			// Keep &lt;br> tags inside captions.
+			if ( text.indexOf( '[caption' ) !== -1 ) {
+				preserve_br = true;
+
+				text = text.replace( /\[caption[\s\S]+?\[\/caption\]/g, function( a ) {
+					a = a.replace( /&lt;br([^>]*)>/g, '&lt;wp-temp-br$1>' );
+
+					a = a.replace( /&lt;[^&lt;>]+>/g, function( b ) {
+						return b.replace( /[\n\t ]+/, ' ' );
+					});
+
+					return a.replace( /\s*\n\s*/g, '&lt;wp-temp-br />' );
+				});
+			}
+
+			text = text + '\n\n';
+			text = text.replace( /&lt;br \/>\s*&lt;br \/>/gi, '\n\n' );
+
+			// Pad block tags with two line breaks.
+			text = text.replace( new RegExp( '(&lt;(?:' + blocklist + ')(?: [^>]*)?>)', 'gi' ), '\n\n$1' );
+			text = text.replace( new RegExp( '(&lt;/(?:' + blocklist + ')>)', 'gi' ), '$1\n\n' );
+			text = text.replace( /&lt;hr( [^>]*)?>/gi, '&lt;hr$1>\n\n' );
+
+			// Remove white space chars around &lt;option>.
+			text = text.replace( /\s*&lt;option/gi, '&lt;option' );
+			text = text.replace( /&lt;\/option>\s*/gi, '&lt;/option>' );
+
+			// Normalize multiple line breaks and white space chars.
+			text = text.replace( /\n\s*\n+/g, '\n\n' );
+
+			// Convert two line breaks to a paragraph.
+			text = text.replace( /([\s\S]+?)\n\n/g, '&lt;p>$1&lt;/p>\n' );
+
+			// Remove empty paragraphs.
+			text = text.replace( /&lt;p>\s*?&lt;\/p>/gi, '');
+
+			// Remove &lt;p> tags that are around block tags.
+			text = text.replace( new RegExp( '&lt;p>\\s*(&lt;/?(?:' + blocklist + ')(?: [^>]*)?>)\\s*&lt;/p>', 'gi' ), '$1' );
+			text = text.replace( /&lt;p>(&lt;li.+?)&lt;\/p>/gi, '$1');
+
+			// Fix &lt;p> in blockquotes.
+			text = text.replace( /&lt;p>\s*&lt;blockquote([^>]*)>/gi, '&lt;blockquote$1>&lt;p>');
+			text = text.replace( /&lt;\/blockquote>\s*&lt;\/p>/gi, '&lt;/p>&lt;/blockquote>');
+
+			// Remove &lt;p> tags that are wrapped around block tags.
+			text = text.replace( new RegExp( '&lt;p>\\s*(&lt;/?(?:' + blocklist + ')(?: [^>]*)?>)', 'gi' ), '$1' );
+			text = text.replace( new RegExp( '(&lt;/?(?:' + blocklist + ')(?: [^>]*)?>)\\s*&lt;/p>', 'gi' ), '$1' );
+
+			text = text.replace( /(&lt;br[^>]*>)\s*\n/gi, '$1' );
+
+			// Add &lt;br> tags.
+			text = text.replace( /\s*\n/g, '&lt;br />\n');
+
+			// Remove &lt;br> tags that are around block tags.
+			text = text.replace( new RegExp( '(&lt;/?(?:' + blocklist + ')[^>]*>)\\s*&lt;br />', 'gi' ), '$1' );
+			text = text.replace( /&lt;br \/>(\s*&lt;\/?(?:p|li|div|dl|dd|dt|th|pre|td|ul|ol)>)/gi, '$1' );
+
+			// Remove &lt;p> and &lt;br> around captions.
+			text = text.replace( /(?:&lt;p>|&lt;br ?\/?>)*\s*\[caption([^\[]+)\[\/caption\]\s*(?:&lt;\/p>|&lt;br ?\/?>)*/gi, '[caption$1[/caption]' );
+
+			// Make sure there is &lt;p> when there is &lt;/p> inside block tags that can contain other blocks.
+			text = text.replace( /(&lt;(?:div|th|td|form|fieldset|dd)[^>]*>)(.*?)&lt;\/p>/g, function( a, b, c ) {
+				if ( c.match( /&lt;p( [^>]*)?>/ ) ) {
+					return a;
+				}
+
+				return b + '&lt;p>' + c + '&lt;/p>';
+			});
+
+			// Restore the line breaks in &lt;pre> and &lt;script> tags.
+			if ( preserve_linebreaks ) {
+				text = text.replace( /&lt;wp-line-break>/g, '\n' );
+			}
+
+			// Restore the &lt;br> tags in captions.
+			if ( preserve_br ) {
+				text = text.replace( /&lt;wp-temp-br([^>]*)>/g, '&lt;br$1>' );
+			}
+
+			return text;
+		}
+
+		/**
+		 * Fires custom jQuery events `beforePreWpautop` and `afterPreWpautop` when jQuery is available.
+		 *
+		 * @since 2.9.0
+		 *
+		 * @memberof switchEditors
+		 *
+		 * @param {String} html The content from the visual editor.
+		 * @return {String} the filtered content.
+		 */
+		function pre_wpautop( html ) {
+			var obj = { o: exports, data: html, unfiltered: html };
+
+			if ( $ ) {
+				$( 'body' ).trigger( 'beforePreWpautop', [ obj ] );
+			}
+
+			obj.data = removep( obj.data );
+
+			if ( $ ) {
+				$( 'body' ).trigger( 'afterPreWpautop', [ obj ] );
+			}
+
+			return obj.data;
+		}
+
+		/**
+		 * Fires custom jQuery events `beforeWpautop` and `afterWpautop` when jQuery is available.
+		 *
+		 * @since 2.9.0
+		 *
+		 * @memberof switchEditors
+		 *
+		 * @param {String} text The content from the text editor.
+		 * @return {String} filtered content.
+		 */
+		function wpautop( text ) {
+			var obj = { o: exports, data: text, unfiltered: text };
+
+			if ( $ ) {
+				$( 'body' ).trigger( 'beforeWpautop', [ obj ] );
+			}
+
+			obj.data = autop( obj.data );
+
+			if ( $ ) {
+				$( 'body' ).trigger( 'afterWpautop', [ obj ] );
+			}
+
+			return obj.data;
+		}
+
+		if ( $ ) {
+			$( document ).ready( init );
+		} else if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', init, false );
+			window.addEventListener( 'load', init, false );
+		} else if ( window.attachEvent ) {
+			window.attachEvent( 'onload', init );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					init();
+				}
+			} );
+		}
+
+		wp.editor.autop = wpautop;
+		wp.editor.removep = pre_wpautop;
+
+		exports = {
+			go: switchEditor,
+			wpautop: wpautop,
+			pre_wpautop: pre_wpautop,
+			_wp_Autop: autop,
+			_wp_Nop: removep
+		};
+
+		return exports;
+	}
+
+	/**
+	 * Expose the switch editors to be used globally.
+	 *
+	 * @namespace switchEditors
+	 */
+	window.switchEditors = new SwitchEditors();
+
+	/**
+	 * Initialize TinyMCE and/or Quicktags. For use with wp_enqueue_editor() (PHP).
+	 *
+	 * Intended for use with an existing textarea that will become the Text editor tab.
+	 * The editor width will be the width of the textarea container, height will be adjustable.
+	 *
+	 * Settings for both TinyMCE and Quicktags can be passed on initialization, and are "filtered"
+	 * with custom jQuery events on the document element, wp-before-tinymce-init and wp-before-quicktags-init.
+	 *
+	 * @since 4.8.0
+	 *
+	 * @param {string} id The HTML id of the textarea that is used for the editor.
+	 *                    Has to be jQuery compliant. No brackets, special chars, etc.
+	 * @param {object} settings Example:
+	 * settings = {
+	 *    // See https://www.tinymce.com/docs/configure/integration-and-setup/.
+	 *    // Alternatively set to `true` to use the defaults.
+	 *    tinymce: {
+	 *        setup: function( editor ) {
+	 *            console.log( 'Editor initialized', editor );
+	 *        }
+	 *    }
+	 *
+	 *    // Alternatively set to `true` to use the defaults.
+	 *	  quicktags: {
+	 *        buttons: 'strong,em,link'
+	 *    }
+	 * }
+	 */
+	wp.editor.initialize = function( id, settings ) {
+		var init;
+		var defaults;
+
+		if ( ! $ || ! id || ! wp.editor.getDefaultSettings ) {
+			return;
+		}
+
+		defaults = wp.editor.getDefaultSettings();
+
+		// Initialize TinyMCE by default.
+		if ( ! settings ) {
+			settings = {
+				tinymce: true
+			};
+		}
+
+		// Add wrap and the Visual|Text tabs.
+		if ( settings.tinymce &amp;&amp; settings.quicktags ) {
+			var $textarea = $( '#' + id );
+
+			var $wrap = $( '&lt;div>' ).attr( {
+					'class': 'wp-core-ui wp-editor-wrap tmce-active',
+					id: 'wp-' + id + '-wrap'
+				} );
+
+			var $editorContainer = $( '&lt;div class="wp-editor-container">' );
+
+			var $button = $( '&lt;button>' ).attr( {
+					type: 'button',
+					'data-wp-editor-id': id
+				} );
+
+			var $editorTools = $( '&lt;div class="wp-editor-tools">' );
+
+			if ( settings.mediaButtons ) {
+				var buttonText = 'Add Media';
+
+				if ( window._wpMediaViewsL10n &amp;&amp; window._wpMediaViewsL10n.addMedia ) {
+					buttonText = window._wpMediaViewsL10n.addMedia;
+				}
+
+				var $addMediaButton = $( '&lt;button type="button" class="button insert-media add_media">' );
+
+				$addMediaButton.append( '&lt;span class="wp-media-buttons-icon">&lt;/span>' );
+				$addMediaButton.append( document.createTextNode( ' ' + buttonText ) );
+				$addMediaButton.data( 'editor', id );
+
+				$editorTools.append(
+					$( '&lt;div class="wp-media-buttons">' )
+						.append( $addMediaButton )
+				);
+			}
+
+			$wrap.append(
+				$editorTools
+					.append( $( '&lt;div class="wp-editor-tabs">' )
+						.append( $button.clone().attr({
+							id: id + '-tmce',
+							'class': 'wp-switch-editor switch-tmce'
+						}).text( window.tinymce.translate( 'Visual' ) ) )
+						.append( $button.attr({
+							id: id + '-html',
+							'class': 'wp-switch-editor switch-html'
+						}).text( window.tinymce.translate( 'Text' ) ) )
+					).append( $editorContainer )
+			);
+
+			$textarea.after( $wrap );
+			$editorContainer.append( $textarea );
+		}
+
+		if ( window.tinymce &amp;&amp; settings.tinymce ) {
+			if ( typeof settings.tinymce !== 'object' ) {
+				settings.tinymce = {};
+			}
+
+			init = $.extend( {}, defaults.tinymce, settings.tinymce );
+			init.selector = '#' + id;
+
+			$( document ).trigger( 'wp-before-tinymce-init', init );
+			window.tinymce.init( init );
+
+			if ( ! window.wpActiveEditor ) {
+				window.wpActiveEditor = id;
+			}
+		}
+
+		if ( window.quicktags &amp;&amp; settings.quicktags ) {
+			if ( typeof settings.quicktags !== 'object' ) {
+				settings.quicktags = {};
+			}
+
+			init = $.extend( {}, defaults.quicktags, settings.quicktags );
+			init.id = id;
+
+			$( document ).trigger( 'wp-before-quicktags-init', init );
+			window.quicktags( init );
+
+			if ( ! window.wpActiveEditor ) {
+				window.wpActiveEditor = init.id;
+			}
+		}
+	};
+
+	/**
+	 * Remove one editor instance.
+	 *
+	 * Intended for use with editors that were initialized with wp.editor.initialize().
+	 *
+	 * @since 4.8.0
+	 *
+	 * @param {string} id The HTML id of the editor textarea.
+	 */
+	wp.editor.remove = function( id ) {
+		var mceInstance, qtInstance,
+			$wrap = $( '#wp-' + id + '-wrap' );
+
+		if ( window.tinymce ) {
+			mceInstance = window.tinymce.get( id );
+
+			if ( mceInstance ) {
+				if ( ! mceInstance.isHidden() ) {
+					mceInstance.save();
+				}
+
+				mceInstance.remove();
+			}
+		}
+
+		if ( window.quicktags ) {
+			qtInstance = window.QTags.getInstance( id );
+
+			if ( qtInstance ) {
+				qtInstance.remove();
+			}
+		}
+
+		if ( $wrap.length ) {
+			$wrap.after( $( '#' + id ) );
+			$wrap.remove();
+		}
+	};
+
+	/**
+	 * Get the editor content.
+	 *
+	 * Intended for use with editors that were initialized with wp.editor.initialize().
+	 *
+	 * @since 4.8.0
+	 *
+	 * @param {string} id The HTML id of the editor textarea.
+	 * @return The editor content.
+	 */
+	wp.editor.getContent = function( id ) {
+		var editor;
+
+		if ( ! $ || ! id ) {
+			return;
+		}
+
+		if ( window.tinymce ) {
+			editor = window.tinymce.get( id );
+
+			if ( editor &amp;&amp; ! editor.isHidden() ) {
+				editor.save();
+			}
+		}
+
+		return $( '#' + id ).val();
+	};
+
+}( window.jQuery, window.wp ));
+</pre>
+    </article>
+</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a>
+	
+		on 2020-06-17T11:56:24+00:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

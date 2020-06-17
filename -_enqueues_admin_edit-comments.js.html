@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Documentation Source: _enqueues/admin/edit-comments.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.united.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Documentation</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="addComment.html">addComment</a></li><li><a href="commentsBox.html">commentsBox</a></li><li><a href="findPosts.html">findPosts</a></li><li><a href="imageEdit.html">imageEdit</a></li><li><a href="inlineEditPost.html">inlineEditPost</a></li><li><a href="inlineEditTax.html">inlineEditTax</a></li><li><a href="postboxes.html">postboxes</a></li><li><a href="switchEditors.html">switchEditors</a></li><li><a href="wp.html">wp</a></li><li><a href="wp.a11y.html">wp.a11y</a></li><li><a href="wp.api.html">wp.api</a></li><li><a href="wp.api.collections.html">wp.api.collections</a></li><li><a href="wp.api.models.html">wp.api.models</a></li><li><a href="wp.api.utils.html">wp.api.utils</a></li><li><a href="wp.api.views.html">wp.api.views</a></li><li><a href="wp.Backbone.html">wp.Backbone</a></li><li><a href="wp.codeEditor.html">wp.codeEditor</a></li><li><a href="wp.communityEvents.html">wp.communityEvents</a></li><li><a href="wp.customHtmlWidget.html">wp.customHtmlWidget</a></li><li><a href="wp.customize.html">wp.customize</a></li><li><a href="wp.customize.HeaderTool.html">wp.customize.HeaderTool</a></li><li><a href="wp.customize.Menus.html">wp.customize.Menus</a></li><li><a href="wp.customize.navMenusPreview.html">wp.customize.navMenusPreview</a></li><li><a href="wp.customize.selectiveRefresh.html">wp.customize.selectiveRefresh</a></li><li><a href="wp.customize.utils.html">wp.customize.utils</a></li><li><a href="wp.customize.Widgets.html">wp.customize.Widgets</a></li><li><a href="wp.customize.widgetsPreview.html">wp.customize.widgetsPreview</a></li><li><a href="wp.emoji.html">wp.emoji</a></li><li><a href="wp.heartbeat.html">wp.heartbeat</a></li><li><a href="wp.media.html">wp.media</a></li><li><a href="wp.media.audio.html">wp.media.audio</a></li><li><a href="wp.media.controller.html">wp.media.controller</a></li><li><a href="wp.media.editor.html">wp.media.editor</a></li><li><a href="wp.media.editor.send.html">wp.media.editor.send</a></li><li><a href="wp.media.featuredImage.html">wp.media.featuredImage</a></li><li><a href="wp.media.frames.html">wp.media.frames</a></li><li><a href="wp.media.model.html">wp.media.model</a></li><li><a href="wp.media.model.Attachments.filters.html">wp.media.model.Attachments.filters</a></li><li><a href="wp.media.string.html">wp.media.string</a></li><li><a href="wp.media.video.html">wp.media.video</a></li><li><a href="wp.media.view.html">wp.media.view</a></li><li><a href="wp.mediaWidgets.html">wp.mediaWidgets</a></li><li><a href="wp.passwordStrength.html">wp.passwordStrength</a></li><li><a href="wp.textWidgets.html">wp.textWidgets</a></li><li><a href="wp.updates.html">wp.updates</a></li><li><a href="wp.utils.html">wp.utils</a></li><li><a href="wpNavMenu.html">wpNavMenu</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="-_.html"></a></li><li><a href="$.widget.wp.pointer.html">$.widget.wp.pointer</a></li><li><a href="$.widget.wp.wpColorPicker.html">$.widget.wp.wpColorPicker</a></li><li><a href="Heading.html">Heading</a></li><li><a href="wp.Backbone.Subviews.html">wp.Backbone.Subviews</a></li><li><a href="wp.BaseHandler.html">wp.BaseHandler</a></li><li><a href="wp.CustomHeader.html">wp.CustomHeader</a></li><li><a href="wp.customHtmlWidgets.CustomHtmlWidgetControl.html">wp.customHtmlWidgets.CustomHtmlWidgetControl</a></li><li><a href="wp.customize.BackgroundControl.html">wp.customize.BackgroundControl</a></li><li><a href="wp.customize.BackgroundPositionControl.html">wp.customize.BackgroundPositionControl</a></li><li><a href="wp.customize.CodeEditorControl.html">wp.customize.CodeEditorControl</a></li><li><a href="wp.customize.ColorControl.html">wp.customize.ColorControl</a></li><li><a href="wp.customize.Control.html">wp.customize.Control</a></li><li><a href="wp.customize.CroppedImageControl.html">wp.customize.CroppedImageControl</a></li><li><a href="wp.customize.DateTimeControl.html">wp.customize.DateTimeControl</a></li><li><a href="wp.customize.Element.html">wp.customize.Element</a></li><li><a href="wp.customize.HeaderControl.html">wp.customize.HeaderControl</a></li><li><a href="wp.customize.HeaderTool.ChoiceList.html">wp.customize.HeaderTool.ChoiceList</a></li><li><a href="wp.customize.HeaderTool.ChoiceListView.html">wp.customize.HeaderTool.ChoiceListView</a></li><li><a href="wp.customize.HeaderTool.ChoiceView.html">wp.customize.HeaderTool.ChoiceView</a></li><li><a href="wp.customize.HeaderTool.CombinedList.html">wp.customize.HeaderTool.CombinedList</a></li><li><a href="wp.customize.HeaderTool.CurrentView.html">wp.customize.HeaderTool.CurrentView</a></li><li><a href="wp.customize.HeaderTool.DefaultsList.html">wp.customize.HeaderTool.DefaultsList</a></li><li><a href="wp.customize.HeaderTool.ImageModel.html">wp.customize.HeaderTool.ImageModel</a></li><li><a href="wp.customize.ImageControl.html">wp.customize.ImageControl</a></li><li><a href="wp.customize.Loader.html">wp.customize.Loader</a></li><li><a href="wp.customize.MediaControl.html">wp.customize.MediaControl</a></li><li><a href="wp.customize.Menus.AvailableItemCollection.html">wp.customize.Menus.AvailableItemCollection</a></li><li><a href="wp.customize.Menus.AvailableItemModel.html">wp.customize.Menus.AvailableItemModel</a></li><li><a href="wp.customize.Menus.AvailableMenuItemsPanelView.html">wp.customize.Menus.AvailableMenuItemsPanelView</a></li><li><a href="wp.customize.Menus.MenuAutoAddControl.html">wp.customize.Menus.MenuAutoAddControl</a></li><li><a href="wp.customize.Menus.MenuControl.html">wp.customize.Menus.MenuControl</a></li><li><a href="wp.customize.Menus.MenuItemControl.html">wp.customize.Menus.MenuItemControl</a></li><li><a href="wp.customize.Menus.MenuLocationControl.html">wp.customize.Menus.MenuLocationControl</a></li><li><a href="wp.customize.Menus.MenuLocationsControl.html">wp.customize.Menus.MenuLocationsControl</a></li><li><a href="wp.customize.Menus.MenuNameControl.html">wp.customize.Menus.MenuNameControl</a></li><li><a href="wp.customize.Menus.MenuSection.html">wp.customize.Menus.MenuSection</a></li><li><a href="wp.customize.Menus.MenusPanel.html">wp.customize.Menus.MenusPanel</a></li><li><a href="wp.customize.Menus.NewMenuSection.html">wp.customize.Menus.NewMenuSection</a></li><li><a href="wp.customize.Messenger.html">wp.customize.Messenger</a></li><li><a href="wp.customize.navMenusPreview.NavMenuInstancePartial.html">wp.customize.navMenusPreview.NavMenuInstancePartial</a></li><li><a href="wp.customize.Notification.html">wp.customize.Notification</a></li><li><a href="wp.customize.Notifications.html">wp.customize.Notifications</a></li><li><a href="wp.customize.OuterSection.html">wp.customize.OuterSection</a></li><li><a href="wp.customize.OverlayNotification.html">wp.customize.OverlayNotification</a></li><li><a href="wp.customize.Panel.html">wp.customize.Panel</a></li><li><a href="wp.customize.Preview.html">wp.customize.Preview</a></li><li><a href="wp.customize.Previewer.html">wp.customize.Previewer</a></li><li><a href="wp.customize.PreviewFrame.html">wp.customize.PreviewFrame</a></li><li><a href="wp.customize.PreviewLinkControl.html">wp.customize.PreviewLinkControl</a></li><li><a href="wp.customize.Section.html">wp.customize.Section</a></li><li><a href="wp.customize.selectiveRefresh.Partial.html">wp.customize.selectiveRefresh.Partial</a></li><li><a href="wp.customize.selectiveRefresh.Placement.html">wp.customize.selectiveRefresh.Placement</a></li><li><a href="wp.customize.Setting.html">wp.customize.Setting</a></li><li><a href="wp.customize.SiteIconControl.html">wp.customize.SiteIconControl</a></li><li><a href="wp.customize.ThemeControl.html">wp.customize.ThemeControl</a></li><li><a href="wp.customize.ThemesPanel.html">wp.customize.ThemesPanel</a></li><li><a href="wp.customize.ThemesSection.html">wp.customize.ThemesSection</a></li><li><a href="wp.customize.UploadControl.html">wp.customize.UploadControl</a></li><li><a href="wp.customize.Value.html">wp.customize.Value</a></li><li><a href="wp.customize.Values.html">wp.customize.Values</a></li><li><a href="wp.customize.Widgets.AvailableWidgetsPanelView.html">wp.customize.Widgets.AvailableWidgetsPanelView</a></li><li><a href="wp.customize.Widgets.SidebarCollection.html">wp.customize.Widgets.SidebarCollection</a></li><li><a href="wp.customize.Widgets.SidebarControl.html">wp.customize.Widgets.SidebarControl</a></li><li><a href="wp.customize.Widgets.SidebarModel.html">wp.customize.Widgets.SidebarModel</a></li><li><a href="wp.customize.Widgets.SidebarSection.html">wp.customize.Widgets.SidebarSection</a></li><li><a href="wp.customize.Widgets.WidgetCollection.html">wp.customize.Widgets.WidgetCollection</a></li><li><a href="wp.customize.Widgets.WidgetControl.html">wp.customize.Widgets.WidgetControl</a></li><li><a href="wp.customize.Widgets.WidgetModel.html">wp.customize.Widgets.WidgetModel</a></li><li><a href="wp.customize.Widgets.WidgetsPanel.html">wp.customize.Widgets.WidgetsPanel</a></li><li><a href="wp.customize.widgetsPreview.SidebarPartial.html">wp.customize.widgetsPreview.SidebarPartial</a></li><li><a href="wp.customize.widgetsPreview.WidgetPartial.html">wp.customize.widgetsPreview.WidgetPartial</a></li><li><a href="wp.customize-Container.html">wp.customize~Container</a></li><li><a href="wp.customize-LockedNotification.html">wp.customize~LockedNotification</a></li><li><a href="wp.media.collection.html">wp.media.collection</a></li><li><a href="wp.media.controller.AudioDetails.html">wp.media.controller.AudioDetails</a></li><li><a href="wp.media.controller.CollectionAdd.html">wp.media.controller.CollectionAdd</a></li><li><a href="wp.media.controller.CollectionEdit.html">wp.media.controller.CollectionEdit</a></li><li><a href="wp.media.controller.Cropper.html">wp.media.controller.Cropper</a></li><li><a href="wp.media.controller.CustomizeImageCropper.html">wp.media.controller.CustomizeImageCropper</a></li><li><a href="wp.media.controller.EditAttachmentMetadata.html">wp.media.controller.EditAttachmentMetadata</a></li><li><a href="wp.media.controller.EditImage.html">wp.media.controller.EditImage</a></li><li><a href="wp.media.controller.Embed.html">wp.media.controller.Embed</a></li><li><a href="wp.media.controller.FeaturedImage.html">wp.media.controller.FeaturedImage</a></li><li><a href="wp.media.controller.GalleryAdd.html">wp.media.controller.GalleryAdd</a></li><li><a href="wp.media.controller.GalleryEdit.html">wp.media.controller.GalleryEdit</a></li><li><a href="wp.media.controller.ImageDetails.html">wp.media.controller.ImageDetails</a></li><li><a href="wp.media.controller.Library.html">wp.media.controller.Library</a></li><li><a href="wp.media.controller.Region.html">wp.media.controller.Region</a></li><li><a href="wp.media.controller.ReplaceImage.html">wp.media.controller.ReplaceImage</a></li><li><a href="wp.media.controller.SiteIconCropper.html">wp.media.controller.SiteIconCropper</a></li><li><a href="wp.media.controller.State.html">wp.media.controller.State</a></li><li><a href="wp.media.model.Attachment.html">wp.media.model.Attachment</a></li><li><a href="wp.media.model.Attachments.html">wp.media.model.Attachments</a></li><li><a href="wp.media.model.PostImage.html">wp.media.model.PostImage</a></li><li><a href="wp.media.model.PostMedia.html">wp.media.model.PostMedia</a></li><li><a href="wp.media.model.Query.html">wp.media.model.Query</a></li><li><a href="wp.media.model.Selection.html">wp.media.model.Selection</a></li><li><a href="wp.media.View_.html">wp.media.View</a></li><li><a href="wp.media.view.Attachment.html">wp.media.view.Attachment</a></li><li><a href="wp.media.view.Attachment.Details.html">wp.media.view.Attachment.Details</a></li><li><a href="wp.media.view.Attachment.Details.TwoColumn.html">wp.media.view.Attachment.Details.TwoColumn</a></li><li><a href="wp.media.view.Attachment.EditLibrary.html">wp.media.view.Attachment.EditLibrary</a></li><li><a href="wp.media.view.Attachment.EditSelection.html">wp.media.view.Attachment.EditSelection</a></li><li><a href="wp.media.view.Attachment.Library.html">wp.media.view.Attachment.Library</a></li><li><a href="wp.media.view.Attachment.Selection.html">wp.media.view.Attachment.Selection</a></li><li><a href="wp.media.view.AttachmentCompat.html">wp.media.view.AttachmentCompat</a></li><li><a href="wp.media.view.AttachmentFilters.html">wp.media.view.AttachmentFilters</a></li><li><a href="wp.media.view.AttachmentFilters.All.html">wp.media.view.AttachmentFilters.All</a></li><li><a href="wp.media.view.AttachmentFilters.DateFilter.html">wp.media.view.AttachmentFilters.DateFilter</a></li><li><a href="wp.media.view.AttachmentFilters.Uploaded.html">wp.media.view.AttachmentFilters.Uploaded</a></li><li><a href="wp.media.view.Attachments.html">wp.media.view.Attachments</a></li><li><a href="wp.media.view.Attachments.Selection.html">wp.media.view.Attachments.Selection</a></li><li><a href="wp.media.view.AttachmentsBrowser.html">wp.media.view.AttachmentsBrowser</a></li><li><a href="wp.media.view.AudioDetails.html">wp.media.view.AudioDetails</a></li><li><a href="wp.media.view.Button.html">wp.media.view.Button</a></li><li><a href="wp.media.view.ButtonGroup.html">wp.media.view.ButtonGroup</a></li><li><a href="wp.media.view.Cropper.html">wp.media.view.Cropper</a></li><li><a href="wp.media.view.DeleteSelected.html">wp.media.view.DeleteSelected</a></li><li><a href="wp.media.view.DeleteSelectedPermanently.html">wp.media.view.DeleteSelectedPermanently</a></li><li><a href="wp.media.view.EditImage.html">wp.media.view.EditImage</a></li><li><a href="wp.media.view.EditImage.Details.html">wp.media.view.EditImage.Details</a></li><li><a href="wp.media.view.EditorUploader.html">wp.media.view.EditorUploader</a></li><li><a href="wp.media.view.Embed.html">wp.media.view.Embed</a></li><li><a href="wp.media.view.EmbedImage.html">wp.media.view.EmbedImage</a></li><li><a href="wp.media.view.EmbedLink.html">wp.media.view.EmbedLink</a></li><li><a href="wp.media.view.EmbedUrl.html">wp.media.view.EmbedUrl</a></li><li><a href="wp.media.view.FocusManager.html">wp.media.view.FocusManager</a></li><li><a href="wp.media.view.Frame.html">wp.media.view.Frame</a></li><li><a href="wp.media.view.Iframe.html">wp.media.view.Iframe</a></li><li><a href="wp.media.view.ImageDetails.html">wp.media.view.ImageDetails</a></li><li><a href="wp.media.view.Label.html">wp.media.view.Label</a></li><li><a href="wp.media.view.MediaDetails.html">wp.media.view.MediaDetails</a></li><li><a href="wp.media.view.MediaFrame.html">wp.media.view.MediaFrame</a></li><li><a href="wp.media.view.MediaFrame.AudioDetails.html">wp.media.view.MediaFrame.AudioDetails</a></li><li><a href="wp.media.view.MediaFrame.EditAttachments.html">wp.media.view.MediaFrame.EditAttachments</a></li><li><a href="wp.media.view.MediaFrame.ImageDetails.html">wp.media.view.MediaFrame.ImageDetails</a></li><li><a href="wp.media.view.MediaFrame.Manage.html">wp.media.view.MediaFrame.Manage</a></li><li><a href="wp.media.view.MediaFrame.Manage.Router.html">wp.media.view.MediaFrame.Manage.Router</a></li><li><a href="wp.media.view.MediaFrame.MediaDetails.html">wp.media.view.MediaFrame.MediaDetails</a></li><li><a href="wp.media.view.MediaFrame.Post.html">wp.media.view.MediaFrame.Post</a></li><li><a href="wp.media.view.MediaFrame.Select.html">wp.media.view.MediaFrame.Select</a></li><li><a href="wp.media.view.MediaFrame.VideoDetails.html">wp.media.view.MediaFrame.VideoDetails</a></li><li><a href="wp.media.view.Menu.html">wp.media.view.Menu</a></li><li><a href="wp.media.view.MenuItem.html">wp.media.view.MenuItem</a></li><li><a href="wp.media.view.Modal.html">wp.media.view.Modal</a></li><li><a href="wp.media.view.PriorityList.html">wp.media.view.PriorityList</a></li><li><a href="wp.media.view.Router.html">wp.media.view.Router</a></li><li><a href="wp.media.view.RouterItem.html">wp.media.view.RouterItem</a></li><li><a href="wp.media.view.Search.html">wp.media.view.Search</a></li><li><a href="wp.media.view.Selection.html">wp.media.view.Selection</a></li><li><a href="wp.media.view.SelectModeToggle.html">wp.media.view.SelectModeToggle</a></li><li><a href="wp.media.view.Settings.html">wp.media.view.Settings</a></li><li><a href="wp.media.view.Settings.AttachmentDisplay.html">wp.media.view.Settings.AttachmentDisplay</a></li><li><a href="wp.media.view.Settings.Gallery.html">wp.media.view.Settings.Gallery</a></li><li><a href="wp.media.view.Settings.Playlist.html">wp.media.view.Settings.Playlist</a></li><li><a href="wp.media.view.Sidebar.html">wp.media.view.Sidebar</a></li><li><a href="wp.media.view.SiteIconCropper.html">wp.media.view.SiteIconCropper</a></li><li><a href="wp.media.view.SiteIconPreview.html">wp.media.view.SiteIconPreview</a></li><li><a href="wp.media.view.Spinner.html">wp.media.view.Spinner</a></li><li><a href="wp.media.view.Toolbar.html">wp.media.view.Toolbar</a></li><li><a href="wp.media.view.Toolbar.Embed.html">wp.media.view.Toolbar.Embed</a></li><li><a href="wp.media.view.Toolbar.Select.html">wp.media.view.Toolbar.Select</a></li><li><a href="wp.media.view.UploaderInline.html">wp.media.view.UploaderInline</a></li><li><a href="wp.media.view.UploaderStatus.html">wp.media.view.UploaderStatus</a></li><li><a href="wp.media.view.UploaderStatusError.html">wp.media.view.UploaderStatusError</a></li><li><a href="wp.media.view.UploaderWindow.html">wp.media.view.UploaderWindow</a></li><li><a href="wp.media.view.VideoDetails.html">wp.media.view.VideoDetails</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_audio.html">wp.mediaWidgets.controlConstructors.media_audio</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_gallery.html">wp.mediaWidgets.controlConstructors.media_gallery</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_video.html">wp.mediaWidgets.controlConstructors.media_video</a></li><li><a href="wp.mediaWidgets.controlConstructors-AudioDetailsMediaFrame.html">wp.mediaWidgets.controlConstructors~AudioDetailsMediaFrame</a></li><li><a href="wp.mediaWidgets.controlConstructors-VideoDetailsMediaFrame.html">wp.mediaWidgets.controlConstructors~VideoDetailsMediaFrame</a></li><li><a href="wp.mediaWidgets.MediaEmbedView.html">wp.mediaWidgets.MediaEmbedView</a></li><li><a href="wp.mediaWidgets.MediaFrameSelect.html">wp.mediaWidgets.MediaFrameSelect</a></li><li><a href="wp.mediaWidgets.MediaWidgetControl.html">wp.mediaWidgets.MediaWidgetControl</a></li><li><a href="wp.mediaWidgets.MediaWidgetModel.html">wp.mediaWidgets.MediaWidgetModel</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_audio.html">wp.mediaWidgets.modelConstructors.media_audio</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_gallery.html">wp.mediaWidgets.modelConstructors.media_gallery</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_image.html">wp.mediaWidgets.modelConstructors.media_image</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_video.html">wp.mediaWidgets.modelConstructors.media_video</a></li><li><a href="wp.mediaWidgets.PersistentDisplaySettingsLibrary.html">wp.mediaWidgets.PersistentDisplaySettingsLibrary</a></li><li><a href="wp.mediaWidgets-Constructor.html">wp.mediaWidgets~Constructor</a></li><li><a href="wp.mediaWidgets-GalleryDetailsMediaFrame.html">wp.mediaWidgets~GalleryDetailsMediaFrame</a></li><li><a href="wp.NativeHandler.html">wp.NativeHandler</a></li><li><a href="wp.textWidgets.TextWidgetControl.html">wp.textWidgets.TextWidgetControl</a></li><li><a href="wp.utils.wordcounter.html">wp.utils.wordcounter</a></li><li><a href="wp.YouTubeHandler.html">wp.YouTubeHandler</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">Mixins<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="wp.media.controller.StateMachine.html">wp.media.controller.StateMachine</a></li><li><a href="wp.media.mixin.html">wp.media.mixin</a></li><li><a href="wp.media.selectionSync.html">wp.media.selectionSync</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="wp.media.controller.Region.html#event:activate">wp.media.controller.Region#event:activate</a></li><li><a href="wp.media.controller.Region.html#event:create">wp.media.controller.Region#event:create</a></li><li><a href="wp.media.controller.Region.html#event:deactivate">wp.media.controller.Region#event:deactivate</a></li><li><a href="wp.media.controller.Region.html#event:render">wp.media.controller.Region#event:render</a></li><li><a href="wp.media.view.Frame.html#event:%257Bmode%257D:deactivate">wp.media.view.Frame#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.AudioDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.AudioDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.EditAttachments.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.EditAttachments#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.ImageDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.ImageDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Manage.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Manage#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.MediaDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.MediaDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Post.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Post#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Select.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Select#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.VideoDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.VideoDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.controlConstructors-AudioDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.controlConstructors~AudioDetailsMediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.controlConstructors-VideoDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.controlConstructors~VideoDetailsMediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.MediaFrameSelect.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.MediaFrameSelect#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets-GalleryDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets~GalleryDetailsMediaFrame#event:{mode}:deactivate</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#$">$</a></li><li><a href="global.html#_attach">_attach</a></li><li><a href="global.html#_isReady">_isReady</a></li><li><a href="global.html#add">add</a></li><li><a href="global.html#ajaxPopulateWidgets">ajaxPopulateWidgets</a></li><li><a href="global.html#ajaxWidgets">ajaxWidgets</a></li><li><a href="global.html#all">all</a></li><li><a href="global.html#array_unique_noempty">array_unique_noempty</a></li><li><a href="global.html#clearFilters">clearFilters</a></li><li><a href="global.html#commentReply">commentReply</a></li><li><a href="global.html#detach">detach</a></li><li><a href="global.html#editPermalink">editPermalink</a></li><li><a href="global.html#filtersChecked">filtersChecked</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#get">get</a></li><li><a href="global.html#insert">insert</a></li><li><a href="global.html#media">media</a></li><li><a href="global.html#out">out</a></li><li><a href="global.html#over">over</a></li><li><a href="global.html#passwordStrength">passwordStrength</a></li><li><a href="global.html#prepare">prepare</a></li><li><a href="global.html#quickPressLoad">quickPressLoad</a></li><li><a href="global.html#ready">ready</a></li><li><a href="global.html#remove">remove</a></li><li><a href="global.html#render">render</a></li><li><a href="global.html#replace">replace</a></li><li><a href="global.html#search">search</a></li><li><a href="global.html#send_to_editor">send_to_editor</a></li><li><a href="global.html#set">set</a></li><li><a href="global.html#setCommentsList">setCommentsList</a></li><li><a href="global.html#tagBox">tagBox</a></li><li><a href="global.html#tb_position">tb_position</a></li><li><a href="global.html#theExtraList">theExtraList</a></li><li><a href="global.html#theList">theList</a></li><li><a href="global.html#unset">unset</a></li><li><a href="global.html#uploader">uploader</a></li><li><a href="global.html#WPRemoveThumbnail">WPRemoveThumbnail</a></li><li><a href="global.html#WPSetThumbnailHTML">WPSetThumbnailHTML</a></li><li><a href="global.html#WPSetThumbnailID">WPSetThumbnailID</a></li><li><a href="global.html#wptitlehint">wptitlehint</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-12">
+	
+		<div id="main">
+			
+
+		<h1 class="page-title">Source: _enqueues/admin/edit-comments.js</h1>
+    
+<section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">/**
+ * Handles updating and editing comments.
+ *
+ * @file This file contains functionality for the admin comments page.
+ * @since 2.1.0
+ * @output wp-admin/js/edit-comments.js
+ */
+
+/* global adminCommentsL10n, thousandsSeparator, list_args, QTags, ajaxurl, wpAjax */
+/* global commentReply, theExtraList, theList, setCommentsList */
+
+(function($) {
+var getCount, updateCount, updateCountText, updatePending, updateApproved,
+	updateHtmlTitle, updateDashboardText, updateInModerationText, adminTitle = document.title,
+	isDashboard = $('#dashboard_right_now').length,
+	titleDiv, titleRegEx;
+
+	/**
+	 * Extracts a number from the content of a jQuery element.
+	 *
+	 * @since 2.9.0
+	 * @access private
+	 *
+	 * @param {jQuery} el jQuery element.
+	 *
+	 * @return {number} The number found in the given element.
+	 */
+	getCount = function(el) {
+		var n = parseInt( el.html().replace(/[^0-9]+/g, ''), 10 );
+		if ( isNaN(n) ) {
+			return 0;
+		}
+		return n;
+	};
+
+	/**
+	 * Updates an html element with a localized number string.
+	 *
+	 * @since 2.9.0
+	 * @access private
+	 *
+	 * @param {jQuery} el The jQuery element to update.
+	 * @param {number} n Number to be put in the element.
+	 *
+	 * @return {void}
+	 */
+	updateCount = function(el, n) {
+		var n1 = '';
+		if ( isNaN(n) ) {
+			return;
+		}
+		n = n &lt; 1 ? '0' : n.toString();
+		if ( n.length > 3 ) {
+			while ( n.length > 3 ) {
+				n1 = thousandsSeparator + n.substr(n.length - 3) + n1;
+				n = n.substr(0, n.length - 3);
+			}
+			n = n + n1;
+		}
+		el.html(n);
+	};
+
+	/**
+	 * Updates the number of approved comments on a specific post and the filter bar.
+	 *
+	 * @since 4.4.0
+	 * @access private
+	 *
+	 * @param {number} diff The amount to lower or raise the approved count with.
+	 * @param {number} commentPostId The ID of the post to be updated.
+	 *
+	 * @return {void}
+	 */
+	updateApproved = function( diff, commentPostId ) {
+		var postSelector = '.post-com-count-' + commentPostId,
+			noClass = 'comment-count-no-comments',
+			approvedClass = 'comment-count-approved',
+			approved,
+			noComments;
+
+		updateCountText( 'span.approved-count', diff );
+
+		if ( ! commentPostId ) {
+			return;
+		}
+
+		// Cache selectors to not get duplicates.
+		approved = $( 'span.' + approvedClass, postSelector );
+		noComments = $( 'span.' + noClass, postSelector );
+
+		approved.each(function() {
+			var a = $(this), n = getCount(a) + diff;
+			if ( n &lt; 1 )
+				n = 0;
+
+			if ( 0 === n ) {
+				a.removeClass( approvedClass ).addClass( noClass );
+			} else {
+				a.addClass( approvedClass ).removeClass( noClass );
+			}
+			updateCount( a, n );
+		});
+
+		noComments.each(function() {
+			var a = $(this);
+			if ( diff > 0 ) {
+				a.removeClass( noClass ).addClass( approvedClass );
+			} else {
+				a.addClass( noClass ).removeClass( approvedClass );
+			}
+			updateCount( a, diff );
+		});
+	};
+
+	/**
+	 * Updates a number count in all matched HTML elements
+	 *
+	 * @since 4.4.0
+	 * @access private
+	 *
+	 * @param {string} selector The jQuery selector for elements to update a count
+	 *                          for.
+	 * @param {number} diff The amount to lower or raise the count with.
+	 *
+	 * @return {void}
+	 */
+	updateCountText = function( selector, diff ) {
+		$( selector ).each(function() {
+			var a = $(this), n = getCount(a) + diff;
+			if ( n &lt; 1 ) {
+				n = 0;
+			}
+			updateCount( a, n );
+		});
+	};
+
+	/**
+	 * Updates a text about comment count on the dashboard.
+	 *
+	 * @since 4.4.0
+	 * @access private
+	 *
+	 * @param {Object} response Ajax response from the server that includes a
+	 *                          translated "comment count" message.
+	 *
+	 * @return {void}
+	 */
+	updateDashboardText = function( response ) {
+		if ( ! isDashboard || ! response || ! response.i18n_comments_text ) {
+			return;
+		}
+
+		$( '.comment-count a', '#dashboard_right_now' ).text( response.i18n_comments_text );
+	};
+
+	/**
+	 * Updates the "comments in moderation" text across the UI.
+	 *
+	 * @since 5.2.0
+	 *
+	 * @param {object} response Ajax response from the server that includes a
+	 *                          translated "comments in moderation" message.
+	 *
+	 * @return {void}
+	 */
+	updateInModerationText = function( response ) {
+		if ( ! response || ! response.i18n_moderation_text ) {
+			return;
+		}
+
+		// Update the "comment in moderation" text across the UI.
+		$( '.comments-in-moderation-text' ).text( response.i18n_moderation_text );
+		// Hide the "comment in moderation" text in the Dashboard "At a Glance" widget.
+		if ( isDashboard &amp;&amp; response.in_moderation ) {
+			$( '.comment-mod-count', '#dashboard_right_now' )
+				[ response.in_moderation > 0 ? 'removeClass' : 'addClass' ]( 'hidden' );
+		}
+	};
+
+	/**
+	 * Updates the title of the document with the number comments to be approved.
+	 *
+	 * @since 4.4.0
+	 * @access private
+	 *
+	 * @param {number} diff The amount to lower or raise the number of to be
+	 *                      approved comments with.
+	 *
+	 * @return {void}
+	 */
+	updateHtmlTitle = function( diff ) {
+		var newTitle, regExMatch, titleCount, commentFrag;
+
+		titleRegEx = titleRegEx || new RegExp( adminCommentsL10n.docTitleCommentsCount.replace( '%s', '\\([0-9' + thousandsSeparator + ']+\\)' ) + '?' );
+		// Count funcs operate on a $'d element.
+		titleDiv = titleDiv || $( '&lt;div />' );
+		newTitle = adminTitle;
+
+		commentFrag = titleRegEx.exec( document.title );
+		if ( commentFrag ) {
+			commentFrag = commentFrag[0];
+			titleDiv.html( commentFrag );
+			titleCount = getCount( titleDiv ) + diff;
+		} else {
+			titleDiv.html( 0 );
+			titleCount = diff;
+		}
+
+		if ( titleCount >= 1 ) {
+			updateCount( titleDiv, titleCount );
+			regExMatch = titleRegEx.exec( document.title );
+			if ( regExMatch ) {
+				newTitle = document.title.replace( regExMatch[0], adminCommentsL10n.docTitleCommentsCount.replace( '%s', titleDiv.text() ) + ' ' );
+			}
+		} else {
+			regExMatch = titleRegEx.exec( newTitle );
+			if ( regExMatch ) {
+				newTitle = newTitle.replace( regExMatch[0], adminCommentsL10n.docTitleComments );
+			}
+		}
+		document.title = newTitle;
+	};
+
+	/**
+	 * Updates the number of pending comments on a specific post and the filter bar.
+	 *
+	 * @since 3.2.0
+	 * @access private
+	 *
+	 * @param {number} diff The amount to lower or raise the pending count with.
+	 * @param {number} commentPostId The ID of the post to be updated.
+	 *
+	 * @return {void}
+	 */
+	updatePending = function( diff, commentPostId ) {
+		var postSelector = '.post-com-count-' + commentPostId,
+			noClass = 'comment-count-no-pending',
+			noParentClass = 'post-com-count-no-pending',
+			pendingClass = 'comment-count-pending',
+			pending,
+			noPending;
+
+		if ( ! isDashboard ) {
+			updateHtmlTitle( diff );
+		}
+
+		$( 'span.pending-count' ).each(function() {
+			var a = $(this), n = getCount(a) + diff;
+			if ( n &lt; 1 )
+				n = 0;
+			a.closest('.awaiting-mod')[ 0 === n ? 'addClass' : 'removeClass' ]('count-0');
+			updateCount( a, n );
+		});
+
+		if ( ! commentPostId ) {
+			return;
+		}
+
+		// Cache selectors to not get dupes.
+		pending = $( 'span.' + pendingClass, postSelector );
+		noPending = $( 'span.' + noClass, postSelector );
+
+		pending.each(function() {
+			var a = $(this), n = getCount(a) + diff;
+			if ( n &lt; 1 )
+				n = 0;
+
+			if ( 0 === n ) {
+				a.parent().addClass( noParentClass );
+				a.removeClass( pendingClass ).addClass( noClass );
+			} else {
+				a.parent().removeClass( noParentClass );
+				a.addClass( pendingClass ).removeClass( noClass );
+			}
+			updateCount( a, n );
+		});
+
+		noPending.each(function() {
+			var a = $(this);
+			if ( diff > 0 ) {
+				a.parent().removeClass( noParentClass );
+				a.removeClass( noClass ).addClass( pendingClass );
+			} else {
+				a.parent().addClass( noParentClass );
+				a.addClass( noClass ).removeClass( pendingClass );
+			}
+			updateCount( a, diff );
+		});
+	};
+
+/**
+ * Initializes the comments list.
+ *
+ * @since 4.4.0
+ *
+ * @global
+ *
+ * @return {void}
+ */
+window.setCommentsList = function() {
+	var totalInput, perPageInput, pageInput, dimAfter, delBefore, updateTotalCount, delAfter, refillTheExtraList, diff,
+		lastConfidentTime = 0;
+
+	totalInput = $('input[name="_total"]', '#comments-form');
+	perPageInput = $('input[name="_per_page"]', '#comments-form');
+	pageInput = $('input[name="_page"]', '#comments-form');
+
+	/**
+	 * Updates the total with the latest count.
+	 *
+	 * The time parameter makes sure that we only update the total if this value is
+	 * a newer value than we previously received.
+	 *
+	 * The time and setConfidentTime parameters make sure that we only update the
+	 * total when necessary. So a value that has been generated earlier will not
+	 * update the total.
+	 *
+	 * @since 2.8.0
+	 * @access private
+	 *
+	 * @param {number} total Total number of comments.
+	 * @param {number} time Unix timestamp of response.
+ 	 * @param {boolean} setConfidentTime Whether to update the last confident time
+	 *                                   with the given time.
+	 *
+	 * @return {void}
+	 */
+	updateTotalCount = function( total, time, setConfidentTime ) {
+		if ( time &lt; lastConfidentTime )
+			return;
+
+		if ( setConfidentTime )
+			lastConfidentTime = time;
+
+		totalInput.val( total.toString() );
+	};
+
+	/**
+	 * Changes DOM that need to be changed after a list item has been dimmed.
+	 *
+	 * @since 2.5.0
+	 * @access private
+	 *
+	 * @param {Object} r Ajax response object.
+	 * @param {Object} settings Settings for the wpList object.
+	 *
+	 * @return {void}
+	 */
+	dimAfter = function( r, settings ) {
+		var editRow, replyID, replyButton, response,
+			c = $( '#' + settings.element );
+
+		if ( true !== settings.parsed ) {
+			response = settings.parsed.responses[0];
+		}
+
+		editRow = $('#replyrow');
+		replyID = $('#comment_ID', editRow).val();
+		replyButton = $('#replybtn', editRow);
+
+		if ( c.is('.unapproved') ) {
+			if ( settings.data.id == replyID )
+				replyButton.text(adminCommentsL10n.replyApprove);
+
+			c.find( '.row-actions span.view' ).addClass( 'hidden' ).end()
+				.find( 'div.comment_status' ).html( '0' );
+
+		} else {
+			if ( settings.data.id == replyID )
+				replyButton.text(adminCommentsL10n.reply);
+
+			c.find( '.row-actions span.view' ).removeClass( 'hidden' ).end()
+				.find( 'div.comment_status' ).html( '1' );
+		}
+
+		diff = $('#' + settings.element).is('.' + settings.dimClass) ? 1 : -1;
+		if ( response ) {
+			updateDashboardText( response.supplemental );
+			updateInModerationText( response.supplemental );
+			updatePending( diff, response.supplemental.postId );
+			updateApproved( -1 * diff, response.supplemental.postId );
+		} else {
+			updatePending( diff );
+			updateApproved( -1 * diff  );
+		}
+	};
+
+	/**
+	 * Handles marking a comment as spam or trashing the comment.
+	 *
+	 * Is executed in the list delBefore hook.
+	 *
+	 * @since 2.8.0
+	 * @access private
+	 *
+	 * @param {Object} settings Settings for the wpList object.
+	 * @param {HTMLElement} list Comments table element.
+	 *
+	 * @return {Object} The settings object.
+	 */
+	delBefore = function( settings, list ) {
+		var note, id, el, n, h, a, author,
+			action = false,
+			wpListsData = $( settings.target ).attr( 'data-wp-lists' );
+
+		settings.data._total = totalInput.val() || 0;
+		settings.data._per_page = perPageInput.val() || 0;
+		settings.data._page = pageInput.val() || 0;
+		settings.data._url = document.location.href;
+		settings.data.comment_status = $('input[name="comment_status"]', '#comments-form').val();
+
+		if ( wpListsData.indexOf(':trash=1') != -1 )
+			action = 'trash';
+		else if ( wpListsData.indexOf(':spam=1') != -1 )
+			action = 'spam';
+
+		if ( action ) {
+			id = wpListsData.replace(/.*?comment-([0-9]+).*/, '$1');
+			el = $('#comment-' + id);
+			note = $('#' + action + '-undo-holder').html();
+
+			el.find('.check-column :checkbox').prop('checked', false); // Uncheck the row so as not to be affected by Bulk Edits.
+
+			if ( el.siblings('#replyrow').length &amp;&amp; commentReply.cid == id )
+				commentReply.close();
+
+			if ( el.is('tr') ) {
+				n = el.children(':visible').length;
+				author = $('.author strong', el).text();
+				h = $('&lt;tr id="undo-' + id + '" class="undo un' + action + '" style="display:none;">&lt;td colspan="' + n + '">' + note + '&lt;/td>&lt;/tr>');
+			} else {
+				author = $('.comment-author', el).text();
+				h = $('&lt;div id="undo-' + id + '" style="display:none;" class="undo un' + action + '">' + note + '&lt;/div>');
+			}
+
+			el.before(h);
+
+			$('strong', '#undo-' + id).text(author);
+			a = $('.undo a', '#undo-' + id);
+			a.attr('href', 'comment.php?action=un' + action + 'comment&amp;c=' + id + '&amp;_wpnonce=' + settings.data._ajax_nonce);
+			a.attr('data-wp-lists', 'delete:the-comment-list:comment-' + id + '::un' + action + '=1');
+			a.attr('class', 'vim-z vim-destructive aria-button-if-js');
+			$('.avatar', el).first().clone().prependTo('#undo-' + id + ' .' + action + '-undo-inside');
+
+			a.click(function( e ){
+				e.preventDefault();
+				e.stopPropagation(); // Ticket #35904.
+				list.wpList.del(this);
+				$('#undo-' + id).css( {backgroundColor:'#ceb'} ).fadeOut(350, function(){
+					$(this).remove();
+					$('#comment-' + id).css('backgroundColor', '').fadeIn(300, function(){ $(this).show(); });
+				});
+			});
+		}
+
+		return settings;
+	};
+
+	/**
+	 * Handles actions that need to be done after marking as spam or thrashing a
+	 * comment.
+	 *
+	 * The ajax requests return the unix time stamp a comment was marked as spam or
+	 * trashed. We use this to have a correct total amount of comments.
+	 *
+	 * @since 2.5.0
+	 * @access private
+	 *
+	 * @param {Object} r Ajax response object.
+	 * @param {Object} settings Settings for the wpList object.
+	 *
+	 * @return {void}
+	 */
+	delAfter = function( r, settings ) {
+		var total_items_i18n, total, animated, animatedCallback,
+			response = true === settings.parsed ? {} : settings.parsed.responses[0],
+			commentStatus = true === settings.parsed ? '' : response.supplemental.status,
+			commentPostId = true === settings.parsed ? '' : response.supplemental.postId,
+			newTotal = true === settings.parsed ? '' : response.supplemental,
+
+			targetParent = $( settings.target ).parent(),
+			commentRow = $('#' + settings.element),
+
+			spamDiff, trashDiff, pendingDiff, approvedDiff,
+
+			/*
+			 * As `wpList` toggles only the `unapproved` class, the approved comment
+			 * rows can have both the `approved` and `unapproved` classes.
+			 */
+			approved = commentRow.hasClass( 'approved' ) &amp;&amp; ! commentRow.hasClass( 'unapproved' ),
+			unapproved = commentRow.hasClass( 'unapproved' ),
+			spammed = commentRow.hasClass( 'spam' ),
+			trashed = commentRow.hasClass( 'trash' ),
+			undoing = false; // Ticket #35904.
+
+		updateDashboardText( newTotal );
+		updateInModerationText( newTotal );
+
+		/*
+		 * The order of these checks is important.
+		 * .unspam can also have .approve or .unapprove.
+		 * .untrash can also have .approve or .unapprove.
+		 */
+
+		if ( targetParent.is( 'span.undo' ) ) {
+			// The comment was spammed.
+			if ( targetParent.hasClass( 'unspam' ) ) {
+				spamDiff = -1;
+
+				if ( 'trash' === commentStatus ) {
+					trashDiff = 1;
+				} else if ( '1' === commentStatus ) {
+					approvedDiff = 1;
+				} else if ( '0' === commentStatus ) {
+					pendingDiff = 1;
+				}
+
+			// The comment was trashed.
+			} else if ( targetParent.hasClass( 'untrash' ) ) {
+				trashDiff = -1;
+
+				if ( 'spam' === commentStatus ) {
+					spamDiff = 1;
+				} else if ( '1' === commentStatus ) {
+					approvedDiff = 1;
+				} else if ( '0' === commentStatus ) {
+					pendingDiff = 1;
+				}
+			}
+
+			undoing = true;
+
+		// User clicked "Spam".
+		} else if ( targetParent.is( 'span.spam' ) ) {
+			// The comment is currently approved.
+			if ( approved ) {
+				approvedDiff = -1;
+			// The comment is currently pending.
+			} else if ( unapproved ) {
+				pendingDiff = -1;
+			// The comment was in the Trash.
+			} else if ( trashed ) {
+				trashDiff = -1;
+			}
+			// You can't spam an item on the Spam screen.
+			spamDiff = 1;
+
+		// User clicked "Unspam".
+		} else if ( targetParent.is( 'span.unspam' ) ) {
+			if ( approved ) {
+				pendingDiff = 1;
+			} else if ( unapproved ) {
+				approvedDiff = 1;
+			} else if ( trashed ) {
+				// The comment was previously approved.
+				if ( targetParent.hasClass( 'approve' ) ) {
+					approvedDiff = 1;
+				// The comment was previously pending.
+				} else if ( targetParent.hasClass( 'unapprove' ) ) {
+					pendingDiff = 1;
+				}
+			} else if ( spammed ) {
+				if ( targetParent.hasClass( 'approve' ) ) {
+					approvedDiff = 1;
+
+				} else if ( targetParent.hasClass( 'unapprove' ) ) {
+					pendingDiff = 1;
+				}
+			}
+			// You can unspam an item on the Spam screen.
+			spamDiff = -1;
+
+		// User clicked "Trash".
+		} else if ( targetParent.is( 'span.trash' ) ) {
+			if ( approved ) {
+				approvedDiff = -1;
+			} else if ( unapproved ) {
+				pendingDiff = -1;
+			// The comment was in the spam queue.
+			} else if ( spammed ) {
+				spamDiff = -1;
+			}
+			// You can't trash an item on the Trash screen.
+			trashDiff = 1;
+
+		// User clicked "Restore".
+		} else if ( targetParent.is( 'span.untrash' ) ) {
+			if ( approved ) {
+				pendingDiff = 1;
+			} else if ( unapproved ) {
+				approvedDiff = 1;
+			} else if ( trashed ) {
+				if ( targetParent.hasClass( 'approve' ) ) {
+					approvedDiff = 1;
+				} else if ( targetParent.hasClass( 'unapprove' ) ) {
+					pendingDiff = 1;
+				}
+			}
+			// You can't go from Trash to Spam.
+			// You can untrash on the Trash screen.
+			trashDiff = -1;
+
+		// User clicked "Approve".
+		} else if ( targetParent.is( 'span.approve:not(.unspam):not(.untrash)' ) ) {
+			approvedDiff = 1;
+			pendingDiff = -1;
+
+		// User clicked "Unapprove".
+		} else if ( targetParent.is( 'span.unapprove:not(.unspam):not(.untrash)' ) ) {
+			approvedDiff = -1;
+			pendingDiff = 1;
+
+		// User clicked "Delete Permanently".
+		} else if ( targetParent.is( 'span.delete' ) ) {
+			if ( spammed ) {
+				spamDiff = -1;
+			} else if ( trashed ) {
+				trashDiff = -1;
+			}
+		}
+
+		if ( pendingDiff ) {
+			updatePending( pendingDiff, commentPostId );
+			updateCountText( 'span.all-count', pendingDiff );
+		}
+
+		if ( approvedDiff ) {
+			updateApproved( approvedDiff, commentPostId );
+			updateCountText( 'span.all-count', approvedDiff );
+		}
+
+		if ( spamDiff ) {
+			updateCountText( 'span.spam-count', spamDiff );
+		}
+
+		if ( trashDiff ) {
+			updateCountText( 'span.trash-count', trashDiff );
+		}
+
+		if (
+			( ( 'trash' === settings.data.comment_status ) &amp;&amp; !getCount( $( 'span.trash-count' ) ) ) ||
+			( ( 'spam' === settings.data.comment_status ) &amp;&amp; !getCount( $( 'span.spam-count' ) ) )
+		) {
+			$( '#delete_all' ).hide();
+		}
+
+		if ( ! isDashboard ) {
+			total = totalInput.val() ? parseInt( totalInput.val(), 10 ) : 0;
+			if ( $(settings.target).parent().is('span.undo') )
+				total++;
+			else
+				total--;
+
+			if ( total &lt; 0 )
+				total = 0;
+
+			if ( 'object' === typeof r ) {
+				if ( response.supplemental.total_items_i18n &amp;&amp; lastConfidentTime &lt; response.supplemental.time ) {
+					total_items_i18n = response.supplemental.total_items_i18n || '';
+					if ( total_items_i18n ) {
+						$('.displaying-num').text( total_items_i18n.replace( '&amp;nbsp;', String.fromCharCode( 160 ) ) );
+						$('.total-pages').text( response.supplemental.total_pages_i18n.replace( '&amp;nbsp;', String.fromCharCode( 160 ) ) );
+						$('.tablenav-pages').find('.next-page, .last-page').toggleClass('disabled', response.supplemental.total_pages == $('.current-page').val());
+					}
+					updateTotalCount( total, response.supplemental.time, true );
+				} else if ( response.supplemental.time ) {
+					updateTotalCount( total, response.supplemental.time, false );
+				}
+			} else {
+				updateTotalCount( total, r, false );
+			}
+		}
+
+		if ( ! theExtraList || theExtraList.length === 0 || theExtraList.children().length === 0 || undoing ) {
+			return;
+		}
+
+		theList.get(0).wpList.add( theExtraList.children( ':eq(0):not(.no-items)' ).remove().clone() );
+
+		refillTheExtraList();
+
+		animated = $( ':animated', '#the-comment-list' );
+		animatedCallback = function() {
+			if ( ! $( '#the-comment-list tr:visible' ).length ) {
+				theList.get(0).wpList.add( theExtraList.find( '.no-items' ).clone() );
+			}
+		};
+
+		if ( animated.length ) {
+			animated.promise().done( animatedCallback );
+		} else {
+			animatedCallback();
+		}
+	};
+
+	/**
+	 * Retrieves additional comments to populate the extra list.
+	 *
+	 * @since 3.1.0
+	 * @access private
+	 *
+	 * @param {boolean} [ev] Repopulate the extra comments list if true.
+	 *
+	 * @return {void}
+	 */
+	refillTheExtraList = function(ev) {
+		var args = $.query.get(), total_pages = $('.total-pages').text(), per_page = $('input[name="_per_page"]', '#comments-form').val();
+
+		if (! args.paged)
+			args.paged = 1;
+
+		if (args.paged > total_pages) {
+			return;
+		}
+
+		if (ev) {
+			theExtraList.empty();
+			args.number = Math.min(8, per_page); // See WP_Comments_List_Table::prepare_items() in class-wp-comments-list-table.php.
+		} else {
+			args.number = 1;
+			args.offset = Math.min(8, per_page) - 1; // Fetch only the next item on the extra list.
+		}
+
+		args.no_placeholder = true;
+
+		args.paged ++;
+
+		// $.query.get() needs some correction to be sent into an Ajax request.
+		if ( true === args.comment_type )
+			args.comment_type = '';
+
+		args = $.extend(args, {
+			'action': 'fetch-list',
+			'list_args': list_args,
+			'_ajax_fetch_list_nonce': $('#_ajax_fetch_list_nonce').val()
+		});
+
+		$.ajax({
+			url: ajaxurl,
+			global: false,
+			dataType: 'json',
+			data: args,
+			success: function(response) {
+				theExtraList.get(0).wpList.add( response.rows );
+			}
+		});
+	};
+
+	/**
+	 * Globally available jQuery object referring to the extra comments list.
+	 *
+	 * @global
+	 */
+	window.theExtraList = $('#the-extra-comment-list').wpList( { alt: '', delColor: 'none', addColor: 'none' } );
+
+	/**
+	 * Globally available jQuery object referring to the comments list.
+	 *
+	 * @global
+	 */
+	window.theList = $('#the-comment-list').wpList( { alt: '', delBefore: delBefore, dimAfter: dimAfter, delAfter: delAfter, addColor: 'none' } )
+		.bind('wpListDelEnd', function(e, s){
+			var wpListsData = $(s.target).attr('data-wp-lists'), id = s.element.replace(/[^0-9]+/g, '');
+
+			if ( wpListsData.indexOf(':trash=1') != -1 || wpListsData.indexOf(':spam=1') != -1 )
+				$('#undo-' + id).fadeIn(300, function(){ $(this).show(); });
+		});
+};
+
+/**
+ * Object containing functionality regarding the comment quick editor and reply
+ * editor.
+ *
+ * @since 2.7.0
+ *
+ * @global
+ */
+window.commentReply = {
+	cid : '',
+	act : '',
+	originalContent : '',
+
+	/**
+	 * Initializes the comment reply functionality.
+	 *
+	 * @since 2.7.0
+	 *
+	 * @memberof commentReply
+	 */
+	init : function() {
+		var row = $('#replyrow');
+
+		$( '.cancel', row ).click( function() { return commentReply.revert(); } );
+		$( '.save', row ).click( function() { return commentReply.send(); } );
+		$( 'input#author-name, input#author-email, input#author-url', row ).keypress( function( e ) {
+			if ( e.which == 13 ) {
+				commentReply.send();
+				e.preventDefault();
+				return false;
+			}
+		});
+
+		// Add events.
+		$('#the-comment-list .column-comment > p').dblclick(function(){
+			commentReply.toggle($(this).parent());
+		});
+
+		$('#doaction, #doaction2, #post-query-submit').click(function(){
+			if ( $('#the-comment-list #replyrow').length > 0 )
+				commentReply.close();
+		});
+
+		this.comments_listing = $('#comments-form > input[name="comment_status"]').val() || '';
+	},
+
+	/**
+	 * Adds doubleclick event handler to the given comment list row.
+	 *
+	 * The double-click event will toggle the comment edit or reply form.
+	 *
+	 * @since 2.7.0
+	 *
+	 * @memberof commentReply
+	 *
+	 * @param {Object} r The row to add double click handlers to.
+	 *
+	 * @return {void}
+	 */
+	addEvents : function(r) {
+		r.each(function() {
+			$(this).find('.column-comment > p').dblclick(function(){
+				commentReply.toggle($(this).parent());
+			});
+		});
+	},
+
+	/**
+	 * Opens the quick edit for the given element.
+	 *
+	 * @since 2.7.0
+	 *
+	 * @memberof commentReply
+	 *
+	 * @param {HTMLElement} el The element you want to open the quick editor for.
+	 *
+	 * @return {void}
+	 */
+	toggle : function(el) {
+		if ( 'none' !== $( el ).css( 'display' ) &amp;&amp; ( $( '#replyrow' ).parent().is('#com-reply') || window.confirm( adminCommentsL10n.warnQuickEdit ) ) ) {
+			$( el ).find( 'button.vim-q' ).click();
+		}
+	},
+
+	/**
+	 * Closes the comment quick edit or reply form and undoes any changes.
+	 *
+	 * @since 2.7.0
+	 *
+	 * @memberof commentReply
+	 *
+	 * @return {void}
+	 */
+	revert : function() {
+
+		if ( $('#the-comment-list #replyrow').length &lt; 1 )
+			return false;
+
+		$('#replyrow').fadeOut('fast', function(){
+			commentReply.close();
+		});
+	},
+
+	/**
+	 * Closes the comment quick edit or reply form and undoes any changes.
+	 *
+	 * @since 2.7.0
+	 *
+	 * @memberof commentReply
+	 *
+	 * @return {void}
+	 */
+	close : function() {
+		var commentRow = $(),
+			replyRow = $( '#replyrow' );
+
+		// Return if the replyrow is not showing.
+		if ( replyRow.parent().is( '#com-reply' ) ) {
+			return;
+		}
+
+		if ( this.cid ) {
+			commentRow = $( '#comment-' + this.cid );
+		}
+
+		/*
+		 * When closing the Quick Edit form, show the comment row and move focus
+		 * back to the Quick Edit button.
+		 */
+		if ( 'edit-comment' === this.act ) {
+			commentRow.fadeIn( 300, function() {
+				commentRow
+					.show()
+					.find( '.vim-q' )
+						.attr( 'aria-expanded', 'false' )
+						.focus();
+			} ).css( 'backgroundColor', '' );
+		}
+
+		// When closing the Reply form, move focus back to the Reply button.
+		if ( 'replyto-comment' === this.act ) {
+			commentRow.find( '.vim-r' )
+				.attr( 'aria-expanded', 'false' )
+				.focus();
+		}
+
+		// Reset the Quicktags buttons.
+ 		if ( typeof QTags != 'undefined' )
+			QTags.closeAllTags('replycontent');
+
+		$('#add-new-comment').css('display', '');
+
+		replyRow.hide();
+		$( '#com-reply' ).append( replyRow );
+		$('#replycontent').css('height', '').val('');
+		$('#edithead input').val('');
+		$( '.notice-error', replyRow )
+			.addClass( 'hidden' )
+			.find( '.error' ).empty();
+		$( '.spinner', replyRow ).removeClass( 'is-active' );
+
+		this.cid = '';
+		this.originalContent = '';
+	},
+
+	/**
+	 * Opens the comment quick edit or reply form.
+	 *
+	 * @since 2.7.0
+	 *
+	 * @memberof commentReply
+	 *
+	 * @param {number} comment_id The comment id to open an editor for.
+	 * @param {number} post_id The post id to open an editor for.
+	 * @param {string} action The action to perform. Either 'edit' or 'replyto'.
+	 *
+	 * @return {boolean} Always false.
+	 */
+	open : function(comment_id, post_id, action) {
+		var editRow, rowData, act, replyButton, editHeight,
+			t = this,
+			c = $('#comment-' + comment_id),
+			h = c.height(),
+			colspanVal = 0;
+
+		if ( ! this.discardCommentChanges() ) {
+			return false;
+		}
+
+		t.close();
+		t.cid = comment_id;
+
+		editRow = $('#replyrow');
+		rowData = $('#inline-'+comment_id);
+		action = action || 'replyto';
+		act = 'edit' == action ? 'edit' : 'replyto';
+		act = t.act = act + '-comment';
+		t.originalContent = $('textarea.comment', rowData).val();
+		colspanVal = $( '> th:visible, > td:visible', c ).length;
+
+		// Make sure it's actually a table and there's a `colspan` value to apply.
+		if ( editRow.hasClass( 'inline-edit-row' ) &amp;&amp; 0 !== colspanVal ) {
+			$( 'td', editRow ).attr( 'colspan', colspanVal );
+		}
+
+		$('#action', editRow).val(act);
+		$('#comment_post_ID', editRow).val(post_id);
+		$('#comment_ID', editRow).val(comment_id);
+
+		if ( action == 'edit' ) {
+			$( '#author-name', editRow ).val( $( 'div.author', rowData ).text() );
+			$('#author-email', editRow).val( $('div.author-email', rowData).text() );
+			$('#author-url', editRow).val( $('div.author-url', rowData).text() );
+			$('#status', editRow).val( $('div.comment_status', rowData).text() );
+			$('#replycontent', editRow).val( $('textarea.comment', rowData).val() );
+			$( '#edithead, #editlegend, #savebtn', editRow ).show();
+			$('#replyhead, #replybtn, #addhead, #addbtn', editRow).hide();
+
+			if ( h > 120 ) {
+				// Limit the maximum height when editing very long comments to make it more manageable.
+				// The textarea is resizable in most browsers, so the user can adjust it if needed.
+				editHeight = h > 500 ? 500 : h;
+				$('#replycontent', editRow).css('height', editHeight + 'px');
+			}
+
+			c.after( editRow ).fadeOut('fast', function(){
+				$('#replyrow').fadeIn(300, function(){ $(this).show(); });
+			});
+		} else if ( action == 'add' ) {
+			$('#addhead, #addbtn', editRow).show();
+			$( '#replyhead, #replybtn, #edithead, #editlegend, #savebtn', editRow ) .hide();
+			$('#the-comment-list').prepend(editRow);
+			$('#replyrow').fadeIn(300);
+		} else {
+			replyButton = $('#replybtn', editRow);
+			$( '#edithead, #editlegend, #savebtn, #addhead, #addbtn', editRow ).hide();
+			$('#replyhead, #replybtn', editRow).show();
+			c.after(editRow);
+
+			if ( c.hasClass('unapproved') ) {
+				replyButton.text(adminCommentsL10n.replyApprove);
+			} else {
+				replyButton.text(adminCommentsL10n.reply);
+			}
+
+			$('#replyrow').fadeIn(300, function(){ $(this).show(); });
+		}
+
+		setTimeout(function() {
+			var rtop, rbottom, scrollTop, vp, scrollBottom;
+
+			rtop = $('#replyrow').offset().top;
+			rbottom = rtop + $('#replyrow').height();
+			scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+			vp = document.documentElement.clientHeight || window.innerHeight || 0;
+			scrollBottom = scrollTop + vp;
+
+			if ( scrollBottom - 20 &lt; rbottom )
+				window.scroll(0, rbottom - vp + 35);
+			else if ( rtop - 20 &lt; scrollTop )
+				window.scroll(0, rtop - 35);
+
+			$('#replycontent').focus().keyup(function(e){
+				if ( e.which == 27 )
+					commentReply.revert(); // Close on Escape.
+			});
+		}, 600);
+
+		return false;
+	},
+
+	/**
+	 * Submits the comment quick edit or reply form.
+	 *
+	 * @since 2.7.0
+	 *
+	 * @memberof commentReply
+	 *
+	 * @return {void}
+	 */
+	send : function() {
+		var post = {},
+			$errorNotice = $( '#replysubmit .error-notice' );
+
+		$errorNotice.addClass( 'hidden' );
+		$( '#replysubmit .spinner' ).addClass( 'is-active' );
+
+		$('#replyrow input').not(':button').each(function() {
+			var t = $(this);
+			post[ t.attr('name') ] = t.val();
+		});
+
+		post.content = $('#replycontent').val();
+		post.id = post.comment_post_ID;
+		post.comments_listing = this.comments_listing;
+		post.p = $('[name="p"]').val();
+
+		if ( $('#comment-' + $('#comment_ID').val()).hasClass('unapproved') )
+			post.approve_parent = 1;
+
+		$.ajax({
+			type : 'POST',
+			url : ajaxurl,
+			data : post,
+			success : function(x) { commentReply.show(x); },
+			error : function(r) { commentReply.error(r); }
+		});
+	},
+
+	/**
+	 * Shows the new or updated comment or reply.
+	 *
+	 * This function needs to be passed the ajax result as received from the server.
+	 * It will handle the response and show the comment that has just been saved to
+	 * the server.
+	 *
+	 * @since 2.7.0
+	 *
+	 * @memberof commentReply
+	 *
+	 * @param {Object} xml Ajax response object.
+	 *
+	 * @return {void}
+	 */
+	show : function(xml) {
+		var t = this, r, c, id, bg, pid;
+
+		if ( typeof(xml) == 'string' ) {
+			t.error({'responseText': xml});
+			return false;
+		}
+
+		r = wpAjax.parseAjaxResponse(xml);
+		if ( r.errors ) {
+			t.error({'responseText': wpAjax.broken});
+			return false;
+		}
+
+		t.revert();
+
+		r = r.responses[0];
+		id = '#comment-' + r.id;
+
+		if ( 'edit-comment' == t.act )
+			$(id).remove();
+
+		if ( r.supplemental.parent_approved ) {
+			pid = $('#comment-' + r.supplemental.parent_approved);
+			updatePending( -1, r.supplemental.parent_post_id );
+
+			if ( this.comments_listing == 'moderated' ) {
+				pid.animate( { 'backgroundColor':'#CCEEBB' }, 400, function(){
+					pid.fadeOut();
+				});
+				return;
+			}
+		}
+
+		if ( r.supplemental.i18n_comments_text ) {
+			updateDashboardText( r.supplemental );
+			updateInModerationText( r.supplemental );
+			updateApproved( 1, r.supplemental.parent_post_id );
+			updateCountText( 'span.all-count', 1 );
+		}
+
+		c = $.trim(r.data); // Trim leading whitespaces.
+		$(c).hide();
+		$('#replyrow').after(c);
+
+		id = $(id);
+		t.addEvents(id);
+		bg = id.hasClass('unapproved') ? '#FFFFE0' : id.closest('.widefat, .postbox').css('backgroundColor');
+
+		id.animate( { 'backgroundColor':'#CCEEBB' }, 300 )
+			.animate( { 'backgroundColor': bg }, 300, function() {
+				if ( pid &amp;&amp; pid.length ) {
+					pid.animate( { 'backgroundColor':'#CCEEBB' }, 300 )
+						.animate( { 'backgroundColor': bg }, 300 )
+						.removeClass('unapproved').addClass('approved')
+						.find('div.comment_status').html('1');
+				}
+			});
+
+	},
+
+	/**
+	 * Shows an error for the failed comment update or reply.
+	 *
+	 * @since 2.7.0
+	 *
+	 * @memberof commentReply
+	 *
+	 * @param {string} r The Ajax response.
+	 *
+	 * @return {void}
+	 */
+	error : function(r) {
+		var er = r.statusText,
+			$errorNotice = $( '#replysubmit .notice-error' ),
+			$error = $errorNotice.find( '.error' );
+
+		$( '#replysubmit .spinner' ).removeClass( 'is-active' );
+
+		if ( r.responseText )
+			er = r.responseText.replace( /&lt;.[^&lt;>]*?>/g, '' );
+
+		if ( er ) {
+			$errorNotice.removeClass( 'hidden' );
+			$error.html( er );
+		}
+	},
+
+	/**
+	 * Opens the add comments form in the comments metabox on the post edit page.
+	 *
+	 * @since 3.4.0
+	 *
+	 * @memberof commentReply
+	 *
+	 * @param {number} post_id The post id.
+	 *
+	 * @return {void}
+	 */
+	addcomment: function(post_id) {
+		var t = this;
+
+		$('#add-new-comment').fadeOut(200, function(){
+			t.open(0, post_id, 'add');
+			$('table.comments-box').css('display', '');
+			$('#no-comments').remove();
+		});
+	},
+
+	/**
+	 * Alert the user if they have unsaved changes on a comment that will be lost if
+	 * they proceed with the intended action.
+	 *
+	 * @since 4.6.0
+	 *
+	 * @memberof commentReply
+	 *
+	 * @return {boolean} Whether it is safe the continue with the intended action.
+	 */
+	discardCommentChanges: function() {
+		var editRow = $( '#replyrow' );
+
+		if  ( this.originalContent === $( '#replycontent', editRow ).val() ) {
+			return true;
+		}
+
+		return window.confirm( adminCommentsL10n.warnCommentChanges );
+	}
+};
+
+$(document).ready(function(){
+	var make_hotkeys_redirect, edit_comment, toggle_all, make_bulk;
+
+	setCommentsList();
+	commentReply.init();
+
+	$(document).on( 'click', 'span.delete a.delete', function( e ) {
+		e.preventDefault();
+	});
+
+	if ( typeof $.table_hotkeys != 'undefined' ) {
+		/**
+		 * Creates a function that navigates to a previous or next page.
+		 *
+		 * @since 2.7.0
+		 * @access private
+		 *
+		 * @param {string} which What page to navigate to: either next or prev.
+		 *
+		 * @return {Function} The function that executes the navigation.
+		 */
+		make_hotkeys_redirect = function(which) {
+			return function() {
+				var first_last, l;
+
+				first_last = 'next' == which? 'first' : 'last';
+				l = $('.tablenav-pages .'+which+'-page:not(.disabled)');
+				if (l.length)
+					window.location = l[0].href.replace(/\&amp;hotkeys_highlight_(first|last)=1/g, '')+'&amp;hotkeys_highlight_'+first_last+'=1';
+			};
+		};
+
+		/**
+		 * Navigates to the edit page for the selected comment.
+		 *
+		 * @since 2.7.0
+		 * @access private
+		 *
+		 * @param {Object} event       The event that triggered this action.
+		 * @param {Object} current_row A jQuery object of the selected row.
+		 *
+		 * @return {void}
+		 */
+		edit_comment = function(event, current_row) {
+			window.location = $('span.edit a', current_row).attr('href');
+		};
+
+		/**
+		 * Toggles all comments on the screen, for bulk actions.
+		 *
+		 * @since 2.7.0
+		 * @access private
+		 *
+		 * @return {void}
+		 */
+		toggle_all = function() {
+			$('#cb-select-all-1').data( 'wp-toggle', 1 ).trigger( 'click' ).removeData( 'wp-toggle' );
+		};
+
+		/**
+		 * Creates a bulk action function that is executed on all selected comments.
+		 *
+		 * @since 2.7.0
+		 * @access private
+		 *
+		 * @param {string} value The name of the action to execute.
+		 *
+		 * @return {Function} The function that executes the bulk action.
+		 */
+		make_bulk = function(value) {
+			return function() {
+				var scope = $('select[name="action"]');
+				$('option[value="' + value + '"]', scope).prop('selected', true);
+				$('#doaction').click();
+			};
+		};
+
+		$.table_hotkeys(
+			$('table.widefat'),
+			[
+				'a', 'u', 's', 'd', 'r', 'q', 'z',
+				['e', edit_comment],
+				['shift+x', toggle_all],
+				['shift+a', make_bulk('approve')],
+				['shift+s', make_bulk('spam')],
+				['shift+d', make_bulk('delete')],
+				['shift+t', make_bulk('trash')],
+				['shift+z', make_bulk('untrash')],
+				['shift+u', make_bulk('unapprove')]
+			],
+			{
+				highlight_first: adminCommentsL10n.hotkeys_highlight_first,
+				highlight_last: adminCommentsL10n.hotkeys_highlight_last,
+				prev_page_link_cb: make_hotkeys_redirect('prev'),
+				next_page_link_cb: make_hotkeys_redirect('next'),
+				hotkeys_opts: {
+					disableInInput: true,
+					type: 'keypress',
+					noDisable: '.check-column input[type="checkbox"]'
+				},
+				cycle_expr: '#the-comment-list tr',
+				start_row_index: 0
+			}
+		);
+	}
+
+	// Quick Edit and Reply have an inline comment editor.
+	$( '#the-comment-list' ).on( 'click', '.comment-inline', function() {
+		var $el = $( this ),
+			action = 'replyto';
+
+		if ( 'undefined' !== typeof $el.data( 'action' ) ) {
+			action = $el.data( 'action' );
+		}
+
+		$( this ).attr( 'aria-expanded', 'true' );
+		commentReply.open( $el.data( 'commentId' ), $el.data( 'postId' ), action );
+	} );
+});
+
+})(jQuery);
+</pre>
+    </article>
+</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a>
+	
+		on 2020-06-17T11:56:24+00:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

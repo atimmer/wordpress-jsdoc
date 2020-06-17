@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Documentation Source: _enqueues/wp/theme-plugin-editor.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.united.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Documentation</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="addComment.html">addComment</a></li><li><a href="commentsBox.html">commentsBox</a></li><li><a href="findPosts.html">findPosts</a></li><li><a href="imageEdit.html">imageEdit</a></li><li><a href="inlineEditPost.html">inlineEditPost</a></li><li><a href="inlineEditTax.html">inlineEditTax</a></li><li><a href="postboxes.html">postboxes</a></li><li><a href="switchEditors.html">switchEditors</a></li><li><a href="wp.html">wp</a></li><li><a href="wp.a11y.html">wp.a11y</a></li><li><a href="wp.api.html">wp.api</a></li><li><a href="wp.api.collections.html">wp.api.collections</a></li><li><a href="wp.api.models.html">wp.api.models</a></li><li><a href="wp.api.utils.html">wp.api.utils</a></li><li><a href="wp.api.views.html">wp.api.views</a></li><li><a href="wp.Backbone.html">wp.Backbone</a></li><li><a href="wp.codeEditor.html">wp.codeEditor</a></li><li><a href="wp.communityEvents.html">wp.communityEvents</a></li><li><a href="wp.customHtmlWidget.html">wp.customHtmlWidget</a></li><li><a href="wp.customize.html">wp.customize</a></li><li><a href="wp.customize.HeaderTool.html">wp.customize.HeaderTool</a></li><li><a href="wp.customize.Menus.html">wp.customize.Menus</a></li><li><a href="wp.customize.navMenusPreview.html">wp.customize.navMenusPreview</a></li><li><a href="wp.customize.selectiveRefresh.html">wp.customize.selectiveRefresh</a></li><li><a href="wp.customize.utils.html">wp.customize.utils</a></li><li><a href="wp.customize.Widgets.html">wp.customize.Widgets</a></li><li><a href="wp.customize.widgetsPreview.html">wp.customize.widgetsPreview</a></li><li><a href="wp.emoji.html">wp.emoji</a></li><li><a href="wp.heartbeat.html">wp.heartbeat</a></li><li><a href="wp.media.html">wp.media</a></li><li><a href="wp.media.audio.html">wp.media.audio</a></li><li><a href="wp.media.controller.html">wp.media.controller</a></li><li><a href="wp.media.editor.html">wp.media.editor</a></li><li><a href="wp.media.editor.send.html">wp.media.editor.send</a></li><li><a href="wp.media.featuredImage.html">wp.media.featuredImage</a></li><li><a href="wp.media.frames.html">wp.media.frames</a></li><li><a href="wp.media.model.html">wp.media.model</a></li><li><a href="wp.media.model.Attachments.filters.html">wp.media.model.Attachments.filters</a></li><li><a href="wp.media.string.html">wp.media.string</a></li><li><a href="wp.media.video.html">wp.media.video</a></li><li><a href="wp.media.view.html">wp.media.view</a></li><li><a href="wp.mediaWidgets.html">wp.mediaWidgets</a></li><li><a href="wp.passwordStrength.html">wp.passwordStrength</a></li><li><a href="wp.textWidgets.html">wp.textWidgets</a></li><li><a href="wp.updates.html">wp.updates</a></li><li><a href="wp.utils.html">wp.utils</a></li><li><a href="wpNavMenu.html">wpNavMenu</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="-_.html"></a></li><li><a href="$.widget.wp.pointer.html">$.widget.wp.pointer</a></li><li><a href="$.widget.wp.wpColorPicker.html">$.widget.wp.wpColorPicker</a></li><li><a href="Heading.html">Heading</a></li><li><a href="wp.Backbone.Subviews.html">wp.Backbone.Subviews</a></li><li><a href="wp.BaseHandler.html">wp.BaseHandler</a></li><li><a href="wp.CustomHeader.html">wp.CustomHeader</a></li><li><a href="wp.customHtmlWidgets.CustomHtmlWidgetControl.html">wp.customHtmlWidgets.CustomHtmlWidgetControl</a></li><li><a href="wp.customize.BackgroundControl.html">wp.customize.BackgroundControl</a></li><li><a href="wp.customize.BackgroundPositionControl.html">wp.customize.BackgroundPositionControl</a></li><li><a href="wp.customize.CodeEditorControl.html">wp.customize.CodeEditorControl</a></li><li><a href="wp.customize.ColorControl.html">wp.customize.ColorControl</a></li><li><a href="wp.customize.Control.html">wp.customize.Control</a></li><li><a href="wp.customize.CroppedImageControl.html">wp.customize.CroppedImageControl</a></li><li><a href="wp.customize.DateTimeControl.html">wp.customize.DateTimeControl</a></li><li><a href="wp.customize.Element.html">wp.customize.Element</a></li><li><a href="wp.customize.HeaderControl.html">wp.customize.HeaderControl</a></li><li><a href="wp.customize.HeaderTool.ChoiceList.html">wp.customize.HeaderTool.ChoiceList</a></li><li><a href="wp.customize.HeaderTool.ChoiceListView.html">wp.customize.HeaderTool.ChoiceListView</a></li><li><a href="wp.customize.HeaderTool.ChoiceView.html">wp.customize.HeaderTool.ChoiceView</a></li><li><a href="wp.customize.HeaderTool.CombinedList.html">wp.customize.HeaderTool.CombinedList</a></li><li><a href="wp.customize.HeaderTool.CurrentView.html">wp.customize.HeaderTool.CurrentView</a></li><li><a href="wp.customize.HeaderTool.DefaultsList.html">wp.customize.HeaderTool.DefaultsList</a></li><li><a href="wp.customize.HeaderTool.ImageModel.html">wp.customize.HeaderTool.ImageModel</a></li><li><a href="wp.customize.ImageControl.html">wp.customize.ImageControl</a></li><li><a href="wp.customize.Loader.html">wp.customize.Loader</a></li><li><a href="wp.customize.MediaControl.html">wp.customize.MediaControl</a></li><li><a href="wp.customize.Menus.AvailableItemCollection.html">wp.customize.Menus.AvailableItemCollection</a></li><li><a href="wp.customize.Menus.AvailableItemModel.html">wp.customize.Menus.AvailableItemModel</a></li><li><a href="wp.customize.Menus.AvailableMenuItemsPanelView.html">wp.customize.Menus.AvailableMenuItemsPanelView</a></li><li><a href="wp.customize.Menus.MenuAutoAddControl.html">wp.customize.Menus.MenuAutoAddControl</a></li><li><a href="wp.customize.Menus.MenuControl.html">wp.customize.Menus.MenuControl</a></li><li><a href="wp.customize.Menus.MenuItemControl.html">wp.customize.Menus.MenuItemControl</a></li><li><a href="wp.customize.Menus.MenuLocationControl.html">wp.customize.Menus.MenuLocationControl</a></li><li><a href="wp.customize.Menus.MenuLocationsControl.html">wp.customize.Menus.MenuLocationsControl</a></li><li><a href="wp.customize.Menus.MenuNameControl.html">wp.customize.Menus.MenuNameControl</a></li><li><a href="wp.customize.Menus.MenuSection.html">wp.customize.Menus.MenuSection</a></li><li><a href="wp.customize.Menus.MenusPanel.html">wp.customize.Menus.MenusPanel</a></li><li><a href="wp.customize.Menus.NewMenuSection.html">wp.customize.Menus.NewMenuSection</a></li><li><a href="wp.customize.Messenger.html">wp.customize.Messenger</a></li><li><a href="wp.customize.navMenusPreview.NavMenuInstancePartial.html">wp.customize.navMenusPreview.NavMenuInstancePartial</a></li><li><a href="wp.customize.Notification.html">wp.customize.Notification</a></li><li><a href="wp.customize.Notifications.html">wp.customize.Notifications</a></li><li><a href="wp.customize.OuterSection.html">wp.customize.OuterSection</a></li><li><a href="wp.customize.OverlayNotification.html">wp.customize.OverlayNotification</a></li><li><a href="wp.customize.Panel.html">wp.customize.Panel</a></li><li><a href="wp.customize.Preview.html">wp.customize.Preview</a></li><li><a href="wp.customize.Previewer.html">wp.customize.Previewer</a></li><li><a href="wp.customize.PreviewFrame.html">wp.customize.PreviewFrame</a></li><li><a href="wp.customize.PreviewLinkControl.html">wp.customize.PreviewLinkControl</a></li><li><a href="wp.customize.Section.html">wp.customize.Section</a></li><li><a href="wp.customize.selectiveRefresh.Partial.html">wp.customize.selectiveRefresh.Partial</a></li><li><a href="wp.customize.selectiveRefresh.Placement.html">wp.customize.selectiveRefresh.Placement</a></li><li><a href="wp.customize.Setting.html">wp.customize.Setting</a></li><li><a href="wp.customize.SiteIconControl.html">wp.customize.SiteIconControl</a></li><li><a href="wp.customize.ThemeControl.html">wp.customize.ThemeControl</a></li><li><a href="wp.customize.ThemesPanel.html">wp.customize.ThemesPanel</a></li><li><a href="wp.customize.ThemesSection.html">wp.customize.ThemesSection</a></li><li><a href="wp.customize.UploadControl.html">wp.customize.UploadControl</a></li><li><a href="wp.customize.Value.html">wp.customize.Value</a></li><li><a href="wp.customize.Values.html">wp.customize.Values</a></li><li><a href="wp.customize.Widgets.AvailableWidgetsPanelView.html">wp.customize.Widgets.AvailableWidgetsPanelView</a></li><li><a href="wp.customize.Widgets.SidebarCollection.html">wp.customize.Widgets.SidebarCollection</a></li><li><a href="wp.customize.Widgets.SidebarControl.html">wp.customize.Widgets.SidebarControl</a></li><li><a href="wp.customize.Widgets.SidebarModel.html">wp.customize.Widgets.SidebarModel</a></li><li><a href="wp.customize.Widgets.SidebarSection.html">wp.customize.Widgets.SidebarSection</a></li><li><a href="wp.customize.Widgets.WidgetCollection.html">wp.customize.Widgets.WidgetCollection</a></li><li><a href="wp.customize.Widgets.WidgetControl.html">wp.customize.Widgets.WidgetControl</a></li><li><a href="wp.customize.Widgets.WidgetModel.html">wp.customize.Widgets.WidgetModel</a></li><li><a href="wp.customize.Widgets.WidgetsPanel.html">wp.customize.Widgets.WidgetsPanel</a></li><li><a href="wp.customize.widgetsPreview.SidebarPartial.html">wp.customize.widgetsPreview.SidebarPartial</a></li><li><a href="wp.customize.widgetsPreview.WidgetPartial.html">wp.customize.widgetsPreview.WidgetPartial</a></li><li><a href="wp.customize-Container.html">wp.customize~Container</a></li><li><a href="wp.customize-LockedNotification.html">wp.customize~LockedNotification</a></li><li><a href="wp.media.collection.html">wp.media.collection</a></li><li><a href="wp.media.controller.AudioDetails.html">wp.media.controller.AudioDetails</a></li><li><a href="wp.media.controller.CollectionAdd.html">wp.media.controller.CollectionAdd</a></li><li><a href="wp.media.controller.CollectionEdit.html">wp.media.controller.CollectionEdit</a></li><li><a href="wp.media.controller.Cropper.html">wp.media.controller.Cropper</a></li><li><a href="wp.media.controller.CustomizeImageCropper.html">wp.media.controller.CustomizeImageCropper</a></li><li><a href="wp.media.controller.EditAttachmentMetadata.html">wp.media.controller.EditAttachmentMetadata</a></li><li><a href="wp.media.controller.EditImage.html">wp.media.controller.EditImage</a></li><li><a href="wp.media.controller.Embed.html">wp.media.controller.Embed</a></li><li><a href="wp.media.controller.FeaturedImage.html">wp.media.controller.FeaturedImage</a></li><li><a href="wp.media.controller.GalleryAdd.html">wp.media.controller.GalleryAdd</a></li><li><a href="wp.media.controller.GalleryEdit.html">wp.media.controller.GalleryEdit</a></li><li><a href="wp.media.controller.ImageDetails.html">wp.media.controller.ImageDetails</a></li><li><a href="wp.media.controller.Library.html">wp.media.controller.Library</a></li><li><a href="wp.media.controller.Region.html">wp.media.controller.Region</a></li><li><a href="wp.media.controller.ReplaceImage.html">wp.media.controller.ReplaceImage</a></li><li><a href="wp.media.controller.SiteIconCropper.html">wp.media.controller.SiteIconCropper</a></li><li><a href="wp.media.controller.State.html">wp.media.controller.State</a></li><li><a href="wp.media.model.Attachment.html">wp.media.model.Attachment</a></li><li><a href="wp.media.model.Attachments.html">wp.media.model.Attachments</a></li><li><a href="wp.media.model.PostImage.html">wp.media.model.PostImage</a></li><li><a href="wp.media.model.PostMedia.html">wp.media.model.PostMedia</a></li><li><a href="wp.media.model.Query.html">wp.media.model.Query</a></li><li><a href="wp.media.model.Selection.html">wp.media.model.Selection</a></li><li><a href="wp.media.View_.html">wp.media.View</a></li><li><a href="wp.media.view.Attachment.html">wp.media.view.Attachment</a></li><li><a href="wp.media.view.Attachment.Details.html">wp.media.view.Attachment.Details</a></li><li><a href="wp.media.view.Attachment.Details.TwoColumn.html">wp.media.view.Attachment.Details.TwoColumn</a></li><li><a href="wp.media.view.Attachment.EditLibrary.html">wp.media.view.Attachment.EditLibrary</a></li><li><a href="wp.media.view.Attachment.EditSelection.html">wp.media.view.Attachment.EditSelection</a></li><li><a href="wp.media.view.Attachment.Library.html">wp.media.view.Attachment.Library</a></li><li><a href="wp.media.view.Attachment.Selection.html">wp.media.view.Attachment.Selection</a></li><li><a href="wp.media.view.AttachmentCompat.html">wp.media.view.AttachmentCompat</a></li><li><a href="wp.media.view.AttachmentFilters.html">wp.media.view.AttachmentFilters</a></li><li><a href="wp.media.view.AttachmentFilters.All.html">wp.media.view.AttachmentFilters.All</a></li><li><a href="wp.media.view.AttachmentFilters.DateFilter.html">wp.media.view.AttachmentFilters.DateFilter</a></li><li><a href="wp.media.view.AttachmentFilters.Uploaded.html">wp.media.view.AttachmentFilters.Uploaded</a></li><li><a href="wp.media.view.Attachments.html">wp.media.view.Attachments</a></li><li><a href="wp.media.view.Attachments.Selection.html">wp.media.view.Attachments.Selection</a></li><li><a href="wp.media.view.AttachmentsBrowser.html">wp.media.view.AttachmentsBrowser</a></li><li><a href="wp.media.view.AudioDetails.html">wp.media.view.AudioDetails</a></li><li><a href="wp.media.view.Button.html">wp.media.view.Button</a></li><li><a href="wp.media.view.ButtonGroup.html">wp.media.view.ButtonGroup</a></li><li><a href="wp.media.view.Cropper.html">wp.media.view.Cropper</a></li><li><a href="wp.media.view.DeleteSelected.html">wp.media.view.DeleteSelected</a></li><li><a href="wp.media.view.DeleteSelectedPermanently.html">wp.media.view.DeleteSelectedPermanently</a></li><li><a href="wp.media.view.EditImage.html">wp.media.view.EditImage</a></li><li><a href="wp.media.view.EditImage.Details.html">wp.media.view.EditImage.Details</a></li><li><a href="wp.media.view.EditorUploader.html">wp.media.view.EditorUploader</a></li><li><a href="wp.media.view.Embed.html">wp.media.view.Embed</a></li><li><a href="wp.media.view.EmbedImage.html">wp.media.view.EmbedImage</a></li><li><a href="wp.media.view.EmbedLink.html">wp.media.view.EmbedLink</a></li><li><a href="wp.media.view.EmbedUrl.html">wp.media.view.EmbedUrl</a></li><li><a href="wp.media.view.FocusManager.html">wp.media.view.FocusManager</a></li><li><a href="wp.media.view.Frame.html">wp.media.view.Frame</a></li><li><a href="wp.media.view.Iframe.html">wp.media.view.Iframe</a></li><li><a href="wp.media.view.ImageDetails.html">wp.media.view.ImageDetails</a></li><li><a href="wp.media.view.Label.html">wp.media.view.Label</a></li><li><a href="wp.media.view.MediaDetails.html">wp.media.view.MediaDetails</a></li><li><a href="wp.media.view.MediaFrame.html">wp.media.view.MediaFrame</a></li><li><a href="wp.media.view.MediaFrame.AudioDetails.html">wp.media.view.MediaFrame.AudioDetails</a></li><li><a href="wp.media.view.MediaFrame.EditAttachments.html">wp.media.view.MediaFrame.EditAttachments</a></li><li><a href="wp.media.view.MediaFrame.ImageDetails.html">wp.media.view.MediaFrame.ImageDetails</a></li><li><a href="wp.media.view.MediaFrame.Manage.html">wp.media.view.MediaFrame.Manage</a></li><li><a href="wp.media.view.MediaFrame.Manage.Router.html">wp.media.view.MediaFrame.Manage.Router</a></li><li><a href="wp.media.view.MediaFrame.MediaDetails.html">wp.media.view.MediaFrame.MediaDetails</a></li><li><a href="wp.media.view.MediaFrame.Post.html">wp.media.view.MediaFrame.Post</a></li><li><a href="wp.media.view.MediaFrame.Select.html">wp.media.view.MediaFrame.Select</a></li><li><a href="wp.media.view.MediaFrame.VideoDetails.html">wp.media.view.MediaFrame.VideoDetails</a></li><li><a href="wp.media.view.Menu.html">wp.media.view.Menu</a></li><li><a href="wp.media.view.MenuItem.html">wp.media.view.MenuItem</a></li><li><a href="wp.media.view.Modal.html">wp.media.view.Modal</a></li><li><a href="wp.media.view.PriorityList.html">wp.media.view.PriorityList</a></li><li><a href="wp.media.view.Router.html">wp.media.view.Router</a></li><li><a href="wp.media.view.RouterItem.html">wp.media.view.RouterItem</a></li><li><a href="wp.media.view.Search.html">wp.media.view.Search</a></li><li><a href="wp.media.view.Selection.html">wp.media.view.Selection</a></li><li><a href="wp.media.view.SelectModeToggle.html">wp.media.view.SelectModeToggle</a></li><li><a href="wp.media.view.Settings.html">wp.media.view.Settings</a></li><li><a href="wp.media.view.Settings.AttachmentDisplay.html">wp.media.view.Settings.AttachmentDisplay</a></li><li><a href="wp.media.view.Settings.Gallery.html">wp.media.view.Settings.Gallery</a></li><li><a href="wp.media.view.Settings.Playlist.html">wp.media.view.Settings.Playlist</a></li><li><a href="wp.media.view.Sidebar.html">wp.media.view.Sidebar</a></li><li><a href="wp.media.view.SiteIconCropper.html">wp.media.view.SiteIconCropper</a></li><li><a href="wp.media.view.SiteIconPreview.html">wp.media.view.SiteIconPreview</a></li><li><a href="wp.media.view.Spinner.html">wp.media.view.Spinner</a></li><li><a href="wp.media.view.Toolbar.html">wp.media.view.Toolbar</a></li><li><a href="wp.media.view.Toolbar.Embed.html">wp.media.view.Toolbar.Embed</a></li><li><a href="wp.media.view.Toolbar.Select.html">wp.media.view.Toolbar.Select</a></li><li><a href="wp.media.view.UploaderInline.html">wp.media.view.UploaderInline</a></li><li><a href="wp.media.view.UploaderStatus.html">wp.media.view.UploaderStatus</a></li><li><a href="wp.media.view.UploaderStatusError.html">wp.media.view.UploaderStatusError</a></li><li><a href="wp.media.view.UploaderWindow.html">wp.media.view.UploaderWindow</a></li><li><a href="wp.media.view.VideoDetails.html">wp.media.view.VideoDetails</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_audio.html">wp.mediaWidgets.controlConstructors.media_audio</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_gallery.html">wp.mediaWidgets.controlConstructors.media_gallery</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_video.html">wp.mediaWidgets.controlConstructors.media_video</a></li><li><a href="wp.mediaWidgets.controlConstructors-AudioDetailsMediaFrame.html">wp.mediaWidgets.controlConstructors~AudioDetailsMediaFrame</a></li><li><a href="wp.mediaWidgets.controlConstructors-VideoDetailsMediaFrame.html">wp.mediaWidgets.controlConstructors~VideoDetailsMediaFrame</a></li><li><a href="wp.mediaWidgets.MediaEmbedView.html">wp.mediaWidgets.MediaEmbedView</a></li><li><a href="wp.mediaWidgets.MediaFrameSelect.html">wp.mediaWidgets.MediaFrameSelect</a></li><li><a href="wp.mediaWidgets.MediaWidgetControl.html">wp.mediaWidgets.MediaWidgetControl</a></li><li><a href="wp.mediaWidgets.MediaWidgetModel.html">wp.mediaWidgets.MediaWidgetModel</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_audio.html">wp.mediaWidgets.modelConstructors.media_audio</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_gallery.html">wp.mediaWidgets.modelConstructors.media_gallery</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_image.html">wp.mediaWidgets.modelConstructors.media_image</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_video.html">wp.mediaWidgets.modelConstructors.media_video</a></li><li><a href="wp.mediaWidgets.PersistentDisplaySettingsLibrary.html">wp.mediaWidgets.PersistentDisplaySettingsLibrary</a></li><li><a href="wp.mediaWidgets-Constructor.html">wp.mediaWidgets~Constructor</a></li><li><a href="wp.mediaWidgets-GalleryDetailsMediaFrame.html">wp.mediaWidgets~GalleryDetailsMediaFrame</a></li><li><a href="wp.NativeHandler.html">wp.NativeHandler</a></li><li><a href="wp.textWidgets.TextWidgetControl.html">wp.textWidgets.TextWidgetControl</a></li><li><a href="wp.utils.wordcounter.html">wp.utils.wordcounter</a></li><li><a href="wp.YouTubeHandler.html">wp.YouTubeHandler</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">Mixins<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="wp.media.controller.StateMachine.html">wp.media.controller.StateMachine</a></li><li><a href="wp.media.mixin.html">wp.media.mixin</a></li><li><a href="wp.media.selectionSync.html">wp.media.selectionSync</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="wp.media.controller.Region.html#event:activate">wp.media.controller.Region#event:activate</a></li><li><a href="wp.media.controller.Region.html#event:create">wp.media.controller.Region#event:create</a></li><li><a href="wp.media.controller.Region.html#event:deactivate">wp.media.controller.Region#event:deactivate</a></li><li><a href="wp.media.controller.Region.html#event:render">wp.media.controller.Region#event:render</a></li><li><a href="wp.media.view.Frame.html#event:%257Bmode%257D:deactivate">wp.media.view.Frame#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.AudioDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.AudioDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.EditAttachments.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.EditAttachments#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.ImageDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.ImageDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Manage.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Manage#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.MediaDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.MediaDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Post.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Post#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Select.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Select#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.VideoDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.VideoDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.controlConstructors-AudioDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.controlConstructors~AudioDetailsMediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.controlConstructors-VideoDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.controlConstructors~VideoDetailsMediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.MediaFrameSelect.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.MediaFrameSelect#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets-GalleryDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets~GalleryDetailsMediaFrame#event:{mode}:deactivate</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#$">$</a></li><li><a href="global.html#_attach">_attach</a></li><li><a href="global.html#_isReady">_isReady</a></li><li><a href="global.html#add">add</a></li><li><a href="global.html#ajaxPopulateWidgets">ajaxPopulateWidgets</a></li><li><a href="global.html#ajaxWidgets">ajaxWidgets</a></li><li><a href="global.html#all">all</a></li><li><a href="global.html#array_unique_noempty">array_unique_noempty</a></li><li><a href="global.html#clearFilters">clearFilters</a></li><li><a href="global.html#commentReply">commentReply</a></li><li><a href="global.html#detach">detach</a></li><li><a href="global.html#editPermalink">editPermalink</a></li><li><a href="global.html#filtersChecked">filtersChecked</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#get">get</a></li><li><a href="global.html#insert">insert</a></li><li><a href="global.html#media">media</a></li><li><a href="global.html#out">out</a></li><li><a href="global.html#over">over</a></li><li><a href="global.html#passwordStrength">passwordStrength</a></li><li><a href="global.html#prepare">prepare</a></li><li><a href="global.html#quickPressLoad">quickPressLoad</a></li><li><a href="global.html#ready">ready</a></li><li><a href="global.html#remove">remove</a></li><li><a href="global.html#render">render</a></li><li><a href="global.html#replace">replace</a></li><li><a href="global.html#search">search</a></li><li><a href="global.html#send_to_editor">send_to_editor</a></li><li><a href="global.html#set">set</a></li><li><a href="global.html#setCommentsList">setCommentsList</a></li><li><a href="global.html#tagBox">tagBox</a></li><li><a href="global.html#tb_position">tb_position</a></li><li><a href="global.html#theExtraList">theExtraList</a></li><li><a href="global.html#theList">theList</a></li><li><a href="global.html#unset">unset</a></li><li><a href="global.html#uploader">uploader</a></li><li><a href="global.html#WPRemoveThumbnail">WPRemoveThumbnail</a></li><li><a href="global.html#WPSetThumbnailHTML">WPSetThumbnailHTML</a></li><li><a href="global.html#WPSetThumbnailID">WPSetThumbnailID</a></li><li><a href="global.html#wptitlehint">wptitlehint</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-12">
+	
+		<div id="main">
+			
+
+		<h1 class="page-title">Source: _enqueues/wp/theme-plugin-editor.js</h1>
+    
+<section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">/**
+ * @output wp-admin/js/theme-plugin-editor.js
+ */
+
+/* eslint no-magic-numbers: ["error", { "ignore": [-1, 0, 1] }] */
+
+if ( ! window.wp ) {
+	window.wp = {};
+}
+
+wp.themePluginEditor = (function( $ ) {
+	'use strict';
+	var component, TreeLinks;
+
+	component = {
+		l10n: {
+			lintError: {
+				singular: '',
+				plural: ''
+			},
+			saveAlert: '',
+			saveError: ''
+		},
+		codeEditor: {},
+		instance: null,
+		noticeElements: {},
+		dirty: false,
+		lintErrors: []
+	};
+
+	/**
+	 * Initialize component.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @param {jQuery}         form - Form element.
+	 * @param {object}         settings - Settings.
+	 * @param {object|boolean} settings.codeEditor - Code editor settings (or `false` if syntax highlighting is disabled).
+	 * @return {void}
+	 */
+	component.init = function init( form, settings ) {
+
+		component.form = form;
+		if ( settings ) {
+			$.extend( component, settings );
+		}
+
+		component.noticeTemplate = wp.template( 'wp-file-editor-notice' );
+		component.noticesContainer = component.form.find( '.editor-notices' );
+		component.submitButton = component.form.find( ':input[name=submit]' );
+		component.spinner = component.form.find( '.submit .spinner' );
+		component.form.on( 'submit', component.submit );
+		component.textarea = component.form.find( '#newcontent' );
+		component.textarea.on( 'change', component.onChange );
+		component.warning = $( '.file-editor-warning' );
+		component.docsLookUpButton = component.form.find( '#docs-lookup' );
+		component.docsLookUpList = component.form.find( '#docs-list' );
+
+		if ( component.warning.length > 0 ) {
+			component.showWarning();
+		}
+
+		if ( false !== component.codeEditor ) {
+			/*
+			 * Defer adding notices until after DOM ready as workaround for WP Admin injecting
+			 * its own managed dismiss buttons and also to prevent the editor from showing a notice
+			 * when the file had linting errors to begin with.
+			 */
+			_.defer( function() {
+				component.initCodeEditor();
+			} );
+		}
+
+		$( component.initFileBrowser );
+
+		$( window ).on( 'beforeunload', function() {
+			if ( component.dirty ) {
+				return component.l10n.saveAlert;
+			}
+			return undefined;
+		} );
+
+		component.docsLookUpList.on( 'change', function() {
+			var option = $( this ).val();
+			if ( '' === option ) {
+				component.docsLookUpButton.prop( 'disabled', true );
+			} else {
+				component.docsLookUpButton.prop( 'disabled', false );
+			}
+		} );
+	};
+
+	/**
+	 * Set up and display the warning modal.
+	 *
+	 * @since 4.9.0
+	 * @return {void}
+	 */
+	component.showWarning = function() {
+		// Get the text within the modal.
+		var rawMessage = component.warning.find( '.file-editor-warning-message' ).text();
+		// Hide all the #wpwrap content from assistive technologies.
+		$( '#wpwrap' ).attr( 'aria-hidden', 'true' );
+		// Detach the warning modal from its position and append it to the body.
+		$( document.body )
+			.addClass( 'modal-open' )
+			.append( component.warning.detach() );
+		// Reveal the modal and set focus on the go back button.
+		component.warning
+			.removeClass( 'hidden' )
+			.find( '.file-editor-warning-go-back' ).focus();
+		// Get the links and buttons within the modal.
+		component.warningTabbables = component.warning.find( 'a, button' );
+		// Attach event handlers.
+		component.warningTabbables.on( 'keydown', component.constrainTabbing );
+		component.warning.on( 'click', '.file-editor-warning-dismiss', component.dismissWarning );
+		// Make screen readers announce the warning message after a short delay (necessary for some screen readers).
+		setTimeout( function() {
+			wp.a11y.speak( wp.sanitize.stripTags( rawMessage.replace( /\s+/g, ' ' ) ), 'assertive' );
+		}, 1000 );
+	};
+
+	/**
+	 * Constrain tabbing within the warning modal.
+	 *
+	 * @since 4.9.0
+	 * @param {object} event jQuery event object.
+	 * @return {void}
+	 */
+	component.constrainTabbing = function( event ) {
+		var firstTabbable, lastTabbable;
+
+		if ( 9 !== event.which ) {
+			return;
+		}
+
+		firstTabbable = component.warningTabbables.first()[0];
+		lastTabbable = component.warningTabbables.last()[0];
+
+		if ( lastTabbable === event.target &amp;&amp; ! event.shiftKey ) {
+			firstTabbable.focus();
+			event.preventDefault();
+		} else if ( firstTabbable === event.target &amp;&amp; event.shiftKey ) {
+			lastTabbable.focus();
+			event.preventDefault();
+		}
+	};
+
+	/**
+	 * Dismiss the warning modal.
+	 *
+	 * @since 4.9.0
+	 * @return {void}
+	 */
+	component.dismissWarning = function() {
+
+		wp.ajax.post( 'dismiss-wp-pointer', {
+			pointer: component.themeOrPlugin + '_editor_notice'
+		});
+
+		// Hide modal.
+		component.warning.remove();
+		$( '#wpwrap' ).removeAttr( 'aria-hidden' );
+		$( 'body' ).removeClass( 'modal-open' );
+	};
+
+	/**
+	 * Callback for when a change happens.
+	 *
+	 * @since 4.9.0
+	 * @return {void}
+	 */
+	component.onChange = function() {
+		component.dirty = true;
+		component.removeNotice( 'file_saved' );
+	};
+
+	/**
+	 * Submit file via Ajax.
+	 *
+	 * @since 4.9.0
+	 * @param {jQuery.Event} event - Event.
+	 * @return {void}
+	 */
+	component.submit = function( event ) {
+		var data = {}, request;
+		event.preventDefault(); // Prevent form submission in favor of Ajax below.
+		$.each( component.form.serializeArray(), function() {
+			data[ this.name ] = this.value;
+		} );
+
+		// Use value from codemirror if present.
+		if ( component.instance ) {
+			data.newcontent = component.instance.codemirror.getValue();
+		}
+
+		if ( component.isSaving ) {
+			return;
+		}
+
+		// Scroll ot the line that has the error.
+		if ( component.lintErrors.length ) {
+			component.instance.codemirror.setCursor( component.lintErrors[0].from.line );
+			return;
+		}
+
+		component.isSaving = true;
+		component.textarea.prop( 'readonly', true );
+		if ( component.instance ) {
+			component.instance.codemirror.setOption( 'readOnly', true );
+		}
+
+		component.spinner.addClass( 'is-active' );
+		request = wp.ajax.post( 'edit-theme-plugin-file', data );
+
+		// Remove previous save notice before saving.
+		if ( component.lastSaveNoticeCode ) {
+			component.removeNotice( component.lastSaveNoticeCode );
+		}
+
+		request.done( function( response ) {
+			component.lastSaveNoticeCode = 'file_saved';
+			component.addNotice({
+				code: component.lastSaveNoticeCode,
+				type: 'success',
+				message: response.message,
+				dismissible: true
+			});
+			component.dirty = false;
+		} );
+
+		request.fail( function( response ) {
+			var notice = $.extend(
+				{
+					code: 'save_error',
+					message: component.l10n.saveError
+				},
+				response,
+				{
+					type: 'error',
+					dismissible: true
+				}
+			);
+			component.lastSaveNoticeCode = notice.code;
+			component.addNotice( notice );
+		} );
+
+		request.always( function() {
+			component.spinner.removeClass( 'is-active' );
+			component.isSaving = false;
+
+			component.textarea.prop( 'readonly', false );
+			if ( component.instance ) {
+				component.instance.codemirror.setOption( 'readOnly', false );
+			}
+		} );
+	};
+
+	/**
+	 * Add notice.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @param {object}   notice - Notice.
+	 * @param {string}   notice.code - Code.
+	 * @param {string}   notice.type - Type.
+	 * @param {string}   notice.message - Message.
+	 * @param {boolean}  [notice.dismissible=false] - Dismissible.
+	 * @param {Function} [notice.onDismiss] - Callback for when a user dismisses the notice.
+	 * @return {jQuery} Notice element.
+	 */
+	component.addNotice = function( notice ) {
+		var noticeElement;
+
+		if ( ! notice.code ) {
+			throw new Error( 'Missing code.' );
+		}
+
+		// Only let one notice of a given type be displayed at a time.
+		component.removeNotice( notice.code );
+
+		noticeElement = $( component.noticeTemplate( notice ) );
+		noticeElement.hide();
+
+		noticeElement.find( '.notice-dismiss' ).on( 'click', function() {
+			component.removeNotice( notice.code );
+			if ( notice.onDismiss ) {
+				notice.onDismiss( notice );
+			}
+		} );
+
+		wp.a11y.speak( notice.message );
+
+		component.noticesContainer.append( noticeElement );
+		noticeElement.slideDown( 'fast' );
+		component.noticeElements[ notice.code ] = noticeElement;
+		return noticeElement;
+	};
+
+	/**
+	 * Remove notice.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @param {string} code - Notice code.
+	 * @return {boolean} Whether a notice was removed.
+	 */
+	component.removeNotice = function( code ) {
+		if ( component.noticeElements[ code ] ) {
+			component.noticeElements[ code ].slideUp( 'fast', function() {
+				$( this ).remove();
+			} );
+			delete component.noticeElements[ code ];
+			return true;
+		}
+		return false;
+	};
+
+	/**
+	 * Initialize code editor.
+	 *
+	 * @since 4.9.0
+	 * @return {void}
+	 */
+	component.initCodeEditor = function initCodeEditor() {
+		var codeEditorSettings, editor;
+
+		codeEditorSettings = $.extend( {}, component.codeEditor );
+
+		/**
+		 * Handle tabbing to the field before the editor.
+		 *
+		 * @since 4.9.0
+		 *
+		 * @return {void}
+		 */
+		codeEditorSettings.onTabPrevious = function() {
+			$( '#templateside' ).find( ':tabbable' ).last().focus();
+		};
+
+		/**
+		 * Handle tabbing to the field after the editor.
+		 *
+		 * @since 4.9.0
+		 *
+		 * @return {void}
+		 */
+		codeEditorSettings.onTabNext = function() {
+			$( '#template' ).find( ':tabbable:not(.CodeMirror-code)' ).first().focus();
+		};
+
+		/**
+		 * Handle change to the linting errors.
+		 *
+		 * @since 4.9.0
+		 *
+		 * @param {Array} errors - List of linting errors.
+		 * @return {void}
+		 */
+		codeEditorSettings.onChangeLintingErrors = function( errors ) {
+			component.lintErrors = errors;
+
+			// Only disable the button in onUpdateErrorNotice when there are errors so users can still feel they can click the button.
+			if ( 0 === errors.length ) {
+				component.submitButton.toggleClass( 'disabled', false );
+			}
+		};
+
+		/**
+		 * Update error notice.
+		 *
+		 * @since 4.9.0
+		 *
+		 * @param {Array} errorAnnotations - Error annotations.
+		 * @return {void}
+		 */
+		codeEditorSettings.onUpdateErrorNotice = function onUpdateErrorNotice( errorAnnotations ) {
+			var message, noticeElement;
+
+			component.submitButton.toggleClass( 'disabled', errorAnnotations.length > 0 );
+
+			if ( 0 !== errorAnnotations.length ) {
+				if ( 1 === errorAnnotations.length ) {
+					message = component.l10n.lintError.singular.replace( '%d', '1' );
+				} else {
+					message = component.l10n.lintError.plural.replace( '%d', String( errorAnnotations.length ) );
+				}
+				noticeElement = component.addNotice({
+					code: 'lint_errors',
+					type: 'error',
+					message: message,
+					dismissible: false
+				});
+				noticeElement.find( 'input[type=checkbox]' ).on( 'click', function() {
+					codeEditorSettings.onChangeLintingErrors( [] );
+					component.removeNotice( 'lint_errors' );
+				} );
+			} else {
+				component.removeNotice( 'lint_errors' );
+			}
+		};
+
+		editor = wp.codeEditor.initialize( $( '#newcontent' ), codeEditorSettings );
+		editor.codemirror.on( 'change', component.onChange );
+
+		// Improve the editor accessibility.
+		$( editor.codemirror.display.lineDiv )
+			.attr({
+				role: 'textbox',
+				'aria-multiline': 'true',
+				'aria-labelledby': 'theme-plugin-editor-label',
+				'aria-describedby': 'editor-keyboard-trap-help-1 editor-keyboard-trap-help-2 editor-keyboard-trap-help-3 editor-keyboard-trap-help-4'
+			});
+
+		// Focus the editor when clicking on its label.
+		$( '#theme-plugin-editor-label' ).on( 'click', function() {
+			editor.codemirror.focus();
+		});
+
+		component.instance = editor;
+	};
+
+	/**
+	 * Initialization of the file browser's folder states.
+	 *
+	 * @since 4.9.0
+	 * @return {void}
+	 */
+	component.initFileBrowser = function initFileBrowser() {
+
+		var $templateside = $( '#templateside' );
+
+		// Collapse all folders.
+		$templateside.find( '[role="group"]' ).parent().attr( 'aria-expanded', false );
+
+		// Expand ancestors to the current file.
+		$templateside.find( '.notice' ).parents( '[aria-expanded]' ).attr( 'aria-expanded', true );
+
+		// Find Tree elements and enhance them.
+		$templateside.find( '[role="tree"]' ).each( function() {
+			var treeLinks = new TreeLinks( this );
+			treeLinks.init();
+		} );
+
+		// Scroll the current file into view.
+		$templateside.find( '.current-file:first' ).each( function() {
+			if ( this.scrollIntoViewIfNeeded ) {
+				this.scrollIntoViewIfNeeded();
+			} else {
+				this.scrollIntoView( false );
+			}
+		} );
+	};
+
+	/* jshint ignore:start */
+	/* jscs:disable */
+	/* eslint-disable */
+
+	/**
+	 * Creates a new TreeitemLink.
+	 *
+	 * @since 4.9.0
+	 * @class
+	 * @private
+	 * @see {@link https://www.w3.org/TR/wai-aria-practices-1.1/examples/treeview/treeview-2/treeview-2b.html|W3C Treeview Example}
+	 * @license W3C-20150513
+	 */
+	var TreeitemLink = (function () {
+		/**
+		 *   This content is licensed according to the W3C Software License at
+		 *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+		 *
+		 *   File:   TreeitemLink.js
+		 *
+		 *   Desc:   Treeitem widget that implements ARIA Authoring Practices
+		 *           for a tree being used as a file viewer
+		 *
+		 *   Author: Jon Gunderson, Ku Ja Eun and Nicholas Hoyt
+		 */
+
+		/**
+		 *   @constructor
+		 *
+		 *   @desc
+		 *       Treeitem object for representing the state and user interactions for a
+		 *       treeItem widget
+		 *
+		 *   @param node
+		 *       An element with the role=tree attribute
+		 */
+
+		var TreeitemLink = function (node, treeObj, group) {
+
+			// Check whether node is a DOM element.
+			if (typeof node !== 'object') {
+				return;
+			}
+
+			node.tabIndex = -1;
+			this.tree = treeObj;
+			this.groupTreeitem = group;
+			this.domNode = node;
+			this.label = node.textContent.trim();
+			this.stopDefaultClick = false;
+
+			if (node.getAttribute('aria-label')) {
+				this.label = node.getAttribute('aria-label').trim();
+			}
+
+			this.isExpandable = false;
+			this.isVisible = false;
+			this.inGroup = false;
+
+			if (group) {
+				this.inGroup = true;
+			}
+
+			var elem = node.firstElementChild;
+
+			while (elem) {
+
+				if (elem.tagName.toLowerCase() == 'ul') {
+					elem.setAttribute('role', 'group');
+					this.isExpandable = true;
+					break;
+				}
+
+				elem = elem.nextElementSibling;
+			}
+
+			this.keyCode = Object.freeze({
+				RETURN: 13,
+				SPACE: 32,
+				PAGEUP: 33,
+				PAGEDOWN: 34,
+				END: 35,
+				HOME: 36,
+				LEFT: 37,
+				UP: 38,
+				RIGHT: 39,
+				DOWN: 40
+			});
+		};
+
+		TreeitemLink.prototype.init = function () {
+			this.domNode.tabIndex = -1;
+
+			if (!this.domNode.getAttribute('role')) {
+				this.domNode.setAttribute('role', 'treeitem');
+			}
+
+			this.domNode.addEventListener('keydown', this.handleKeydown.bind(this));
+			this.domNode.addEventListener('click', this.handleClick.bind(this));
+			this.domNode.addEventListener('focus', this.handleFocus.bind(this));
+			this.domNode.addEventListener('blur', this.handleBlur.bind(this));
+
+			if (this.isExpandable) {
+				this.domNode.firstElementChild.addEventListener('mouseover', this.handleMouseOver.bind(this));
+				this.domNode.firstElementChild.addEventListener('mouseout', this.handleMouseOut.bind(this));
+			}
+			else {
+				this.domNode.addEventListener('mouseover', this.handleMouseOver.bind(this));
+				this.domNode.addEventListener('mouseout', this.handleMouseOut.bind(this));
+			}
+		};
+
+		TreeitemLink.prototype.isExpanded = function () {
+
+			if (this.isExpandable) {
+				return this.domNode.getAttribute('aria-expanded') === 'true';
+			}
+
+			return false;
+
+		};
+
+		/* EVENT HANDLERS */
+
+		TreeitemLink.prototype.handleKeydown = function (event) {
+			var tgt = event.currentTarget,
+				flag = false,
+				_char = event.key,
+				clickEvent;
+
+			function isPrintableCharacter(str) {
+				return str.length === 1 &amp;&amp; str.match(/\S/);
+			}
+
+			function printableCharacter(item) {
+				if (_char == '*') {
+					item.tree.expandAllSiblingItems(item);
+					flag = true;
+				}
+				else {
+					if (isPrintableCharacter(_char)) {
+						item.tree.setFocusByFirstCharacter(item, _char);
+						flag = true;
+					}
+				}
+			}
+
+			this.stopDefaultClick = false;
+
+			if (event.altKey || event.ctrlKey || event.metaKey) {
+				return;
+			}
+
+			if (event.shift) {
+				if (event.keyCode == this.keyCode.SPACE || event.keyCode == this.keyCode.RETURN) {
+					event.stopPropagation();
+					this.stopDefaultClick = true;
+				}
+				else {
+					if (isPrintableCharacter(_char)) {
+						printableCharacter(this);
+					}
+				}
+			}
+			else {
+				switch (event.keyCode) {
+					case this.keyCode.SPACE:
+					case this.keyCode.RETURN:
+						if (this.isExpandable) {
+							if (this.isExpanded()) {
+								this.tree.collapseTreeitem(this);
+							}
+							else {
+								this.tree.expandTreeitem(this);
+							}
+							flag = true;
+						}
+						else {
+							event.stopPropagation();
+							this.stopDefaultClick = true;
+						}
+						break;
+
+					case this.keyCode.UP:
+						this.tree.setFocusToPreviousItem(this);
+						flag = true;
+						break;
+
+					case this.keyCode.DOWN:
+						this.tree.setFocusToNextItem(this);
+						flag = true;
+						break;
+
+					case this.keyCode.RIGHT:
+						if (this.isExpandable) {
+							if (this.isExpanded()) {
+								this.tree.setFocusToNextItem(this);
+							}
+							else {
+								this.tree.expandTreeitem(this);
+							}
+						}
+						flag = true;
+						break;
+
+					case this.keyCode.LEFT:
+						if (this.isExpandable &amp;&amp; this.isExpanded()) {
+							this.tree.collapseTreeitem(this);
+							flag = true;
+						}
+						else {
+							if (this.inGroup) {
+								this.tree.setFocusToParentItem(this);
+								flag = true;
+							}
+						}
+						break;
+
+					case this.keyCode.HOME:
+						this.tree.setFocusToFirstItem();
+						flag = true;
+						break;
+
+					case this.keyCode.END:
+						this.tree.setFocusToLastItem();
+						flag = true;
+						break;
+
+					default:
+						if (isPrintableCharacter(_char)) {
+							printableCharacter(this);
+						}
+						break;
+				}
+			}
+
+			if (flag) {
+				event.stopPropagation();
+				event.preventDefault();
+			}
+		};
+
+		TreeitemLink.prototype.handleClick = function (event) {
+
+			// Only process click events that directly happened on this treeitem.
+			if (event.target !== this.domNode &amp;&amp; event.target !== this.domNode.firstElementChild) {
+				return;
+			}
+
+			if (this.isExpandable) {
+				if (this.isExpanded()) {
+					this.tree.collapseTreeitem(this);
+				}
+				else {
+					this.tree.expandTreeitem(this);
+				}
+				event.stopPropagation();
+			}
+		};
+
+		TreeitemLink.prototype.handleFocus = function (event) {
+			var node = this.domNode;
+			if (this.isExpandable) {
+				node = node.firstElementChild;
+			}
+			node.classList.add('focus');
+		};
+
+		TreeitemLink.prototype.handleBlur = function (event) {
+			var node = this.domNode;
+			if (this.isExpandable) {
+				node = node.firstElementChild;
+			}
+			node.classList.remove('focus');
+		};
+
+		TreeitemLink.prototype.handleMouseOver = function (event) {
+			event.currentTarget.classList.add('hover');
+		};
+
+		TreeitemLink.prototype.handleMouseOut = function (event) {
+			event.currentTarget.classList.remove('hover');
+		};
+
+		return TreeitemLink;
+	})();
+
+	/**
+	 * Creates a new TreeLinks.
+	 *
+	 * @since 4.9.0
+	 * @class
+	 * @private
+	 * @see {@link https://www.w3.org/TR/wai-aria-practices-1.1/examples/treeview/treeview-2/treeview-2b.html|W3C Treeview Example}
+	 * @license W3C-20150513
+	 */
+	TreeLinks = (function () {
+		/*
+		 *   This content is licensed according to the W3C Software License at
+		 *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+		 *
+		 *   File:   TreeLinks.js
+		 *
+		 *   Desc:   Tree widget that implements ARIA Authoring Practices
+		 *           for a tree being used as a file viewer
+		 *
+		 *   Author: Jon Gunderson, Ku Ja Eun and Nicholas Hoyt
+		 */
+
+		/*
+		 *   @constructor
+		 *
+		 *   @desc
+		 *       Tree item object for representing the state and user interactions for a
+		 *       tree widget
+		 *
+		 *   @param node
+		 *       An element with the role=tree attribute
+		 */
+
+		var TreeLinks = function (node) {
+			// Check whether node is a DOM element.
+			if (typeof node !== 'object') {
+				return;
+			}
+
+			this.domNode = node;
+
+			this.treeitems = [];
+			this.firstChars = [];
+
+			this.firstTreeitem = null;
+			this.lastTreeitem = null;
+
+		};
+
+		TreeLinks.prototype.init = function () {
+
+			function findTreeitems(node, tree, group) {
+
+				var elem = node.firstElementChild;
+				var ti = group;
+
+				while (elem) {
+
+					if ((elem.tagName.toLowerCase() === 'li' &amp;&amp; elem.firstElementChild.tagName.toLowerCase() === 'span') || elem.tagName.toLowerCase() === 'a') {
+						ti = new TreeitemLink(elem, tree, group);
+						ti.init();
+						tree.treeitems.push(ti);
+						tree.firstChars.push(ti.label.substring(0, 1).toLowerCase());
+					}
+
+					if (elem.firstElementChild) {
+						findTreeitems(elem, tree, ti);
+					}
+
+					elem = elem.nextElementSibling;
+				}
+			}
+
+			// Initialize pop up menus.
+			if (!this.domNode.getAttribute('role')) {
+				this.domNode.setAttribute('role', 'tree');
+			}
+
+			findTreeitems(this.domNode, this, false);
+
+			this.updateVisibleTreeitems();
+
+			this.firstTreeitem.domNode.tabIndex = 0;
+
+		};
+
+		TreeLinks.prototype.setFocusToItem = function (treeitem) {
+
+			for (var i = 0; i &lt; this.treeitems.length; i++) {
+				var ti = this.treeitems[i];
+
+				if (ti === treeitem) {
+					ti.domNode.tabIndex = 0;
+					ti.domNode.focus();
+				}
+				else {
+					ti.domNode.tabIndex = -1;
+				}
+			}
+
+		};
+
+		TreeLinks.prototype.setFocusToNextItem = function (currentItem) {
+
+			var nextItem = false;
+
+			for (var i = (this.treeitems.length - 1); i >= 0; i--) {
+				var ti = this.treeitems[i];
+				if (ti === currentItem) {
+					break;
+				}
+				if (ti.isVisible) {
+					nextItem = ti;
+				}
+			}
+
+			if (nextItem) {
+				this.setFocusToItem(nextItem);
+			}
+
+		};
+
+		TreeLinks.prototype.setFocusToPreviousItem = function (currentItem) {
+
+			var prevItem = false;
+
+			for (var i = 0; i &lt; this.treeitems.length; i++) {
+				var ti = this.treeitems[i];
+				if (ti === currentItem) {
+					break;
+				}
+				if (ti.isVisible) {
+					prevItem = ti;
+				}
+			}
+
+			if (prevItem) {
+				this.setFocusToItem(prevItem);
+			}
+		};
+
+		TreeLinks.prototype.setFocusToParentItem = function (currentItem) {
+
+			if (currentItem.groupTreeitem) {
+				this.setFocusToItem(currentItem.groupTreeitem);
+			}
+		};
+
+		TreeLinks.prototype.setFocusToFirstItem = function () {
+			this.setFocusToItem(this.firstTreeitem);
+		};
+
+		TreeLinks.prototype.setFocusToLastItem = function () {
+			this.setFocusToItem(this.lastTreeitem);
+		};
+
+		TreeLinks.prototype.expandTreeitem = function (currentItem) {
+
+			if (currentItem.isExpandable) {
+				currentItem.domNode.setAttribute('aria-expanded', true);
+				this.updateVisibleTreeitems();
+			}
+
+		};
+
+		TreeLinks.prototype.expandAllSiblingItems = function (currentItem) {
+			for (var i = 0; i &lt; this.treeitems.length; i++) {
+				var ti = this.treeitems[i];
+
+				if ((ti.groupTreeitem === currentItem.groupTreeitem) &amp;&amp; ti.isExpandable) {
+					this.expandTreeitem(ti);
+				}
+			}
+
+		};
+
+		TreeLinks.prototype.collapseTreeitem = function (currentItem) {
+
+			var groupTreeitem = false;
+
+			if (currentItem.isExpanded()) {
+				groupTreeitem = currentItem;
+			}
+			else {
+				groupTreeitem = currentItem.groupTreeitem;
+			}
+
+			if (groupTreeitem) {
+				groupTreeitem.domNode.setAttribute('aria-expanded', false);
+				this.updateVisibleTreeitems();
+				this.setFocusToItem(groupTreeitem);
+			}
+
+		};
+
+		TreeLinks.prototype.updateVisibleTreeitems = function () {
+
+			this.firstTreeitem = this.treeitems[0];
+
+			for (var i = 0; i &lt; this.treeitems.length; i++) {
+				var ti = this.treeitems[i];
+
+				var parent = ti.domNode.parentNode;
+
+				ti.isVisible = true;
+
+				while (parent &amp;&amp; (parent !== this.domNode)) {
+
+					if (parent.getAttribute('aria-expanded') == 'false') {
+						ti.isVisible = false;
+					}
+					parent = parent.parentNode;
+				}
+
+				if (ti.isVisible) {
+					this.lastTreeitem = ti;
+				}
+			}
+
+		};
+
+		TreeLinks.prototype.setFocusByFirstCharacter = function (currentItem, _char) {
+			var start, index;
+			_char = _char.toLowerCase();
+
+			// Get start index for search based on position of currentItem.
+			start = this.treeitems.indexOf(currentItem) + 1;
+			if (start === this.treeitems.length) {
+				start = 0;
+			}
+
+			// Check remaining slots in the menu.
+			index = this.getIndexFirstChars(start, _char);
+
+			// If not found in remaining slots, check from beginning.
+			if (index === -1) {
+				index = this.getIndexFirstChars(0, _char);
+			}
+
+			// If match was found...
+			if (index > -1) {
+				this.setFocusToItem(this.treeitems[index]);
+			}
+		};
+
+		TreeLinks.prototype.getIndexFirstChars = function (startIndex, _char) {
+			for (var i = startIndex; i &lt; this.firstChars.length; i++) {
+				if (this.treeitems[i].isVisible) {
+					if (_char === this.firstChars[i]) {
+						return i;
+					}
+				}
+			}
+			return -1;
+		};
+
+		return TreeLinks;
+	})();
+
+	/* jshint ignore:end */
+	/* jscs:enable */
+	/* eslint-enable */
+
+	return component;
+})( jQuery );
+</pre>
+    </article>
+</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a>
+	
+		on 2020-06-17T11:56:24+00:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

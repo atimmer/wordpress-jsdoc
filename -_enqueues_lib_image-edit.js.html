@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Documentation Source: _enqueues/lib/image-edit.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.united.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Documentation</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="addComment.html">addComment</a></li><li><a href="commentsBox.html">commentsBox</a></li><li><a href="findPosts.html">findPosts</a></li><li><a href="imageEdit.html">imageEdit</a></li><li><a href="inlineEditPost.html">inlineEditPost</a></li><li><a href="inlineEditTax.html">inlineEditTax</a></li><li><a href="postboxes.html">postboxes</a></li><li><a href="switchEditors.html">switchEditors</a></li><li><a href="wp.html">wp</a></li><li><a href="wp.a11y.html">wp.a11y</a></li><li><a href="wp.api.html">wp.api</a></li><li><a href="wp.api.collections.html">wp.api.collections</a></li><li><a href="wp.api.models.html">wp.api.models</a></li><li><a href="wp.api.utils.html">wp.api.utils</a></li><li><a href="wp.api.views.html">wp.api.views</a></li><li><a href="wp.Backbone.html">wp.Backbone</a></li><li><a href="wp.codeEditor.html">wp.codeEditor</a></li><li><a href="wp.communityEvents.html">wp.communityEvents</a></li><li><a href="wp.customHtmlWidget.html">wp.customHtmlWidget</a></li><li><a href="wp.customize.html">wp.customize</a></li><li><a href="wp.customize.HeaderTool.html">wp.customize.HeaderTool</a></li><li><a href="wp.customize.Menus.html">wp.customize.Menus</a></li><li><a href="wp.customize.navMenusPreview.html">wp.customize.navMenusPreview</a></li><li><a href="wp.customize.selectiveRefresh.html">wp.customize.selectiveRefresh</a></li><li><a href="wp.customize.utils.html">wp.customize.utils</a></li><li><a href="wp.customize.Widgets.html">wp.customize.Widgets</a></li><li><a href="wp.customize.widgetsPreview.html">wp.customize.widgetsPreview</a></li><li><a href="wp.emoji.html">wp.emoji</a></li><li><a href="wp.heartbeat.html">wp.heartbeat</a></li><li><a href="wp.media.html">wp.media</a></li><li><a href="wp.media.audio.html">wp.media.audio</a></li><li><a href="wp.media.controller.html">wp.media.controller</a></li><li><a href="wp.media.editor.html">wp.media.editor</a></li><li><a href="wp.media.editor.send.html">wp.media.editor.send</a></li><li><a href="wp.media.featuredImage.html">wp.media.featuredImage</a></li><li><a href="wp.media.frames.html">wp.media.frames</a></li><li><a href="wp.media.model.html">wp.media.model</a></li><li><a href="wp.media.model.Attachments.filters.html">wp.media.model.Attachments.filters</a></li><li><a href="wp.media.string.html">wp.media.string</a></li><li><a href="wp.media.video.html">wp.media.video</a></li><li><a href="wp.media.view.html">wp.media.view</a></li><li><a href="wp.mediaWidgets.html">wp.mediaWidgets</a></li><li><a href="wp.passwordStrength.html">wp.passwordStrength</a></li><li><a href="wp.textWidgets.html">wp.textWidgets</a></li><li><a href="wp.updates.html">wp.updates</a></li><li><a href="wp.utils.html">wp.utils</a></li><li><a href="wpNavMenu.html">wpNavMenu</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="-_.html"></a></li><li><a href="$.widget.wp.pointer.html">$.widget.wp.pointer</a></li><li><a href="$.widget.wp.wpColorPicker.html">$.widget.wp.wpColorPicker</a></li><li><a href="Heading.html">Heading</a></li><li><a href="wp.Backbone.Subviews.html">wp.Backbone.Subviews</a></li><li><a href="wp.BaseHandler.html">wp.BaseHandler</a></li><li><a href="wp.CustomHeader.html">wp.CustomHeader</a></li><li><a href="wp.customHtmlWidgets.CustomHtmlWidgetControl.html">wp.customHtmlWidgets.CustomHtmlWidgetControl</a></li><li><a href="wp.customize.BackgroundControl.html">wp.customize.BackgroundControl</a></li><li><a href="wp.customize.BackgroundPositionControl.html">wp.customize.BackgroundPositionControl</a></li><li><a href="wp.customize.CodeEditorControl.html">wp.customize.CodeEditorControl</a></li><li><a href="wp.customize.ColorControl.html">wp.customize.ColorControl</a></li><li><a href="wp.customize.Control.html">wp.customize.Control</a></li><li><a href="wp.customize.CroppedImageControl.html">wp.customize.CroppedImageControl</a></li><li><a href="wp.customize.DateTimeControl.html">wp.customize.DateTimeControl</a></li><li><a href="wp.customize.Element.html">wp.customize.Element</a></li><li><a href="wp.customize.HeaderControl.html">wp.customize.HeaderControl</a></li><li><a href="wp.customize.HeaderTool.ChoiceList.html">wp.customize.HeaderTool.ChoiceList</a></li><li><a href="wp.customize.HeaderTool.ChoiceListView.html">wp.customize.HeaderTool.ChoiceListView</a></li><li><a href="wp.customize.HeaderTool.ChoiceView.html">wp.customize.HeaderTool.ChoiceView</a></li><li><a href="wp.customize.HeaderTool.CombinedList.html">wp.customize.HeaderTool.CombinedList</a></li><li><a href="wp.customize.HeaderTool.CurrentView.html">wp.customize.HeaderTool.CurrentView</a></li><li><a href="wp.customize.HeaderTool.DefaultsList.html">wp.customize.HeaderTool.DefaultsList</a></li><li><a href="wp.customize.HeaderTool.ImageModel.html">wp.customize.HeaderTool.ImageModel</a></li><li><a href="wp.customize.ImageControl.html">wp.customize.ImageControl</a></li><li><a href="wp.customize.Loader.html">wp.customize.Loader</a></li><li><a href="wp.customize.MediaControl.html">wp.customize.MediaControl</a></li><li><a href="wp.customize.Menus.AvailableItemCollection.html">wp.customize.Menus.AvailableItemCollection</a></li><li><a href="wp.customize.Menus.AvailableItemModel.html">wp.customize.Menus.AvailableItemModel</a></li><li><a href="wp.customize.Menus.AvailableMenuItemsPanelView.html">wp.customize.Menus.AvailableMenuItemsPanelView</a></li><li><a href="wp.customize.Menus.MenuAutoAddControl.html">wp.customize.Menus.MenuAutoAddControl</a></li><li><a href="wp.customize.Menus.MenuControl.html">wp.customize.Menus.MenuControl</a></li><li><a href="wp.customize.Menus.MenuItemControl.html">wp.customize.Menus.MenuItemControl</a></li><li><a href="wp.customize.Menus.MenuLocationControl.html">wp.customize.Menus.MenuLocationControl</a></li><li><a href="wp.customize.Menus.MenuLocationsControl.html">wp.customize.Menus.MenuLocationsControl</a></li><li><a href="wp.customize.Menus.MenuNameControl.html">wp.customize.Menus.MenuNameControl</a></li><li><a href="wp.customize.Menus.MenuSection.html">wp.customize.Menus.MenuSection</a></li><li><a href="wp.customize.Menus.MenusPanel.html">wp.customize.Menus.MenusPanel</a></li><li><a href="wp.customize.Menus.NewMenuSection.html">wp.customize.Menus.NewMenuSection</a></li><li><a href="wp.customize.Messenger.html">wp.customize.Messenger</a></li><li><a href="wp.customize.navMenusPreview.NavMenuInstancePartial.html">wp.customize.navMenusPreview.NavMenuInstancePartial</a></li><li><a href="wp.customize.Notification.html">wp.customize.Notification</a></li><li><a href="wp.customize.Notifications.html">wp.customize.Notifications</a></li><li><a href="wp.customize.OuterSection.html">wp.customize.OuterSection</a></li><li><a href="wp.customize.OverlayNotification.html">wp.customize.OverlayNotification</a></li><li><a href="wp.customize.Panel.html">wp.customize.Panel</a></li><li><a href="wp.customize.Preview.html">wp.customize.Preview</a></li><li><a href="wp.customize.Previewer.html">wp.customize.Previewer</a></li><li><a href="wp.customize.PreviewFrame.html">wp.customize.PreviewFrame</a></li><li><a href="wp.customize.PreviewLinkControl.html">wp.customize.PreviewLinkControl</a></li><li><a href="wp.customize.Section.html">wp.customize.Section</a></li><li><a href="wp.customize.selectiveRefresh.Partial.html">wp.customize.selectiveRefresh.Partial</a></li><li><a href="wp.customize.selectiveRefresh.Placement.html">wp.customize.selectiveRefresh.Placement</a></li><li><a href="wp.customize.Setting.html">wp.customize.Setting</a></li><li><a href="wp.customize.SiteIconControl.html">wp.customize.SiteIconControl</a></li><li><a href="wp.customize.ThemeControl.html">wp.customize.ThemeControl</a></li><li><a href="wp.customize.ThemesPanel.html">wp.customize.ThemesPanel</a></li><li><a href="wp.customize.ThemesSection.html">wp.customize.ThemesSection</a></li><li><a href="wp.customize.UploadControl.html">wp.customize.UploadControl</a></li><li><a href="wp.customize.Value.html">wp.customize.Value</a></li><li><a href="wp.customize.Values.html">wp.customize.Values</a></li><li><a href="wp.customize.Widgets.AvailableWidgetsPanelView.html">wp.customize.Widgets.AvailableWidgetsPanelView</a></li><li><a href="wp.customize.Widgets.SidebarCollection.html">wp.customize.Widgets.SidebarCollection</a></li><li><a href="wp.customize.Widgets.SidebarControl.html">wp.customize.Widgets.SidebarControl</a></li><li><a href="wp.customize.Widgets.SidebarModel.html">wp.customize.Widgets.SidebarModel</a></li><li><a href="wp.customize.Widgets.SidebarSection.html">wp.customize.Widgets.SidebarSection</a></li><li><a href="wp.customize.Widgets.WidgetCollection.html">wp.customize.Widgets.WidgetCollection</a></li><li><a href="wp.customize.Widgets.WidgetControl.html">wp.customize.Widgets.WidgetControl</a></li><li><a href="wp.customize.Widgets.WidgetModel.html">wp.customize.Widgets.WidgetModel</a></li><li><a href="wp.customize.Widgets.WidgetsPanel.html">wp.customize.Widgets.WidgetsPanel</a></li><li><a href="wp.customize.widgetsPreview.SidebarPartial.html">wp.customize.widgetsPreview.SidebarPartial</a></li><li><a href="wp.customize.widgetsPreview.WidgetPartial.html">wp.customize.widgetsPreview.WidgetPartial</a></li><li><a href="wp.customize-Container.html">wp.customize~Container</a></li><li><a href="wp.customize-LockedNotification.html">wp.customize~LockedNotification</a></li><li><a href="wp.media.collection.html">wp.media.collection</a></li><li><a href="wp.media.controller.AudioDetails.html">wp.media.controller.AudioDetails</a></li><li><a href="wp.media.controller.CollectionAdd.html">wp.media.controller.CollectionAdd</a></li><li><a href="wp.media.controller.CollectionEdit.html">wp.media.controller.CollectionEdit</a></li><li><a href="wp.media.controller.Cropper.html">wp.media.controller.Cropper</a></li><li><a href="wp.media.controller.CustomizeImageCropper.html">wp.media.controller.CustomizeImageCropper</a></li><li><a href="wp.media.controller.EditAttachmentMetadata.html">wp.media.controller.EditAttachmentMetadata</a></li><li><a href="wp.media.controller.EditImage.html">wp.media.controller.EditImage</a></li><li><a href="wp.media.controller.Embed.html">wp.media.controller.Embed</a></li><li><a href="wp.media.controller.FeaturedImage.html">wp.media.controller.FeaturedImage</a></li><li><a href="wp.media.controller.GalleryAdd.html">wp.media.controller.GalleryAdd</a></li><li><a href="wp.media.controller.GalleryEdit.html">wp.media.controller.GalleryEdit</a></li><li><a href="wp.media.controller.ImageDetails.html">wp.media.controller.ImageDetails</a></li><li><a href="wp.media.controller.Library.html">wp.media.controller.Library</a></li><li><a href="wp.media.controller.Region.html">wp.media.controller.Region</a></li><li><a href="wp.media.controller.ReplaceImage.html">wp.media.controller.ReplaceImage</a></li><li><a href="wp.media.controller.SiteIconCropper.html">wp.media.controller.SiteIconCropper</a></li><li><a href="wp.media.controller.State.html">wp.media.controller.State</a></li><li><a href="wp.media.model.Attachment.html">wp.media.model.Attachment</a></li><li><a href="wp.media.model.Attachments.html">wp.media.model.Attachments</a></li><li><a href="wp.media.model.PostImage.html">wp.media.model.PostImage</a></li><li><a href="wp.media.model.PostMedia.html">wp.media.model.PostMedia</a></li><li><a href="wp.media.model.Query.html">wp.media.model.Query</a></li><li><a href="wp.media.model.Selection.html">wp.media.model.Selection</a></li><li><a href="wp.media.View_.html">wp.media.View</a></li><li><a href="wp.media.view.Attachment.html">wp.media.view.Attachment</a></li><li><a href="wp.media.view.Attachment.Details.html">wp.media.view.Attachment.Details</a></li><li><a href="wp.media.view.Attachment.Details.TwoColumn.html">wp.media.view.Attachment.Details.TwoColumn</a></li><li><a href="wp.media.view.Attachment.EditLibrary.html">wp.media.view.Attachment.EditLibrary</a></li><li><a href="wp.media.view.Attachment.EditSelection.html">wp.media.view.Attachment.EditSelection</a></li><li><a href="wp.media.view.Attachment.Library.html">wp.media.view.Attachment.Library</a></li><li><a href="wp.media.view.Attachment.Selection.html">wp.media.view.Attachment.Selection</a></li><li><a href="wp.media.view.AttachmentCompat.html">wp.media.view.AttachmentCompat</a></li><li><a href="wp.media.view.AttachmentFilters.html">wp.media.view.AttachmentFilters</a></li><li><a href="wp.media.view.AttachmentFilters.All.html">wp.media.view.AttachmentFilters.All</a></li><li><a href="wp.media.view.AttachmentFilters.DateFilter.html">wp.media.view.AttachmentFilters.DateFilter</a></li><li><a href="wp.media.view.AttachmentFilters.Uploaded.html">wp.media.view.AttachmentFilters.Uploaded</a></li><li><a href="wp.media.view.Attachments.html">wp.media.view.Attachments</a></li><li><a href="wp.media.view.Attachments.Selection.html">wp.media.view.Attachments.Selection</a></li><li><a href="wp.media.view.AttachmentsBrowser.html">wp.media.view.AttachmentsBrowser</a></li><li><a href="wp.media.view.AudioDetails.html">wp.media.view.AudioDetails</a></li><li><a href="wp.media.view.Button.html">wp.media.view.Button</a></li><li><a href="wp.media.view.ButtonGroup.html">wp.media.view.ButtonGroup</a></li><li><a href="wp.media.view.Cropper.html">wp.media.view.Cropper</a></li><li><a href="wp.media.view.DeleteSelected.html">wp.media.view.DeleteSelected</a></li><li><a href="wp.media.view.DeleteSelectedPermanently.html">wp.media.view.DeleteSelectedPermanently</a></li><li><a href="wp.media.view.EditImage.html">wp.media.view.EditImage</a></li><li><a href="wp.media.view.EditImage.Details.html">wp.media.view.EditImage.Details</a></li><li><a href="wp.media.view.EditorUploader.html">wp.media.view.EditorUploader</a></li><li><a href="wp.media.view.Embed.html">wp.media.view.Embed</a></li><li><a href="wp.media.view.EmbedImage.html">wp.media.view.EmbedImage</a></li><li><a href="wp.media.view.EmbedLink.html">wp.media.view.EmbedLink</a></li><li><a href="wp.media.view.EmbedUrl.html">wp.media.view.EmbedUrl</a></li><li><a href="wp.media.view.FocusManager.html">wp.media.view.FocusManager</a></li><li><a href="wp.media.view.Frame.html">wp.media.view.Frame</a></li><li><a href="wp.media.view.Iframe.html">wp.media.view.Iframe</a></li><li><a href="wp.media.view.ImageDetails.html">wp.media.view.ImageDetails</a></li><li><a href="wp.media.view.Label.html">wp.media.view.Label</a></li><li><a href="wp.media.view.MediaDetails.html">wp.media.view.MediaDetails</a></li><li><a href="wp.media.view.MediaFrame.html">wp.media.view.MediaFrame</a></li><li><a href="wp.media.view.MediaFrame.AudioDetails.html">wp.media.view.MediaFrame.AudioDetails</a></li><li><a href="wp.media.view.MediaFrame.EditAttachments.html">wp.media.view.MediaFrame.EditAttachments</a></li><li><a href="wp.media.view.MediaFrame.ImageDetails.html">wp.media.view.MediaFrame.ImageDetails</a></li><li><a href="wp.media.view.MediaFrame.Manage.html">wp.media.view.MediaFrame.Manage</a></li><li><a href="wp.media.view.MediaFrame.Manage.Router.html">wp.media.view.MediaFrame.Manage.Router</a></li><li><a href="wp.media.view.MediaFrame.MediaDetails.html">wp.media.view.MediaFrame.MediaDetails</a></li><li><a href="wp.media.view.MediaFrame.Post.html">wp.media.view.MediaFrame.Post</a></li><li><a href="wp.media.view.MediaFrame.Select.html">wp.media.view.MediaFrame.Select</a></li><li><a href="wp.media.view.MediaFrame.VideoDetails.html">wp.media.view.MediaFrame.VideoDetails</a></li><li><a href="wp.media.view.Menu.html">wp.media.view.Menu</a></li><li><a href="wp.media.view.MenuItem.html">wp.media.view.MenuItem</a></li><li><a href="wp.media.view.Modal.html">wp.media.view.Modal</a></li><li><a href="wp.media.view.PriorityList.html">wp.media.view.PriorityList</a></li><li><a href="wp.media.view.Router.html">wp.media.view.Router</a></li><li><a href="wp.media.view.RouterItem.html">wp.media.view.RouterItem</a></li><li><a href="wp.media.view.Search.html">wp.media.view.Search</a></li><li><a href="wp.media.view.Selection.html">wp.media.view.Selection</a></li><li><a href="wp.media.view.SelectModeToggle.html">wp.media.view.SelectModeToggle</a></li><li><a href="wp.media.view.Settings.html">wp.media.view.Settings</a></li><li><a href="wp.media.view.Settings.AttachmentDisplay.html">wp.media.view.Settings.AttachmentDisplay</a></li><li><a href="wp.media.view.Settings.Gallery.html">wp.media.view.Settings.Gallery</a></li><li><a href="wp.media.view.Settings.Playlist.html">wp.media.view.Settings.Playlist</a></li><li><a href="wp.media.view.Sidebar.html">wp.media.view.Sidebar</a></li><li><a href="wp.media.view.SiteIconCropper.html">wp.media.view.SiteIconCropper</a></li><li><a href="wp.media.view.SiteIconPreview.html">wp.media.view.SiteIconPreview</a></li><li><a href="wp.media.view.Spinner.html">wp.media.view.Spinner</a></li><li><a href="wp.media.view.Toolbar.html">wp.media.view.Toolbar</a></li><li><a href="wp.media.view.Toolbar.Embed.html">wp.media.view.Toolbar.Embed</a></li><li><a href="wp.media.view.Toolbar.Select.html">wp.media.view.Toolbar.Select</a></li><li><a href="wp.media.view.UploaderInline.html">wp.media.view.UploaderInline</a></li><li><a href="wp.media.view.UploaderStatus.html">wp.media.view.UploaderStatus</a></li><li><a href="wp.media.view.UploaderStatusError.html">wp.media.view.UploaderStatusError</a></li><li><a href="wp.media.view.UploaderWindow.html">wp.media.view.UploaderWindow</a></li><li><a href="wp.media.view.VideoDetails.html">wp.media.view.VideoDetails</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_audio.html">wp.mediaWidgets.controlConstructors.media_audio</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_gallery.html">wp.mediaWidgets.controlConstructors.media_gallery</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_video.html">wp.mediaWidgets.controlConstructors.media_video</a></li><li><a href="wp.mediaWidgets.controlConstructors-AudioDetailsMediaFrame.html">wp.mediaWidgets.controlConstructors~AudioDetailsMediaFrame</a></li><li><a href="wp.mediaWidgets.controlConstructors-VideoDetailsMediaFrame.html">wp.mediaWidgets.controlConstructors~VideoDetailsMediaFrame</a></li><li><a href="wp.mediaWidgets.MediaEmbedView.html">wp.mediaWidgets.MediaEmbedView</a></li><li><a href="wp.mediaWidgets.MediaFrameSelect.html">wp.mediaWidgets.MediaFrameSelect</a></li><li><a href="wp.mediaWidgets.MediaWidgetControl.html">wp.mediaWidgets.MediaWidgetControl</a></li><li><a href="wp.mediaWidgets.MediaWidgetModel.html">wp.mediaWidgets.MediaWidgetModel</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_audio.html">wp.mediaWidgets.modelConstructors.media_audio</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_gallery.html">wp.mediaWidgets.modelConstructors.media_gallery</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_image.html">wp.mediaWidgets.modelConstructors.media_image</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_video.html">wp.mediaWidgets.modelConstructors.media_video</a></li><li><a href="wp.mediaWidgets.PersistentDisplaySettingsLibrary.html">wp.mediaWidgets.PersistentDisplaySettingsLibrary</a></li><li><a href="wp.mediaWidgets-Constructor.html">wp.mediaWidgets~Constructor</a></li><li><a href="wp.mediaWidgets-GalleryDetailsMediaFrame.html">wp.mediaWidgets~GalleryDetailsMediaFrame</a></li><li><a href="wp.NativeHandler.html">wp.NativeHandler</a></li><li><a href="wp.textWidgets.TextWidgetControl.html">wp.textWidgets.TextWidgetControl</a></li><li><a href="wp.utils.wordcounter.html">wp.utils.wordcounter</a></li><li><a href="wp.YouTubeHandler.html">wp.YouTubeHandler</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">Mixins<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="wp.media.controller.StateMachine.html">wp.media.controller.StateMachine</a></li><li><a href="wp.media.mixin.html">wp.media.mixin</a></li><li><a href="wp.media.selectionSync.html">wp.media.selectionSync</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="wp.media.controller.Region.html#event:activate">wp.media.controller.Region#event:activate</a></li><li><a href="wp.media.controller.Region.html#event:create">wp.media.controller.Region#event:create</a></li><li><a href="wp.media.controller.Region.html#event:deactivate">wp.media.controller.Region#event:deactivate</a></li><li><a href="wp.media.controller.Region.html#event:render">wp.media.controller.Region#event:render</a></li><li><a href="wp.media.view.Frame.html#event:%257Bmode%257D:deactivate">wp.media.view.Frame#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.AudioDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.AudioDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.EditAttachments.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.EditAttachments#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.ImageDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.ImageDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Manage.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Manage#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.MediaDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.MediaDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Post.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Post#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Select.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Select#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.VideoDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.VideoDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.controlConstructors-AudioDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.controlConstructors~AudioDetailsMediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.controlConstructors-VideoDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.controlConstructors~VideoDetailsMediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.MediaFrameSelect.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.MediaFrameSelect#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets-GalleryDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets~GalleryDetailsMediaFrame#event:{mode}:deactivate</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#$">$</a></li><li><a href="global.html#_attach">_attach</a></li><li><a href="global.html#_isReady">_isReady</a></li><li><a href="global.html#add">add</a></li><li><a href="global.html#ajaxPopulateWidgets">ajaxPopulateWidgets</a></li><li><a href="global.html#ajaxWidgets">ajaxWidgets</a></li><li><a href="global.html#all">all</a></li><li><a href="global.html#array_unique_noempty">array_unique_noempty</a></li><li><a href="global.html#clearFilters">clearFilters</a></li><li><a href="global.html#commentReply">commentReply</a></li><li><a href="global.html#detach">detach</a></li><li><a href="global.html#editPermalink">editPermalink</a></li><li><a href="global.html#filtersChecked">filtersChecked</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#get">get</a></li><li><a href="global.html#insert">insert</a></li><li><a href="global.html#media">media</a></li><li><a href="global.html#out">out</a></li><li><a href="global.html#over">over</a></li><li><a href="global.html#passwordStrength">passwordStrength</a></li><li><a href="global.html#prepare">prepare</a></li><li><a href="global.html#quickPressLoad">quickPressLoad</a></li><li><a href="global.html#ready">ready</a></li><li><a href="global.html#remove">remove</a></li><li><a href="global.html#render">render</a></li><li><a href="global.html#replace">replace</a></li><li><a href="global.html#search">search</a></li><li><a href="global.html#send_to_editor">send_to_editor</a></li><li><a href="global.html#set">set</a></li><li><a href="global.html#setCommentsList">setCommentsList</a></li><li><a href="global.html#tagBox">tagBox</a></li><li><a href="global.html#tb_position">tb_position</a></li><li><a href="global.html#theExtraList">theExtraList</a></li><li><a href="global.html#theList">theList</a></li><li><a href="global.html#unset">unset</a></li><li><a href="global.html#uploader">uploader</a></li><li><a href="global.html#WPRemoveThumbnail">WPRemoveThumbnail</a></li><li><a href="global.html#WPSetThumbnailHTML">WPSetThumbnailHTML</a></li><li><a href="global.html#WPSetThumbnailID">WPSetThumbnailID</a></li><li><a href="global.html#wptitlehint">wptitlehint</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-12">
+	
+		<div id="main">
+			
+
+		<h1 class="page-title">Source: _enqueues/lib/image-edit.js</h1>
+    
+<section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">/**
+ * The functions necessary for editing images.
+ *
+ * @since 2.9.0
+ * @output wp-admin/js/image-edit.js
+ */
+
+ /* global imageEditL10n, ajaxurl, confirm */
+
+(function($) {
+
+	/**
+	 * Contains all the methods to initialise and control the image editor.
+	 *
+	 * @namespace imageEdit
+	 */
+	var imageEdit = window.imageEdit = {
+	iasapi : {},
+	hold : {},
+	postid : '',
+	_view : false,
+
+	/**
+	 * Handle crop tool clicks.
+	 */
+	handleCropToolClick: function( postid, nonce, cropButton ) {
+		var img = $( '#image-preview-' + postid ),
+			selection = this.iasapi.getSelection();
+
+		// Ensure selection is available, otherwise reset to full image.
+		if ( isNaN( selection.x1 ) ) {
+			this.setCropSelection( postid, { 'x1': 0, 'y1': 0, 'x2': img.innerWidth(), 'y2': img.innerHeight(), 'width': img.innerWidth(), 'height': img.innerHeight() } );
+			selection = this.iasapi.getSelection();
+		}
+
+		// If we don't already have a selection, select the entire image.
+		if ( 0 === selection.x1 &amp;&amp; 0 === selection.y1 &amp;&amp; 0 === selection.x2 &amp;&amp; 0 === selection.y2 ) {
+			this.iasapi.setSelection( 0, 0, img.innerWidth(), img.innerHeight(), true );
+			this.iasapi.setOptions( { show: true } );
+			this.iasapi.update();
+		} else {
+
+			// Otherwise, perform the crop.
+			imageEdit.crop( postid, nonce , cropButton );
+		}
+	},
+
+	/**
+	 * Converts a value to an integer.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number} f The float value that should be converted.
+	 *
+	 * @return {number} The integer representation from the float value.
+	 */
+	intval : function(f) {
+		/*
+		 * Bitwise OR operator: one of the obscure ways to truncate floating point figures,
+		 * worth reminding JavaScript doesn't have a distinct "integer" type.
+		 */
+		return f | 0;
+	},
+
+	/**
+	 * Adds the disabled attribute and class to a single form element or a field set.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {jQuery}         el The element that should be modified.
+	 * @param {bool|number}    s  The state for the element. If set to true
+	 *                            the element is disabled,
+	 *                            otherwise the element is enabled.
+	 *                            The function is sometimes called with a 0 or 1
+	 *                            instead of true or false.
+	 *
+	 * @return {void}
+	 */
+	setDisabled : function( el, s ) {
+		/*
+		 * `el` can be a single form element or a fieldset. Before #28864, the disabled state on
+		 * some text fields  was handled targeting $('input', el). Now we need to handle the
+		 * disabled state on buttons too so we can just target `el` regardless if it's a single
+		 * element or a fieldset because when a fieldset is disabled, its descendants are disabled too.
+		 */
+		if ( s ) {
+			el.removeClass( 'disabled' ).prop( 'disabled', false );
+		} else {
+			el.addClass( 'disabled' ).prop( 'disabled', true );
+		}
+	},
+
+	/**
+	 * Initializes the image editor.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number} postid The post id.
+	 *
+	 * @return {void}
+	 */
+	init : function(postid) {
+		var t = this, old = $('#image-editor-' + t.postid),
+			x = t.intval( $('#imgedit-x-' + postid).val() ),
+			y = t.intval( $('#imgedit-y-' + postid).val() );
+
+		if ( t.postid !== postid &amp;&amp; old.length ) {
+			t.close(t.postid);
+		}
+
+		t.hold.w = t.hold.ow = x;
+		t.hold.h = t.hold.oh = y;
+		t.hold.xy_ratio = x / y;
+		t.hold.sizer = parseFloat( $('#imgedit-sizer-' + postid).val() );
+		t.postid = postid;
+		$('#imgedit-response-' + postid).empty();
+
+		$('input[type="text"]', '#imgedit-panel-' + postid).keypress(function(e) {
+			var k = e.keyCode;
+
+			// Key codes 37 through 40 are the arrow keys.
+			if ( 36 &lt; k &amp;&amp; k &lt; 41 ) {
+				$(this).blur();
+			}
+
+			// The key code 13 is the Enter key.
+			if ( 13 === k ) {
+				e.preventDefault();
+				e.stopPropagation();
+				return false;
+			}
+		});
+	},
+
+	/**
+	 * Toggles the wait/load icon in the editor.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number} postid The post id.
+	 * @param {number} toggle Is 0 or 1, fades the icon in then 1 and out when 0.
+	 *
+	 * @return {void}
+	 */
+	toggleEditor : function(postid, toggle) {
+		var wait = $('#imgedit-wait-' + postid);
+
+		if ( toggle ) {
+			wait.fadeIn( 'fast' );
+		} else {
+			wait.fadeOut('fast');
+		}
+	},
+
+	/**
+	 * Shows or hides the image edit help box.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {HTMLElement} el The element to create the help window in.
+	 *
+	 * @return {boolean} Always returns false.
+	 */
+	toggleHelp : function(el) {
+		var $el = $( el );
+		$el
+			.attr( 'aria-expanded', 'false' === $el.attr( 'aria-expanded' ) ? 'true' : 'false' )
+			.parents( '.imgedit-group-top' ).toggleClass( 'imgedit-help-toggled' ).find( '.imgedit-help' ).slideToggle( 'fast' );
+
+		return false;
+	},
+
+	/**
+	 * Gets the value from the image edit target.
+	 *
+	 * The image edit target contains the image sizes where the (possible) changes
+	 * have to be applied to.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number} postid The post id.
+	 *
+	 * @return {string} The value from the imagedit-save-target input field when available,
+	 *                  or 'full' when not available.
+	 */
+	getTarget : function(postid) {
+		return $('input[name="imgedit-target-' + postid + '"]:checked', '#imgedit-save-target-' + postid).val() || 'full';
+	},
+
+	/**
+	 * Recalculates the height or width and keeps the original aspect ratio.
+	 *
+	 * If the original image size is exceeded a red exclamation mark is shown.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number}         postid The current post id.
+	 * @param {number}         x      Is 0 when it applies the y-axis
+	 *                                and 1 when applicable for the x-axis.
+	 * @param {jQuery}         el     Element.
+	 *
+	 * @return {void}
+	 */
+	scaleChanged : function( postid, x, el ) {
+		var w = $('#imgedit-scale-width-' + postid), h = $('#imgedit-scale-height-' + postid),
+		warn = $('#imgedit-scale-warn-' + postid), w1 = '', h1 = '';
+
+		if ( false === this.validateNumeric( el ) ) {
+			return;
+		}
+
+		if ( x ) {
+			h1 = ( w.val() !== '' ) ? Math.round( w.val() / this.hold.xy_ratio ) : '';
+			h.val( h1 );
+		} else {
+			w1 = ( h.val() !== '' ) ? Math.round( h.val() * this.hold.xy_ratio ) : '';
+			w.val( w1 );
+		}
+
+		if ( ( h1 &amp;&amp; h1 > this.hold.oh ) || ( w1 &amp;&amp; w1 > this.hold.ow ) ) {
+			warn.css('visibility', 'visible');
+		} else {
+			warn.css('visibility', 'hidden');
+		}
+	},
+
+	/**
+	 * Gets the selected aspect ratio.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number} postid The post id.
+	 *
+	 * @return {string} The aspect ratio.
+	 */
+	getSelRatio : function(postid) {
+		var x = this.hold.w, y = this.hold.h,
+			X = this.intval( $('#imgedit-crop-width-' + postid).val() ),
+			Y = this.intval( $('#imgedit-crop-height-' + postid).val() );
+
+		if ( X &amp;&amp; Y ) {
+			return X + ':' + Y;
+		}
+
+		if ( x &amp;&amp; y ) {
+			return x + ':' + y;
+		}
+
+		return '1:1';
+	},
+
+	/**
+	 * Removes the last action from the image edit history.
+	 * The history consist of (edit) actions performed on the image.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number} postid  The post id.
+	 * @param {number} setSize 0 or 1, when 1 the image resets to its original size.
+	 *
+	 * @return {string} JSON string containing the history or an empty string if no history exists.
+	 */
+	filterHistory : function(postid, setSize) {
+		// Apply undo state to history.
+		var history = $('#imgedit-history-' + postid).val(), pop, n, o, i, op = [];
+
+		if ( history !== '' ) {
+			// Read the JSON string with the image edit history.
+			history = JSON.parse(history);
+			pop = this.intval( $('#imgedit-undone-' + postid).val() );
+			if ( pop > 0 ) {
+				while ( pop > 0 ) {
+					history.pop();
+					pop--;
+				}
+			}
+
+			// Reset size to it's original state.
+			if ( setSize ) {
+				if ( !history.length ) {
+					this.hold.w = this.hold.ow;
+					this.hold.h = this.hold.oh;
+					return '';
+				}
+
+				// Restore original 'o'.
+				o = history[history.length - 1];
+
+				// c = 'crop', r = 'rotate', f = 'flip'.
+				o = o.c || o.r || o.f || false;
+
+				if ( o ) {
+					// fw = Full image width.
+					this.hold.w = o.fw;
+					// fh = Full image height.
+					this.hold.h = o.fh;
+				}
+			}
+
+			// Filter the last step/action from the history.
+			for ( n in history ) {
+				i = history[n];
+				if ( i.hasOwnProperty('c') ) {
+					op[n] = { 'c': { 'x': i.c.x, 'y': i.c.y, 'w': i.c.w, 'h': i.c.h } };
+				} else if ( i.hasOwnProperty('r') ) {
+					op[n] = { 'r': i.r.r };
+				} else if ( i.hasOwnProperty('f') ) {
+					op[n] = { 'f': i.f.f };
+				}
+			}
+			return JSON.stringify(op);
+		}
+		return '';
+	},
+	/**
+	 * Binds the necessary events to the image.
+	 *
+	 * When the image source is reloaded the image will be reloaded.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number}   postid   The post id.
+	 * @param {string}   nonce    The nonce to verify the request.
+	 * @param {function} callback Function to execute when the image is loaded.
+	 *
+	 * @return {void}
+	 */
+	refreshEditor : function(postid, nonce, callback) {
+		var t = this, data, img;
+
+		t.toggleEditor(postid, 1);
+		data = {
+			'action': 'imgedit-preview',
+			'_ajax_nonce': nonce,
+			'postid': postid,
+			'history': t.filterHistory(postid, 1),
+			'rand': t.intval(Math.random() * 1000000)
+		};
+
+		img = $( '&lt;img id="image-preview-' + postid + '" alt="" />' )
+			.on( 'load', { history: data.history }, function( event ) {
+				var max1, max2,
+					parent = $( '#imgedit-crop-' + postid ),
+					t = imageEdit,
+					historyObj;
+
+				// Checks if there already is some image-edit history.
+				if ( '' !== event.data.history ) {
+					historyObj = JSON.parse( event.data.history );
+					// If last executed action in history is a crop action.
+					if ( historyObj[historyObj.length - 1].hasOwnProperty( 'c' ) ) {
+						/*
+						 * A crop action has completed and the crop button gets disabled
+						 * ensure the undo button is enabled.
+						 */
+						t.setDisabled( $( '#image-undo-' + postid) , true );
+						// Move focus to the undo button to avoid a focus loss.
+						$( '#image-undo-' + postid ).focus();
+					}
+				}
+
+				parent.empty().append(img);
+
+				// w, h are the new full size dimensions.
+				max1 = Math.max( t.hold.w, t.hold.h );
+				max2 = Math.max( $(img).width(), $(img).height() );
+				t.hold.sizer = max1 > max2 ? max2 / max1 : 1;
+
+				t.initCrop(postid, img, parent);
+
+				if ( (typeof callback !== 'undefined') &amp;&amp; callback !== null ) {
+					callback();
+				}
+
+				if ( $('#imgedit-history-' + postid).val() &amp;&amp; $('#imgedit-undone-' + postid).val() === '0' ) {
+					$('input.imgedit-submit-btn', '#imgedit-panel-' + postid).removeAttr('disabled');
+				} else {
+					$('input.imgedit-submit-btn', '#imgedit-panel-' + postid).prop('disabled', true);
+				}
+
+				t.toggleEditor(postid, 0);
+			})
+			.on('error', function() {
+				$('#imgedit-crop-' + postid).empty().append('&lt;div class="error">&lt;p>' + imageEditL10n.error + '&lt;/p>&lt;/div>');
+				t.toggleEditor(postid, 0);
+			})
+			.attr('src', ajaxurl + '?' + $.param(data));
+	},
+	/**
+	 * Performs an image edit action.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param  {number}  postid The post id.
+	 * @param  {string}  nonce  The nonce to verify the request.
+	 * @param  {string}  action The action to perform on the image.
+	 *                          The possible actions are: "scale" and "restore".
+	 *
+	 * @return {boolean|void} Executes a post request that refreshes the page
+	 *                        when the action is performed.
+	 *                        Returns false if a invalid action is given,
+	 *                        or when the action cannot be performed.
+	 */
+	action : function(postid, nonce, action) {
+		var t = this, data, w, h, fw, fh;
+
+		if ( t.notsaved(postid) ) {
+			return false;
+		}
+
+		data = {
+			'action': 'image-editor',
+			'_ajax_nonce': nonce,
+			'postid': postid
+		};
+
+		if ( 'scale' === action ) {
+			w = $('#imgedit-scale-width-' + postid),
+			h = $('#imgedit-scale-height-' + postid),
+			fw = t.intval(w.val()),
+			fh = t.intval(h.val());
+
+			if ( fw &lt; 1 ) {
+				w.focus();
+				return false;
+			} else if ( fh &lt; 1 ) {
+				h.focus();
+				return false;
+			}
+
+			if ( fw === t.hold.ow || fh === t.hold.oh ) {
+				return false;
+			}
+
+			data['do'] = 'scale';
+			data.fwidth = fw;
+			data.fheight = fh;
+		} else if ( 'restore' === action ) {
+			data['do'] = 'restore';
+		} else {
+			return false;
+		}
+
+		t.toggleEditor(postid, 1);
+		$.post(ajaxurl, data, function(r) {
+			$('#image-editor-' + postid).empty().append(r);
+			t.toggleEditor(postid, 0);
+			// Refresh the attachment model so that changes propagate.
+			if ( t._view ) {
+				t._view.refresh();
+			}
+		});
+	},
+
+	/**
+	 * Stores the changes that are made to the image.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number}  postid   The post id to get the image from the database.
+	 * @param {string}  nonce    The nonce to verify the request.
+	 *
+	 * @return {boolean|void}  If the actions are successfully saved a response message is shown.
+	 *                         Returns false if there is no image editing history,
+	 *                         thus there are not edit-actions performed on the image.
+	 */
+	save : function(postid, nonce) {
+		var data,
+			target = this.getTarget(postid),
+			history = this.filterHistory(postid, 0),
+			self = this;
+
+		if ( '' === history ) {
+			return false;
+		}
+
+		this.toggleEditor(postid, 1);
+		data = {
+			'action': 'image-editor',
+			'_ajax_nonce': nonce,
+			'postid': postid,
+			'history': history,
+			'target': target,
+			'context': $('#image-edit-context').length ? $('#image-edit-context').val() : null,
+			'do': 'save'
+		};
+		// Post the image edit data to the backend.
+		$.post(ajaxurl, data, function(r) {
+			// Read the response.
+			var ret = JSON.parse(r);
+
+			// If a response is returned, close the editor and show an error.
+			if ( ret.error ) {
+				$('#imgedit-response-' + postid).html('&lt;div class="error">&lt;p>' + ret.error + '&lt;/p>&lt;/div>');
+				imageEdit.close(postid);
+				return;
+			}
+
+			if ( ret.fw &amp;&amp; ret.fh ) {
+				$('#media-dims-' + postid).html( ret.fw + ' &amp;times; ' + ret.fh );
+			}
+
+			if ( ret.thumbnail ) {
+				$('.thumbnail', '#thumbnail-head-' + postid).attr('src', ''+ret.thumbnail);
+			}
+
+			if ( ret.msg ) {
+				$('#imgedit-response-' + postid).html('&lt;div class="updated">&lt;p>' + ret.msg + '&lt;/p>&lt;/div>');
+			}
+
+			if ( self._view ) {
+				self._view.save();
+			} else {
+				imageEdit.close(postid);
+			}
+		});
+	},
+
+	/**
+	 * Creates the image edit window.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number} postid   The post id for the image.
+	 * @param {string} nonce    The nonce to verify the request.
+	 * @param {object} view     The image editor view to be used for the editing.
+	 *
+	 * @return {void|promise} Either returns void if the button was already activated
+	 *                        or returns an instance of the image editor, wrapped in a promise.
+	 */
+	open : function( postid, nonce, view ) {
+		this._view = view;
+
+		var dfd, data, elem = $('#image-editor-' + postid), head = $('#media-head-' + postid),
+			btn = $('#imgedit-open-btn-' + postid), spin = btn.siblings('.spinner');
+
+		/*
+		 * Instead of disabling the button, which causes a focus loss and makes screen
+		 * readers announce "unavailable", return if the button was already clicked.
+		 */
+		if ( btn.hasClass( 'button-activated' ) ) {
+			return;
+		}
+
+		spin.addClass( 'is-active' );
+
+		data = {
+			'action': 'image-editor',
+			'_ajax_nonce': nonce,
+			'postid': postid,
+			'do': 'open'
+		};
+
+		dfd = $.ajax({
+			url:  ajaxurl,
+			type: 'post',
+			data: data,
+			beforeSend: function() {
+				btn.addClass( 'button-activated' );
+			}
+		}).done(function( html ) {
+			elem.html( html );
+			head.fadeOut('fast', function(){
+				elem.fadeIn('fast');
+				btn.removeClass( 'button-activated' );
+				spin.removeClass( 'is-active' );
+			});
+			// Initialise the Image Editor now that everything is ready.
+			imageEdit.init( postid );
+		});
+
+		return dfd;
+	},
+
+	/**
+	 * Initializes the cropping tool and sets a default cropping selection.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number} postid The post id.
+	 *
+	 * @return {void}
+	 */
+	imgLoaded : function(postid) {
+		var img = $('#image-preview-' + postid), parent = $('#imgedit-crop-' + postid);
+
+		// Ensure init has run even when directly loaded.
+		if ( 'undefined' === typeof this.hold.sizer ) {
+			this.init( postid );
+		}
+
+		this.initCrop(postid, img, parent);
+		this.setCropSelection( postid, { 'x1': 0, 'y1': 0, 'x2': 0, 'y2': 0, 'width': img.innerWidth(), 'height': img.innerHeight() } );
+
+		this.toggleEditor(postid, 0);
+		// Editor is ready, move focus to the first focusable element.
+		$( '.imgedit-wrap .imgedit-help-toggle' ).eq( 0 ).focus();
+	},
+
+	/**
+	 * Initializes the cropping tool.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number}      postid The post id.
+	 * @param {HTMLElement} image  The preview image.
+	 * @param {HTMLElement} parent The preview image container.
+	 *
+	 * @return {void}
+	 */
+	initCrop : function(postid, image, parent) {
+		var t = this,
+			selW = $('#imgedit-sel-width-' + postid),
+			selH = $('#imgedit-sel-height-' + postid),
+			$image = $( image ),
+			$img;
+
+		// Already initialized?
+		if ( $image.data( 'imgAreaSelect' ) ) {
+			return;
+		}
+
+		t.iasapi = $image.imgAreaSelect({
+			parent: parent,
+			instance: true,
+			handles: true,
+			keys: true,
+			minWidth: 3,
+			minHeight: 3,
+
+			/**
+			 * Sets the CSS styles and binds events for locking the aspect ratio.
+			 *
+			 * @ignore
+			 *
+			 * @param {jQuery} img The preview image.
+			 */
+			onInit: function( img ) {
+				// Ensure that the imgAreaSelect wrapper elements are position:absolute
+				// (even if we're in a position:fixed modal).
+				$img = $( img );
+				$img.next().css( 'position', 'absolute' )
+					.nextAll( '.imgareaselect-outer' ).css( 'position', 'absolute' );
+				/**
+				 * Binds mouse down event to the cropping container.
+				 *
+				 * @return {void}
+				 */
+				parent.children().on( 'mousedown, touchstart', function(e){
+					var ratio = false, sel, defRatio;
+
+					if ( e.shiftKey ) {
+						sel = t.iasapi.getSelection();
+						defRatio = t.getSelRatio(postid);
+						ratio = ( sel &amp;&amp; sel.width &amp;&amp; sel.height ) ? sel.width + ':' + sel.height : defRatio;
+					}
+
+					t.iasapi.setOptions({
+						aspectRatio: ratio
+					});
+				});
+			},
+
+			/**
+			 * Event triggered when starting a selection.
+			 *
+			 * @ignore
+			 *
+			 * @return {void}
+			 */
+			onSelectStart: function() {
+				imageEdit.setDisabled($('#imgedit-crop-sel-' + postid), 1);
+			},
+			/**
+			 * Event triggered when the selection is ended.
+			 *
+			 * @ignore
+			 *
+			 * @param {object} img jQuery object representing the image.
+			 * @param {object} c   The selection.
+			 *
+			 * @return {object}
+			 */
+			onSelectEnd: function(img, c) {
+				imageEdit.setCropSelection(postid, c);
+			},
+
+			/**
+			 * Event triggered when the selection changes.
+			 *
+			 * @ignore
+			 *
+			 * @param {object} img jQuery object representing the image.
+			 * @param {object} c   The selection.
+			 *
+			 * @return {void}
+			 */
+			onSelectChange: function(img, c) {
+				var sizer = imageEdit.hold.sizer;
+				selW.val( imageEdit.round(c.width / sizer) );
+				selH.val( imageEdit.round(c.height / sizer) );
+			}
+		});
+	},
+
+	/**
+	 * Stores the current crop selection.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number} postid The post id.
+	 * @param {object} c      The selection.
+	 *
+	 * @return {boolean}
+	 */
+	setCropSelection : function(postid, c) {
+		var sel;
+
+		c = c || 0;
+
+		if ( !c || ( c.width &lt; 3 &amp;&amp; c.height &lt; 3 ) ) {
+			this.setDisabled( $( '.imgedit-crop', '#imgedit-panel-' + postid ), 1 );
+			this.setDisabled( $( '#imgedit-crop-sel-' + postid ), 1 );
+			$('#imgedit-sel-width-' + postid).val('');
+			$('#imgedit-sel-height-' + postid).val('');
+			$('#imgedit-selection-' + postid).val('');
+			return false;
+		}
+
+		sel = { 'x': c.x1, 'y': c.y1, 'w': c.width, 'h': c.height };
+		this.setDisabled($('.imgedit-crop', '#imgedit-panel-' + postid), 1);
+		$('#imgedit-selection-' + postid).val( JSON.stringify(sel) );
+	},
+
+
+	/**
+	 * Closes the image editor.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number}  postid The post id.
+	 * @param {bool}    warn   Warning message.
+	 *
+	 * @return {void|bool} Returns false if there is a warning.
+	 */
+	close : function(postid, warn) {
+		warn = warn || false;
+
+		if ( warn &amp;&amp; this.notsaved(postid) ) {
+			return false;
+		}
+
+		this.iasapi = {};
+		this.hold = {};
+
+		// If we've loaded the editor in the context of a Media Modal,
+		// then switch to the previous view, whatever that might have been.
+		if ( this._view ){
+			this._view.back();
+		}
+
+		// In case we are not accessing the image editor in the context of a View,
+		// close the editor the old-school way.
+		else {
+			$('#image-editor-' + postid).fadeOut('fast', function() {
+				$( '#media-head-' + postid ).fadeIn( 'fast', function() {
+					// Move focus back to the Edit Image button. Runs also when saving.
+					$( '#imgedit-open-btn-' + postid ).focus();
+				});
+				$(this).empty();
+			});
+		}
+
+
+	},
+
+	/**
+	 * Checks if the image edit history is saved.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number} postid The post id.
+	 *
+	 * @return {boolean} Returns true if the history is not saved.
+	 */
+	notsaved : function(postid) {
+		var h = $('#imgedit-history-' + postid).val(),
+			history = ( h !== '' ) ? JSON.parse(h) : [],
+			pop = this.intval( $('#imgedit-undone-' + postid).val() );
+
+		if ( pop &lt; history.length ) {
+			if ( confirm( $('#imgedit-leaving-' + postid).html() ) ) {
+				return false;
+			}
+			return true;
+		}
+		return false;
+	},
+
+	/**
+	 * Adds an image edit action to the history.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {object} op     The original position.
+	 * @param {number} postid The post id.
+	 * @param {string} nonce  The nonce.
+	 *
+	 * @return {void}
+	 */
+	addStep : function(op, postid, nonce) {
+		var t = this, elem = $('#imgedit-history-' + postid),
+			history = ( elem.val() !== '' ) ? JSON.parse( elem.val() ) : [],
+			undone = $( '#imgedit-undone-' + postid ),
+			pop = t.intval( undone.val() );
+
+		while ( pop > 0 ) {
+			history.pop();
+			pop--;
+		}
+		undone.val(0); // Reset.
+
+		history.push(op);
+		elem.val( JSON.stringify(history) );
+
+		t.refreshEditor(postid, nonce, function() {
+			t.setDisabled($('#image-undo-' + postid), true);
+			t.setDisabled($('#image-redo-' + postid), false);
+		});
+	},
+
+	/**
+	 * Rotates the image.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {string} angle  The angle the image is rotated with.
+	 * @param {number} postid The post id.
+	 * @param {string} nonce  The nonce.
+	 * @param {object} t      The target element.
+	 *
+	 * @return {boolean}
+	 */
+	rotate : function(angle, postid, nonce, t) {
+		if ( $(t).hasClass('disabled') ) {
+			return false;
+		}
+
+		this.addStep({ 'r': { 'r': angle, 'fw': this.hold.h, 'fh': this.hold.w }}, postid, nonce);
+	},
+
+	/**
+	 * Flips the image.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number} axis   The axle the image is flipped on.
+	 * @param {number} postid The post id.
+	 * @param {string} nonce  The nonce.
+	 * @param {object} t      The target element.
+	 *
+	 * @return {boolean}
+	 */
+	flip : function (axis, postid, nonce, t) {
+		if ( $(t).hasClass('disabled') ) {
+			return false;
+		}
+
+		this.addStep({ 'f': { 'f': axis, 'fw': this.hold.w, 'fh': this.hold.h }}, postid, nonce);
+	},
+
+	/**
+	 * Crops the image.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number} postid The post id.
+	 * @param {string} nonce  The nonce.
+	 * @param {object} t      The target object.
+	 *
+	 * @return {void|boolean} Returns false if the crop button is disabled.
+	 */
+	crop : function (postid, nonce, t) {
+		var sel = $('#imgedit-selection-' + postid).val(),
+			w = this.intval( $('#imgedit-sel-width-' + postid).val() ),
+			h = this.intval( $('#imgedit-sel-height-' + postid).val() );
+
+		if ( $(t).hasClass('disabled') || sel === '' ) {
+			return false;
+		}
+
+		sel = JSON.parse(sel);
+		if ( sel.w > 0 &amp;&amp; sel.h > 0 &amp;&amp; w > 0 &amp;&amp; h > 0 ) {
+			sel.fw = w;
+			sel.fh = h;
+			this.addStep({ 'c': sel }, postid, nonce);
+		}
+	},
+
+	/**
+	 * Undoes an image edit action.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number} postid   The post id.
+	 * @param {string} nonce    The nonce.
+	 *
+	 * @return {void|false} Returns false if the undo button is disabled.
+	 */
+	undo : function (postid, nonce) {
+		var t = this, button = $('#image-undo-' + postid), elem = $('#imgedit-undone-' + postid),
+			pop = t.intval( elem.val() ) + 1;
+
+		if ( button.hasClass('disabled') ) {
+			return;
+		}
+
+		elem.val(pop);
+		t.refreshEditor(postid, nonce, function() {
+			var elem = $('#imgedit-history-' + postid),
+				history = ( elem.val() !== '' ) ? JSON.parse( elem.val() ) : [];
+
+			t.setDisabled($('#image-redo-' + postid), true);
+			t.setDisabled(button, pop &lt; history.length);
+			// When undo gets disabled, move focus to the redo button to avoid a focus loss.
+			if ( history.length === pop ) {
+				$( '#image-redo-' + postid ).focus();
+			}
+		});
+	},
+
+	/**
+	 * Reverts a undo action.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number} postid The post id.
+	 * @param {string} nonce  The nonce.
+	 *
+	 * @return {void}
+	 */
+	redo : function(postid, nonce) {
+		var t = this, button = $('#image-redo-' + postid), elem = $('#imgedit-undone-' + postid),
+			pop = t.intval( elem.val() ) - 1;
+
+		if ( button.hasClass('disabled') ) {
+			return;
+		}
+
+		elem.val(pop);
+		t.refreshEditor(postid, nonce, function() {
+			t.setDisabled($('#image-undo-' + postid), true);
+			t.setDisabled(button, pop > 0);
+			// When redo gets disabled, move focus to the undo button to avoid a focus loss.
+			if ( 0 === pop ) {
+				$( '#image-undo-' + postid ).focus();
+			}
+		});
+	},
+
+	/**
+	 * Sets the selection for the height and width in pixels.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number} postid The post id.
+	 * @param {jQuery} el     The element containing the values.
+	 *
+	 * @return {void|boolean} Returns false when the x or y value is lower than 1,
+	 *                        void when the value is not numeric or when the operation
+	 *                        is successful.
+	 */
+	setNumSelection : function( postid, el ) {
+		var sel, elX = $('#imgedit-sel-width-' + postid), elY = $('#imgedit-sel-height-' + postid),
+			x = this.intval( elX.val() ), y = this.intval( elY.val() ),
+			img = $('#image-preview-' + postid), imgh = img.height(), imgw = img.width(),
+			sizer = this.hold.sizer, x1, y1, x2, y2, ias = this.iasapi;
+
+		if ( false === this.validateNumeric( el ) ) {
+			return;
+		}
+
+		if ( x &lt; 1 ) {
+			elX.val('');
+			return false;
+		}
+
+		if ( y &lt; 1 ) {
+			elY.val('');
+			return false;
+		}
+
+		if ( x &amp;&amp; y &amp;&amp; ( sel = ias.getSelection() ) ) {
+			x2 = sel.x1 + Math.round( x * sizer );
+			y2 = sel.y1 + Math.round( y * sizer );
+			x1 = sel.x1;
+			y1 = sel.y1;
+
+			if ( x2 > imgw ) {
+				x1 = 0;
+				x2 = imgw;
+				elX.val( Math.round( x2 / sizer ) );
+			}
+
+			if ( y2 > imgh ) {
+				y1 = 0;
+				y2 = imgh;
+				elY.val( Math.round( y2 / sizer ) );
+			}
+
+			ias.setSelection( x1, y1, x2, y2 );
+			ias.update();
+			this.setCropSelection(postid, ias.getSelection());
+		}
+	},
+
+	/**
+	 * Rounds a number to a whole.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number} num The number.
+	 *
+	 * @return {number} The number rounded to a whole number.
+	 */
+	round : function(num) {
+		var s;
+		num = Math.round(num);
+
+		if ( this.hold.sizer > 0.6 ) {
+			return num;
+		}
+
+		s = num.toString().slice(-1);
+
+		if ( '1' === s ) {
+			return num - 1;
+		} else if ( '9' === s ) {
+			return num + 1;
+		}
+
+		return num;
+	},
+
+	/**
+	 * Sets a locked aspect ratio for the selection.
+	 *
+	 * @since 2.9.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {number} postid     The post id.
+	 * @param {number} n          The ratio to set.
+	 * @param {jQuery} el         The element containing the values.
+	 *
+	 * @return {void}
+	 */
+	setRatioSelection : function(postid, n, el) {
+		var sel, r, x = this.intval( $('#imgedit-crop-width-' + postid).val() ),
+			y = this.intval( $('#imgedit-crop-height-' + postid).val() ),
+			h = $('#image-preview-' + postid).height();
+
+		if ( false === this.validateNumeric( el ) ) {
+			this.iasapi.setOptions({
+				aspectRatio: null
+			});
+
+			return;
+		}
+
+		if ( x &amp;&amp; y ) {
+			this.iasapi.setOptions({
+				aspectRatio: x + ':' + y
+			});
+
+			if ( sel = this.iasapi.getSelection(true) ) {
+				r = Math.ceil( sel.y1 + ( ( sel.x2 - sel.x1 ) / ( x / y ) ) );
+
+				if ( r > h ) {
+					r = h;
+					if ( n ) {
+						$('#imgedit-crop-height-' + postid).val('');
+					} else {
+						$('#imgedit-crop-width-' + postid).val('');
+					}
+				}
+
+				this.iasapi.setSelection( sel.x1, sel.y1, sel.x2, r );
+				this.iasapi.update();
+			}
+		}
+	},
+
+	/**
+	 * Validates if a value in a jQuery.HTMLElement is numeric.
+	 *
+	 * @since 4.6.0
+	 *
+	 * @memberof imageEdit
+	 *
+	 * @param {jQuery} el The html element.
+	 *
+	 * @return {void|boolean} Returns false if the value is not numeric,
+	 *                        void when it is.
+	 */
+	validateNumeric: function( el ) {
+		if ( ! this.intval( $( el ).val() ) ) {
+			$( el ).val( '' );
+			return false;
+		}
+	}
+};
+})(jQuery);
+</pre>
+    </article>
+</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a>
+	
+		on 2020-06-17T11:56:25+00:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

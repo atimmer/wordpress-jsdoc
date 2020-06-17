@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Documentation Source: _enqueues/admin/inline-edit-post.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.united.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Documentation</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="addComment.html">addComment</a></li><li><a href="commentsBox.html">commentsBox</a></li><li><a href="findPosts.html">findPosts</a></li><li><a href="imageEdit.html">imageEdit</a></li><li><a href="inlineEditPost.html">inlineEditPost</a></li><li><a href="inlineEditTax.html">inlineEditTax</a></li><li><a href="postboxes.html">postboxes</a></li><li><a href="switchEditors.html">switchEditors</a></li><li><a href="wp.html">wp</a></li><li><a href="wp.a11y.html">wp.a11y</a></li><li><a href="wp.api.html">wp.api</a></li><li><a href="wp.api.collections.html">wp.api.collections</a></li><li><a href="wp.api.models.html">wp.api.models</a></li><li><a href="wp.api.utils.html">wp.api.utils</a></li><li><a href="wp.api.views.html">wp.api.views</a></li><li><a href="wp.Backbone.html">wp.Backbone</a></li><li><a href="wp.codeEditor.html">wp.codeEditor</a></li><li><a href="wp.communityEvents.html">wp.communityEvents</a></li><li><a href="wp.customHtmlWidget.html">wp.customHtmlWidget</a></li><li><a href="wp.customize.html">wp.customize</a></li><li><a href="wp.customize.HeaderTool.html">wp.customize.HeaderTool</a></li><li><a href="wp.customize.Menus.html">wp.customize.Menus</a></li><li><a href="wp.customize.navMenusPreview.html">wp.customize.navMenusPreview</a></li><li><a href="wp.customize.selectiveRefresh.html">wp.customize.selectiveRefresh</a></li><li><a href="wp.customize.utils.html">wp.customize.utils</a></li><li><a href="wp.customize.Widgets.html">wp.customize.Widgets</a></li><li><a href="wp.customize.widgetsPreview.html">wp.customize.widgetsPreview</a></li><li><a href="wp.emoji.html">wp.emoji</a></li><li><a href="wp.heartbeat.html">wp.heartbeat</a></li><li><a href="wp.media.html">wp.media</a></li><li><a href="wp.media.audio.html">wp.media.audio</a></li><li><a href="wp.media.controller.html">wp.media.controller</a></li><li><a href="wp.media.editor.html">wp.media.editor</a></li><li><a href="wp.media.editor.send.html">wp.media.editor.send</a></li><li><a href="wp.media.featuredImage.html">wp.media.featuredImage</a></li><li><a href="wp.media.frames.html">wp.media.frames</a></li><li><a href="wp.media.model.html">wp.media.model</a></li><li><a href="wp.media.model.Attachments.filters.html">wp.media.model.Attachments.filters</a></li><li><a href="wp.media.string.html">wp.media.string</a></li><li><a href="wp.media.video.html">wp.media.video</a></li><li><a href="wp.media.view.html">wp.media.view</a></li><li><a href="wp.mediaWidgets.html">wp.mediaWidgets</a></li><li><a href="wp.passwordStrength.html">wp.passwordStrength</a></li><li><a href="wp.textWidgets.html">wp.textWidgets</a></li><li><a href="wp.updates.html">wp.updates</a></li><li><a href="wp.utils.html">wp.utils</a></li><li><a href="wpNavMenu.html">wpNavMenu</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="-_.html"></a></li><li><a href="$.widget.wp.pointer.html">$.widget.wp.pointer</a></li><li><a href="$.widget.wp.wpColorPicker.html">$.widget.wp.wpColorPicker</a></li><li><a href="Heading.html">Heading</a></li><li><a href="wp.Backbone.Subviews.html">wp.Backbone.Subviews</a></li><li><a href="wp.BaseHandler.html">wp.BaseHandler</a></li><li><a href="wp.CustomHeader.html">wp.CustomHeader</a></li><li><a href="wp.customHtmlWidgets.CustomHtmlWidgetControl.html">wp.customHtmlWidgets.CustomHtmlWidgetControl</a></li><li><a href="wp.customize.BackgroundControl.html">wp.customize.BackgroundControl</a></li><li><a href="wp.customize.BackgroundPositionControl.html">wp.customize.BackgroundPositionControl</a></li><li><a href="wp.customize.CodeEditorControl.html">wp.customize.CodeEditorControl</a></li><li><a href="wp.customize.ColorControl.html">wp.customize.ColorControl</a></li><li><a href="wp.customize.Control.html">wp.customize.Control</a></li><li><a href="wp.customize.CroppedImageControl.html">wp.customize.CroppedImageControl</a></li><li><a href="wp.customize.DateTimeControl.html">wp.customize.DateTimeControl</a></li><li><a href="wp.customize.Element.html">wp.customize.Element</a></li><li><a href="wp.customize.HeaderControl.html">wp.customize.HeaderControl</a></li><li><a href="wp.customize.HeaderTool.ChoiceList.html">wp.customize.HeaderTool.ChoiceList</a></li><li><a href="wp.customize.HeaderTool.ChoiceListView.html">wp.customize.HeaderTool.ChoiceListView</a></li><li><a href="wp.customize.HeaderTool.ChoiceView.html">wp.customize.HeaderTool.ChoiceView</a></li><li><a href="wp.customize.HeaderTool.CombinedList.html">wp.customize.HeaderTool.CombinedList</a></li><li><a href="wp.customize.HeaderTool.CurrentView.html">wp.customize.HeaderTool.CurrentView</a></li><li><a href="wp.customize.HeaderTool.DefaultsList.html">wp.customize.HeaderTool.DefaultsList</a></li><li><a href="wp.customize.HeaderTool.ImageModel.html">wp.customize.HeaderTool.ImageModel</a></li><li><a href="wp.customize.ImageControl.html">wp.customize.ImageControl</a></li><li><a href="wp.customize.Loader.html">wp.customize.Loader</a></li><li><a href="wp.customize.MediaControl.html">wp.customize.MediaControl</a></li><li><a href="wp.customize.Menus.AvailableItemCollection.html">wp.customize.Menus.AvailableItemCollection</a></li><li><a href="wp.customize.Menus.AvailableItemModel.html">wp.customize.Menus.AvailableItemModel</a></li><li><a href="wp.customize.Menus.AvailableMenuItemsPanelView.html">wp.customize.Menus.AvailableMenuItemsPanelView</a></li><li><a href="wp.customize.Menus.MenuAutoAddControl.html">wp.customize.Menus.MenuAutoAddControl</a></li><li><a href="wp.customize.Menus.MenuControl.html">wp.customize.Menus.MenuControl</a></li><li><a href="wp.customize.Menus.MenuItemControl.html">wp.customize.Menus.MenuItemControl</a></li><li><a href="wp.customize.Menus.MenuLocationControl.html">wp.customize.Menus.MenuLocationControl</a></li><li><a href="wp.customize.Menus.MenuLocationsControl.html">wp.customize.Menus.MenuLocationsControl</a></li><li><a href="wp.customize.Menus.MenuNameControl.html">wp.customize.Menus.MenuNameControl</a></li><li><a href="wp.customize.Menus.MenuSection.html">wp.customize.Menus.MenuSection</a></li><li><a href="wp.customize.Menus.MenusPanel.html">wp.customize.Menus.MenusPanel</a></li><li><a href="wp.customize.Menus.NewMenuSection.html">wp.customize.Menus.NewMenuSection</a></li><li><a href="wp.customize.Messenger.html">wp.customize.Messenger</a></li><li><a href="wp.customize.navMenusPreview.NavMenuInstancePartial.html">wp.customize.navMenusPreview.NavMenuInstancePartial</a></li><li><a href="wp.customize.Notification.html">wp.customize.Notification</a></li><li><a href="wp.customize.Notifications.html">wp.customize.Notifications</a></li><li><a href="wp.customize.OuterSection.html">wp.customize.OuterSection</a></li><li><a href="wp.customize.OverlayNotification.html">wp.customize.OverlayNotification</a></li><li><a href="wp.customize.Panel.html">wp.customize.Panel</a></li><li><a href="wp.customize.Preview.html">wp.customize.Preview</a></li><li><a href="wp.customize.Previewer.html">wp.customize.Previewer</a></li><li><a href="wp.customize.PreviewFrame.html">wp.customize.PreviewFrame</a></li><li><a href="wp.customize.PreviewLinkControl.html">wp.customize.PreviewLinkControl</a></li><li><a href="wp.customize.Section.html">wp.customize.Section</a></li><li><a href="wp.customize.selectiveRefresh.Partial.html">wp.customize.selectiveRefresh.Partial</a></li><li><a href="wp.customize.selectiveRefresh.Placement.html">wp.customize.selectiveRefresh.Placement</a></li><li><a href="wp.customize.Setting.html">wp.customize.Setting</a></li><li><a href="wp.customize.SiteIconControl.html">wp.customize.SiteIconControl</a></li><li><a href="wp.customize.ThemeControl.html">wp.customize.ThemeControl</a></li><li><a href="wp.customize.ThemesPanel.html">wp.customize.ThemesPanel</a></li><li><a href="wp.customize.ThemesSection.html">wp.customize.ThemesSection</a></li><li><a href="wp.customize.UploadControl.html">wp.customize.UploadControl</a></li><li><a href="wp.customize.Value.html">wp.customize.Value</a></li><li><a href="wp.customize.Values.html">wp.customize.Values</a></li><li><a href="wp.customize.Widgets.AvailableWidgetsPanelView.html">wp.customize.Widgets.AvailableWidgetsPanelView</a></li><li><a href="wp.customize.Widgets.SidebarCollection.html">wp.customize.Widgets.SidebarCollection</a></li><li><a href="wp.customize.Widgets.SidebarControl.html">wp.customize.Widgets.SidebarControl</a></li><li><a href="wp.customize.Widgets.SidebarModel.html">wp.customize.Widgets.SidebarModel</a></li><li><a href="wp.customize.Widgets.SidebarSection.html">wp.customize.Widgets.SidebarSection</a></li><li><a href="wp.customize.Widgets.WidgetCollection.html">wp.customize.Widgets.WidgetCollection</a></li><li><a href="wp.customize.Widgets.WidgetControl.html">wp.customize.Widgets.WidgetControl</a></li><li><a href="wp.customize.Widgets.WidgetModel.html">wp.customize.Widgets.WidgetModel</a></li><li><a href="wp.customize.Widgets.WidgetsPanel.html">wp.customize.Widgets.WidgetsPanel</a></li><li><a href="wp.customize.widgetsPreview.SidebarPartial.html">wp.customize.widgetsPreview.SidebarPartial</a></li><li><a href="wp.customize.widgetsPreview.WidgetPartial.html">wp.customize.widgetsPreview.WidgetPartial</a></li><li><a href="wp.customize-Container.html">wp.customize~Container</a></li><li><a href="wp.customize-LockedNotification.html">wp.customize~LockedNotification</a></li><li><a href="wp.media.collection.html">wp.media.collection</a></li><li><a href="wp.media.controller.AudioDetails.html">wp.media.controller.AudioDetails</a></li><li><a href="wp.media.controller.CollectionAdd.html">wp.media.controller.CollectionAdd</a></li><li><a href="wp.media.controller.CollectionEdit.html">wp.media.controller.CollectionEdit</a></li><li><a href="wp.media.controller.Cropper.html">wp.media.controller.Cropper</a></li><li><a href="wp.media.controller.CustomizeImageCropper.html">wp.media.controller.CustomizeImageCropper</a></li><li><a href="wp.media.controller.EditAttachmentMetadata.html">wp.media.controller.EditAttachmentMetadata</a></li><li><a href="wp.media.controller.EditImage.html">wp.media.controller.EditImage</a></li><li><a href="wp.media.controller.Embed.html">wp.media.controller.Embed</a></li><li><a href="wp.media.controller.FeaturedImage.html">wp.media.controller.FeaturedImage</a></li><li><a href="wp.media.controller.GalleryAdd.html">wp.media.controller.GalleryAdd</a></li><li><a href="wp.media.controller.GalleryEdit.html">wp.media.controller.GalleryEdit</a></li><li><a href="wp.media.controller.ImageDetails.html">wp.media.controller.ImageDetails</a></li><li><a href="wp.media.controller.Library.html">wp.media.controller.Library</a></li><li><a href="wp.media.controller.Region.html">wp.media.controller.Region</a></li><li><a href="wp.media.controller.ReplaceImage.html">wp.media.controller.ReplaceImage</a></li><li><a href="wp.media.controller.SiteIconCropper.html">wp.media.controller.SiteIconCropper</a></li><li><a href="wp.media.controller.State.html">wp.media.controller.State</a></li><li><a href="wp.media.model.Attachment.html">wp.media.model.Attachment</a></li><li><a href="wp.media.model.Attachments.html">wp.media.model.Attachments</a></li><li><a href="wp.media.model.PostImage.html">wp.media.model.PostImage</a></li><li><a href="wp.media.model.PostMedia.html">wp.media.model.PostMedia</a></li><li><a href="wp.media.model.Query.html">wp.media.model.Query</a></li><li><a href="wp.media.model.Selection.html">wp.media.model.Selection</a></li><li><a href="wp.media.View_.html">wp.media.View</a></li><li><a href="wp.media.view.Attachment.html">wp.media.view.Attachment</a></li><li><a href="wp.media.view.Attachment.Details.html">wp.media.view.Attachment.Details</a></li><li><a href="wp.media.view.Attachment.Details.TwoColumn.html">wp.media.view.Attachment.Details.TwoColumn</a></li><li><a href="wp.media.view.Attachment.EditLibrary.html">wp.media.view.Attachment.EditLibrary</a></li><li><a href="wp.media.view.Attachment.EditSelection.html">wp.media.view.Attachment.EditSelection</a></li><li><a href="wp.media.view.Attachment.Library.html">wp.media.view.Attachment.Library</a></li><li><a href="wp.media.view.Attachment.Selection.html">wp.media.view.Attachment.Selection</a></li><li><a href="wp.media.view.AttachmentCompat.html">wp.media.view.AttachmentCompat</a></li><li><a href="wp.media.view.AttachmentFilters.html">wp.media.view.AttachmentFilters</a></li><li><a href="wp.media.view.AttachmentFilters.All.html">wp.media.view.AttachmentFilters.All</a></li><li><a href="wp.media.view.AttachmentFilters.DateFilter.html">wp.media.view.AttachmentFilters.DateFilter</a></li><li><a href="wp.media.view.AttachmentFilters.Uploaded.html">wp.media.view.AttachmentFilters.Uploaded</a></li><li><a href="wp.media.view.Attachments.html">wp.media.view.Attachments</a></li><li><a href="wp.media.view.Attachments.Selection.html">wp.media.view.Attachments.Selection</a></li><li><a href="wp.media.view.AttachmentsBrowser.html">wp.media.view.AttachmentsBrowser</a></li><li><a href="wp.media.view.AudioDetails.html">wp.media.view.AudioDetails</a></li><li><a href="wp.media.view.Button.html">wp.media.view.Button</a></li><li><a href="wp.media.view.ButtonGroup.html">wp.media.view.ButtonGroup</a></li><li><a href="wp.media.view.Cropper.html">wp.media.view.Cropper</a></li><li><a href="wp.media.view.DeleteSelected.html">wp.media.view.DeleteSelected</a></li><li><a href="wp.media.view.DeleteSelectedPermanently.html">wp.media.view.DeleteSelectedPermanently</a></li><li><a href="wp.media.view.EditImage.html">wp.media.view.EditImage</a></li><li><a href="wp.media.view.EditImage.Details.html">wp.media.view.EditImage.Details</a></li><li><a href="wp.media.view.EditorUploader.html">wp.media.view.EditorUploader</a></li><li><a href="wp.media.view.Embed.html">wp.media.view.Embed</a></li><li><a href="wp.media.view.EmbedImage.html">wp.media.view.EmbedImage</a></li><li><a href="wp.media.view.EmbedLink.html">wp.media.view.EmbedLink</a></li><li><a href="wp.media.view.EmbedUrl.html">wp.media.view.EmbedUrl</a></li><li><a href="wp.media.view.FocusManager.html">wp.media.view.FocusManager</a></li><li><a href="wp.media.view.Frame.html">wp.media.view.Frame</a></li><li><a href="wp.media.view.Iframe.html">wp.media.view.Iframe</a></li><li><a href="wp.media.view.ImageDetails.html">wp.media.view.ImageDetails</a></li><li><a href="wp.media.view.Label.html">wp.media.view.Label</a></li><li><a href="wp.media.view.MediaDetails.html">wp.media.view.MediaDetails</a></li><li><a href="wp.media.view.MediaFrame.html">wp.media.view.MediaFrame</a></li><li><a href="wp.media.view.MediaFrame.AudioDetails.html">wp.media.view.MediaFrame.AudioDetails</a></li><li><a href="wp.media.view.MediaFrame.EditAttachments.html">wp.media.view.MediaFrame.EditAttachments</a></li><li><a href="wp.media.view.MediaFrame.ImageDetails.html">wp.media.view.MediaFrame.ImageDetails</a></li><li><a href="wp.media.view.MediaFrame.Manage.html">wp.media.view.MediaFrame.Manage</a></li><li><a href="wp.media.view.MediaFrame.Manage.Router.html">wp.media.view.MediaFrame.Manage.Router</a></li><li><a href="wp.media.view.MediaFrame.MediaDetails.html">wp.media.view.MediaFrame.MediaDetails</a></li><li><a href="wp.media.view.MediaFrame.Post.html">wp.media.view.MediaFrame.Post</a></li><li><a href="wp.media.view.MediaFrame.Select.html">wp.media.view.MediaFrame.Select</a></li><li><a href="wp.media.view.MediaFrame.VideoDetails.html">wp.media.view.MediaFrame.VideoDetails</a></li><li><a href="wp.media.view.Menu.html">wp.media.view.Menu</a></li><li><a href="wp.media.view.MenuItem.html">wp.media.view.MenuItem</a></li><li><a href="wp.media.view.Modal.html">wp.media.view.Modal</a></li><li><a href="wp.media.view.PriorityList.html">wp.media.view.PriorityList</a></li><li><a href="wp.media.view.Router.html">wp.media.view.Router</a></li><li><a href="wp.media.view.RouterItem.html">wp.media.view.RouterItem</a></li><li><a href="wp.media.view.Search.html">wp.media.view.Search</a></li><li><a href="wp.media.view.Selection.html">wp.media.view.Selection</a></li><li><a href="wp.media.view.SelectModeToggle.html">wp.media.view.SelectModeToggle</a></li><li><a href="wp.media.view.Settings.html">wp.media.view.Settings</a></li><li><a href="wp.media.view.Settings.AttachmentDisplay.html">wp.media.view.Settings.AttachmentDisplay</a></li><li><a href="wp.media.view.Settings.Gallery.html">wp.media.view.Settings.Gallery</a></li><li><a href="wp.media.view.Settings.Playlist.html">wp.media.view.Settings.Playlist</a></li><li><a href="wp.media.view.Sidebar.html">wp.media.view.Sidebar</a></li><li><a href="wp.media.view.SiteIconCropper.html">wp.media.view.SiteIconCropper</a></li><li><a href="wp.media.view.SiteIconPreview.html">wp.media.view.SiteIconPreview</a></li><li><a href="wp.media.view.Spinner.html">wp.media.view.Spinner</a></li><li><a href="wp.media.view.Toolbar.html">wp.media.view.Toolbar</a></li><li><a href="wp.media.view.Toolbar.Embed.html">wp.media.view.Toolbar.Embed</a></li><li><a href="wp.media.view.Toolbar.Select.html">wp.media.view.Toolbar.Select</a></li><li><a href="wp.media.view.UploaderInline.html">wp.media.view.UploaderInline</a></li><li><a href="wp.media.view.UploaderStatus.html">wp.media.view.UploaderStatus</a></li><li><a href="wp.media.view.UploaderStatusError.html">wp.media.view.UploaderStatusError</a></li><li><a href="wp.media.view.UploaderWindow.html">wp.media.view.UploaderWindow</a></li><li><a href="wp.media.view.VideoDetails.html">wp.media.view.VideoDetails</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_audio.html">wp.mediaWidgets.controlConstructors.media_audio</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_gallery.html">wp.mediaWidgets.controlConstructors.media_gallery</a></li><li><a href="wp.mediaWidgets.controlConstructors.media_video.html">wp.mediaWidgets.controlConstructors.media_video</a></li><li><a href="wp.mediaWidgets.controlConstructors-AudioDetailsMediaFrame.html">wp.mediaWidgets.controlConstructors~AudioDetailsMediaFrame</a></li><li><a href="wp.mediaWidgets.controlConstructors-VideoDetailsMediaFrame.html">wp.mediaWidgets.controlConstructors~VideoDetailsMediaFrame</a></li><li><a href="wp.mediaWidgets.MediaEmbedView.html">wp.mediaWidgets.MediaEmbedView</a></li><li><a href="wp.mediaWidgets.MediaFrameSelect.html">wp.mediaWidgets.MediaFrameSelect</a></li><li><a href="wp.mediaWidgets.MediaWidgetControl.html">wp.mediaWidgets.MediaWidgetControl</a></li><li><a href="wp.mediaWidgets.MediaWidgetModel.html">wp.mediaWidgets.MediaWidgetModel</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_audio.html">wp.mediaWidgets.modelConstructors.media_audio</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_gallery.html">wp.mediaWidgets.modelConstructors.media_gallery</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_image.html">wp.mediaWidgets.modelConstructors.media_image</a></li><li><a href="wp.mediaWidgets.modelConstructors.media_video.html">wp.mediaWidgets.modelConstructors.media_video</a></li><li><a href="wp.mediaWidgets.PersistentDisplaySettingsLibrary.html">wp.mediaWidgets.PersistentDisplaySettingsLibrary</a></li><li><a href="wp.mediaWidgets-Constructor.html">wp.mediaWidgets~Constructor</a></li><li><a href="wp.mediaWidgets-GalleryDetailsMediaFrame.html">wp.mediaWidgets~GalleryDetailsMediaFrame</a></li><li><a href="wp.NativeHandler.html">wp.NativeHandler</a></li><li><a href="wp.textWidgets.TextWidgetControl.html">wp.textWidgets.TextWidgetControl</a></li><li><a href="wp.utils.wordcounter.html">wp.utils.wordcounter</a></li><li><a href="wp.YouTubeHandler.html">wp.YouTubeHandler</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">Mixins<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="wp.media.controller.StateMachine.html">wp.media.controller.StateMachine</a></li><li><a href="wp.media.mixin.html">wp.media.mixin</a></li><li><a href="wp.media.selectionSync.html">wp.media.selectionSync</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="wp.media.controller.Region.html#event:activate">wp.media.controller.Region#event:activate</a></li><li><a href="wp.media.controller.Region.html#event:create">wp.media.controller.Region#event:create</a></li><li><a href="wp.media.controller.Region.html#event:deactivate">wp.media.controller.Region#event:deactivate</a></li><li><a href="wp.media.controller.Region.html#event:render">wp.media.controller.Region#event:render</a></li><li><a href="wp.media.view.Frame.html#event:%257Bmode%257D:deactivate">wp.media.view.Frame#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.AudioDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.AudioDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.EditAttachments.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.EditAttachments#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.ImageDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.ImageDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Manage.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Manage#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.MediaDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.MediaDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Post.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Post#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.Select.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.Select#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.VideoDetails.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame.VideoDetails#event:{mode}:deactivate</a></li><li><a href="wp.media.view.MediaFrame.html#event:%257Bmode%257D:deactivate">wp.media.view.MediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.controlConstructors-AudioDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.controlConstructors~AudioDetailsMediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.controlConstructors-VideoDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.controlConstructors~VideoDetailsMediaFrame#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets.MediaFrameSelect.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets.MediaFrameSelect#event:{mode}:deactivate</a></li><li><a href="wp.mediaWidgets-GalleryDetailsMediaFrame.html#event:%257Bmode%257D:deactivate">wp.mediaWidgets~GalleryDetailsMediaFrame#event:{mode}:deactivate</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#$">$</a></li><li><a href="global.html#_attach">_attach</a></li><li><a href="global.html#_isReady">_isReady</a></li><li><a href="global.html#add">add</a></li><li><a href="global.html#ajaxPopulateWidgets">ajaxPopulateWidgets</a></li><li><a href="global.html#ajaxWidgets">ajaxWidgets</a></li><li><a href="global.html#all">all</a></li><li><a href="global.html#array_unique_noempty">array_unique_noempty</a></li><li><a href="global.html#clearFilters">clearFilters</a></li><li><a href="global.html#commentReply">commentReply</a></li><li><a href="global.html#detach">detach</a></li><li><a href="global.html#editPermalink">editPermalink</a></li><li><a href="global.html#filtersChecked">filtersChecked</a></li><li><a href="global.html#first">first</a></li><li><a href="global.html#get">get</a></li><li><a href="global.html#insert">insert</a></li><li><a href="global.html#media">media</a></li><li><a href="global.html#out">out</a></li><li><a href="global.html#over">over</a></li><li><a href="global.html#passwordStrength">passwordStrength</a></li><li><a href="global.html#prepare">prepare</a></li><li><a href="global.html#quickPressLoad">quickPressLoad</a></li><li><a href="global.html#ready">ready</a></li><li><a href="global.html#remove">remove</a></li><li><a href="global.html#render">render</a></li><li><a href="global.html#replace">replace</a></li><li><a href="global.html#search">search</a></li><li><a href="global.html#send_to_editor">send_to_editor</a></li><li><a href="global.html#set">set</a></li><li><a href="global.html#setCommentsList">setCommentsList</a></li><li><a href="global.html#tagBox">tagBox</a></li><li><a href="global.html#tb_position">tb_position</a></li><li><a href="global.html#theExtraList">theExtraList</a></li><li><a href="global.html#theList">theList</a></li><li><a href="global.html#unset">unset</a></li><li><a href="global.html#uploader">uploader</a></li><li><a href="global.html#WPRemoveThumbnail">WPRemoveThumbnail</a></li><li><a href="global.html#WPSetThumbnailHTML">WPSetThumbnailHTML</a></li><li><a href="global.html#WPSetThumbnailID">WPSetThumbnailID</a></li><li><a href="global.html#wptitlehint">wptitlehint</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-12">
+	
+		<div id="main">
+			
+
+		<h1 class="page-title">Source: _enqueues/admin/inline-edit-post.js</h1>
+    
+<section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">/**
+ * This file contains the functions needed for the inline editing of posts.
+ *
+ * @since 2.7.0
+ * @output wp-admin/js/inline-edit-post.js
+ */
+
+/* global inlineEditL10n, ajaxurl, typenow, inlineEditPost */
+
+window.wp = window.wp || {};
+
+/**
+ * Manages the quick edit and bulk edit windows for editing posts or pages.
+ *
+ * @namespace inlineEditPost
+ *
+ * @since 2.7.0
+ *
+ * @type {Object}
+ *
+ * @property {string} type The type of inline editor.
+ * @property {string} what The prefix before the post id.
+ *
+ */
+( function( $, wp ) {
+
+	window.inlineEditPost = {
+
+	/**
+	 * Initializes the inline and bulk post editor.
+	 *
+	 * Binds event handlers to the Escape key to close the inline editor
+	 * and to the save and close buttons. Changes DOM to be ready for inline
+	 * editing. Adds event handler to bulk edit.
+	 *
+	 * @since 2.7.0
+	 *
+	 * @memberof inlineEditPost
+	 *
+	 * @return {void}
+	 */
+	init : function(){
+		var t = this, qeRow = $('#inline-edit'), bulkRow = $('#bulk-edit');
+
+		t.type = $('table.widefat').hasClass('pages') ? 'page' : 'post';
+		// Post ID prefix.
+		t.what = '#post-';
+
+		/**
+		 * Binds the Escape key to revert the changes and close the quick editor.
+		 *
+		 * @return {boolean} The result of revert.
+		 */
+		qeRow.keyup(function(e){
+			// Revert changes if Escape key is pressed.
+			if ( e.which === 27 ) {
+				return inlineEditPost.revert();
+			}
+		});
+
+		/**
+		 * Binds the Escape key to revert the changes and close the bulk editor.
+		 *
+		 * @return {boolean} The result of revert.
+		 */
+		bulkRow.keyup(function(e){
+			// Revert changes if Escape key is pressed.
+			if ( e.which === 27 ) {
+				return inlineEditPost.revert();
+			}
+		});
+
+		/**
+		 * Reverts changes and close the quick editor if the cancel button is clicked.
+		 *
+		 * @return {boolean} The result of revert.
+		 */
+		$( '.cancel', qeRow ).click( function() {
+			return inlineEditPost.revert();
+		});
+
+		/**
+		 * Saves changes in the quick editor if the save(named: update) button is clicked.
+		 *
+		 * @return {boolean} The result of save.
+		 */
+		$( '.save', qeRow ).click( function() {
+			return inlineEditPost.save(this);
+		});
+
+		/**
+		 * If Enter is pressed, and the target is not the cancel button, save the post.
+		 *
+		 * @return {boolean} The result of save.
+		 */
+		$('td', qeRow).keydown(function(e){
+			if ( e.which === 13 &amp;&amp; ! $( e.target ).hasClass( 'cancel' ) ) {
+				return inlineEditPost.save(this);
+			}
+		});
+
+		/**
+		 * Reverts changes and close the bulk editor if the cancel button is clicked.
+		 *
+		 * @return {boolean} The result of revert.
+		 */
+		$( '.cancel', bulkRow ).click( function() {
+			return inlineEditPost.revert();
+		});
+
+		/**
+		 * Disables the password input field when the private post checkbox is checked.
+		 */
+		$('#inline-edit .inline-edit-private input[value="private"]').click( function(){
+			var pw = $('input.inline-edit-password-input');
+			if ( $(this).prop('checked') ) {
+				pw.val('').prop('disabled', true);
+			} else {
+				pw.prop('disabled', false);
+			}
+		});
+
+		/**
+		 * Binds click event to the .editinline button which opens the quick editor.
+		 */
+		$( '#the-list' ).on( 'click', '.editinline', function() {
+			$( this ).attr( 'aria-expanded', 'true' );
+			inlineEditPost.edit( this );
+		});
+
+		$('#bulk-edit').find('fieldset:first').after(
+			$('#inline-edit fieldset.inline-edit-categories').clone()
+		).siblings( 'fieldset:last' ).prepend(
+			$('#inline-edit label.inline-edit-tags').clone()
+		);
+
+		$('select[name="_status"] option[value="future"]', bulkRow).remove();
+
+		/**
+		 * Adds onclick events to the apply buttons.
+		 */
+		$('#doaction, #doaction2').click(function(e){
+			var n;
+
+			t.whichBulkButtonId = $( this ).attr( 'id' );
+			n = t.whichBulkButtonId.substr( 2 );
+
+			if ( 'edit' === $( 'select[name="' + n + '"]' ).val() ) {
+				e.preventDefault();
+				t.setBulk();
+			} else if ( $('form#posts-filter tr.inline-editor').length > 0 ) {
+				t.revert();
+			}
+		});
+	},
+
+	/**
+	 * Toggles the quick edit window, hiding it when it's active and showing it when
+	 * inactive.
+	 *
+	 * @since 2.7.0
+	 *
+	 * @memberof inlineEditPost
+	 *
+	 * @param {Object} el Element within a post table row.
+	 */
+	toggle : function(el){
+		var t = this;
+		$( t.what + t.getId( el ) ).css( 'display' ) === 'none' ? t.revert() : t.edit( el );
+	},
+
+	/**
+	 * Creates the bulk editor row to edit multiple posts at once.
+	 *
+	 * @since 2.7.0
+	 *
+	 * @memberof inlineEditPost
+	 */
+	setBulk : function(){
+		var te = '', type = this.type, c = true;
+		this.revert();
+
+		$( '#bulk-edit td' ).attr( 'colspan', $( 'th:visible, td:visible', '.widefat:first thead' ).length );
+
+		// Insert the editor at the top of the table with an empty row above to maintain zebra striping.
+		$('table.widefat tbody').prepend( $('#bulk-edit') ).prepend('&lt;tr class="hidden">&lt;/tr>');
+		$('#bulk-edit').addClass('inline-editor').show();
+
+		/**
+		 * Create a HTML div with the title and a link(delete-icon) for each selected
+		 * post.
+		 *
+		 * Get the selected posts based on the checked checkboxes in the post table.
+		 */
+		$( 'tbody th.check-column input[type="checkbox"]' ).each( function() {
+
+			// If the checkbox for a post is selected, add the post to the edit list.
+			if ( $(this).prop('checked') ) {
+				c = false;
+				var id = $(this).val(), theTitle;
+				theTitle = $('#inline_'+id+' .post_title').html() || inlineEditL10n.notitle;
+				te += '&lt;div id="ttle'+id+'">&lt;a id="_'+id+'" class="ntdelbutton" title="'+inlineEditL10n.ntdeltitle+'">X&lt;/a>'+theTitle+'&lt;/div>';
+			}
+		});
+
+		// If no checkboxes where checked, just hide the quick/bulk edit rows.
+		if ( c ) {
+			return this.revert();
+		}
+
+		// Add onclick events to the delete-icons in the bulk editors the post title list.
+		$('#bulk-titles').html(te);
+		/**
+		 * Binds on click events to the checkboxes before the posts in the table.
+		 *
+		 * @listens click
+		 */
+		$('#bulk-titles a').click(function(){
+			var id = $(this).attr('id').substr(1);
+
+			$('table.widefat input[value="' + id + '"]').prop('checked', false);
+			$('#ttle'+id).remove();
+		});
+
+		// Enable auto-complete for tags when editing posts.
+		if ( 'post' === type ) {
+			$( 'tr.inline-editor textarea[data-wp-taxonomy]' ).each( function ( i, element ) {
+				/*
+				 * While Quick Edit clones the form each time, Bulk Edit always re-uses
+				 * the same form. Let's check if an autocomplete instance already exists.
+				 */
+				if ( $( element ).autocomplete( 'instance' ) ) {
+					// jQuery equivalent of `continue` within an `each()` loop.
+					return;
+				}
+
+				$( element ).wpTagsSuggest();
+			} );
+		}
+
+		// Scrolls to the top of the table where the editor is rendered.
+		$('html, body').animate( { scrollTop: 0 }, 'fast' );
+	},
+
+	/**
+	 * Creates a quick edit window for the post that has been clicked.
+	 *
+	 * @since 2.7.0
+	 *
+	 * @memberof inlineEditPost
+	 *
+	 * @param {number|Object} id The id of the clicked post or an element within a post
+	 *                           table row.
+	 * @return {boolean} Always returns false at the end of execution.
+	 */
+	edit : function(id) {
+		var t = this, fields, editRow, rowData, status, pageOpt, pageLevel, nextPage, pageLoop = true, nextLevel, f, val, pw;
+		t.revert();
+
+		if ( typeof(id) === 'object' ) {
+			id = t.getId(id);
+		}
+
+		fields = ['post_title', 'post_name', 'post_author', '_status', 'jj', 'mm', 'aa', 'hh', 'mn', 'ss', 'post_password', 'post_format', 'menu_order', 'page_template'];
+		if ( t.type === 'page' ) {
+			fields.push('post_parent');
+		}
+
+		// Add the new edit row with an extra blank row underneath to maintain zebra striping.
+		editRow = $('#inline-edit').clone(true);
+		$( 'td', editRow ).attr( 'colspan', $( 'th:visible, td:visible', '.widefat:first thead' ).length );
+
+		$(t.what+id).removeClass('is-expanded').hide().after(editRow).after('&lt;tr class="hidden">&lt;/tr>');
+
+		// Populate fields in the quick edit window.
+		rowData = $('#inline_'+id);
+		if ( !$(':input[name="post_author"] option[value="' + $('.post_author', rowData).text() + '"]', editRow).val() ) {
+
+			// The post author no longer has edit capabilities, so we need to add them to the list of authors.
+			$(':input[name="post_author"]', editRow).prepend('&lt;option value="' + $('.post_author', rowData).text() + '">' + $('#' + t.type + '-' + id + ' .author').text() + '&lt;/option>');
+		}
+		if ( $( ':input[name="post_author"] option', editRow ).length === 1 ) {
+			$('label.inline-edit-author', editRow).hide();
+		}
+
+		for ( f = 0; f &lt; fields.length; f++ ) {
+			val = $('.'+fields[f], rowData);
+
+			/**
+			 * Replaces the image for a Twemoji(Twitter emoji) with it's alternate text.
+			 *
+			 * @return {string} Alternate text from the image.
+			 */
+			val.find( 'img' ).replaceWith( function() { return this.alt; } );
+			val = val.text();
+			$(':input[name="' + fields[f] + '"]', editRow).val( val );
+		}
+
+		if ( $( '.comment_status', rowData ).text() === 'open' ) {
+			$( 'input[name="comment_status"]', editRow ).prop( 'checked', true );
+		}
+		if ( $( '.ping_status', rowData ).text() === 'open' ) {
+			$( 'input[name="ping_status"]', editRow ).prop( 'checked', true );
+		}
+		if ( $( '.sticky', rowData ).text() === 'sticky' ) {
+			$( 'input[name="sticky"]', editRow ).prop( 'checked', true );
+		}
+
+		/**
+		 * Creates the select boxes for the categories.
+		 */
+		$('.post_category', rowData).each(function(){
+			var taxname,
+				term_ids = $(this).text();
+
+			if ( term_ids ) {
+				taxname = $(this).attr('id').replace('_'+id, '');
+				$('ul.'+taxname+'-checklist :checkbox', editRow).val(term_ids.split(','));
+			}
+		});
+
+		/**
+		 * Gets all the taxonomies for live auto-fill suggestions when typing the name
+		 * of a tag.
+		 */
+		$('.tags_input', rowData).each(function(){
+			var terms = $(this),
+				taxname = $(this).attr('id').replace('_' + id, ''),
+				textarea = $('textarea.tax_input_' + taxname, editRow),
+				comma = inlineEditL10n.comma;
+
+			terms.find( 'img' ).replaceWith( function() { return this.alt; } );
+			terms = terms.text();
+
+			if ( terms ) {
+				if ( ',' !== comma ) {
+					terms = terms.replace(/,/g, comma);
+				}
+				textarea.val(terms);
+			}
+
+			textarea.wpTagsSuggest();
+		});
+
+		// Handle the post status.
+		status = $('._status', rowData).text();
+		if ( 'future' !== status ) {
+			$('select[name="_status"] option[value="future"]', editRow).remove();
+		}
+
+		pw = $( '.inline-edit-password-input' ).prop( 'disabled', false );
+		if ( 'private' === status ) {
+			$('input[name="keep_private"]', editRow).prop('checked', true);
+			pw.val( '' ).prop( 'disabled', true );
+		}
+
+		// Remove the current page and children from the parent dropdown.
+		pageOpt = $('select[name="post_parent"] option[value="' + id + '"]', editRow);
+		if ( pageOpt.length > 0 ) {
+			pageLevel = pageOpt[0].className.split('-')[1];
+			nextPage = pageOpt;
+			while ( pageLoop ) {
+				nextPage = nextPage.next('option');
+				if ( nextPage.length === 0 ) {
+					break;
+				}
+
+				nextLevel = nextPage[0].className.split('-')[1];
+
+				if ( nextLevel &lt;= pageLevel ) {
+					pageLoop = false;
+				} else {
+					nextPage.remove();
+					nextPage = pageOpt;
+				}
+			}
+			pageOpt.remove();
+		}
+
+		$(editRow).attr('id', 'edit-'+id).addClass('inline-editor').show();
+		$('.ptitle', editRow).focus();
+
+		return false;
+	},
+
+	/**
+	 * Saves the changes made in the quick edit window to the post.
+	 * AJAX saving is only for Quick Edit and not for bulk edit.
+	 *
+	 * @since 2.7.0
+	 *
+	 * @param  {int}     id The id for the post that has been changed.
+	 * @return {boolean}    False, so the form does not submit when pressing
+	 *                      Enter on a focused field.
+	 */
+	save : function(id) {
+		var params, fields, page = $('.post_status_page').val() || '';
+
+		if ( typeof(id) === 'object' ) {
+			id = this.getId(id);
+		}
+
+		$( 'table.widefat .spinner' ).addClass( 'is-active' );
+
+		params = {
+			action: 'inline-save',
+			post_type: typenow,
+			post_ID: id,
+			edit_date: 'true',
+			post_status: page
+		};
+
+		fields = $('#edit-'+id).find(':input').serialize();
+		params = fields + '&amp;' + $.param(params);
+
+		// Make Ajax request.
+		$.post( ajaxurl, params,
+			function(r) {
+				var $errorNotice = $( '#edit-' + id + ' .inline-edit-save .notice-error' ),
+					$error = $errorNotice.find( '.error' );
+
+				$( 'table.widefat .spinner' ).removeClass( 'is-active' );
+				$( '.ac_results' ).hide();
+
+				if (r) {
+					if ( -1 !== r.indexOf( '&lt;tr' ) ) {
+						$(inlineEditPost.what+id).siblings('tr.hidden').addBack().remove();
+						$('#edit-'+id).before(r).remove();
+						$( inlineEditPost.what + id ).hide().fadeIn( 400, function() {
+							// Move focus back to the Quick Edit button. $( this ) is the row being animated.
+							$( this ).find( '.editinline' )
+								.attr( 'aria-expanded', 'false' )
+								.focus();
+							wp.a11y.speak( inlineEditL10n.saved );
+						});
+					} else {
+						r = r.replace( /&lt;.[^&lt;>]*?>/g, '' );
+						$errorNotice.removeClass( 'hidden' );
+						$error.html( r );
+						wp.a11y.speak( $error.text() );
+					}
+				} else {
+					$errorNotice.removeClass( 'hidden' );
+					$error.html( inlineEditL10n.error );
+					wp.a11y.speak( inlineEditL10n.error );
+				}
+			},
+		'html');
+
+		// Prevent submitting the form when pressing Enter on a focused field.
+		return false;
+	},
+
+	/**
+	 * Hides and empties the Quick Edit and/or Bulk Edit windows.
+	 *
+	 * @since 2.7.0
+	 *
+	 * @memberof inlineEditPost
+	 *
+	 * @return {boolean} Always returns false.
+	 */
+	revert : function(){
+		var $tableWideFat = $( '.widefat' ),
+			id = $( '.inline-editor', $tableWideFat ).attr( 'id' );
+
+		if ( id ) {
+			$( '.spinner', $tableWideFat ).removeClass( 'is-active' );
+			$( '.ac_results' ).hide();
+
+			if ( 'bulk-edit' === id ) {
+
+				// Hide the bulk editor.
+				$( '#bulk-edit', $tableWideFat ).removeClass( 'inline-editor' ).hide().siblings( '.hidden' ).remove();
+				$('#bulk-titles').empty();
+
+				// Store the empty bulk editor in a hidden element.
+				$('#inlineedit').append( $('#bulk-edit') );
+
+				// Move focus back to the Bulk Action button that was activated.
+				$( '#' + inlineEditPost.whichBulkButtonId ).focus();
+			} else {
+
+				// Remove both the inline-editor and its hidden tr siblings.
+				$('#'+id).siblings('tr.hidden').addBack().remove();
+				id = id.substr( id.lastIndexOf('-') + 1 );
+
+				// Show the post row and move focus back to the Quick Edit button.
+				$( this.what + id ).show().find( '.editinline' )
+					.attr( 'aria-expanded', 'false' )
+					.focus();
+			}
+		}
+
+		return false;
+	},
+
+	/**
+	 * Gets the id for a the post that you want to quick edit from the row in the quick
+	 * edit table.
+	 *
+	 * @since 2.7.0
+	 *
+	 * @memberof inlineEditPost
+	 *
+	 * @param  {Object} o DOM row object to get the id for.
+	 * @return {string}   The post id extracted from the table row in the object.
+	 */
+	getId : function(o) {
+		var id = $(o).closest('tr').attr('id'),
+			parts = id.split('-');
+		return parts[parts.length - 1];
+	}
+};
+
+$( document ).ready( function(){ inlineEditPost.init(); } );
+
+// Show/hide locks on posts.
+$( document ).on( 'heartbeat-tick.wp-check-locked-posts', function( e, data ) {
+	var locked = data['wp-check-locked-posts'] || {};
+
+	$('#the-list tr').each( function(i, el) {
+		var key = el.id, row = $(el), lock_data, avatar;
+
+		if ( locked.hasOwnProperty( key ) ) {
+			if ( ! row.hasClass('wp-locked') ) {
+				lock_data = locked[key];
+				row.find('.column-title .locked-text').text( lock_data.text );
+				row.find('.check-column checkbox').prop('checked', false);
+
+				if ( lock_data.avatar_src ) {
+					avatar = $( '&lt;img class="avatar avatar-18 photo" width="18" height="18" alt="" />' ).attr( 'src', lock_data.avatar_src.replace( /&amp;amp;/g, '&amp;' ) );
+					row.find('.column-title .locked-avatar').empty().append( avatar );
+				}
+				row.addClass('wp-locked');
+			}
+		} else if ( row.hasClass('wp-locked') ) {
+			row.removeClass( 'wp-locked' ).find( '.locked-info span' ).empty();
+		}
+	});
+}).on( 'heartbeat-send.wp-check-locked-posts', function( e, data ) {
+	var check = [];
+
+	$('#the-list tr').each( function(i, el) {
+		if ( el.id ) {
+			check.push( el.id );
+		}
+	});
+
+	if ( check.length ) {
+		data['wp-check-locked-posts'] = check;
+	}
+}).ready( function() {
+
+	// Set the heartbeat interval to 15 seconds.
+	if ( typeof wp !== 'undefined' &amp;&amp; wp.heartbeat ) {
+		wp.heartbeat.interval( 15 );
+	}
+});
+
+})( jQuery, window.wp );
+</pre>
+    </article>
+</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a>
+	
+		on 2020-06-17T11:56:25+00:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>
